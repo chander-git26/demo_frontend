@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous"/>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    
+        <style>
+            .navbtns {
+
+            font-weight: bold;
+            font-size: 20px;
+            }
+            
+            .inputel {
+            min-width: 50px;
+            width:200px;
+            text-align: center;
+
+            }
+
+            .labelel {
+            margin: 20px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            }
+
+            .bgimg {
+            background-size: cover;
+            background-color: lightblue;
+            }
+
+            .detailsPage {
+            text-align: center;
+            padding:75px
+            }
+
+            .borderboxel {
+
+            background-color: white;
+            max-width: 500px;
+            width:65%;
+            border-radius: 20px;
+            padding: 20px;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: right;
+
+            }
+            .title {
+            font-family: sans-serif;
+            color: orangered;
+            font-size: 30px;
+            }
+
+            .logo {
+                height: 55px;
+                width:42px
+               
+            }
+
+            .ex1 {
+                width: 100%;
+            }
+
+            .saveel {
+                height: 45px;
+                width: 160px;
+                border-radius: 15px;
+                font-size: 18px;
+                font-weight: bold;
+                background-color: green;
+                color: white;
+                text-align: center;
+            }
+
+            .backel{
+                height: 45px;
+                width: 120px;
+                border-radius: 15px;
+                font-size: 18px;
+                font-weight: bold;
+                background-color:orange;
+                color: white;
+                text-align: center;
+
+            }
+
+            
+
+            .btnsel {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+            }
+        </style>
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <a class="navbar-brand" href=""><img src="https://cosglobal.in/wp-content/uploads/2023/11/WhatsApp-Image-2023-11-22-at-18.18.56.jpeg" class="logo "></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse d-flex flex-row justify-content-center" id="navbarNavAltMarkup">
+              <div class="navbar-nav d-flex flex-direction:row justify-content:right">
+                <!--<a class="nav-item nav-link active navbtns" href="#">Home </span></a>
+                <a class="nav-item nav-link navbtns" href="#">About us</a>
+                <a class="nav-item nav-link navbtns" href="#">Gallery</a>
+                <a class="nav-item nav-link navbtns" href="#">Contact us</a>-->
+              </div>
+            </div>
+          </nav>
+
+          <div class="bgimg detailsPage d-flex flex-row justify-content-center" >
+            <div class="borderboxel  d-flex flex-row justify-content-center">
+                <div class="ex1 ">
+                    <h1 class="title">Personal Details</h1>
+                    <div class="d-flex flex-column flex-direction:column justify-content:center">
+
+
+
+                                
+
+
+                                <div class="labelel">
+                                    <div>
+                                        <label for="Mobile">Aadhaar Nuber</label>
+                                    </div>
+                                    <div>
+                                        <input  type="digit" class="inputel" id="aadhaarNumber" placeholder="Enter your Aadhaar number"required ></input>
+                                    <br>
+                                    </div>
+                                </div>
+
+
+
+                                <div class="labelel">
+                                    <div>
+                                        <label for="Mobile">PAN Nuber</label>
+                                    </div>
+                                    <div>
+                                        <input  type="digit" class="inputel" id="panNumber" placeholder="Enter your Pan number"required maxlength="10"></input>
+                                    <br>
+                                    </div>
+                                </div>
+
+                                
+
+                                <div class="labelel">
+                                    <div>
+                                        <label for="maritalstatus"> Marital Status</label>
+                                        </span>
+                                        <p class="style7">
+                                    </div>
+                                    <div>
+                                        <input type="radio" name="maritalstatus" value="Single" />Single
+                                        <input type="radio" name="maritalstatus" value="Married" />Married
+                                        </p>
+                                    </div>
+                                    
+                                </div>
+                                
+                                
+
+                                <div class="labelel">
+                                    <div>
+                                        <label for="bloodgroup">Blood Group</label>
+                                    </div>
+                                    <div>
+                                        <select>
+                                            <option>select</option>
+                                            <option>A+</option>
+                                            <option>B+</option>
+                                            <option>AB+</option>
+                                            <option>O+</option>
+                                            <option>A-</option>
+                                            <option>B-</option>
+                                            <option>AB-</option>
+                                            
+                                            
+                                        </select>
+                                        <br>
+                                    </div>
+                                    
+                                    
+                                </div>
+                            
+                            <div class="labelel">
+                                <div>
+                                    <label for="height">Height</label>
+                                </div>
+                                <div>
+                                    <input type="text" class="inputel" id="Height" placeholder="Enter your Height (in cms)"></input>
+                                    <br>
+                                </div>
+                                
+                                
+                            </div>
+
+
+                            <div class="labelel">
+                                <div>
+                                    <label for="weightDetails">Weight</label>
+                                </div>
+                                <div>
+                                    <input type="text" class="inputel" id="weightDetails" placeholder="Enter your Weight (in kgs)"></input>
+                                    <br>
+                                </div>
+                                
+                                
+                            </div>
+
+                      
+                            <div class="labelel">
+                                <div>
+                                    <label for="smoking">Smoking</label>
+                                </div>
+                                <div>
+                                    <input type="radio"  id="smokingyes" name="smoking"></input>Yes
+                                    <input type="radio"  id="smokingno" name="smoking"></input>No
+                                    <br>
+                                </div>
+                                
+                            </div>
+
+                            <div class="labelel">
+                                <div>
+                                    <label for="alcohol">Alcohol</label>
+                                </div>
+                                <div>
+                                    <input type="radio" id="Alcoholyes"  name="Alchohol"></input>Yes
+                                    <input type="radio"  id="Alcoholno"  name="Alchohol" ></input>No
+                                    <br>
+                                </div>
+                                
+                            </div>    
+                            
+                              
+                            
+
+                        </div> 
+
+                        <div class="btnsel">
+                            <button class="backel" type="submit"><a href="login.html" >Back </a></button>
+                            <button class="saveel" type="submit"><a href="proffisional.html" >Save & Next </a> </button>
+                        </div>
+
+
+
+
+                    </div> 
+                </div> 
+                
+                
+
+            </div>
+    </body>
+</html>

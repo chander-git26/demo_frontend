@@ -1,0 +1,148 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+    <title>Bootstrap Example</title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+      body{
+        background-image: url('https://wallpaperaccess.com/full/3833918.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      .bd-example{
+        width: 40%;
+        padding: 20px;
+        height: 10px;
+      }
+    </style>
+  </head>
+
+      <br><br>
+
+      <center>
+        <div class="bd-example">
+          <table class="table">
+            <thead>
+                <div class="col-2" style="border-radius: 25px;padding:35px;margin: 22px;">
+              <tr>
+                <th scope="col">Details</th>
+                <th scope="col">Name</th>
+                <th scope="col">Age</th>
+                <th scope="col">occupation</th>
+               
+
+               
+              </tr>
+                </div>
+            </thead>
+            <tbody>
+              <tr class="table-active">
+                <th scope="row">Father</th>
+                <td><span id="fathername"></span></td>
+                <td><span id="fatherage"></span></td>
+                <td><span id="fatheroccupation"></span></td>
+                
+                
+                
+              </tr>
+              <tr>
+                <th scope="row">Mother</th>
+                <td><span id="mothername"></span></td>
+                <td><span id="motherage"></span></td>
+                <td><span id="motheroccupation"></span></td>
+                
+               
+              </tr>
+        
+        
+              <tr class="table-primary">
+                <th scope="row">Spouse</th>
+                <td><span id="spousename"></span></td>
+                <td><span id="spouseage"></span></td>
+                <td><span id="spouseoccupation"></span></td>
+               
+                
+              </tr>
+              <tr class="table-secondary">
+                <th scope="row">Nominee1</th>
+                <td><span id="nominee1name"></span></td>
+                <td><span id="nominee1age"></span></td>
+                <td><span id="nominee1occupation"></span></td>
+                
+               
+              </tr>
+              <tr class="table-success">
+                <th scope="row">Nominee2</th>
+                <td><span id="nominee2name"></span></td>
+                <td><span id="nominee2age"></span></td>
+                <td><span id="nominee2ccupation"></span></td>
+               
+                
+             
+            
+            </tbody>
+          </table>
+        </div>
+       
+      </center>
+
+      
+
+
+  <script>
+    function fetchData() {
+            const apiUrl = ''; 
+            fetch(apiUrl) 
+                .then(response => { 
+                    if (!response.ok) { 
+                        throw new Error('Network response was not ok'); 
+                    } 
+                    return response.json();
+                })
+                .then(data => {
+
+                    document.getElementById('fathername').textContent = data.fathername;
+                    document.getElementById('fatherage').textContent = data.fatheage; 
+                    document.getElementById('fatheroccupation').textContent = data.fatheroccupation; 
+
+                    document.getElementById('mothername').textContent = data.mothername;
+                    document.getElementById('motherage').textContent = data.motheage; 
+                    document.getElementById('motheroccupation').textContent = data.motheroccupation; 
+
+                    document.getElementById('spousename').textContent = data.spousename;
+                    document.getElementById('spouseage').textContent = data.spouseage; 
+                    document.getElementById('spouseoccupation').textContent = data.spouseoccupation; 
+
+                    document.getElementById('nominee1name').textContent = data.nominee1name;
+                    document.getElementById('nominee1age').textContent = data.nominee1age; 
+                    document.getElementById('nominee1occupation').textContent = data.nominee1occupation; 
+
+
+                    document.getElementById('nominee2name').textContent = data.nominee2name;
+                    document.getElementById('nominee2age').textContent = data.nominee2age; 
+                    document.getElementById('nominee2occupation').textContent = data.nominee2occupation; 
+                    
+                    
+                    
+                    
+                    
+                    
+                })
+                .catch(error => { 
+                    console.error('Error fetching data:', error); 
+                }); 
+            }
+            window.onload = fetchData;
+  </script>
+                 
+    
+    <!-- End Example Code -->
+  </body>
+</html>
+
+ 
+

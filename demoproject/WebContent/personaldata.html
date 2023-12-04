@@ -1,0 +1,127 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+    <title>Bootstrap Example</title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+      body{
+        background-image: url('https://wallpaperaccess.com/full/3833918.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      .bd-example{
+        width: 40%;
+        padding: 20px;
+        height: 10px;
+      }
+    </style>
+  </head>
+
+      <br><br>
+
+      <center>
+        <div class="bd-example">
+          <table class="table">
+            <thead>
+                <div class="col-2" style="border-radius: 25px;padding:35px;margin: 22px;">
+              <tr>
+                <th scope="col">Details</th>
+                <th scope="col">Result</th>
+               
+              </tr>
+                </div>
+            </thead>
+            <tbody>
+              <tr class="table-active">
+                <th scope="row">Adhar number</th>
+                <td ><span id="getadhar"></span></td>
+                
+              </tr>
+
+              <tr>
+                <th scope="row">Pan number</th>
+                <td><span id="getpannumber"></span></td>
+               
+              </tr>
+        
+        
+              <tr class="table-primary">
+                <th scope="row">Marital status</th>
+                <td><span id="getmaritalstatus"></span></td>
+                
+              </tr>
+              <tr class="table-secondary">
+                <th scope="row">Blood group</th>
+                <td><span id="getbloodgroup"></span></td>
+               
+              </tr>
+              <tr class="table-success">
+                <th scope="row">Height</th>
+                <td><span id="getheight"></span></td>
+                
+              </tr>
+              <tr class="table-danger">
+                <th scope="row">Weight</th>
+                <td><span id="getweightDetails"></span></td>
+                
+              </tr>
+              <tr class="table-warning">
+                <th scope="row">Smoking</th>
+                <td><span id="getsmoking"></span></td>
+               
+              </tr>
+              <tr class="table-info">
+                <th scope="row">Alcohol</th>
+                <td><span id="getalchohol"></span></td>
+                
+            
+            </tbody>
+          </table>
+        </div>
+       
+      </center>
+
+      <!--Javascipt code-->
+      <script>
+
+        function fetchData() {
+              const apiUrl = ''; 
+              fetch(apiUrl) 
+                  .then(response => { 
+                      if (!response.ok) { 
+                          throw new Error('Network response was not ok'); 
+                      } 
+                      return response.json();
+                  })
+                  .then(data => {
+
+                      document.getElementById('getaadhaarNumber').textContent = data.aadhaarNumber; 
+                      document.getElementById('getpannumber').textContent = data.pannumber; 
+                      document.getElementById('getmaritalstatus').textContent = data.maritalstatus; 
+                      document.getElementById('getbloodgroup').textContent = data.bloodgroup; 
+                      document.getElementById('getheight').textContent = data.height; 
+                      document.getElementById('getweightdetails').textContent = data.weightdetails; 
+                      document.getElementById('getsmoking').textContent = data.smoking; 
+                      document.getElementById('getalchohol').textContent = data.alchohol; 
+                      
+                      
+                      
+                  })
+                  .catch(error => { 
+                      console.error('Error fetching data:', error); 
+                  }); 
+              }
+              window.onload = fetchData;
+      </script>
+      
+    
+    <!-- End Example Code -->
+  </body>
+</html>
+
+ 
+

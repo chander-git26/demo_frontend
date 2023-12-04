@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous"/>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    
+        <style>
+            .navbtns {
+
+            font-weight: bold;
+            font-size: 20px;
+            }
+            .detailsPage {
+            text-align: center;
+            padding:75px
+            }
+            .inputel {
+            min-width: 50px;
+            width:200px;
+            text-align: center;
+
+            }
+            .saveel {
+                height: 45px;
+                width: 160px;
+                border-radius: 15px;
+                font-size: 18px;
+                font-weight: bold;
+                background-color: green;
+                color: white;
+                text-align: center;
+            }
+ 
+            .backel{
+                height: 45px;
+                width: 120px;
+                border-radius: 15px;
+                font-size: 18px;
+                font-weight: bold;
+                background-color:orange;
+                color: white;
+                text-align: center;
+ 
+            }
+ 
+           
+ 
+            .btnsel {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+            }
+
+
+            .labelel {
+            margin: 20px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            }
+
+            .bgimg {
+            background-size: cover;
+            background-color: lightblue;
+            }
+
+            .borderboxel {
+
+            background-color: white;
+            max-width: 500px;
+            width:65%;
+            border-radius: 20px;
+            padding: 20px;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: right;
+
+            }
+            .title {
+            font-family: sans-serif;
+            color: orangered;
+            font-size: 30px;
+            }
+
+            .submitel {
+            height: 45px;
+            width: 120px;
+            border-radius: 15px;
+            font-size: 18px;
+            font-weight: bold;
+            background-color: green;
+            color: white;
+            text-align: center;
+            }
+
+            .logo {
+                height: 55px;
+                width:42px
+               
+            }
+
+            .ex1 {
+                width: 100%;
+            }
+        </style>
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <a class="navbar-brand" href=""><img src="https://cosglobal.in/wp-content/uploads/2023/11/WhatsApp-Image-2023-11-22-at-18.18.56.jpeg" class="logo "></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            
+          </nav>
+
+          <div class="bgimg detailsPage d-flex flex-row justify-content-center" >
+            <div class="borderboxel  d-flex flex-row justify-content-center">
+                <div class="ex1 ">
+                    <h1 class="title">Medical Details</h1>
+                    <div class="d-flex flex-column flex-direction:column justify-content:center">
+
+
+
+                                <div class="labelel">
+                                    <div>
+                                    <label for="Past surgeries">Past surgeries</label>
+                                    </div>
+                                    <div>
+                                        <input type="text" class="inputel" id="Past surgeries"placeholder="Enter Past surgeries" required ></input>
+                                    <!--<select>
+                                     <option>select</option>
+                                     <option>Heart surgery</option>
+                                     <option>Nose surgery</option>
+                                     <option>kidney surgery</option>
+                                     <option>Eye surgery</option>
+                                     <option>skin surgery</option>
+                                     <option>Leg surgery</option>
+                                     <option>General surgery</option>
+                                     <option>Neuro surgery</option>
+                                     <option>Plastic surgery</option>-->
+
+
+
+                                    </select>
+                                    
+                                    <br>
+                                    </div>
+                                </div>
+                                        
+                                
+                      
+                            <div class="labelel">
+                                <div>
+                                    <label for="Blood pressure">Blood pressure</label>
+                                </div>
+                                <div>
+                                    <input type="text" class="inputel" id="Blood pressure"placeholder="Enter Blood pressure"  maxlength="3" required ></input>
+                                    
+                                    <br>
+                                </div>
+                                
+                            </div>
+
+                            <div class="labelel">
+                                <div>
+                                    <label for="Diabetes">Diabetes</label>
+                                </div>
+                                <div>
+                                    <input type="text" class="inputel" id="diabetes"placeholder="Enter diabetes percentage"  maxlength="3" required></input>
+                                    <br>
+                                </div>
+                                
+                            </div>   
+
+
+                            <div class="labelel">
+                                <div>
+                                <label for="Upload medical history">Upload medical history</label>
+                                </div>
+                                <div>
+                                <input type="file" class="inputel" id="Medicalhistory"placeholder="Enter your Medical history"required></input>
+                              
+                                
+                                <br>
+                                </div>
+                            </div>
+
+                        </div> 
+                            <div class="btnsel">
+                                <button class="backel" type="submit"><a href="family.html">Back</a></button>
+                                <button class="saveel" type="submit"><a href="login.html">Submit</a></button>
+                            </div>
+
+                        </div> 
+                        
+                        
+                    </form>
+                 </body>
+        </html>
+
+
+
+                    </div> 
+                </div> 
+                
+                
+
+            </div>
+    </body>
+</html>

@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+    integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+    crossorigin="anonymous"></script>
+
+  <style>
+    .navbtns {
+
+      font-weight: bold;
+      font-size: 20px;
+    }
+
+    .detailsPage {
+      text-align: center;
+      padding: 75px
+    }
+
+    .inputel {
+      min-width: 50px;
+      width: 200px;
+      text-align: center;
+
+    }
+
+    .labelel {
+      margin: 20px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    .bgimg {
+      background-size: cover;
+      background-color: lightblue;
+    }
+
+    .borderboxel {
+
+      background-color: white;
+      max-width: 500px;
+      width: 65%;
+      border-radius: 20px;
+      padding: 20px;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: right;
+
+    }
+
+    .title {
+      font-family: sans-serif;
+      color: orangered;
+      font-size: 30px;
+    }
+
+    .submitel {
+      height: 45px;
+      width: 120px;
+      border-radius: 15px;
+      font-size: 18px;
+      font-weight: bold;
+      background-color: green;
+      color: white;
+      text-align: center;
+    }
+
+    .logo {
+      height: 55px;
+      width: 42px
+    }
+
+    .ex1 {
+      width: 100%;
+    }
+
+    .dropbtn {
+      background-color: #3498DB;
+      color: white;
+      padding: 16px;
+      font-size: 16px;
+      border: none;
+      cursor: pointer;
+    }
+
+    .dropbtn:hover,
+    .dropbtn:focus {
+      background-color: #2980B9;
+    }
+
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f1f1f1;
+      min-width: 160px;
+      overflow: auto;
+      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+    }
+
+    .dropdown-content a {
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+    }
+
+    .dropdown a:hover {
+      background-color: #ddd;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    .options {
+      list-style: none;
+      padding: 0;
+    }
+
+    .options li {
+      margin-bottom: 5px;
+    }
+
+    .expand-button {
+      cursor: pointer;
+      color: blue;
+
+    }
+
+    .show {
+      display: block;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+
+    label {
+      width: 200px;
+      text-align: left;
+      margin-right: 20px;
+    
+    }
+    .details-text {
+  white-space: nowrap; 
+}
+.saveel {
+                height: 45px;
+                width: 160px;
+                border-radius: 15px;
+                font-size: 18px;
+                font-weight: bold;
+                background-color: green;
+                color: white;
+                text-align: center;
+            }
+ 
+            .backel{
+                height: 45px;
+                width: 120px;
+                border-radius: 15px;
+                font-size: 18px;
+                font-weight: bold;
+                background-color:orange;
+                color: white;
+                text-align: center;
+ 
+            }
+ 
+           
+ 
+            .btnsel {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+            }
+    
+  </style>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <a class="navbar-brand" href=""><img
+        src="https://cosglobal.in/wp-content/uploads/2023/11/WhatsApp-Image-2023-11-22-at-18.18.56.jpeg"
+        class="logo "></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+      aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+   
+  </nav>
+
+  <div class="bgimg detailsPage d-flex flex-row justify-content-center">
+    <div class="borderboxel  d-flex flex-row justify-content-center">
+      <div class="ex1 ">
+        <h1 class="title">FAMILY INFORMATION</h1>
+        <div class="d-flex flex-column flex-direction:column justify-content:center">
+
+
+         
+          <div class="expand-button">
+            <button> <label for="Father name" class="details-text" onclick="toggleFamilyDetails()">Father details</label></button>
+          </div>
+          
+
+          <div id="familyDetails" class="hidden">
+        
+            <ul class="options">
+              <br>
+              <label for="fathername">fatherName:</label>
+              <input type="text" id="fathername" name="username" required>
+              <br>
+              <label for="fatherage">Age:</label>
+              <input type="digit" id="fatheage" maxlength="3" name="username" required>
+              <br>
+
+              <label for="fatheroccupation">Occupation:</label>
+              <input type="text" id="fatheroccupation" name="username" required>
+              <br>
+
+              <label for="medicalhistory">Upload medical history</label>
+              <input type="file" class="inputel" id="fathermedicalhistory" placeholder="Enter your Medical history"
+                required></input>
+              <br>
+
+
+             
+            </ul>
+          </div><br>
+
+
+     
+          <div class="expand-button">
+            <button> <label for="mothername" class="details-text" onclick="toggleMotherDetails()">Mother Details</label></button>
+          </div>
+
+          <div id="MotherDetails" class="hidden">
+         
+
+            <ul class="options">
+              <br>
+              <label for="mothername">mother Name:</label>
+              <input type="text" id="mothername" name="username" required>
+              <br>
+              <label for="motherage">Age:</label>
+              <input type="text" id="motherage" maxlength="3" name="username" required>
+              <br>
+
+              <label for="motheroccupation">Occupation:</label>
+              <input type="text" id="motheroccupation" name="username" required>
+              <br>
+              <label for="mothermedicalhistory">Upload medical history</label>
+              <input type="file" class="inputel" id="mothermedicalhistory" placeholder="Enter your Medical history"
+                required></input>
+              <br>
+
+
+            </ul>
+          </div><br>
+
+
+         
+          <div class="expand-button">
+            <button> <label for="" class="details-text" onclick="toggleSpouseDetails()">Spouse Details</label></button>
+          </div>
+
+          <div id="SpouseDetails"   class="hidden" style="display: none;">
+          
+
+            <ul class="options">
+              <br>
+              <label for="spousename">Name:</label>
+              <input type="text" id="spousename" maxlength="3" name="username" required>
+              <br>
+              <label for="spouseage">Age:</label>
+              <input type="text" id="spouseage" name="username" required>
+              <br>
+
+              <label for="spouseoccupation">Occupation:</label>
+              <input type="text" id="spouseoccupation" name="username" required>
+              <br>
+
+              <label for="spoudemedicalhistory">Upload medical history</label>
+              <input type="file" class="inputel" id="spoudemedicalhistory" placeholder="Enter your Medical history"
+                required></input>
+              <br>
+
+
+              
+            </ul>
+          </div><br>
+
+
+
+        
+          <div class="expand-button">
+            <button> <label for="Nominee1 name" class="details-text" onclick="toggleNominee1Details()">Nomine1 Details</label></button>
+          </div>
+
+          <div id="Nominee1Details" class="hidden">
+          
+            <ul class="options">
+              <br>
+              <label for="username">Name:</label>
+              <input type="text" id="username" name="username" required>
+              <br>
+              <label for="username">Age:</label>
+              <input type="text" id="username" maxlength="3" name="username" required>
+              <br>
+
+              <label for="username">Occupation:</label>
+              <input type="text" id="username" name="username" required>
+              <br>
+              <label for="Upload medical history">Upload medical history</label>
+              <input type="file" class="inputel" id="Medicalhistory" placeholder="Enter your Medical history"
+                required></input>
+              <br>
+
+        
+            </ul>
+          </div><br>
+
+    
+          <div class="expand-button">
+            <button><label for="Nominee2 name" class="details-text" onclick="toggleNominee2Details()">Nomine2 Details</label></button>
+          </div>
+
+          <div id="Nominee2Details" class="hidden">
+       
+
+            <ul class="options">
+              <br>
+              <label for="username">Name:</label>
+              <input type="text" id="username" name="username" required>
+              <br>
+              <label for="username">Age:</label>
+              <input type="text" id="username" maxlength="3" name="username" required>
+              <br>
+
+              <label for="username">Occupation:</label>
+              <input type="text" id="username" name="username" required>
+              <br>
+              <div class="labelel">
+                <div>
+                  <label for="Upload medical history">Upload medical history</label>
+                </div>
+                <div>
+                  <input type="file" class="inputel" id="Medicalhistory" placeholder="Enter your Medical history"
+                    required></input>
+
+
+                  <br>
+                </div>
+              </div>
+
+             
+            </ul>
+          </div><br>
+
+          <script>
+            function toggleFamilyDetails() {
+              var details = document.getElementById("familyDetails");
+              if (details.classList.contains("hidden")) {
+                details.classList.remove("hidden");
+              } else {
+                details.classList.add("hidden");
+              }
+            }
+            function toggleMotherDetails() {
+              var details = document.getElementById("MotherDetails");
+              if (details.classList.contains("hidden")) {
+                details.classList.remove("hidden");
+              } else {
+                details.classList.add("hidden");
+              }
+            }
+            function toggleSpouseDetails() {
+              var details = document.getElementById("SpouseDetails");
+              if (details.classList.contains("hidden")) {
+                details.classList.remove("hidden");
+              } else {
+                details.classList.add("hidden");
+              }
+            }
+            function toggleNominee1Details() {
+              var details = document.getElementById("Nominee1Details");
+              if (details.classList.contains("hidden")) {
+                details.classList.remove("hidden");
+              } else {
+                details.classList.add("hidden");
+              }
+            }
+
+            function toggleNominee2Details() {
+              var details = document.getElementById("Nominee2Details");
+              if (details.classList.contains("hidden")) {
+                details.classList.remove("hidden");
+              } else {
+                details.classList.add("hidden");
+              }
+            }
+          </script>
+
+
+<div class="labelel">
+  <div>
+    <label for="Maritalstatus">Maritalstatus</label>
+    
+  </div>
+  <div>
+      <select id="Maritalstatus" onchange="showHideSpouseDetails()">
+        <option value="choose" id="choose">Choose</option>
+          <option value="Single" id="Singlestatus">Single</option>
+          <option value="Married" id="SpouseDetails">Married</option>
+      </select>
+      
+      </div>
+    <br>
+  </div>
+
+</div>
+
+
+
+<div class="labelel" id="Noofchildren" style="display: none;">
+  <div>
+
+   
+   
+    
+  </div>
+  <script>
+    function displayChildrenInfo() {
+      var numOfChildren = document.getElementById('numOfChildren').value;
+      var childrenInfoDiv = document.getElementById('childrenInfo');
+      childrenInfoDiv.innerHTML = ''; 
+      for (var i = 1; i <= numOfChildren; i++) {
+        var childDiv = document.createElement('div');
+        childDiv.innerHTML = '<h3>Child ' + i + ' Information:</h3>' +
+        '<label for="childName' + i + '">Name:</label>' +
+          '<input type="text" id="childName' + i + '" name="childname' + i + '" required>' +
+          '<label for="childAge' + i + '">Age:</label>' +
+          '<input type="text" maxlength="3" id="childAge' + i + '" name="childAge' + i + '" required>' +
+          '<label for="childGrade' + i + '">Grade:</label>' +
+          '<input type="text" id="childGrade' + i + '" name="childGrade' + i + '" required>' +
+          '<label for="childGender' + i + '">Gender:</label>' +
+          '<input type="text" id="childGender' + i + '" name="childGender' + i + '" required><br><br>';
+        
+        childrenInfoDiv.appendChild(childDiv);
+      }
+    }
+  </script>
+</head>
+<body>
+<div>
+  
+  <label for="numOfChildren">Select number of children:</label>
+  <select id="numOfChildren" onchange="displayChildrenInfo()">
+    <option value="0">choose</option>
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+    
+  </select>
+</div>
+  <div id="childrenInfo">
+   
+  </div>
+</div>
+
+          <div class="btnsel">
+            <button class="backel" type="submit"> <a href="proffisional.html" >Back </a> </button>
+            <button class="saveel" type="submit"><a href="Medical Details 3.html">Save & Next </a> </button>
+        </div>
+
+ </div>
+      </div>
+
+
+
+    </div>
+    <script>
+      function showHideSpouseDetails() {
+          var Maritalstatus = document.getElementById("Maritalstatus");
+          var SpouseDetails = document.getElementById("SpouseDetails");
+          var Noofchildren= document.getElementById("Noofchildren");
+
+          if (Maritalstatus.value === "Married") {
+            SpouseDetails.style.display="block";
+              Noofchildren.style.display="block";
+          } else {
+            SpouseDetails.style.display = "none";
+              Noofchildren.style.display="none";
+          }
+      }
+      showHideSpouseDetails();
+
+  </script>
+
+</body>
+
+</html>
