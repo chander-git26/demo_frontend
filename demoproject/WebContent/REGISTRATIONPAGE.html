@@ -413,8 +413,7 @@ body{
 
                             </div>     
  
-                         
-
+      
 
                     <p><br/>
 
@@ -425,14 +424,12 @@ body{
  
                       <span class="style33 style7 style9">
 
-                   <button><a href="signin.html">Signup</a> </button> 
-
-                  </span>
+                   <button><a href="signin.html" onclick="successfulalert()">Signup</a> </button> 
+            </span>
 
                     </p>
 
                     <button><a href="signin.html">Back</a></button>
-
 
             </font>
 
@@ -445,6 +442,29 @@ body{
             </div>
 
             </div>
+
+               <script>
+              function fetchData() {
+                    const apiUrl = 'http://localhost:8280/user/createUser'; 
+                    fetch(apiUrl) 
+                        .then(response => { 
+                            if (!response.ok) { 
+                                throw new Error('Network response was not ok'); 
+                            } 
+                            return response.json();
+                        })
+                  
+                  .catch(error => {
+                      console.error('Error fetching data:', Error);
+                  });
+               }
+               window.onload = fetchData
+
+              function successfulalert() {
+                alert("Account successfully created!");
+              }
+                    
+            </script>
 
          </body>
 
