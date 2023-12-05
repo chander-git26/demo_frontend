@@ -13,11 +13,18 @@
         background-repeat: no-repeat;
         background-size: cover;
       }
-    </style>
+      label {
+      width: 1870px;
+      text-align: right;
+      margin-right: 40px;
+    }
+  
+</style>
   </head>
 
   <body class="p-3 m-0 border-0 bd-example m-0 border-0">
 
+  
     <div>
    
     <button type="button" class="btn btn-warning"><a href="index.html">Home</a></button>
@@ -39,19 +46,49 @@
     </div>
 </left>
 
-<div id="one" style="float:right;">
-  <center><i class="fa-regular fa-user fa-2xl"></i></center><br><br>
 
-<h5 >Welcome, <span id="getusername"></span></h5><br><br>
+<i class="fa-regular fa-user fa-2xl" id="profileIcon" style="float:right;"></i><br><br>
 
+<form id="loginForm">
+  <div id="usernameField">
+  <label>id:<input type="text" name="username"></label>
+  </div>
+  <br>
+ 
+  <div id="passwordField">
+    <label>Name:<input type="password" name="password"></label>
+  </div>
+  <br>
+  <right>
+  
+  </right>
+  
 </div>
+ 
+</form>
+
+<script>
+ const profileIcon = document.getElementById('profileIcon');
+  const usernameField = document.getElementById('usernameField');
+  const passwordField = document.getElementById('passwordField');
+profileIcon.addEventListener('click', function() {
+    if (usernameField.style.display === 'none') {
+      usernameField.style.display = 'block';
+      passwordField.style.display = 'block';
+    } else {
+      usernameField.style.display = 'none';
+      passwordField.style.display = 'none';
+    }
+  });
+</script>
+
 
 <br><br><br><br>
 <h4>User Info</h4>
 <br>
       <div class="btn-group" role="group" aria-label="Basic example">
         <button type="button" class="btn btn-primary"><a href="personaldata.html"><font color="BLACK">perosnal</font></a></button>
-        <button type="button" class="btn btn-primary"><a href="proffisionaldata.html"><font color="BLACK">professional</font></a></button>
+        <button type="button" class="btn btn-primary"><a href="proffisionaldata.html"><font color="BLACK">proffisional</font></a></button>
         <button type="button" class="btn btn-primary"><a href="familydata.html"><font color="BLACK">family</font></a></button>
         <button type="button" class="btn btn-primary"><a href="medicaldata.html"><font color="BLACK">medical</font></a></button>
       
@@ -63,32 +100,21 @@
                  
     
     <!-- End Example Code -->
-    <script>
-    
-      function fetchData() {
-       const apiUrl = ''; 
-      fetch(apiUrl) 
-          .then(response => { 
-              if (!response.ok) { 
-                  throw new Error('Network response was not ok'); 
-              } 
-              return response.json();
-          })
-          .then(data => {
-              
-              document.getElementById('getusername').textContent = data.username; 
-              
-              
-              
-          })
-          .catch(error => { 
-              console.error('Error fetching data:', error); 
-          }); 
-       }
-       window.onload = fetchData;
-  
-  
-      </script>
+    <div class="col-8">
+    <div class="card" style="width: 18rem; ">
+      <img class="card-img-top" src="https://cdn4.vectorstock.com/i/1000x1000/20/38/hand-making-small-heart-sign-vector-28932038.jpg" alt="Card image cap">
+      <div class="card-body">
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      </div>
+    </div>
+
+    <div class="card" style="width: 18rem;">
+      <img class="card-img-top" src="..." alt="Card image cap">
+      <div class="card-body">
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      </div>
+    </div>
+  </div>
   </body>
 </html>
 
