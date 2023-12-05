@@ -72,7 +72,7 @@
     border: 1px solid black;
     display: flex;
     flex-direction: column;
-    
+    text-align: center;
     flex-shrink: 0;
 }
 
@@ -155,8 +155,10 @@
 }
 .btnel{
   background-color: whitesmoke;
-  
-  height: 60px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  height: 50px;
 }
 
 .userlogo{
@@ -296,7 +298,7 @@
         <h5 class="text-center pt-3 pb-5" style="color: #ffffff;">Name: <span id="getusername"></span></h5>
      
             
-            <button type="button" class="btnel" ><a href="personaldata.html">perosnal</a></button><br/>
+            <button type="button" class="btnel " ><a href="personaldata.html">perosnal</a></button><br/>
             
             <button type="button" class="btnel"><a href="proffisionaldata.html">professional</a></button><br/>
             <button type="button" class="btnel"><a href="familydata.html">family</a></button><br/>
@@ -412,15 +414,17 @@
   
 
 <script>
+    var selectBox = document.getElementById("selectIncomeOption");
+    function redirectOnChange() {
+      
+      var selectedValue = selectBox.options[selectBox.selectedIndex].value;
+    
+      if (selectedValue !== "choose") {
+        window.location.href = selectedValue + ".html";
+      }
+    }
 
-            function redirectOnChange() {
-              var selectBox = document.getElementById("selectIncomeOption");
-              var selectedValue = selectBox.options[selectBox.selectedIndex].value;
-           
-              if (selectedValue !== "choose") {
-                window.location.href = selectedValue + ".html";
-              }
-            }
+    
 
 
 
@@ -436,6 +440,7 @@ profileIcon.addEventListener('click', function() {
       passwordField.style.display = 'none';
     }
   });
+
 </script>
 
 
