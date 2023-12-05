@@ -8,6 +8,10 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous"/>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
 
     <style>
       body{
@@ -23,8 +27,8 @@
     .logoright{
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
-        margin-top: 25px;
+        
+        
       }
 
 .category {
@@ -43,15 +47,185 @@
     width: 200px;
     margin-right: 25px;
 }
+.logo {
+        height: 55px;
+        width:42px
+               
+      }
+      .dropdownoptions{
+        background-color: grey;
+        border-radius: 5px;
+      }
+      .navbg{
+        background-color: white;
+        width: 100%;
+      }
+
+      
+.cover {
+    display: flex;
+}
+
+.sidebar {
+    width: 270px;
+    background-color: #002159;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    
+    flex-shrink: 0;
+}
+
+.head {
+    font-size: 40px;
+    font-family: Roboto;
+    color: #ffffff;
+    font-weight: 500;
+    text-align: center;
+}
+
+.sidebar-item {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+}
+
+.icon {
+    font-size: 19px;
+    color: white;
+    padding: 19px;
+}
+
+.icon-name {
+    font-family: Roboto;
+    font-size: 19px;
+    color: #ffffff;
+}
+
+.selected {
+    background-color: #296eff;
+}
+
+.profile-pic {
+    height: 50px;
+    width: 50px;
+    border-radius: 25px;
+    margin-right: 15px;
+}
+
+.favorites {
+    padding: 20px;
+    overflow-y: auto;
+    flex-grow: 1;
+}
+
+.favorites-head {
+    color: #002159;
+    font-size: 45px;
+    font-weight: 600;
+    text-align: left;
+}
+
+.category {
+    font-size: 30px;
+    font-family: Roboto;
+    color: #002159;
+    font-weight: bold;
+}
+
+.wrap {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+.option-container {
+    display: flex;
+    align-items: center;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    padding-left: 12px;
+    flex-grow: 1;
+}
+
+.main-img {
+    height: 200px;
+    width: 200px;
+    margin-right: 25px;
+}
+.btnel{
+  background-color: whitesmoke;
+  
+  height: 60px;
+}
+
+.userlogo{
+  height: 45px;
+  width: 55px;
+  padding: 20px;
+}
+
 
   
 </style>
   </head>
 
-  <body class="p-3 m-0 border-0 bd-example m-0 border-0">
+  <body >
+
+    <nav class="navbar navbar-expand-lg navbar-light navbg">
+      <a class="navbar-brand" href=""><img src="https://cosglobal.in/wp-content/uploads/2023/11/WhatsApp-Image-2023-11-22-at-18.18.56.jpeg" class="logo "></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse d-flex flex-row justify-content-center" id="navbarNavAltMarkup">
+        <div class="navbar-nav d-flex flex-direction:row justify-content-center">
+          <button type="button" class="btn btn-warning mr-5"><a href="index.html" style="color: white;">Home</a></button>
+         
+          <button type="button" class="btn btn-info mr-5"><a href="profie.html" style="color: white;"> Complete profile</a></button>
+
+
+          <select class="dropdownoptions " style="color: white;" id="selectIncomeOption" onchange="redirectOnChange()">
+            <option value="choose">Choose insurance</option>
+            <option value="Healthinsurance">Health insurance</option>
+            <option value="Lifeinsurance1">life insurance</option>
+            <option value="Automobile">Auto mobile insurance</option>
+            <option value="retirementplans">Retirement plan</option>
+            <option value="child">Childern Investement</option>
+            
+          </select>
+           
+          
+          <!--<button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            choose insurance
+          </button>
+          <ul class="dropdown-menu" style="">
+            <li><a class="dropdown-item" href="Healthinsurance.html">Health insurance</a></li>
+            <li><a class="dropdown-item" href="Lifeinsurance1.html">life insurance</a></li>
+            <li><a class="dropdown-item" href="Automobile.html">Auto mobile insurance</a></li>
+            <li><a class="dropdown-item" href="retirementplans.html">Retirement plan</a></li>
+            <li><a class="dropdown-item" href="child.html">Childern Investement</a></li>
+          </ul>
+          
+            <select id="selectIncomeOption">
+                                            <option>select</option>
+                                            <option value="employee">Employement</option>
+                                            <option value="business">Business</option>
+                                            
+                                        </select>
+            
+            
+            
+            
+            <a class="nav-item nav-link active navbtns" href="#">Home </span></a>
+          <a class="nav-item nav-link navbtns" href="#">About us</a>
+          <a class="nav-item nav-link navbtns" href="#">Gallery</a>
+          <a class="nav-item nav-link navbtns" href="#">Contact us</a>-->
+        </div>
+      </div>
+    </nav>
 
   
-    <div>
+    <!--<div>
    
     <button type="button" class="btn btn-warning"><a href="index.html">Home</a></button>
     <button type="button" class="btn btn-info"><a href="profie.html"> Complete profile</a></button>
@@ -69,124 +243,164 @@
         <li><a class="dropdown-item" href="child.html">Childern Investement</a></li>
       </ul>
     </left>
+    </div>-->
+    
+
+
+    <!--<div class="sidebar">
+            <div>
+                <h1 class="head">Dashboard</h1>
+                <div class="options-container">
+                    <div class="sidebar-item">
+                        
+                        <p class="icon-name">Home</p>
+                    </div>
+                    <div class="sidebar-item">
+                        
+                        <p class="icon-name">Downloads</p>
+                    </div>
+                    <div class="sidebar-item selected">
+                        
+                        <p class="icon-name">Favorites</p>
+                    </div>
+                    <div class="sidebar-item">
+                        
+                        <p class="icon-name">Settings</p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="sidebar-item">
+                <img src="https://assets.ccbp.in/frontend/intermediate-rwd/user-profile-img.png" class="profile-pic" />
+                <p class="icon-name">Sarah Meyers</p>
+            </div>
+        </div>-->
+
+
+
+
+          
+  
+
+<div class="cover">
+
+  
+
+
+    <div class="logoright sidebar">
+        <h1 class="head ">User info<i class="userlogo text-center pt-3 fa-regular fa-user fa-1xl" style="color: #ffffff;"></i><br><br></h1>
+        
+        
+   
+        <h5 class="text-center pt-3" style="color: #ffffff;">Id: <span id="getuserid"></span></h5>
+        <h5 class="text-center pt-3 pb-5" style="color: #ffffff;">Name: <span id="getusername"></span></h5>
+     
+            
+            <button type="button" class="btnel" ><a href="personaldata.html">perosnal</a></button><br/>
+            
+            <button type="button" class="btnel"><a href="proffisionaldata.html">professional</a></button><br/>
+            <button type="button" class="btnel"><a href="familydata.html">family</a></button><br/>
+            <button type="button" class="btnel"><a href="medicaldata.html">medical</a></button><br/>
+
+            
+        
+
     </div>
 
+    <div class="col-12">
 
 
-<div class="logoright">
-  <div>
-        
-    <h4>User Info</h4>
-    <br>
-          <div class="btn-group" role="group" aria-label="Basic example">
-            <button type="button" class="btn btn-primary"><a href="personaldata.html"><font color="BLACK">perosnal</font></a></button>
-            <button type="button" class="btn btn-primary"><a href="proffisionaldata.html"><font color="BLACK">professional</font></a></button>
-            <button type="button" class="btn btn-primary"><a href="familydata.html"><font color="BLACK">family</font></a></button>
-            <button type="button" class="btn btn-primary"><a href="medicaldata.html"><font color="BLACK">medical</font></a></button>
+  
+      <div class="wrap">
           
+              
+    
+    
+    
+    
+    
+              <div class="card-deck col-3 " style="padding:20px;margin: 20px">
+                <div class="card">
+                  <img class="" src="https://media.istockphoto.com/id/1005014108/photo/individual-health-insurance-policy-and-stethoscope.jpg?s=2048x2048&w=is&k=20&c=-W4hPT_yOMS5LuLiMsi_HjGfNrmLugQ-0a-Fv-JljC4=" alt="Card image cap">
+                  <div class="card-body">
+                    <h5 class="card-title">Health Insurance</h5>
+                    <p class="card-text">It is an assurance which provides immediate financial help in case when any medical emergency arises.
+                       It is a contract between a policyholder and the insurance company which covers medical expenses that might occur due to illness, injury or accident.</p>
+                  </div>
+                  
+                </div>
+              </div>
+            
+    
+    
+            <div class="card-deck col-3 " style="padding:20px;margin: 20px">
+              <div class="card">
+                <img class="" src="https://media.istockphoto.com/id/475702616/photo/life-insurance-paper-family.jpg?s=2048x2048&w=is&k=20&c=_qfMXgu34S-LCNEMC8Hu9nLlrRx0sU8l0vqvbJMGTAk=" alt="Card image cap">
+                <div class="card-body">
+                  <h5 class="card-title">Life Insurance</h5>
+                  <p class="card-text">It provides contract between an individual and an insurance provider, 
+                    where the company promises to pay a specified amount of money to the family or beneficiary of the individual, in return for regular payments over a period of time.</p>
+                </div>
+                
+              </div>
+            </div>
+          
+    
+    
+          <div class="card-deck col-3 " style="padding:20px;margin: 20px">
+            <div class="card">
+              <img class="" src="https://media.istockphoto.com/id/856956280/photo/car-insurance-concept.jpg?s=2048x2048&w=is&k=20&c=h8C6XYHFza3jdlLOATe4gP7TdLbWnVIshMvMyMmiH4I=" alt="Card image cap">
+              <div class="card-body">
+                <h5 class="card-title">Auto Mobile Insurance</h5>
+                <p class="card-text">It covers the loss of or damage caused to the automobile or its parts due to natural and man-made calamities.
+                   It provides accident cover for individual owners of the vehicle while driving and also for passengers and third party legal liability.</p>
+              </div>
+              
+            </div>
+            </div>
+    
+    
+            <div class="card-deck col-3 " style="padding:20px;margin: 20px">
+              <div class="card">
+                <img class="" src="https://media.istockphoto.com/id/622064028/photo/close-up-coins-in-glass-jar-with-alarm-clock.jpg?s=2048x2048&w=is&k=20&c=APa1lVDeWQxyevvzyHDKhb0DSgGzLJvdG2uCp5TeOWk=" alt="Card image cap">
+                <div class="card-body">
+                  <h5 class="card-title">Retirement Plans</h5>
+                  <p class="card-text"> We provide financial strategies of saving, investments to sustain oneself during retirement. 
+                    Many popular investment vehicles, such as individual retirement accounts and 401(k)s, allow retirement savers to grow their money with certain tax advantages.
+                  </p>
+                </div>
+                </div>
+              </div>
+    
+    
+              <div class="card-deck col-3 " style="padding:20px;margin: 20px">
+                <div class="card">
+                  <img class="" src="https://thumbs.dreamstime.com/b/family-life-insurance-concept-business-man-hand-95620412.jpg" alt="Card image cap">
+                  <div class="card-body">
+                    <h5 class="card-title">Children Investment</h5>
+                    <p class="card-text">Child insurance plans protect your child financially in case of any unfortunate event. 
+                      These plans ensure that your child has a financial safety net in your absence. 
+                      They ensure that your child is financially prepared to meet their goals, no matter what!</p>
+                  </div>
+                  
+                </div>
+          
+      
+    
+        </div>
+    
+    
+    
+    
           </div>
-
-          
-  </div>
-
-  <div id="one" class=" " >
-    <i class="fa-regular fa-user fa-2xl"></i><br><br>
-   
-   <h5 >Id: <span id="getuserid"></span></h5>
-   <h5 >Name: <span id="getusername"></span></h5>
-
-   
-   </div>
-
+      </div>
+    
 </div>
 
-<div class="col-12">
-
-
+  <!--this one-->
   
-  <div class="wrap">
-      
-          
+</div>
 
-
-
-
-
-          <div class="card-deck col-3 " style="padding:20px;margin: 20px">
-            <div class="card">
-              <img class="" src="https://media.istockphoto.com/id/1005014108/photo/individual-health-insurance-policy-and-stethoscope.jpg?s=2048x2048&w=is&k=20&c=-W4hPT_yOMS5LuLiMsi_HjGfNrmLugQ-0a-Fv-JljC4=" alt="Card image cap">
-              <div class="card-body">
-                <h5 class="card-title">Health Insurance</h5>
-                <p class="card-text">It is an assurance which provides immediate financial help in case when any medical emergency arises.
-                   It is a contract between a policyholder and the insurance company which covers medical expenses that might occur due to illness, injury or accident.</p>
-              </div>
-              
-            </div>
-          </div>
-        
-
-
-        <div class="card-deck col-3 " style="padding:20px;margin: 20px">
-          <div class="card">
-            <img class="" src="https://media.istockphoto.com/id/475702616/photo/life-insurance-paper-family.jpg?s=2048x2048&w=is&k=20&c=_qfMXgu34S-LCNEMC8Hu9nLlrRx0sU8l0vqvbJMGTAk=" alt="Card image cap">
-            <div class="card-body">
-              <h5 class="card-title">Life Insurance</h5>
-              <p class="card-text">It provides contract between an individual and an insurance provider, 
-                where the company promises to pay a specified amount of money to the family or beneficiary of the individual, in return for regular payments over a period of time.</p>
-            </div>
-            
-          </div>
-        </div>
-      
-
-
-      <div class="card-deck col-3 " style="padding:20px;margin: 20px">
-        <div class="card">
-          <img class="" src="https://media.istockphoto.com/id/856956280/photo/car-insurance-concept.jpg?s=2048x2048&w=is&k=20&c=h8C6XYHFza3jdlLOATe4gP7TdLbWnVIshMvMyMmiH4I=" alt="Card image cap">
-          <div class="card-body">
-            <h5 class="card-title">Auto Mobile Insurance</h5>
-            <p class="card-text">It covers the loss of or damage caused to the automobile or its parts due to natural and man-made calamities.
-               It provides accident cover for individual owners of the vehicle while driving and also for passengers and third party legal liability.</p>
-          </div>
-          
-        </div>
-        </div>
-
-
-        <div class="card-deck col-3 " style="padding:20px;margin: 20px">
-          <div class="card">
-            <img class="" src="https://media.istockphoto.com/id/622064028/photo/close-up-coins-in-glass-jar-with-alarm-clock.jpg?s=2048x2048&w=is&k=20&c=APa1lVDeWQxyevvzyHDKhb0DSgGzLJvdG2uCp5TeOWk=" alt="Card image cap">
-            <div class="card-body">
-              <h5 class="card-title">Retirement Plans</h5>
-              <p class="card-text"> We provide financial strategies of saving, investments to sustain oneself during retirement. 
-                Many popular investment vehicles, such as individual retirement accounts and 401(k)s, allow retirement savers to grow their money with certain tax advantages.
-              </p>
-            </div>
-            </div>
-          </div>
-
-
-          <div class="card-deck col-3 " style="padding:20px;margin: 20px">
-            <div class="card">
-              <img class="" src="https://thumbs.dreamstime.com/b/family-life-insurance-concept-business-man-hand-95620412.jpg" alt="Card image cap">
-              <div class="card-body">
-                <h5 class="card-title">Children Investment</h5>
-                <p class="card-text">Child insurance plans protect your child financially in case of any unfortunate event. 
-                  These plans ensure that your child has a financial safety net in your absence. 
-                  They ensure that your child is financially prepared to meet their goals, no matter what!</p>
-              </div>
-              
-            </div>
-      
-  
-
-    </div>
-
-
-
-
-      </div>
-  </div>
             
             
  <!--
@@ -198,6 +412,18 @@
   
 
 <script>
+
+            function redirectOnChange() {
+              var selectBox = document.getElementById("selectIncomeOption");
+              var selectedValue = selectBox.options[selectBox.selectedIndex].value;
+           
+              if (selectedValue !== "choose") {
+                window.location.href = selectedValue + ".html";
+              }
+            }
+
+
+
  const profileIcon = document.getElementById('profileIcon');
   const usernameField = document.getElementById('usernameField');
   const passwordField = document.getElementById('passwordField');
