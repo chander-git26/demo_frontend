@@ -70,7 +70,7 @@
             <tbody>
               <tr class="table-active">
                 <th scope="row">Adhar number</th>
-                <td ><span id="getadhar"></span></td>
+                <td ><span id="getaadhaarNumber"></span></td>
                 
               </tr>
 
@@ -137,7 +137,7 @@
                       document.getElementById('getmaritalstatus').textContent = data.maritalstatus; 
                       document.getElementById('getbloodgroup').textContent = data.bloodgroup; 
                       document.getElementById('getheight').textContent = data.height; 
-                      document.getElementById('getweightdetails').textContent = data.weightdetails; 
+                      document.getElementById('getweightDetails').textContent = data.weightdetails; 
                       document.getElementById('getsmoking').textContent = data.smoking; 
                       document.getElementById('getalchohol').textContent = data.alchohol; 
                       
@@ -158,3 +158,31 @@
 
  
 
+<!--<script>
+
+        function fetchData() {
+              const apiUrl = 'https://jsonplaceholder.typicode.com/users/1'; 
+              fetch(apiUrl) 
+                  .then(response => { 
+                      if (!response.ok) { 
+                          throw new Error('Network response was not ok'); 
+                      } 
+                      return response.json();
+                  })
+                  .then(data => {
+
+                      document.getElementById('name').textContent = data.name; 
+                      document.getElementById('username').textContent = data.username; 
+                      document.getElementById('email').textContent = data.email; 
+                      document.getElementById('phone').textContent = data.phone; 
+                      document.getElementById('website').textContent = data.website; 
+                         
+                      
+                  })
+                  .catch(error => { 
+                      console.error('Error fetching data:', error); 
+                  }); 
+              }
+              window.onload = fetchData;
+      </script>
+      -->
