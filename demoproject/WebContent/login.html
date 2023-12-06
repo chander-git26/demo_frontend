@@ -74,6 +74,7 @@
     flex-direction: column;
     text-align: center;
     flex-shrink: 0;
+    padding: 10px;
 }
 
 .head {
@@ -158,13 +159,36 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
+  align-items: center;
   height: 50px;
+  border-radius: 12px;
+}
+
+.btntext {
+
+  color: #002159;
+  font-weight: bold;
+  font-size:20px ;
 }
 
 .userlogo{
   height: 45px;
   width: 55px;
   padding: 20px;
+}
+
+.logoutbtnel{
+  background-color: slategray;
+  border-radius: 15px;
+  height: 45px;
+  width: 119px;
+  color: white;
+  font-weight: bold;
+}
+.logout{
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
 }
 
 
@@ -181,12 +205,12 @@
       </button>
       <div class="collapse navbar-collapse d-flex flex-row justify-content-center" id="navbarNavAltMarkup">
         <div class="navbar-nav d-flex flex-direction:row justify-content-center">
-          <button type="button" class="btn btn-warning mr-5"><a href="index.html" style="color: white;">Home</a></button>
+          <button type="button" class="btn btn-warning mr-5"><a href="index.html" style="color: white; font-weight: bold;">Home</a></button>
          
-          <button type="button" class="btn btn-info mr-5"><a href="profie.html" style="color: white;"> Complete profile</a></button>
+          <button type="button" class="btn btn-info mr-5"><a href="profie.html" style="color: white; font-weight: bold;"> Complete profile</a></button>
 
 
-          <select class="dropdownoptions " style="color: white;" id="selectIncomeOption" onchange="redirectOnChange()">
+          <select class="dropdownoptions " style="color: white; font-weight: bold;" id="selectIncomeOption" onchange="redirectOnChange()">
             <option value="choose">Choose insurance</option>
             <option value="Healthinsurance">Health insurance</option>
             <option value="Lifeinsurance1">life insurance</option>
@@ -298,13 +322,16 @@
         <h5 class="text-center pt-3 pb-5" style="color: #ffffff;">Name: <span id="getusername"></span></h5>
      
             
-            <button type="button" class="btnel " ><a href="personaldata.html">perosnal</a></button><br/>
+            <button type="button" class="btnel " ><a href="personaldata.html" class="btntext">Perosnal</a></button><br/>
             
-            <button type="button" class="btnel"><a href="proffisionaldata.html">professional</a></button><br/>
-            <button type="button" class="btnel"><a href="familydata.html">family</a></button><br/>
-            <button type="button" class="btnel"><a href="medicaldata.html">medical</a></button><br/>
+            <button type="button" class="btnel"><a href="proffisionaldata.html" class="btntext">Professional</a></button><br/>
+            <button type="button" class="btnel"><a href="familydata.html" class="btntext">Family</a></button><br/>
+            <button type="button" class="btnel"><a href="medicaldata.html" class="btntext">Medical</a></button><br/>
+            <div class="logout">
+              <button type="button" class="logoutbtnel"><a href="signin.html" style="color: #ffffff;">Log Out</a></button><br/>
 
-            
+            </div>
+       
         
 
     </div>
@@ -401,7 +428,7 @@
 
   <!--this one-->
   
-</div>
+
 
             
             
