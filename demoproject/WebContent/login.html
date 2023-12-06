@@ -2,6 +2,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
     <title>Bootstrap Example</title>
@@ -155,7 +156,7 @@
     margin-right: 25px;
 }
 .btnel{
-  background-color: whitesmoke;
+  
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -166,7 +167,7 @@
 
 .btntext {
 
-  color: #002159;
+  color: white;
   font-weight: bold;
   font-size:20px ;
 }
@@ -178,18 +179,27 @@
 }
 
 .logoutbtnel{
-  background-color: slategray;
-  border-radius: 15px;
-  height: 45px;
-  width: 119px;
-  color: white;
-  font-weight: bold;
+  
+
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+  align-items: center;
+  height: 50px;
+  border-radius: 12px;
 }
 .logout{
   display: flex;
   flex-direction: row;
   justify-content: right;
 }
+
+.btnels{
+  height: 40px;
+  width: 125px;
+  background-color: #002159;
+  color: #ffffff;
+  font-weight: bold;}
 
 
   
@@ -205,7 +215,6 @@
       </button>
       <div class="collapse navbar-collapse d-flex flex-row justify-content-center" id="navbarNavAltMarkup">
         <div class="navbar-nav d-flex flex-direction:row justify-content-center">
-          <button type="button" class="btn btn-warning mr-5"><a href="index.html" style="color: white; font-weight: bold;">Home</a></button>
          
           <button type="button" class="btn btn-info mr-5"><a href="profie.html" style="color: white; font-weight: bold;"> Complete profile</a></button>
 
@@ -305,9 +314,6 @@
 
 
 
-          
-  
-
 <div class="cover">
 
   
@@ -322,13 +328,13 @@
         <h5 class="text-center pt-3 pb-5" style="color: #ffffff;">Name: <span id="getusername"></span></h5>
      
             
-            <button type="button" class="btnel " ><a href="personaldata.html" class="btntext">Perosnal</a></button><br/>
+            <button type="button" class="btnel  w3-bar-item w3-button" ><a href="personaldata.html" class="btntext">Perosnal</a></button><br/>
             
-            <button type="button" class="btnel"><a href="proffisionaldata.html" class="btntext">Professional</a></button><br/>
-            <button type="button" class="btnel"><a href="familydata.html" class="btntext">Family</a></button><br/>
-            <button type="button" class="btnel"><a href="medicaldata.html" class="btntext">Medical</a></button><br/>
+            <button type="button" class="btnel  w3-bar-item w3-button"><a href="proffisionaldata.html" class="btntext">Professional</a></button><br/>
+            <button type="button" class="btnel  w3-bar-item w3-button"><a href="familydata.html" class="btntext">Family</a></button><br/>
+            <button type="button" class="btnel  w3-bar-item w3-button"><a href="medicaldata.html" class="btntext">Medical</a></button><br/>
             <div class="logout">
-              <button type="button" class="logoutbtnel"><a href="signin.html" style="color: #ffffff;">Log Out</a></button><br/>
+              <button type="button" class="logoutbtnel w3-bar-item w3-button"><a href="signin.html" style="color: #ffffff;">Log Out</a></button><br/>
 
             </div>
        
@@ -342,11 +348,7 @@
   
       <div class="wrap">
           
-              
-    
-    
-    
-    
+             
     
               <div class="card-deck col-3 " style="padding:20px;margin: 20px">
                 <div class="card">
@@ -355,6 +357,7 @@
                     <h5 class="card-title">Health Insurance</h5>
                     <p class="card-text">It is an assurance which provides immediate financial help in case when any medical emergency arises.
                        It is a contract between a policyholder and the insurance company which covers medical expenses that might occur due to illness, injury or accident.</p>
+                       <button class="btnels">View Plans</button>
                   </div>
                   
                 </div>
@@ -369,7 +372,8 @@
                   <h5 class="card-title">Life Insurance</h5>
                   <p class="card-text">It provides contract between an individual and an insurance provider, 
                     where the company promises to pay a specified amount of money to the family or beneficiary of the individual, in return for regular payments over a period of time.</p>
-                </div>
+                    <button class="btnels">View Plans</button>
+                  </div>
                 
               </div>
             </div>
@@ -383,7 +387,8 @@
                 <h5 class="card-title">Auto Mobile Insurance</h5>
                 <p class="card-text">It covers the loss of or damage caused to the automobile or its parts due to natural and man-made calamities.
                    It provides accident cover for individual owners of the vehicle while driving and also for passengers and third party legal liability.</p>
-              </div>
+                   <button class="btnels">View Plans</button>
+                  </div>
               
             </div>
             </div>
@@ -397,6 +402,7 @@
                   <p class="card-text"> We provide financial strategies of saving, investments to sustain oneself during retirement. 
                     Many popular investment vehicles, such as individual retirement accounts and 401(k)s, allow retirement savers to grow their money with certain tax advantages.
                   </p>
+                  <button class="btnels">View Plans</button>
                 </div>
                 </div>
               </div>
@@ -410,6 +416,7 @@
                     <p class="card-text">Child insurance plans protect your child financially in case of any unfortunate event. 
                       These plans ensure that your child has a financial safety net in your absence. 
                       They ensure that your child is financially prepared to meet their goals, no matter what!</p>
+                      <button class="btnels">View Plans</button>
                   </div>
                   
                 </div>
