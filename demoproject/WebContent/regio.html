@@ -171,7 +171,7 @@ body{
           <label for="password" class="fl fontLabel"> Password </label>
                 <div class="fl iconBox"><i class="fa fa-key" aria-hidden="true"></i></div>
                 <div class="fr">
-                        <input type="Password" id="pwd" required name="password" placeholder="Password" class="textBox">
+                        <input type="Password" id="password" required name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" placeholder="Password" class="textBox">
                 </div>
                 <div class="clr"></div>
             </div>
@@ -181,11 +181,27 @@ body{
                 <label for="password" class="fl fontLabel">confirm Password </label>
                       <div class="fl iconBox"><i class="fa fa-key" aria-hidden="true"></i></div>
                       <div class="fr">
-                              <input type="Password" id="pwd" required name="password" placeholder="Password" class="textBox">
+                              <input type="Password" id="confirm_password" required name="password" placeholder="Password" class="textBox" required>
                       </div>
                       <div class="clr"></div>
                   </div>
- 
+                  <script>
+                    var password = document.getElementById("password")
+  , confirm_password = document.getElementById("confirm_password");
+
+function validatePassword(){
+  if(password.value != confirm_password.value) {
+    confirm_password.setCustomValidity("Passwords Don't Match");
+  } else {
+    confirm_password.setCustomValidity('');
+  }
+}
+
+
+password.onchange = validatePassword;
+confirm_password.onkeyup = validatePassword;
+                  </script>
+
             <!---Gender----->
  
             <div class="box">
@@ -253,6 +269,68 @@ body{
       </form>
   </div>
   <!--Body of Form ends--->
+  <script>
+    function fetchData() {
+
+         const firstName = document.getElementById('fname').value;
+         const lastName = document.getElementById('lname').value;
+         const password = document.getElementById('pwd').value;
+         const confirmPassword = document.getElementById('confirmpwd').value;
+         const email = document.getElementById('email').value;
+         const mobile = document.getElementById('mobile').value;
+         const address = document.getElementById('address').value;
+         const dob = document.getElementById('dob').value;
+         const gender = document.querySelector('input[name="gender"]:checked').value;
+         const state = document.getElementById('state').value;
+         const country = document.getElementById('country').value;
+         const zipcode = document.getElementById('zipcode').value;
+
+
+         const userData = {
+           firstName: firstName,
+           lastName: lastName,
+           password: password,
+           confirmPassword: confirmPassword,
+           email: email,
+           mobile: mobile,
+           address: address,
+           dob: dob,
+           gender: gender,
+           state: state,
+           country:country,
+           zipcode: zipcode
+         };
+
+         // Make a POST request to the API endpoint
+         const apiUrl ="http://localhost:8280/user/createUser";
+         fetch(, {
+           method: 'POST',
+           headers: {
+             'Content-Type': 'application/json',
+           },
+           body: JSON.stringify(userData),
+         })
+         .then(response => {
+           if (!response.ok) {
+             throw new Error('Network response was not ok');
+           }
+           return response.json();
+           console.log(body);
+         })
+         .then(data => {
+           console.log('Data successfully submitted:', data);
+           console.log(body);
+
+          // window.location.href = "signin.html";
+         })
+         .catch(error => {
+           console.error('Error submitting data:', error);
+         });
+         }
+  
+
+
+</script>
   </body>
 </html>
  

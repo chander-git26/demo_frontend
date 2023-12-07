@@ -10,6 +10,11 @@
                     background-repeat: no-repeat;
                     background-size: cover;
                 }
+
+                .container{
+                  display: flex;
+                  flex-direction: column;
+                }
         </style>
          
     
@@ -20,17 +25,14 @@
 
         <br><br>
         <br><br>
-        <br><br>
+
        
-        <center>
-            <h1>Child Investement</h1>
-        </center>
+            <h1 class="pr-5">Child Investement</h1>
         
-        <div class="container">
+        
+        <div class="container pr-5">
             <div class="row">
-                <div class="col-2" >
-                    
-                  </div>
+                
               <div class="col-2" style="border-style: solid; border-radius: 25px;padding:35px;margin: 22px;">
                 <h4>PLAN-A</h4>
                 <br>
@@ -43,6 +45,8 @@
                 select
                
               </div>
+
+
               <div class="col-2" style="border-style: solid; border-radius: 25px;padding:35px;margin: 22px;">
                 <h4>PLAN-B</h4>
                 <br>
@@ -54,6 +58,8 @@
                 <label class="form-check-label" for="flexRadioDefault1">
                    select
               </div>
+
+
               <div class="col-2" style="border-style: solid; border-radius: 25px;padding:35px;margin: 22px;">
                 <h4>PLAN-C</h4>
                 <br>
@@ -65,13 +71,16 @@
                 <label class="form-check-label" for="flexRadioDefault1">
                    select
               </div>
+            </div>
+
               <div class="col-3" >
                 <button type="button" class="btn btn-primary" data-toggle="button" aria-pressed="false" autocomplete="off">
                    proceed to payment
                   </button>
                 
               </div>
-            </div>
+        
+      </div>
 
 </body>
 </html>
