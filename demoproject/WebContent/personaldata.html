@@ -157,38 +157,5 @@
        
         fetchData();
       </script>
-    
-    <!-- End Example Code -->
   </body>
 </html>
-
- 
-
-<!--<script>
-
-        function fetchData() {
-              const apiUrl = 'https://jsonplaceholder.typicode.com/users/1'; 
-              fetch(apiUrl) 
-                  .then(response => { 
-                      if (!response.ok) { 
-                          throw new Error('Network response was not ok'); 
-                      } 
-                      return response.json();
-                  })
-                  .then(data => {
-
-                      document.getElementById('name').textContent = data.name; 
-                      document.getElementById('username').textContent = data.username; 
-                      document.getElementById('email').textContent = data.email; 
-                      document.getElementById('phone').textContent = data.phone; 
-                      document.getElementById('website').textContent = data.website; 
-                         
-                      
-                  })
-                  .catch(error => { 
-                      console.error('Error fetching data:', error); 
-                  }); 
-              }
-              window.onload = fetchData;
-      </script>
-      -->
