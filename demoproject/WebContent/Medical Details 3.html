@@ -135,40 +135,40 @@
 
 
 
-                                <div class="labelel">
-                                    <div>
-                                    <label for="Past surgeries">Past surgeries</label>
-                                    </div>
-                                    <div>
-                                        <input type="text" class="inputel" id="Past surgeries"placeholder="Enter Past surgeries" required ></input>
-                                    <!--<select>
-                                     <option>select</option>
-                                     <option>Heart surgery</option>
-                                     <option>Nose surgery</option>
-                                     <option>kidney surgery</option>
-                                     <option>Eye surgery</option>
-                                     <option>skin surgery</option>
-                                     <option>Leg surgery</option>
-                                     <option>General surgery</option>
-                                     <option>Neuro surgery</option>
-                                     <option>Plastic surgery</option>-->
-
-
-
-                                    </select>
-                                    
-                                    <br>
-                                    </div>
+                            <div class="labelel">
+                                <div>
+                                <label for="pastSurgeries">Past surgeries</label>
                                 </div>
+                                <div>
+                                    <input type="text" class="inputel" id="pastSurgeries"placeholder="Enter Past surgeries" required ></input>
+                                <!--<select>
+                                    <option>select</option>
+                                    <option>Heart surgery</option>
+                                    <option>Nose surgery</option>
+                                    <option>kidney surgery</option>
+                                    <option>Eye surgery</option>
+                                    <option>skin surgery</option>
+                                    <option>Leg surgery</option>
+                                    <option>General surgery</option>
+                                    <option>Neuro surgery</option>
+                                    <option>Plastic surgery</option>-->
+
+
+
+                                </select>
+                                
+                                <br>
+                                </div>
+                            </div>
                                         
                                 
                       
                             <div class="labelel">
                                 <div>
-                                    <label for="Blood pressure">Blood pressure</label>
+                                    <label for="bloodPressure">Blood pressure</label>
                                 </div>
                                 <div>
-                                    <input type="text" class="inputel" id="Blood pressure"placeholder="Enter Blood pressure"  maxlength="3" required ></input>
+                                    <input type="text" class="inputel" id="bloodPressure"placeholder="Enter Blood pressure"  maxlength="3" required ></input>
                                     
                                     <br>
                                 </div>
@@ -177,7 +177,7 @@
 
                             <div class="labelel">
                                 <div>
-                                    <label for="Diabetes">Diabetes</label>
+                                    <label for="diabetes">Diabetes</label>
                                 </div>
                                 <div>
                                     <input type="text" class="inputel" id="diabetes"placeholder="Enter diabetes percentage"  maxlength="3" required></input>
@@ -200,25 +200,66 @@
                             </div>
 
                         </div> 
-                            <div class="btnsel">
+                        <div class="btnsel">
                                 <button class="backel" type="submit"><a href="family.html">Back</a></button>
                                 <button class="saveel" type="submit"><a href="login.html">Submit</a></button>
-                            </div>
-
-                        </div> 
-                        
-                        
-                    </form>
-                 </body>
-        </html>
-
-
+                        </div>
 
                     </div> 
+                        
+                        
+                    
+
+
                 </div> 
+            </div> 
+        </div>
+
+        <script>
+
+                        
+            async function postData() {
+                const apiUrl = 'http://localhost:8280/user/MedicalInformation';
+                
+                const data = {
+                    user_id: "1",
+                    past_surgeries: document.getElementById('pastSurgeries').value,
+                    blood_pressure: document.getElementById('bloodPressure').value,
+                    diabetes: document.getElementById('diabetes').value,
+                    
+                    
+                    
+                };
+                
+                try {
+                    const response = await fetch(apiUrl, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(data)
+                    });
+                
+                    if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                    }
+                
+                    const responseData = await response.json();
+                    console.log(responseData); 
+                
+                } catch (error) {
+                    console.error('Error posting data:', error);
+                }
+                }
+                
+                postData();
+        </script>
                 
                 
 
-            </div>
+            
+
+
+
     </body>
 </html>

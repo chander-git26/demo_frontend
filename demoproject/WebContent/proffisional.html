@@ -450,6 +450,45 @@
 
             });
 
+
+        
+
+            async function postData() {
+                const apiUrl = 'http://localhost:8280/user/ProfessionalInformation';
+                
+                const data = {
+                    user_id: "1",
+                    companyname: document.getElementById('companyDetails').value,
+                    annualincome: document.getElementById('salaryDetails').value,
+                    bussinessname: document.getElementById('businessDetails').value,
+                    annualrevenue: document.getElementById('revenueDetails').value,
+                    
+                    
+                };
+                
+                try {
+                    const response = await fetch(apiUrl, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(data)
+                    });
+                
+                    if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                    }
+                
+                    const responseData = await response.json();
+                    console.log(responseData); 
+                
+                } catch (error) {
+                    console.error('Error posting data:', error);
+                }
+                }
+                
+                postData();
+
         </script>
     </body>
 </html>

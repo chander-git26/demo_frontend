@@ -229,7 +229,7 @@
 
          
           <div class="expand-button">
-            <button> <label for="Father name" class="details-text" onclick="toggleFamilyDetails()">Father details</label></button>
+            <button> <label for="Fathername" class="details-text" onclick="toggleFamilyDetails()">Father details</label></button>
           </div>
           
 
@@ -299,14 +299,14 @@
 
             <ul class="options">
               <br>
-              <label for="spousename">Name:</label>
+              <label for="spousename">Spouse Name:</label>
               <input type="text" id="spousename" maxlength="3" name="username" required>
               <br>
-              <label for="spouseage">Age:</label>
+              <label for="spouseage">Spouse Age:</label>
               <input type="text" id="spouseage" name="username" required>
               <br>
 
-              <label for="spouseoccupation">Occupation:</label>
+              <label for="spouseoccupation">Spouse Occupation:</label>
               <input type="text" id="spouseoccupation" name="username" required>
               <br>
 
@@ -434,11 +434,11 @@
 
 <div class="labelel">
   <div>
-    <label for="Maritalstatus">Maritalstatus</label>
+    <label for="maritalStatus">Maritalstatus</label>
     
   </div>
   <div>
-      <select id="Maritalstatus" onchange="showHideSpouseDetails()">
+      <select id="maritalStatus" onchange="showHideSpouseDetails()">
         <option value="choose" id="choose">Choose</option>
           <option value="Single" id="Singlestatus">Single</option>
           <option value="Married" id="SpouseDetails">Married</option>
@@ -525,6 +525,59 @@
           }
       }
       showHideSpouseDetails();
+
+
+
+      async function postData() {
+                const apiUrl = 'http://localhost:8280/user/MedicalInformation';
+                
+                const data = {
+                    user_id: "1",
+                    father_name: document.getElementById('fathername').value,
+                    father_age: document.getElementById('fatherage').value,
+                    father_occupation: document.getElementById('fatheroccupation').value,
+                    mother_name: document.getElementById('mothername').value,
+                    mother_age: document.getElementById('motherage').value,
+                    mother_occupation: document.getElementById('motheroccupation').value,
+                    spouse_name: document.getElementById('spousename').value,
+                    spouse_age: document.getElementById('spouseage').value,
+                    spouse_occupation: document.getElementById('spouseoccupation').value,
+                    nomine1_name: document.getElementById('nomine1name').value,
+                    nomine1_age: document.getElementById('nomine1age').value,
+                    nomine1_occupation: document.getElementById('nomine1occupation').value,
+                    nomine2_name: document.getElementById('nomine2name').value,
+                    nomine2_age: document.getElementById('nomine2age').value,
+                    nomine2_occupation: document.getElementById('nomine2occupation').value,
+                    marital_status: document.getElementById('maritalStatus').value,
+                    selectnumberofchildren: document.getElementById('childrenInfo').value
+                    
+                    
+                    
+                };
+                
+                try {
+                    const response = await fetch(apiUrl, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(data)
+                    });
+                
+                    if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                    }
+                
+                    const responseData = await response.json();
+                    console.log(responseData); 
+                
+                } catch (error) {
+                    console.error('Error posting data:', error);
+                }
+                }
+                
+                postData();
+        
 
   </script>
 

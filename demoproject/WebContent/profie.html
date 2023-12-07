@@ -117,7 +117,7 @@
             </div>
           </nav>
 
-          <div class="bgimg detailsPage d-flex flex-row justify-content-center" >
+        <div class="bgimg detailsPage d-flex flex-row justify-content-center" >
             <div class="borderboxel  d-flex flex-row justify-content-center">
                 <div class="ex1 ">
                     <h1 class="title">Personal Details</h1>
@@ -130,7 +130,7 @@
 
                                 <div class="labelel">
                                     <div>
-                                        <label for="Mobile">Aadhaar Nuber</label>
+                                        <label for="aadhaarNumber">Aadhaar Nuber</label>
                                     </div>
                                     <div>
                                         <input  type="digit" class="inputel" id="aadhaarNumber" placeholder="Enter your Aadhaar number"required ></input>
@@ -168,7 +168,7 @@
                                 
                                 
 
-                                <div class="labelel">
+                            <div class="labelel">
                                     <div>
                                         <label for="bloodgroup">Blood Group</label>
                                     </div>
@@ -193,10 +193,10 @@
                             
                             <div class="labelel">
                                 <div>
-                                    <label for="height">Height</label>
+                                    <label for="heightDetails">Height</label>
                                 </div>
                                 <div>
-                                    <input type="text" class="inputel" id="Height" placeholder="Enter your Height (in cms)"></input>
+                                    <input type="text" class="inputel" id="heightDetails" placeholder="Enter your Height (in cms)"></input>
                                     <br>
                                 </div>
                                 
@@ -246,7 +246,7 @@
 
                         </div> 
 
-                        <div class="btnsel">
+                    <div class="btnsel">
                             <button class="backel" type="submit"><a href="login.html" >Back </a></button>
                             
                             <button class="saveel" type="submit"><a href="proffisional.html" >Save & Next </a> </button>
@@ -255,11 +255,53 @@
 
 
 
-                    </div> 
                 </div> 
+            </div> 
                 
                 
 
-            </div>
+        </div>
+
+
+
+        <script>
+            async function postData() {
+                const apiUrl = 'http://localhost:8280/user/PersonalInformation';
+                
+                const data = {
+                    user_id: "1",
+                    aadharnumber: document.getElementById('aadhaarNumber').value,
+                    pannumber: document.getElementById('panNumber').value,
+                    bloodgroup: document.getElementById('bloodgroup').value,
+                    height: document.getElementById('heightDetails').value,
+                    weight: document.getElementById('weightDetails').value,
+                    smoking: document.getElementById('smoking').value,
+                    alochol: document.getElementById('alcohol').value
+                    
+                };
+                
+                try {
+                    const response = await fetch(apiUrl, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(data)
+                    });
+                
+                    if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                    }
+                
+                    const responseData = await response.json();
+                    console.log(responseData); 
+                
+                } catch (error) {
+                    console.error('Error posting data:', error);
+                }
+                }
+                
+                postData();
+        </script>
     </body>
 </html>
