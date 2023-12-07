@@ -85,36 +85,38 @@
     </div>
                  
     
-    <!-- End Example Code -->
+    
+       <script>
+          async function fetchData() {
+            try {
+              const userid = 
+              const apiUrl = 'http://localhost:8280/user/getUserDetails/101';
+              const response = await fetch(apiUrl,{
+                        method:'GET',
+                      
 
-    <script>
-      function fetchData() {
-            const apiUrl = ''; 
-            fetch(apiUrl) 
-                .then(response => { 
-                    if (!response.ok) { 
-                        throw new Error('Network response was not ok'); 
-                    } 
-                    return response.json();
-                })
-          .then(data => {
-             
+                      }
+              );
+        
+              if (!response.ok) {
+                throw new Error('Network response was not ok');
+              }
+              const data = await response.json();
+              
               document.getElementById('getpastsurgeries').textContent = data.pastsurgeries;
               document.getElementById('getbloodpressure').textContent = data.bloodpressure;
               document.getElementById('getdiabatase').textContent = data.diabatase;
+                            
+            
+            } catch (error) {
+              console.log('Error fetching data:', error);
+            }
+          }
+        
+          fetchData();
+        </script>
  
-             
-          })
-          .catch(error => {
-              console.error('Error fetching data:', error);
-          });
-       }
-       window.onload = fetchData
  
- 
- 
- 
-    </script>
   </body>
 </html>
 

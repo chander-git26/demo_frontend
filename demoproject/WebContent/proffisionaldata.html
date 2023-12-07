@@ -96,34 +96,37 @@
                  
     
     <!--Javascipt code-->
-    <script>
+    
+<script>
+  async function fetchData() {
+    try {
+      const userid = 
+      const apiUrl = 'http://localhost:8280/user/getUserDetails/101';
+      const response = await fetch(apiUrl,{
+                method:'GET',
+               
 
-      function fetchData() {
-            const apiUrl = ''; 
-            fetch(apiUrl) 
-                .then(response => { 
-                    if (!response.ok) { 
-                        throw new Error('Network response was not ok'); 
-                    } 
-                    return response.json();
-                })
-                .then(data => {
-
-                    document.getElementById('companyname').textContent = data.companyDetails; 
-                    document.getElementById('annualincome').textContent = data.salaryDetails; 
-                    document.getElementById('businessname').textContent = data.businessDetails; 
-                    document.getElementById('annualrevenue').textContent = data.revenueDetails; 
+               }
+      );
+ 
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+      const data = await response.json();
+      
+      document.getElementById('companyname').textContent = data.companyDetails; 
+      document.getElementById('annualincome').textContent = data.salaryDetails; 
+      document.getElementById('businessname').textContent = data.bussinessname; 
+      document.getElementById('annualrevenue').textContent = data.annualrevenue; 
                     
-                    
-                    
-                    
-                })
-                .catch(error => { 
-                    console.error('Error fetching data:', error); 
-                }); 
-            }
-            window.onload = fetchData;
-    </script>
+     
+    } catch (error) {
+      console.log('Error fetching data:', error);
+    }
+  }
+ 
+  fetchData();
+</script>
     
   
   </body>
