@@ -257,80 +257,48 @@ confirm_password.onkeyup = validatePassword;
             <div class="box terms">
                     <input type="checkbox" name="Terms" required> &nbsp; I accept the terms and conditions
             </div>
+
+
+            <script>
+  
+              function fetchData() {
+                      const apiUrl = 'http://localhost:8280/user/createUser';
+                      fetch(apiUrl)
+                          .then(response => {
+                              if (!response.ok) {
+                                  throw new Error('Network response was not ok');
+                              }
+                              return response.json();
+                          })
+                   
+                    .catch(error => {
+                        console.error('Error fetching data:', Error);
+                    });
+                 }
+                 window.onload = fetchData
+            
+               
+            
+                     
+              </script>
+
+
             <!--Terms and Conditions------>
  
  
  
             <!---Submit Button------>
             <div class="box" style="background: #2d3e3f">
-                    <input type="Submit" name="Submit" class="submit" value="SUBMIT">
+                    <input type="Submit" name="Submit"  class="submit" value="SUBMIT">
             </div>
+
+            
             <!---Submit Button----->
+           
       </form>
   </div>
   <!--Body of Form ends--->
-  <script>
-    function fetchData() {
-
-         const firstName = document.getElementById('fname').value;
-         const lastName = document.getElementById('lname').value;
-         const password = document.getElementById('pwd').value;
-         const confirmPassword = document.getElementById('confirmpwd').value;
-         const email = document.getElementById('email').value;
-         const mobile = document.getElementById('mobile').value;
-         const address = document.getElementById('address').value;
-         const dob = document.getElementById('dob').value;
-         const gender = document.querySelector('input[name="gender"]:checked').value;
-         const state = document.getElementById('state').value;
-         const country = document.getElementById('country').value;
-         const zipcode = document.getElementById('zipcode').value;
-
-
-         const userData = {
-           firstName: firstName,
-           lastName: lastName,
-           password: password,
-           confirmPassword: confirmPassword,
-           email: email,
-           mobile: mobile,
-           address: address,
-           dob: dob,
-           gender: gender,
-           state: state,
-           country:country,
-           zipcode: zipcode
-         };
-
-         // Make a POST request to the API endpoint
-         const apiUrl ="http://localhost:8280/user/createUser";
-         fetch(, {
-           method: 'POST',
-           headers: {
-             'Content-Type': 'application/json',
-           },
-           body: JSON.stringify(userData),
-         })
-         .then(response => {
-           if (!response.ok) {
-             throw new Error('Network response was not ok');
-           }
-           return response.json();
-           console.log(body);
-         })
-         .then(data => {
-           console.log('Data successfully submitted:', data);
-           console.log(body);
-
-          // window.location.href = "signin.html";
-         })
-         .catch(error => {
-           console.error('Error submitting data:', error);
-         });
-         }
-  
-
-
-</script>
+ 
   </body>
 </html>
  
