@@ -43,7 +43,6 @@
     .bgimg {
       background-size: cover;
       background-color: lightblue;
-      height: 100vh;
     }
 
     .borderboxel {
@@ -53,7 +52,7 @@
       width: 65%;
       border-radius: 20px;
       padding: 20px;
-      height: 600px;
+
       display: flex;
       flex-direction: column;
       justify-content: right;
@@ -129,6 +128,7 @@
     .hidden {
       display: none;
     }
+    
 
     .options {
       list-style: none;
@@ -162,18 +162,17 @@
     
     }
     .details-text {
-        white-space: nowrap; 
-    }
-  .saveel {
+  white-space: nowrap; 
+}
+.saveel {
                 height: 45px;
                 width: 160px;
                 border-radius: 15px;
                 font-size: 18px;
                 font-weight: bold;
-                background-color: rgb(205, 212, 212);
+                background-color: green;
                 color: white;
                 text-align: center;
-                
             }
  
             .backel{
@@ -182,7 +181,7 @@
                 border-radius: 15px;
                 font-size: 18px;
                 font-weight: bold;
-                background-color:rgb(51, 50, 49);
+                background-color:orange;
                 color: white;
                 text-align: center;
  
@@ -208,15 +207,6 @@
       aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse d-flex flex-row justify-content-center" id="navbarNavAltMarkup">
-      <div class="navbar-nav d-flex flex-direction:row justify-content:right">
-        <button type="button" class="btn btn-warning mr-5"><a href="login.html" style="color: white; ">Home</a></button>
-        <!--<a class="nav-item nav-link active navbtns" href="#">Home </span></a>
-        <a class="nav-item nav-link navbtns" href="#">About us</a>
-        <a class="nav-item nav-link navbtns" href="#">Gallery</a>
-        <a class="nav-item nav-link navbtns" href="#">Contact us</a>-->
-      </div>
-    </div>
    
   </nav>
 
@@ -235,21 +225,22 @@
 
           <div id="familyDetails" class="hidden">
         
+
             <ul class="options">
               <br>
-              <label for="fathername">fatherName:</label>
-              <input type="text" id="fathername" name="username" required>
+              <label for="username">fatherName:</label>
+              <input type="text" id="username" name="username" required>
               <br>
-              <label for="fatherage">Age:</label>
-              <input type="digit" id="fatheage" maxlength="3" name="username" required>
-              <br>
-
-              <label for="fatheroccupation">Occupation:</label>
-              <input type="text" id="fatheroccupation" name="username" required>
+              <label for="username">Age:</label>
+              <input type="digit" id="username" maxlength="3" name="username" required>
               <br>
 
-              <label for="medicalhistory">Upload medical history</label>
-              <input type="file" class="inputel" id="fathermedicalhistory" placeholder="Enter your Medical history"
+              <label for="username">Occupation:</label>
+              <input type="text" id="username" name="username" required>
+              <br>
+
+              <label for="Upload medical history">Upload medical history</label>
+              <input type="file" class="inputel" id="Medicalhistory" placeholder="Enter your Medical history"
                 required></input>
               <br>
 
@@ -261,7 +252,7 @@
 
      
           <div class="expand-button">
-            <button> <label for="mothername" class="details-text" onclick="toggleMotherDetails()">Mother Details</label></button>
+            <button> <label for="Mother name" class="details-text" onclick="toggleMotherDetails()">Mother Details</label></button>
           </div>
 
           <div id="MotherDetails" class="hidden">
@@ -269,69 +260,7 @@
 
             <ul class="options">
               <br>
-              <label for="mothername">mother Name:</label>
-              <input type="text" id="mothername" name="username" required>
-              <br>
-              <label for="motherage">Age:</label>
-              <input type="text" id="motherage" maxlength="3" name="username" required>
-              <br>
-
-              <label for="motheroccupation">Occupation:</label>
-              <input type="text" id="motheroccupation" name="username" required>
-              <br>
-              <label for="mothermedicalhistory">Upload medical history</label>
-              <input type="file" class="inputel" id="mothermedicalhistory" placeholder="Enter your Medical history"
-                required></input>
-              <br>
-
-
-            </ul>
-          </div><br>
-
-
-         
-          <div class="expand-button">
-            <button> <label for="" class="details-text" onclick="toggleSpouseDetails()">Spouse Details</label></button>
-          </div>
-
-          <div id="SpouseDetails"   class="hidden" style="display: none;">
-          
-
-            <ul class="options">
-              <br>
-              <label for="spousename">Name:</label>
-              <input type="text" id="spousename" maxlength="3" name="username" required>
-              <br>
-              <label for="spouseage">Age:</label>
-              <input type="text" id="spouseage" name="username" required>
-              <br>
-
-              <label for="spouseoccupation">Occupation:</label>
-              <input type="text" id="spouseoccupation" name="username" required>
-              <br>
-
-              <label for="spoudemedicalhistory">Upload medical history</label>
-              <input type="file" class="inputel" id="spoudemedicalhistory" placeholder="Enter your Medical history"
-                required></input>
-              <br>
-
-
-              
-            </ul>
-          </div><br>
-
-
-
-        
-          <div class="expand-button">
-            <button> <label for="Nominee1 name" class="details-text" onclick="toggleNominee1Details()">Nomine1 Details</label></button>
-          </div>
-
-          <div id="Nominee1Details" class="hidden">
-          
-            <ul class="options">
-              <br>
-              <label for="username">Name:</label>
+              <label for="username">mother Name:</label>
               <input type="text" id="username" name="username" required>
               <br>
               <label for="username">Age:</label>
@@ -346,48 +275,98 @@
                 required></input>
               <br>
 
-        
+             
             </ul>
           </div><br>
 
-    
+
+         
           <div class="expand-button">
-            <button><label for="Nominee2 name" class="details-text" onclick="toggleNominee2Details()">Nomine2 Details</label></button>
+            <button> <label for="Spouse name" class="details-text" onclick="toggleSpouseDetails()">Spouse Details</label></button>
           </div>
 
-          <div id="Nominee2Details" class="hidden">
-       
+          <div id="SpouseDetails"   class="hidden" style="display: none;">
+          
 
             <ul class="options">
               <br>
               <label for="username">Name:</label>
-              <input type="text" id="username" name="username" required>
+              <input type="text" id="username" maxlength="3" name="username" required>
               <br>
               <label for="username">Age:</label>
-              <input type="text" id="username" maxlength="3" name="username" required>
+              <input type="text" id="username" name="username" required>
               <br>
 
               <label for="username">Occupation:</label>
               <input type="text" id="username" name="username" required>
               <br>
-              <div class="labelel">
-                <div>
-                  <label for="Upload medical history">Upload medical history</label>
-                </div>
-                <div>
-                  <input type="file" class="inputel" id="Medicalhistory" placeholder="Enter your Medical history"
-                    required></input>
 
-
-                  <br>
-                </div>
-              </div>
+              <label for="Upload medical history">Upload medical history</label>
+              <input type="file" class="inputel" id="Medicalhistory" placeholder="Enter your Medical history"
+                required></input>
+              <br>
 
              
             </ul>
           </div><br>
 
+        
+          <form>
+            <button> <label for="other name" class="details-text" >select your nominee</label></button><br>
+            <input type="checkbox" name="relationship" value="father" onchange="updateCheckboxes(this)"> Father<br>
+            <input type="checkbox" name="relationship" value="mother" onchange="updateCheckboxes(this)"> Mother<br>
+            <input type="checkbox" name="relationship" value="spouse" onchange="updateCheckboxes(this)"> Spouse<br>
+            <input type="checkbox" id="otherDetails" name="relationship" value="other" onclick="showDetails()"> Other Nominee Details<br>
+          </form>
+        
+          <div id="detailsDiv" style="display: none;">
+            
+            <form>
+              <label for="name">Name:</label>
+              <input type="text" id="name" name="name"><br><br>
+              <label for="username">Age:</label>
+              <input type="text" id="username" maxlength="3" name="username" required><br><br>
+             <label for="relation">Relation to nominee:</label>
+              <input type="relation" id="relation" name="relation"><br><br>               
+            </form>
+          </div>
+
           <script>
+            function updateCheckboxes(checkbox) {
+              var checkboxes = document.getElementsByName('relationship');
+              var checkedCount = 0;
+        
+              for (var i = 0; i < checkboxes.length; i++) {
+                if (checkboxes[i].checked) {
+                  checkedCount++;
+                }
+              }
+        
+              if (checkedCount > 2) {
+                checkbox.checked = false;
+              }
+        
+              for (var i = 0; i < checkboxes.length; i++) {
+                if (!checkboxes[i].checked && checkedCount >= 2) {
+                  checkboxes[i].disabled = true;
+                } else {
+                  checkboxes[i].disabled = false;
+                }
+              }
+            }
+        
+            function showDetails() {
+              var otherDetails = document.getElementById("otherDetails");
+              var detailsDiv = document.getElementById("detailsDiv");
+        
+              if (otherDetails.checked) {
+                detailsDiv.style.display = "block";
+              } else {
+                detailsDiv.style.display = "none";
+              }
+            }
+          </script>
+           <script>
             function toggleFamilyDetails() {
               var details = document.getElementById("familyDetails");
               if (details.classList.contains("hidden")) {
@@ -412,24 +391,11 @@
                 details.classList.add("hidden");
               }
             }
-            function toggleNominee1Details() {
-              var details = document.getElementById("Nominee1Details");
-              if (details.classList.contains("hidden")) {
-                details.classList.remove("hidden");
-              } else {
-                details.classList.add("hidden");
-              }
-            }
-
-            function toggleNominee2Details() {
-              var details = document.getElementById("Nominee2Details");
-              if (details.classList.contains("hidden")) {
-                details.classList.remove("hidden");
-              } else {
-                details.classList.add("hidden");
-              }
-            }
-          </script>
+            </script>
+            
+        
+          
+          
 
 
 <div class="labelel">
@@ -500,8 +466,8 @@
 </div>
 
           <div class="btnsel">
-            <button class="backel" type="submit"> <a href="proffisional.html" >Back </a> </button>
-            <button class="saveel" type="submit"><a href="Medical Details 3.html">Save & Next </a> </button>
+            <button class="backel" type="submit">Back </button>
+            <button class="saveel" type="submit">Save & Next </button>
         </div>
 
  </div>
@@ -527,7 +493,7 @@
       showHideSpouseDetails();
 
   </script>
-
+  
 </body>
 
 </html>
