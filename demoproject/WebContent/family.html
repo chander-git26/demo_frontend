@@ -2,6 +2,10 @@
 <html>
 
 <head>
+
+  <script src="https://kit.fontawesome.com/b454b53842.js" crossorigin="anonymous"></script>
+
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
     integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
@@ -14,7 +18,7 @@
     integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
     crossorigin="anonymous"></script>
 
-    
+
   <style>
     .navbtns {
 
@@ -105,6 +109,24 @@
       position: relative;
       display: inline-block;
     }
+
+    .btnel{
+  
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  border-radius: 12px;
+  }
+
+  .btntext {
+
+  color: black;
+  font-weight: bold;
+  font-size:20px ;
+  }
+
 
     .dropdown-content {
       display: none;
@@ -198,20 +220,85 @@
                 flex-direction: row;
                 justify-content: space-between;
             }
+
+            .navbg {
+            background-color: #0d2436;
+        
+        }
+        .container{
+            margin: 0px;
+            display: flex;
+            justify-content: center;
+        }
+        .row {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        
+        .card1 {
+            text-align: center;
+        }
+        
+        
+        .logo1 {
+            height: 75px;
+            text-align: center;
+        }
+        
+        .logocontainer {
+            background-color: #152c3e;
+            color: gainsboro;
+            width: 50px;
+            height: 40px;
+            border-radius: 40px;
+            margin: 15px;
+            padding: 22px;
+            text-align: center;
+        }
+        
+        .para1 {
+            color: gainsboro;
+            text-align: center;
+        }
+        
+        .card2 {
+            padding: 15px;
+            text-align: left;
+            color: gainsboro;
+        }
+        
+        .head1 {
+            font-size: 25px;
+            font-weight: bold;
+        }
+        
+        .line {
+            background-color: gainsboro;
+        }
     
   </style>
 </head>
 
 <body>
   <nav class="navbar navbar-expand-lg navbar-light">
-    <a class="navbar-brand" href=""><img
-        src="https://cosglobal.in/wp-content/uploads/2023/11/WhatsApp-Image-2023-11-22-at-18.18.56.jpeg"
-        class="logo "></a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
-      aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <a class="navbar-brand" href=""><img src="https://cosglobal.in/wp-content/uploads/2023/11/WhatsApp-Image-2023-11-22-at-18.18.56.jpeg" class="logo "></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-   
+    <div class="collapse navbar-collapse d-flex flex-row justify-content-right" id="navbarNavAltMarkup">
+      <div class="navbar-nav d-flex flex-direction:row justify-content:right">
+        
+        
+         <button type="button" onclick="window.location.href='login.html'" class="btnel btntext  w3-bar-item w3-button" ><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house" viewBox="0 0 16 16">
+            <path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5z"/>
+          </svg> Home</button><br/>
+        <!--<a class="nav-item nav-link active navbtns" href="#">Home </span></a>
+        <a class="nav-item nav-link navbtns" href="#">About us</a>
+        <a class="nav-item nav-link navbtns" href="#">Gallery</a>
+        <a class="nav-item nav-link navbtns" href="#">Contact us</a>-->
+      </div>
+    </div>
   </nav>
 
   <div class="bgimg detailsPage d-flex flex-row justify-content-center">
@@ -471,7 +558,7 @@
 
           <div class="btnsel">
             
-            <button type="button" onclick="window.location.href='profie.html'" class="backel" style=" color: white; "> Back</button>
+            <button type="button" onclick="window.location.href='proffisional.html'" class="backel" style=" color: white; "> Back</button>
             <button type="button" onclick="window.location.href='Medical Details 3.html'" class="saveel" style=" color: black; "> Save & Next</button>
         </div>
 
@@ -481,6 +568,86 @@
 
 
     </div>
+
+    <div class="navbg">
+            
+      <div class="row">
+
+
+          <div class="col-12 col-md-6 col-lg-3">
+              <div class="card1">
+                  <div class="d-flex flex-row justify-content-center">
+
+                      <img src="https://cosglobal.in/wp-content/uploads/2023/11/WhatsApp-Image-2023-11-22-at-18.18.56.jpeg" class="logo1 text-center mt-4 mb-4" />
+                  </div>
+                  <div class="d-flex flex-row justify-content-center">
+                      <div class="logocontainer">
+                          <i class="fa-brands fa-google logo2 mr-5"></i>
+                      </div>
+                      <div class="logocontainer">
+                          <i class="fa-brands fa-instagram logo2 mr-5"></i>
+                      </div>
+                      <div class="logocontainer">
+                          <i class="fa-brands fa-twitter logo2 mr-5"></i>
+                      </div>
+                      <div class="logocontainer">
+                          <i class="fa-brands fa-linkedin logo2"></i>
+                      </div>
+                  </div>
+                  <p class="para1">Madhapur, Hyderabad, India.</p>
+              </div>
+          </div>
+
+          <div class="col-6 col-md-6 col-lg-3">
+              <div class="card2">
+                  <h1 class="head1">Get to Know Us</h1>
+                  <p>About us</p>
+                  <p>Career</p>
+                  <p>Press Release</p>
+                  <p>Gift a Smile</p>
+              </div>
+          </div>
+
+          <div class="col-6 col-md-6 col-lg-3">
+              <div class="card2">
+                  <h1 class="head1">Contact  Us</h1>
+
+                  <form >
+                      <input class="w3-input w3-border" type="text" placeholder="Name" required name="Name">
+                      <input class="w3-input w3-section w3-border" type="text" placeholder="Email" required name="Email">
+                      <input class="w3-input w3-section w3-border" type="text" placeholder="Subject" required name="Subject">
+                      <input class="w3-input w3-section w3-border" type="text" placeholder="Comment" required name="Comment">
+                      <button class="w3-button w3-lightblue w3-section" type="submit">
+                        <i class="fa fa-paper-plane"></i> SEND MESSAGE
+                      </button>
+                    </form>
+             
+                    
+
+
+
+              </div>
+          </div>
+
+          <div class="col-6 col-md-6 col-lg-3">
+              <div class="card2">
+                  <h1 class="head1">Let Us Help You</h1>
+                  <p>Life Insurances</p>
+                  <p>Medical Insurance</p>
+                  <p>Retirement Plnas</p>
+                  <p>Child Investments</p>
+              </div>
+          </div>
+
+      </div>
+  
+  <hr class="line m-5" />
+  <p class="para1">2023 by Cosglobal</p>
+
+
+
+</div>
+          
     <script>
       function showHideSpouseDetails() {
           var Maritalstatus = document.getElementById("Maritalstatus");
@@ -498,6 +665,8 @@
       showHideSpouseDetails();
 
   </script>
+
+  
   
 </body>
 
