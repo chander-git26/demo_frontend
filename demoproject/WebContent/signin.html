@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="eng">
     <head>
-        <title>User signin</title>
+        <title>Login</title>
         <link rel="stylesheet" href="style.css">
         <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     
@@ -18,11 +18,11 @@
                 <form action="login.html">
                     <h1>Login</h1>
                     <div class="input-box">
-                        <input type="text" placeholder="user name" required>
+                        <input type="email" placeholder="user name" required id="email">
                         <box-icon name='user'></box-icon>
                     </div><br>
                     <div class="input-box">
-                        <input type="password" placeholder="password" required>
+                        <input type="password" placeholder="password" required id="password">
                         <box-icon name='lock-alt' type='solid' ></box-icon>
                     </div><br>
                     
@@ -37,6 +37,46 @@
 
 
                 </form>
+
+
+                <script>
+  
+                    async function postData() {
+                    
+                  
+                    const data = {
+                      
+                      email: document.getElementById("email").value,
+                      password: document.getElementById("password").value,
+                     
+                    };
+                  
+                    try {
+                      const apiUrl = 'http://localhost:8280/user/signin';
+                      const response = await fetch(apiUrl, {
+                        method: 'GET',
+                        headers: {
+                          'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify(data)
+                      });
+                  
+                      if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                      }
+                  
+                      const responseData = await response.json();
+                      console.log(responseData); // You can handle the response data here
+                  
+                    } catch (error) {
+                      console.error('Error posting data:', error);
+                    }
+                  }
+                  
+                
+                
+                     
+                </script>
 
             </div>
         </header>
