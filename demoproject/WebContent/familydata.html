@@ -141,9 +141,12 @@
       
 
         <script>
+
+
+
         async function fetchData() {
           try {
-            const apiUrl = 'http://localhost:8280/user/getUserDetails/101';
+            const apiUrl = 'http://localhost:8280/user/getfamilyInfo/101';
             const response = await fetch(apiUrl,{
                       method:'GET',
                       
@@ -156,26 +159,25 @@
             }
             const data = await response.json();
             
-            document.getElementById('fathername').textContent = data.fathername;
-            document.getElementById('fatherage').textContent = data.fatheage; 
-            document.getElementById('fatheroccupation').textContent = data.fatheroccupation; 
+            document.getElementById('fathername').textContent = data.data.fathername;
+            document.getElementById('fathergage').textContent = data.data.age; 
+            document.getElementById('fatheroccupation').textContent = data.father_occupation; 
 
-            document.getElementById('mothername').textContent = data.mothername;
-            document.getElementById('motherage').textContent = data.motheage; 
-            document.getElementById('motheroccupation').textContent = data.motheroccupation; 
+            document.getElementById('mothername').textContent = data.data.mother_name;
+            document.getElementById('motherage').textContent = data.data.mother_age; 
+            document.getElementById('motheroccupation').textContent = data.data.mother_occupation; 
 
-            document.getElementById('spousename').textContent = data.spousename;
-            document.getElementById('spouseage').textContent = data.spouseage; 
-            document.getElementById('spouseoccupation').textContent = data.spouseoccupation; 
+            document.getElementById('spousename').textContent = data.data.spouse_name;
+            document.getElementById('spouseage').textContent = data.data.spouse_age; 
+            document.getElementById('spouseoccupation').textContent = data.data.spouse_occupation; 
 
-            document.getElementById('nominee1name').textContent = data.nominee1name;
-            document.getElementById('nominee1age').textContent = data.nominee1age; 
-            document.getElementById('nominee1occupation').textContent = data.nominee1occupation; 
+            document.getElementById('nominee1name').textContent = data.data.nominee1_name;
+            document.getElementById('nominee1age').textContent = data.data.nominee2_name; 
 
 
-            document.getElementById('nominee2name').textContent = data.nominee2name;
-            document.getElementById('nominee2age').textContent = data.nominee2age; 
-            document.getElementById('nominee2occupation').textContent = data.nominee2occupation; 
+            document.getElementById('nominee2name').textContent = data.data.other_nominee_name;
+            document.getElementById('nominee2age').textContent = data.data.other_nominee_age; 
+            document.getElementById('nominee2occupation').textContent = data.data.other_nominee_relationship; 
                           
             
           } catch (error) {
