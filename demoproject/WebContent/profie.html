@@ -78,6 +78,7 @@
                 text-align: center;
 
              
+                
             }
 
             .backel{
@@ -115,6 +116,61 @@
                 flex-direction: row;
                 justify-content: space-between;
             }
+
+            .navbg {
+            background-color: #0d2436;
+        
+        }
+        .container{
+            margin: 0px;
+            display: flex;
+            justify-content: center;
+        }
+        .row {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        
+        .card1 {
+            text-align: center;
+        }
+        
+        .logo1 {
+            height: 75px;
+            text-align: center;
+        }
+        
+        .logocontainer {
+            background-color: #152c3e;
+            color: gainsboro;
+            width: 50px;
+            height: 40px;
+            border-radius: 40px;
+            margin: 15px;
+            padding: 22px;
+            text-align: center;
+        }
+        
+        .para1 {
+            color: gainsboro;
+            text-align: center;
+        }
+        
+        .card2 {
+            padding: 15px;
+            text-align: left;
+            color: gainsboro;
+        }
+        
+        .head1 {
+            font-size: 25px;
+            font-weight: bold;
+        }
+        
+        .line {
+            background-color: gainsboro;
+        }
         </style>
     </head>
     <body>
@@ -223,7 +279,7 @@
                                 
                                 
                             </div>
-
+                            
 
                             <div class="labelel">
                                 <div>
@@ -269,7 +325,7 @@
 
                         <div class="btnsel">
                             <button type="button" onclick="window.location.href='login.html'" class="backel" style=" color: white; "> Back</button>
-                            <button type="button" onclick="window.location.href='proffisional.html'" class="saveel" style=" color: black; "> Save & Next</button>
+                            <button type="button" onclick="saveAndNext()" class="saveel" style=" color: black; "> Save & Next</button>
 
                             
                         </div>
@@ -283,5 +339,135 @@
                 
 
             </div>
+
+            <div class="navbg">
+            
+                <div class="row">
+    
+    
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="card1">
+                            <div class="d-flex flex-row justify-content-center">
+    
+                                <img src="https://cosglobal.in/wp-content/uploads/2023/11/WhatsApp-Image-2023-11-22-at-18.18.56.jpeg" class="logo1 text-center mt-4 mb-4" />
+                            </div>
+                            <div class="d-flex flex-row justify-content-center">
+                                <div class="logocontainer">
+                                    <i class="fa-brands fa-google logo2 mr-5"></i>
+                                </div>
+                                <div class="logocontainer">
+                                    <i class="fa-brands fa-instagram logo2 mr-5"></i>
+                                </div>
+                                <div class="logocontainer">
+                                    <i class="fa-brands fa-twitter logo2 mr-5"></i>
+                                </div>
+                                <div class="logocontainer">
+                                    <i class="fa-brands fa-linkedin logo2"></i>
+                                </div>
+                            </div>
+                            <p class="para1">Madhapur, Hyderabad, India.</p>
+                        </div>
+                    </div>
+    
+                    <div class="col-6 col-md-6 col-lg-3">
+                        <div class="card2">
+                            <h1 class="head1">Get to Know Us</h1>
+                            <p>About us</p>
+                            <p>Career</p>
+                            <p>Press Release</p>
+                            <p>Gift a Smile</p>
+                        </div>
+                    </div>
+    
+                    
+                    <div class="col-6 col-md-6 col-lg-3">
+                        <div class="card2">
+                            <h1 class="head1">Contact  Us</h1>
+
+                            <form >
+                                <input class="w3-input w3-border" type="text" placeholder="Name" required name="Name">
+                                <input class="w3-input w3-section w3-border" type="text" placeholder="Email" required name="Email">
+                                <input class="w3-input w3-section w3-border" type="text" placeholder="Subject" required name="Subject">
+                                <input class="w3-input w3-section w3-border" type="text" placeholder="Comment" required name="Comment">
+                                <button class="w3-button w3-lightblue w3-section" type="submit">
+                                  <i class="fa fa-paper-plane"></i> SEND MESSAGE
+                                </button>
+                              </form>
+                       
+                              
+
+
+    
+                        </div>
+                    </div>
+    
+                    <div class="col-6 col-md-6 col-lg-3">
+                        <div class="card2">
+                            <h1 class="head1">Let Us Help You</h1>
+                            <p>Life Insurances</p>
+                            <p>Medical Insurance</p>
+                            <p>Retirement Plnas</p>
+                            <p>Child Investments</p>
+                        </div>
+                    </div>
+    
+                </div>
+            
+            <hr class="line m-5" />
+            <p class="para1">2023 by Cosglobal</p>
+    
+    
+    
+        </div>
+                    
+
+            <script>
+
+                function saveAndNext() {
+                   
+                    window.location.href='proffisional.html';
+
+                }
+
+                async function postData() {
+                    const apiUrl = 'http://localhost:8280/user/PersonalInformation';
+                
+                    const data = {
+                      
+
+                       
+                        "aadharnumber": document.getElementById("aadhaarNumber").value,
+                        "pannumber": document.getElementById("panNumber").value,
+                        "bloodgroup": document.getElementById("aadhaarNumber").value,
+                        "height": document.getElementById("Height").value,
+                        "weight": document.getElementById("weightDetails").value,
+                        "smoking": document.getElementById("smokingyes").value,
+                        "alochol": document.getElementById("Alcoholyes").value
+                       
+                    };
+                
+                    try {
+                    const response = await fetch(apiUrl, {
+                        method: 'POST',
+                        headers: {
+                        'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify(data)
+                    });
+                
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                
+                    const responseData = await response.json();
+                    console.log(responseData); // You can handle the response data here
+                
+                    } catch (error) {
+                    console.error('Error posting data:', error);
+                    }
+                }
+                
+                
+            </script>
     </body>
 </html>

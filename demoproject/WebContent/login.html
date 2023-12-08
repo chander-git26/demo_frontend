@@ -216,7 +216,7 @@
       <div class="collapse navbar-collapse d-flex flex-row justify-content-center" id="navbarNavAltMarkup">
         <div class="navbar-nav d-flex flex-direction:row justify-content-center">
          
-          <button type="button" class="btn btn-info mr-5"><a href="profie.html" style="color: white; font-weight: bold;"> Complete profile</a></button>
+          <button type="button" onclick="window.location.href='profie.html'" class="btn btn-info mr-5 " style=" color: white; font-weight: bold;"> Complete profile</button>
 
 
           <select class="dropdownoptions " style="color: white; font-weight: bold;" id="selectIncomeOption" onchange="redirectOnChange()">
@@ -324,46 +324,20 @@
         
         
    
-        <h5 class="text-center pt-3" style="color: #ffffff;">Id: <span id="user_id"></span></h5>
-        <h5 class="text-center pt-3 pb-5" style="color: #ffffff;">Name: <span id="email"></span></h5>
+        <h5 class="text-center pt-3" style="color: #ffffff;">Id: <span id="getuserid"></span></h5>
+        <h5 class="text-center pt-3 pb-5" style="color: #ffffff;">Name: <span id="getusername"></span></h5>
 
-     <script>
-        async function fetchData() {
-          try {
-            const apiUrl = 'http://localhost:8280/user/getUserDetails/105';
-            const response = await fetch(apiUrl,{
-                      method:'GET',
-                     
- 
-                     }
-            );
-       
-            if (!response.ok) {
-              console.log('hghg');
-              throw new Error('Network response was not ok');
-            }
-            console.log('hgfgfghfhjfhfhnfnh');
-            const data = await response.json();
-            console.log(data);
-            document.getElementById('user_id').textContent = data.data.userId;
-            document.getElementById('email').textContent = data.data.firstname;
             
-           
-          } catch (error) {
-            console.log('Error fetching data:', error);
-          }
-        }
-       
-        fetchData();
-      </script>
+            <button type="button" onclick="window.location.href='personaldata.html'" class="btnel btntext  w3-bar-item w3-button" >Perosnal</button><br/>
+            <button type="button" onclick="window.location.href='proffisionaldata.html'" class="btnel btntext  w3-bar-item w3-button" >Proffesional</button><br/>
+            <button type="button" onclick="window.location.href='familydata.html'" class="btnel btntext  w3-bar-item w3-button" >Family</button><br/>
+            <button type="button" onclick="window.location.href='medicaldata.html'" class="btnel btntext  w3-bar-item w3-button" >Medical</button><br/>
+
+
+
             
-            <button type="button" class="btnel  w3-bar-item w3-button" ><a href="personaldata.html" class="btntext">Perosnal</a></button><br/>
-            
-            <button type="button" class="btnel  w3-bar-item w3-button"><a href="proffisionaldata.html" class="btntext">Professional</a></button><br/>
-            <button type="button" class="btnel  w3-bar-item w3-button"><a href="familydata.html" class="btntext">Family</a></button><br/>
-            <button type="button" class="btnel  w3-bar-item w3-button"><a href="medicaldata.html" class="btntext">Medical</a></button><br/>
             <div class="logout">
-              <button type="button" class="logoutbtnel w3-bar-item w3-button"><a href="inde.html" style="color: #ffffff;">Log Out</a></button><br/>
+              <button type="button" onclick="window.location.href='inde.html'" style="background-color: #ffffff; font-weight: bold;" class="blogoutbtnel w3-bar-item w3-button" >Log Out</button><br/>
 
             </div>
        
@@ -386,7 +360,8 @@
                     <h5 class="card-title">Health Insurance</h5>
                     <p class="card-text">It is an assurance which provides immediate financial help in case when any medical emergency arises.
                        It is a contract between a policyholder and the insurance company which covers medical expenses that might occur due to illness, injury or accident.</p>
-                       <button class="btnels"><a style="color: #ffffff;" href="Healthinsurance.html">View Plans</a></button>
+                       <button type="button" class="btnels" onclick="window.location.href='Healthinsurance.html'" style="color: #ffffff;" >View Plans</button><br/>
+
                   </div>
                   
                 </div>
@@ -401,7 +376,8 @@
                   <h5 class="card-title">Life Insurance</h5>
                   <p class="card-text">It provides contract between an individual and an insurance provider, 
                     where the company promises to pay a specified amount of money to the family or beneficiary of the individual, in return for regular payments over a period of time.</p>
-                    <button class="btnels"><a style="color: #ffffff;" href="Lifeinsurance1.html">View Plans</a></button>
+                    <button type="button" class="btnels" onclick="window.location.href='Lifeinsurance1.html'" style="color: #ffffff;" >View Plans</button><br/>
+
                   </div>
                 
               </div>
@@ -416,7 +392,8 @@
                 <h5 class="card-title">Auto Mobile Insurance</h5>
                 <p class="card-text">It covers the loss of or damage caused to the automobile or its parts due to natural and man-made calamities.
                    It provides accident cover for individual owners of the vehicle while driving and also for passengers and third party legal liability.</p>
-                   <button class="btnels"><a style="color: #ffffff;" href="Automobile.html">View Plans</a></button>
+                   <button type="button" class="btnels" onclick="window.location.href='Automobile.html'" style="color: #ffffff;" >View Plans</button><br/>
+                   
                   </div>
               
             </div>
@@ -431,7 +408,8 @@
                   <p class="card-text"> We provide financial strategies of saving, investments to sustain oneself during retirement. 
                     Many popular investment vehicles, such as individual retirement accounts and 401(k)s, allow retirement savers to grow their money with certain tax advantages.
                   </p>
-                  <button class="btnels"><a style="color: #ffffff;" href="retirementplans.html">View Plans</a></button>
+                  <button type="button" class="btnels" onclick="window.location.href='retirementplans.html'" style="color: #ffffff;" >View Plans</button><br/>
+
                 </div>
                 </div>
               </div>
@@ -445,7 +423,8 @@
                     <p class="card-text">Child insurance plans protect your child financially in case of any unfortunate event. 
                       These plans ensure that your child has a financial safety net in your absence. 
                       They ensure that your child is financially prepared to meet their goals, no matter what!</p>
-                      <button class="btnels"><a style="color: #ffffff;" href="child.html">View Plans</a></button>
+                      <button type="button" class="btnels" onclick="window.location.href='child.html'" style="color: #ffffff;" >View Plans</button><br/>
+
                   </div>
                   
                 </div>
