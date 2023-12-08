@@ -43,6 +43,7 @@
     .bgimg {
       background-size: cover;
       background-color: lightblue;
+      min-height: 100vh;
     }
 
     .borderboxel {
@@ -164,16 +165,18 @@
     .details-text {
   white-space: nowrap; 
 }
-.saveel {
-                height: 45px;
-                width: 160px;
-                border-radius: 15px;
-                font-size: 18px;
-                font-weight: bold;
-                background-color: green;
-                color: white;
-                text-align: center;
-            }
+                .saveel {
+                                height: 45px;
+                                width: 160px;
+                                border-radius: 15px;
+                                font-size: 18px;
+                                font-weight: bold;
+                                background-color: rgb(235, 238, 240);
+                                color: rgb(243, 243, 243);
+                                text-align: center;
+
+                            
+                            }
  
             .backel{
                 height: 45px;
@@ -181,10 +184,10 @@
                 border-radius: 15px;
                 font-size: 18px;
                 font-weight: bold;
-                background-color:orange;
+                background-color:rgb(36, 35, 33);
                 color: white;
                 text-align: center;
- 
+
             }
  
            
@@ -466,8 +469,9 @@
 </div>
 
           <div class="btnsel">
-            <button class="backel" type="submit">Back </button>
-            <button class="saveel" type="submit">Save & Next </button>
+            
+            <button type="button" onclick="window.location.href='profie.html'" class="backel" style=" color: white; "> Back</button>
+            <button type="button" onclick="window.location.href='Medical Details 3.html'" class="saveel" style=" color: black; "> Save & Next</button>
         </div>
 
  </div>
