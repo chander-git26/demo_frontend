@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
-
+ 
 <head>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
     integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
@@ -13,79 +14,70 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
     integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
     crossorigin="anonymous"></script>
-
+ 
   <style>
     .navbtns {
-
+ 
       font-weight: bold;
       font-size: 20px;
     }
-
+ 
     .detailsPage {
       text-align: center;
       padding: 75px
     }
-
+ 
     .inputel {
       min-width: 50px;
       width: 200px;
       text-align: center;
-
+ 
     }
-
+ 
     .labelel {
       margin: 20px;
       display: flex;
       flex-direction: row;
       justify-content: space-between;
     }
-
+ 
     .bgimg {
       background-size: cover;
       background-color: lightblue;
       height: 100vh;
     }
-
+ 
     .borderboxel {
-
+ 
       background-color: white;
       max-width: 500px;
       width: 65%;
       border-radius: 20px;
       padding: 20px;
-      height: 600px;
+ 
       display: flex;
       flex-direction: column;
       justify-content: right;
-
+ 
     }
-
+ 
     .title {
       font-family: sans-serif;
       color: orangered;
       font-size: 30px;
     }
-
-    .submitel {
-      height: 45px;
-      width: 120px;
-      border-radius: 15px;
-      font-size: 18px;
-      font-weight: bold;
-      background-color: green;
-      color: white;
-      text-align: center;
-    }
-
+ 
+    
+ 
     .logo {
       height: 55px;
       width: 42px
     }
-
+ 
     .ex1 {
       width: 100%;
     }
-
+ 
     .dropbtn {
       background-color: #3498DB;
       color: white;
@@ -94,17 +86,17 @@
       border: none;
       cursor: pointer;
     }
-
+ 
     .dropbtn:hover,
     .dropbtn:focus {
       background-color: #2980B9;
     }
-
+ 
     .dropdown {
       position: relative;
       display: inline-block;
     }
-
+ 
     .dropdown-content {
       display: none;
       position: absolute;
@@ -114,55 +106,67 @@
       box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
       z-index: 1;
     }
-
+ 
     .dropdown-content a {
       color: black;
       padding: 12px 16px;
       text-decoration: none;
       display: block;
     }
-
+ 
     .dropdown a:hover {
       background-color: #ddd;
     }
-
+ 
     .hidden {
       display: none;
     }
-
+   
+ 
     .options {
       list-style: none;
       padding: 0;
     }
-
+ 
     .options li {
       margin-bottom: 5px;
     }
-
+ 
     .expand-button {
       cursor: pointer;
       color: blue;
-
+ 
     }
-
+ 
     .show {
       display: block;
     }
-
+ 
     .form-group {
       display: flex;
       flex-direction: row;
       align-items: center;
     }
-
+ 
     label {
       width: 200px;
       text-align: left;
       margin-right: 20px;
-    
+   
     }
     .details-text {
-        white-space: nowrap; 
+  white-space: nowrap;
+}
+
+.submitel {
+      height: 45px;
+                width: 160px;
+                border-radius: 15px;
+                font-size: 18px;
+                font-weight: bold;
+                background-color: rgb(218, 221, 224);
+                color: white;
+                text-align: center;
     }
   .saveel {
                 height: 45px;
@@ -187,7 +191,31 @@
                 text-align: center;
  
             }
- 
+            .saveel {
+                height: 45px;
+                width: 160px;
+                border-radius: 15px;
+                font-size: 18px;
+                font-weight: bold;
+                background-color: rgb(235, 238, 240);
+                color: rgb(243, 243, 243);
+                text-align: center;
+
+             
+            }
+
+            .backel{
+                height: 45px;
+                width: 120px;
+                border-radius: 15px;
+                font-size: 18px;
+                font-weight: bold;
+                background-color:rgb(36, 35, 33);
+                color: white;
+                text-align: center;
+
+            }
+             
            
  
             .btnsel {
@@ -195,149 +223,105 @@
                 flex-direction: row;
                 justify-content: space-between;
             }
-    
+
+            .btnel{
+  
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  border-radius: 12px;
+  }
+
+  .btntext {
+
+  color: black;
+  font-weight: bold;
+  font-size:20px ;
+  }
+   
   </style>
 </head>
-
+ 
 <body>
   <nav class="navbar navbar-expand-lg navbar-light">
-    <a class="navbar-brand" href=""><img
-        src="https://cosglobal.in/wp-content/uploads/2023/11/WhatsApp-Image-2023-11-22-at-18.18.56.jpeg"
-        class="logo "></a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
-      aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <a class="navbar-brand" href=""><img src="https://cosglobal.in/wp-content/uploads/2023/11/WhatsApp-Image-2023-11-22-at-18.18.56.jpeg" class="logo "></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse d-flex flex-row justify-content-center" id="navbarNavAltMarkup">
+    <div class="collapse navbar-collapse d-flex flex-row justify-content-right" id="navbarNavAltMarkup">
       <div class="navbar-nav d-flex flex-direction:row justify-content:right">
-        <button type="button" class="btn btn-warning mr-5"><a href="login.html" style="color: white; ">Home</a></button>
+        
+        
+         <button type="button" onclick="window.location.href='login.html'" class="btnel btntext  w3-bar-item w3-button" ><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house" viewBox="0 0 16 16">
+            <path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5z"/>
+          </svg> Home</button><br/>
         <!--<a class="nav-item nav-link active navbtns" href="#">Home </span></a>
         <a class="nav-item nav-link navbtns" href="#">About us</a>
         <a class="nav-item nav-link navbtns" href="#">Gallery</a>
         <a class="nav-item nav-link navbtns" href="#">Contact us</a>-->
       </div>
     </div>
-   
   </nav>
-
+ 
   <div class="bgimg detailsPage d-flex flex-row justify-content-center">
     <div class="borderboxel  d-flex flex-row justify-content-center">
       <div class="ex1 ">
         <h1 class="title">FAMILY INFORMATION</h1>
         <div class="d-flex flex-column flex-direction:column justify-content:center">
-
-
+ 
+ 
          
           <div class="expand-button">
-            <button> <label for="Fathername" class="details-text" onclick="toggleFamilyDetails()">Father details</label></button>
+            <button> <label for="Father name" class="details-text" onclick="toggleFamilyDetails()">Father details</label></button>
           </div>
-          
-
+         
+ 
           <div id="familyDetails" class="hidden">
-        
+       
+ 
             <ul class="options">
               <br>
-              <label for="fathername">fatherName:</label>
-              <input type="text" id="fathername" name="username" required>
+              <label for="username">fatherName:</label>
+              <input type="text" id="username" name="username" required>
               <br>
-              <label for="fatherage">Age:</label>
-              <input type="digit" id="fatheage" maxlength="3" name="username" required>
+              <label for="username">Age:</label>
+              <input type="digit" id="username" maxlength="3" name="username" required>
               <br>
-
-              <label for="fatheroccupation">Occupation:</label>
-              <input type="text" id="fatheroccupation" name="username" required>
+ 
+              <label for="username">Occupation:</label>
+              <input type="text" id="username" name="username" required>
               <br>
-
-              <label for="medicalhistory">Upload medical history</label>
-              <input type="file" class="inputel" id="fathermedicalhistory" placeholder="Enter your Medical history"
+ 
+              <label for="Upload medical history">Upload medical history</label>
+              <input type="file" class="inputel" id="Medicalhistory" placeholder="Enter your Medical history"
                 required></input>
               <br>
-
-
+ 
+ 
              
             </ul>
           </div><br>
-
-
+ 
+ 
      
           <div class="expand-button">
-            <button> <label for="mothername" class="details-text" onclick="toggleMotherDetails()">Mother Details</label></button>
+            <button> <label for="Mother name" class="details-text" onclick="toggleMotherDetails()">Mother Details</label></button>
           </div>
-
+ 
           <div id="MotherDetails" class="hidden">
          
-
+ 
             <ul class="options">
               <br>
-              <label for="mothername">mother Name:</label>
-              <input type="text" id="mothername" name="username" required>
-              <br>
-              <label for="motherage">Age:</label>
-              <input type="text" id="motherage" maxlength="3" name="username" required>
-              <br>
-
-              <label for="motheroccupation">Occupation:</label>
-              <input type="text" id="motheroccupation" name="username" required>
-              <br>
-              <label for="mothermedicalhistory">Upload medical history</label>
-              <input type="file" class="inputel" id="mothermedicalhistory" placeholder="Enter your Medical history"
-                required></input>
-              <br>
-
-
-            </ul>
-          </div><br>
-
-
-         
-          <div class="expand-button">
-            <button> <label for="" class="details-text" onclick="toggleSpouseDetails()">Spouse Details</label></button>
-          </div>
-
-          <div id="SpouseDetails"   class="hidden" style="display: none;">
-          
-
-            <ul class="options">
-              <br>
-              <label for="spousename">Spouse Name:</label>
-              <input type="text" id="spousename" maxlength="3" name="username" required>
-              <br>
-              <label for="spouseage">Spouse Age:</label>
-              <input type="text" id="spouseage" name="username" required>
-              <br>
-
-              <label for="spouseoccupation">Spouse Occupation:</label>
-              <input type="text" id="spouseoccupation" name="username" required>
-              <br>
-
-              <label for="spoudemedicalhistory">Upload medical history</label>
-              <input type="file" class="inputel" id="spoudemedicalhistory" placeholder="Enter your Medical history"
-                required></input>
-              <br>
-
-
-              
-            </ul>
-          </div><br>
-
-
-
-        
-          <div class="expand-button">
-            <button> <label for="Nominee1 name" class="details-text" onclick="toggleNominee1Details()">Nomine1 Details</label></button>
-          </div>
-
-          <div id="Nominee1Details" class="hidden">
-          
-            <ul class="options">
-              <br>
-              <label for="username">Name:</label>
+              <label for="username">mother Name:</label>
               <input type="text" id="username" name="username" required>
               <br>
               <label for="username">Age:</label>
               <input type="text" id="username" maxlength="3" name="username" required>
               <br>
-
+ 
               <label for="username">Occupation:</label>
               <input type="text" id="username" name="username" required>
               <br>
@@ -345,48 +329,125 @@
               <input type="file" class="inputel" id="Medicalhistory" placeholder="Enter your Medical history"
                 required></input>
               <br>
-
-        
-            </ul>
-          </div><br>
-
-    
-          <div class="expand-button">
-            <button><label for="Nominee2 name" class="details-text" onclick="toggleNominee2Details()">Nomine2 Details</label></button>
-          </div>
-
-          <div id="Nominee2Details" class="hidden">
-       
-
-            <ul class="options">
-              <br>
-              <label for="username">Name:</label>
-              <input type="text" id="username" name="username" required>
-              <br>
-              <label for="username">Age:</label>
-              <input type="text" id="username" maxlength="3" name="username" required>
-              <br>
-
-              <label for="username">Occupation:</label>
-              <input type="text" id="username" name="username" required>
-              <br>
-              <div class="labelel">
-                <div>
-                  <label for="Upload medical history">Upload medical history</label>
-                </div>
-                <div>
-                  <input type="file" class="inputel" id="Medicalhistory" placeholder="Enter your Medical history"
-                    required></input>
-
-
-                  <br>
-                </div>
-              </div>
-
+ 
              
             </ul>
           </div><br>
-
+ 
+ 
+         
+          <div class="expand-button">
+            <button> <label for="Spouse name" class="details-text" onclick="toggleSpouseDetails()">Spouse Details</label></button>
+          </div>
+ 
+          <div id="SpouseDetails"   class="hidden" style="display: none;">
+         
+ 
+            <ul class="options">
+              <br>
+              <label for="username">Name:</label>
+              <input type="text" id="username" maxlength="3" name="username" required>
+              <br>
+              <label for="username">Age:</label>
+              <input type="text" id="username" name="username" required>
+              <br>
+ 
+              <label for="username">Occupation:</label>
+              <input type="text" id="username" name="username" required>
+              <br>
+ 
+              <label for="Upload medical history">Upload medical history</label>
+              <input type="file" class="inputel" id="Medicalhistory" placeholder="Enter your Medical history"
+                required></input>
+              <br>
+ 
+             
+            </ul>
+          </div><br>
+ 
+          <div class="expand-button">
+            <button> <label for="Spouse name" class="details-text" onclick="toggleotherDetails()">others Details</label></button>
+          </div>
+ 
+          <div id="otherDetails"   class="hidden" >
+         
+ 
+            <ul class="options">
+              <br>
+              <label for="username">Name:</label>
+              <input type="text" id="username" maxlength="3" name="username" required>
+              <br>
+              <label for="username">Age:</label>
+              <input type="text" id="username" name="username" required>
+              <br>
+              <label for="username">Relation to nominee:</label>
+              <input type="text" id="username" name="username" required>
+              <br>
+ 
+             
+ 
+           
+ 
+             
+            </ul>
+          </div><br>
+ 
+ 
+ 
+ 
+       
+          <form>
+            <fieldset>
+             
+            <button> <label for="other name" class="details-text" >select your nominee</label></button>
+              <label>
+                <input type="checkbox" name="nominee" value="father" class="nomineeCheckbox">
+                Father
+              </label><br>
+              <label>
+                <input type="checkbox" name="nominee" value="mother" class="nomineeCheckbox">
+                Mother
+              </label><br>
+              <label>
+                <input type="checkbox" name="nominee" value="spouse" class="nomineeCheckbox">
+                Spouse
+              </label><br>
+              <label>
+                <input type="checkbox" name="nominee" value="Other" class="nomineeCheckbox">
+                Other
+              </label><br>
+            </div>
+            <div>
+             
+       
+         
+            </fieldset>
+          </form>
+          <script>
+            const checkboxes = document.querySelectorAll('.nomineeCheckbox');
+            let checkedCount = 0;
+         
+            checkboxes.forEach(checkbox => {
+              checkbox.addEventListener('change', function() {
+                if (this.checked) {
+                  checkedCount++;
+                  if (checkedCount > 2) {
+                    this.checked = false;
+                    checkedCount--;
+                  }
+                } else {
+                  checkedCount--;
+                }
+              });
+            });
+          </script>
+ 
+ 
+         
+         
+   
+         
+ 
           <script>
             function toggleFamilyDetails() {
               var details = document.getElementById("familyDetails");
@@ -412,17 +473,8 @@
                 details.classList.add("hidden");
               }
             }
-            function toggleNominee1Details() {
-              var details = document.getElementById("Nominee1Details");
-              if (details.classList.contains("hidden")) {
-                details.classList.remove("hidden");
-              } else {
-                details.classList.add("hidden");
-              }
-            }
-
-            function toggleNominee2Details() {
-              var details = document.getElementById("Nominee2Details");
+            function toggleotherDetails() {
+              var details = document.getElementById("otherDetails");
               if (details.classList.contains("hidden")) {
                 details.classList.remove("hidden");
               } else {
@@ -430,40 +482,40 @@
               }
             }
           </script>
-
-
+ 
+ 
 <div class="labelel">
   <div>
-    <label for="maritalStatus">Maritalstatus</label>
-    
+    <label for="Maritalstatus">Maritalstatus</label>
+   
   </div>
   <div>
-      <select id="maritalStatus" onchange="showHideSpouseDetails()">
+      <select id="Maritalstatus" onchange="showHideSpouseDetails()">
         <option value="choose" id="choose">Choose</option>
           <option value="Single" id="Singlestatus">Single</option>
           <option value="Married" id="SpouseDetails">Married</option>
       </select>
-      
+     
       </div>
     <br>
   </div>
-
+ 
 </div>
-
-
-
+ 
+ 
+ 
 <div class="labelel" id="Noofchildren" style="display: none;">
   <div>
-
+ 
    
    
-    
+   
   </div>
   <script>
     function displayChildrenInfo() {
       var numOfChildren = document.getElementById('numOfChildren').value;
       var childrenInfoDiv = document.getElementById('childrenInfo');
-      childrenInfoDiv.innerHTML = ''; 
+      childrenInfoDiv.innerHTML = '';
       for (var i = 1; i <= numOfChildren; i++) {
         var childDiv = document.createElement('div');
         childDiv.innerHTML = '<h3>Child ' + i + ' Information:</h3>' +
@@ -475,7 +527,7 @@
           '<input type="text" id="childGrade' + i + '" name="childGrade' + i + '" required>' +
           '<label for="childGender' + i + '">Gender:</label>' +
           '<input type="text" id="childGender' + i + '" name="childGender' + i + '" required><br><br>';
-        
+       
         childrenInfoDiv.appendChild(childDiv);
       }
     }
@@ -483,7 +535,7 @@
 </head>
 <body>
 <div>
-  
+ 
   <label for="numOfChildren">Select number of children:</label>
   <select id="numOfChildren" onchange="displayChildrenInfo()">
     <option value="0">choose</option>
@@ -491,31 +543,32 @@
     <option value="2">2</option>
     <option value="3">3</option>
     <option value="4">4</option>
-    
+   
   </select>
 </div>
   <div id="childrenInfo">
    
   </div>
 </div>
-
+ 
           <div class="btnsel">
-            <button class="backel" type="submit"> <a href="proffisional.html" >Back </a> </button>
-            <button class="saveel" type="submit"><a href="Medical Details 3.html">Save & Next </a> </button>
+            <button type="button" onclick="window.location.href='proffisional.html'" class="backel" style=" color: white; "> Back</button>
+            <button type="button" onclick="window.location.href='Medical Details 3.html'" class="submitel" style=" color: black; "> Save & Next</button>
+   
         </div>
-
+ 
  </div>
       </div>
-
-
-
+ 
+ 
+ 
     </div>
     <script>
       function showHideSpouseDetails() {
           var Maritalstatus = document.getElementById("Maritalstatus");
           var SpouseDetails = document.getElementById("SpouseDetails");
           var Noofchildren= document.getElementById("Noofchildren");
-
+ 
           if (Maritalstatus.value === "Married") {
             SpouseDetails.style.display="block";
               Noofchildren.style.display="block";
@@ -525,64 +578,9 @@
           }
       }
       showHideSpouseDetails();
-
-
-
-      
-
-      async function postData() {
-                const apiUrl = 'http://localhost:8280/user/MedicalInformation';
-                
-                const data = {
-                    user_id: "1",
-                    father_name: document.getElementById('fathername').value,
-                    father_age: document.getElementById('fatherage').value,
-                    father_occupation: document.getElementById('fatheroccupation').value,
-                    mother_name: document.getElementById('mothername').value,
-                    mother_age: document.getElementById('motherage').value,
-                    mother_occupation: document.getElementById('motheroccupation').value,
-                    spouse_name: document.getElementById('spousename').value,
-                    spouse_age: document.getElementById('spouseage').value,
-                    spouse_occupation: document.getElementById('spouseoccupation').value,
-                    nomine1_name: document.getElementById('nomine1name').value,
-                    nomine1_age: document.getElementById('nomine1age').value,
-                    nomine1_occupation: document.getElementById('nomine1occupation').value,
-                    nomine2_name: document.getElementById('nomine2name').value,
-                    nomine2_age: document.getElementById('nomine2age').value,
-                    nomine2_occupation: document.getElementById('nomine2occupation').value,
-                    marital_status: document.getElementById('maritalStatus').value,
-                    selectnumberofchildren: document.getElementById('childrenInfo').value
-                    
-                    
-                    
-                };
-                
-                try {
-                    const response = await fetch(apiUrl, {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json'
-                    },
-                    body: JSON.stringify(data)
-                    });
-                
-                    if (!response.ok) {
-                    throw new Error('Network response was not ok');
-                    }
-                
-                    const responseData = await response.json();
-                    console.log(responseData); 
-                
-                } catch (error) {
-                    console.error('Error posting data:', error);
-                }
-                }
-                
-                postData();
-        
-
+ 
   </script>
-
+ 
 </body>
-
+ 
 </html>
