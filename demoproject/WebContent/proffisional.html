@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous"/>
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
@@ -20,6 +21,7 @@
 
             }
 
+            
             .labelel {
             margin: 20px;
             display: flex;
@@ -97,6 +99,23 @@
                 justify-content: space-between;
                 margin-top: 30px;
             }
+
+            .btnel{
+  
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                height: 50px;
+                border-radius: 12px;
+                }
+
+                .btntext {
+
+                color: black;
+                font-weight: bold;
+                font-size:20px ;
+                }
         </style>
     </head>
     <body>
@@ -105,9 +124,13 @@
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse d-flex flex-row justify-content-center" id="navbarNavAltMarkup">
+            <div class="collapse navbar-collapse d-flex flex-row justify-content-right" id="navbarNavAltMarkup">
               <div class="navbar-nav d-flex flex-direction:row justify-content:right">
-                <button type="button" class="btn btn-warning mr-5"><a href="login.html" style="color: white; ">Home</a></button>
+                
+                
+                 <button type="button" onclick="window.location.href='login.html'" class="btnel btntext  w3-bar-item w3-button" ><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house" viewBox="0 0 16 16">
+                    <path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5z"/>
+                  </svg> Home</button><br/>
                 <!--<a class="nav-item nav-link active navbtns" href="#">Home </span></a>
                 <a class="nav-item nav-link navbtns" href="#">About us</a>
                 <a class="nav-item nav-link navbtns" href="#">Gallery</a>
@@ -279,8 +302,10 @@
 
 
                     <div class="btnsel">
-                        <button class="backel" type="submit"><a href="profie.html">Back</a></button>
-                        <button class="submitel" type="submit"><a href="family.html">Save & Next</a></button>
+                      
+
+                        <button type="button" onclic="window.location.href='profie.html'" class="backel" style=" color: white; "> Back</button>
+                        <button type="button" onclick="window.location.href='family.html'"  class="submitel" style=" color: black; "> Save & Next</button>
                     </div>
 
 
@@ -450,6 +475,55 @@
 
             });
 
+
+
+
+
+            
+
+
+
         </script>
+
+
+<script>
+
+                
+    
+    async function postData() {
+                    const apiUrl = 'http://localhost:8280/user/ProfessionalInformation';
+                
+                    const data = {
+                      
+                        "sourceofincome": document.getElementById()"selectIncomeOption").value,
+                        "bussinessname": document.getElementById()"businessDetails").value,
+                        "annualrevenue" : document.getElementById()"revenuedetails").value
+                       
+                       
+                       
+                    };
+                
+                    try {
+                    const response = await fetch(apiUrl, {
+                        method: 'POST',
+                        headers: {
+                        'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify(data)
+                    });
+                
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                
+                    const responseData = await response.json();
+                    console.log(responseData); // You can handle the response data here
+                
+                    } catch (error) {
+                    console.error('Error posting data:', error);
+                    }
+                }
+                
+</script>
     </body>
 </html>
