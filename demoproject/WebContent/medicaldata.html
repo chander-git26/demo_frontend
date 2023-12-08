@@ -2,6 +2,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
     <title>medical</title>
@@ -25,6 +26,23 @@
         padding: 20px;
         height: 10px;
       }
+      .btnel{
+  
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  border-radius: 12px;
+  }
+
+  .btntext {
+
+  color: black;
+  font-weight: bold;
+  font-size:20px ;
+  }
+
     </style>
   </head>
 
@@ -34,9 +52,13 @@
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse d-flex flex-row justify-content-center" id="navbarNavAltMarkup">
+      <div class="collapse navbar-collapse d-flex flex-row justify-content-right" id="navbarNavAltMarkup">
         <div class="navbar-nav d-flex flex-direction:row justify-content:right">
-         
+          
+          
+           <button type="button" onclick="window.location.href='login.html'" class="btnel btntext  w3-bar-item w3-button" ><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house" viewBox="0 0 16 16">
+              <path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5z"/>
+            </svg> Home</button><br/>
           <!--<a class="nav-item nav-link active navbtns" href="#">Home </span></a>
           <a class="nav-item nav-link navbtns" href="#">About us</a>
           <a class="nav-item nav-link navbtns" href="#">Gallery</a>
@@ -89,7 +111,6 @@
        <script>
           async function fetchData() {
             try {
-              const userid = 
               const apiUrl = 'http://localhost:8280/user/getUserDetails/101';
               const response = await fetch(apiUrl,{
                         method:'GET',
