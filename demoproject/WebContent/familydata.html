@@ -15,6 +15,7 @@
         background-size: cover;
         height: 100vh;
       }
+
       .logo {
                 height: 55px;
                 width:42px
@@ -26,7 +27,7 @@
         height: 10px;
       }
       .btnel{
- 
+  
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -34,17 +35,17 @@
   height: 50px;
   border-radius: 12px;
   }
- 
+
   .btntext {
- 
+
   color: black;
   font-weight: bold;
   font-size:20px ;
   }
- 
+
     </style>
   </head>
- 
+
   <body>
     <nav class="navbar navbar-expand-lg navbar-light">
       <a class="navbar-brand" href=""><img src="https://cosglobal.in/wp-content/uploads/2023/11/WhatsApp-Image-2023-11-22-at-18.18.56.jpeg" class="logo "></a>
@@ -53,8 +54,8 @@
       </button>
       <div class="collapse navbar-collapse d-flex flex-row justify-content-right" id="navbarNavAltMarkup">
         <div class="navbar-nav d-flex flex-direction:row justify-content:right">
-         
-         
+          
+          
            <button type="button" onclick="window.location.href='login.html'" class="btnel btntext  w3-bar-item w3-button" ><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house" viewBox="0 0 16 16">
               <path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5z"/>
             </svg> Home</button><br/>
@@ -65,9 +66,9 @@
         </div>
       </div>
     </nav>
- 
+
     <div class="bg">
- 
+
       <center>
         <div class="bd-example">
           <table class="table">
@@ -79,7 +80,7 @@
                 <th scope="col">Age</th>
                 <th scope="col">occupation</th>
                
- 
+
                
               </tr>
                 </div>
@@ -90,34 +91,34 @@
                 <td><span id="fathername"></span></td>
                 <td><span id="fatherage"></span></td>
                 <td><span id="fatheroccupation"></span></td>
-               
-               
-               
+                
+                
+                
               </tr>
               <tr>
                 <th scope="row">Mother</th>
                 <td><span id="mothername"></span></td>
                 <td><span id="motherage"></span></td>
                 <td><span id="motheroccupation"></span></td>
-               
+                
                
               </tr>
-       
-       
+        
+        
               <tr class="table-primary">
                 <th scope="row">Spouse</th>
                 <td><span id="spousename"></span></td>
                 <td><span id="spouseage"></span></td>
                 <td><span id="spouseoccupation"></span></td>
                
-               
+                
               </tr>
               <tr class="table-secondary">
                 <th scope="row">Nominee1</th>
                 <td><span id="nominee1name"></span></td>
                 <td><span id="nominee1age"></span></td>
                 <td><span id="nominee1occupation"></span></td>
-               
+                
                
               </tr>
               <tr class="table-success">
@@ -126,25 +127,25 @@
                 <td><span id="nominee2age"></span></td>
                 <td><span id="nominee2ccupation"></span></td>
                </tr>
- 
+
                <tr class="table-primary">
                 <th scope="row">Other nominee</th>
                 <td><span id="othernomineename"></span></td>
                 <td><span id="othernomineeage"></span></td>
                 <td><span id="othernomineenamerelationship"></span></td>
                
-               
+                
               </tr>
-               
+                
              
-           
+            
             </tbody>
           </table>
         </div>
        
       </center>
     </div>
- 
+
         <script>
 
  
@@ -155,48 +156,57 @@
 
         async function fetchData() {
           try {
+
             const apiUrl = 'http://localhost:8280/user/getfamilyInfo/102';
+
+
             const response = await fetch(apiUrl,{
                       method:'GET',
-                     
-     
+                      
+      
                       }
             );
-       
+        
             if (!response.ok) {
               throw new Error('Network response was not ok');
             }
             const data = await response.json();
 
-           
-            document.getElementById('fathername').textContent = data.data.father_name;
-            document.getElementById('fatherage').textContent = data.data.age;
-            document.getElementById('fatheroccupation').textContent = data.data.father_occupation;
- 
+          
+            
+            document.getElementById('fathername').textContent = data.data.fathername;
+            document.getElementById('fathergage').textContent = data.data.age; 
+            document.getElementById('fatheroccupation').textContent = data.father_occupation; 
+
             document.getElementById('mothername').textContent = data.data.mother_name;
-            document.getElementById('motherage').textContent = data.data.mother_age;
-            document.getElementById('motheroccupation').textContent = data.data.mother_occupation;
- 
+            document.getElementById('motherage').textContent = data.data.mother_age; 
+            document.getElementById('motheroccupation').textContent = data.data.mother_occupation; 
+
             document.getElementById('spousename').textContent = data.data.spouse_name;
-            document.getElementById('spouseage').textContent = data.data.spouse_age;
-            document.getElementById('spouseoccupation').textContent = data.data.spouse_occupation;
- 
+            document.getElementById('spouseage').textContent = data.data.spouse_age; 
+            document.getElementById('spouseoccupation').textContent = data.data.spouse_occupation; 
+
             document.getElementById('nominee1name').textContent = data.data.nominee1_name;
-            document.getElementById('nominee2name').textContent = data.data.nominee2_name;
- 
- 
+            document.getElementById('nominee2name').textContent = data.data.nominee2_name; 
+
+
             document.getElementById('othernomineename').textContent = data.data.other_nominee_name;
-            document.getElementById('othernomineeage').textContent = data.data.other_nominee_age;
-            document.getElementById('othernomineerelationship').textContent = data.data.other_nominee_relationship;
-                        
+            document.getElementById('othernomineeage').textContent = data.data.other_nominee_age; 
+            document.getElementById('othernomineerelationship').textContent = data.data.other_nominee_relationship; 
+                          
+            
+
           } catch (error) {
             console.log('Error fetching data:', error);
           }
         }
-       
+        
         fetchData();
       </script>
-   
+    
     <!-- End Example Code -->
   </body>
 </html>
+
+ 
+
