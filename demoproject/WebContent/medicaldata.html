@@ -107,38 +107,47 @@
       </center>
     </div>
                  
-    
-    
-       <script>
-          async function fetchData() {
-            try {
-              const apiUrl = 'http://localhost:8280/user/getUserDetails/101';
-              const response = await fetch(apiUrl,{
-                        method:'GET',
-                      
+    <script>
+      async function fetchData() {
+        try {
+          const apiUrl = 'http://localhost:8280/user/getMedicalInfo/102';
+          const response = await fetch(apiUrl,{
+                    method:'GET'
+                   
+                   
 
-                      }
-              );
-        
-              if (!response.ok) {
-                throw new Error('Network response was not ok');
-              }
-              const data = await response.json();
-              
-              document.getElementById('getpastsurgeries').textContent = data.pastsurgeries;
-              document.getElementById('getbloodpressure').textContent = data.bloodpressure;
-              document.getElementById('getdiabatase').textContent = data.diabatase;
-                            
-            
-            } catch (error) {
-              console.log('Error fetching data:', error);
-            }
+                   }
+          );
+     
+          if (!response.ok) {
+            console.log('hghg');
+            throw new Error('Network response was not ok');
           }
+<<<<<<< HEAD
+          console.log('hgfgfghfhjfhfhnfnh');
+          const data = await response.json();
+          console.log(data);
+          document.getElementById('getpastsurgeries').textContent = data.data.past_surgeries;
+          document.getElementById('getbloodpressure').textContent = data.data.blood_pressure;
+          document.getElementById('getdiabatase').textContent = data.data.diabetes;
+          
+        } catch (error) {
+          console.log('Error fetching data:', error);
+        }
+      }
+     
+      fetchData();
+    </script>
+    
+      
+ 
+=======
         
           fetchData();
         </script>
 
     
+>>>>>>> dfe0fd5da8be0da525622e26a5a624ba1f0721c2
   </body>
 </html>
 
