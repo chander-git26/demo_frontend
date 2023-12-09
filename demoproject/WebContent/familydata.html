@@ -127,7 +127,16 @@
                 <td><span id="nominee2name"></span></td>
                 <td><span id="nominee2age"></span></td>
                 <td><span id="nominee2ccupation"></span></td>
+               </tr>
+
+               <tr class="table-primary">
+                <th scope="row">Other nominee</th>
+                <td><span id="othernomineename"></span></td>
+                <td><span id="othernomineeage"></span></td>
+                <td><span id="othernomineenamerelationship"></span></td>
                
+                
+              </tr>
                 
              
             
@@ -137,8 +146,6 @@
        
       </center>
     </div>
-
-      
 
         <script>
 
@@ -172,12 +179,12 @@
             document.getElementById('spouseoccupation').textContent = data.data.spouse_occupation; 
 
             document.getElementById('nominee1name').textContent = data.data.nominee1_name;
-            document.getElementById('nominee1age').textContent = data.data.nominee2_name; 
+            document.getElementById('nominee2name').textContent = data.data.nominee2_name; 
 
 
-            document.getElementById('nominee2name').textContent = data.data.other_nominee_name;
-            document.getElementById('nominee2age').textContent = data.data.other_nominee_age; 
-            document.getElementById('nominee2occupation').textContent = data.data.other_nominee_relationship; 
+            document.getElementById('othernomineename').textContent = data.data.other_nominee_name;
+            document.getElementById('othernomineeage').textContent = data.data.other_nominee_age; 
+            document.getElementById('othernomineerelationship').textContent = data.data.other_nominee_relationship; 
                           
             
           } catch (error) {

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <script src="https://kit.fontawesome.com/b454b53842.js" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous"/>
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
@@ -343,12 +344,12 @@
             <div class="navbg">
             
                 <div class="row">
-    
-    
+          
+          
                     <div class="col-12 col-md-6 col-lg-3">
                         <div class="card1">
                             <div class="d-flex flex-row justify-content-center">
-    
+          
                                 <img src="https://cosglobal.in/wp-content/uploads/2023/11/WhatsApp-Image-2023-11-22-at-18.18.56.jpeg" class="logo1 text-center mt-4 mb-4" />
                             </div>
                             <div class="d-flex flex-row justify-content-center">
@@ -368,7 +369,7 @@
                             <p class="para1">Madhapur, Hyderabad, India.</p>
                         </div>
                     </div>
-    
+          
                     <div class="col-6 col-md-6 col-lg-3">
                         <div class="card2">
                             <h1 class="head1">Get to Know Us</h1>
@@ -378,12 +379,11 @@
                             <p>Gift a Smile</p>
                         </div>
                     </div>
-    
-                    
+          
                     <div class="col-6 col-md-6 col-lg-3">
                         <div class="card2">
                             <h1 class="head1">Contact  Us</h1>
-
+          
                             <form >
                                 <input class="w3-input w3-border" type="text" placeholder="Name" required name="Name">
                                 <input class="w3-input w3-section w3-border" type="text" placeholder="Email" required name="Email">
@@ -395,12 +395,12 @@
                               </form>
                        
                               
-
-
-    
+          
+          
+          
                         </div>
                     </div>
-    
+          
                     <div class="col-6 col-md-6 col-lg-3">
                         <div class="card2">
                             <h1 class="head1">Let Us Help You</h1>
@@ -410,16 +410,17 @@
                             <p>Child Investments</p>
                         </div>
                     </div>
-    
+          
                 </div>
             
             <hr class="line m-5" />
             <p class="para1">2023 by Cosglobal</p>
-    
-    
-    
-        </div>
+          
+          
+          
+          </div>
                     
+
 
             <script>
 
@@ -430,15 +431,16 @@
                 }
 
                 async function postData() {
-                    const apiUrl = 'http://localhost:8280/user/PersonalInformation';
+                    const apiUrl = 'http://localhost:8280/user/personalInformation';
                 
                     const data = {
                       
 
                        
-                        "aadharnumber": document.getElementById("aadhaarNumber").value,
-                        "pannumber": document.getElementById("panNumber").value,
-                        "bloodgroup": document.getElementById("aadhaarNumber").value,
+                        "aadharNumber": document.getElementById("aadhaarNumber").value,
+                        "panNumber": document.getElementById("panNumber").value,
+                        "maritalStatus": document.getElementById("maritalstatus").value,
+                        "bloodGroup": document.getElementById("aadhaarNumber").value,
                         "height": document.getElementById("Height").value,
                         "weight": document.getElementById("weightDetails").value,
                         "smoking": document.getElementById("smokingyes").value,

@@ -139,35 +139,34 @@
 
       <!--Javascipt code-->
       
-      
-
-
-
       <script>
         async function fetchData() {
           try {
-            const apiUrl = 'http://localhost:8280/user/getUserDetails/101';
+            const apiUrl = 'http://localhost:8280/user/getPersonalInfo/101';
             const response = await fetch(apiUrl,{
-                      method:'GET',
+                      method:'GET'
                      
- 
+                     
+  
                      }
             );
        
             if (!response.ok) {
+              console.log('hghg');
               throw new Error('Network response was not ok');
             }
+            console.log('hgfgfghfhjfhfhnfnh');
             const data = await response.json();
+            console.log(data);
+            document.getElementById('getaadhaarNumber').textContent = data.data.aadhaar_number; 
+            document.getElementById('getpannumber').textContent = data.data.pan_number; 
+            document.getElementById('getmaritalstatus').textContent = data.data.marital_status; 
+            document.getElementById('getbloodgroup').textContent = data.data.blood_Group; 
+            document.getElementById('getheight').textContent = data.data.height; 
+            document.getElementById('getweightDetails').textContent = data.data.weight; 
+            document.getElementById('getsmoking').textContent = data.data.smoking; 
+            document.getElementById('getalchohol').textContent = data.data.alcohol; 
             
-            document.getElementById('getaadhaarNumber').textContent = data.aadhaarNumber; 
-            document.getElementById('getpannumber').textContent = data.pannumber; 
-            document.getElementById('getmaritalstatus').textContent = data.maritalstatus; 
-            document.getElementById('getbloodgroup').textContent = data.bloodgroup; 
-            document.getElementById('getheight').textContent = data.height; 
-            document.getElementById('getweightDetails').textContent = data.weightdetails; 
-            document.getElementById('getsmoking').textContent = data.smoking; 
-            document.getElementById('getalchohol').textContent = data.alchohol; 
-           
           } catch (error) {
             console.log('Error fetching data:', error);
           }
@@ -175,5 +174,9 @@
        
         fetchData();
       </script>
+
+
+
+     
   </body>
 </html>
