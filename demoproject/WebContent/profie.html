@@ -15,7 +15,7 @@
             }
             
             .inputel {
-            min-width: 50px;
+            min-width: 10px;
             width:200px;
             text-align: center;
 
@@ -45,7 +45,7 @@
             width:65%;
             border-radius: 20px;
             padding: 20px;
-
+            height: auto;
             display: flex;
             flex-direction: column;
             justify-content: right;
@@ -68,7 +68,7 @@
             }
 
             .saveel {
-                height: 45px;
+                height: 55px;
                 width: 160px;
                 border-radius: 15px;
                 font-size: 18px;
@@ -78,7 +78,7 @@
                 text-align: center;
 
              
-                
+
             }
 
             .backel{
@@ -104,7 +104,7 @@
 
                 .btntext {
 
-                color: black;
+                color: white;
                 font-weight: bold;
                 font-size:20px ;
                 }
@@ -207,27 +207,75 @@
 
                                 <div class="labelel">
                                     <div>
-                                        <label for="Mobile">Aadhaar Nuber</label>
+                                        <label for="Mobile">Address :</label>
                                     </div>
                                     <div>
-                                        <input  type="digit" class="inputel" id="aadhaarNumber" placeholder="Enter your Aadhaar number"required ></input>
-                                    <br>
+                                        <input  type="digit" class="inputel" id="address" placeholder="Enter your Address"required ></input>
+                                    
                                     </div>
                                 </div>
 
-
-
+                           
                                 <div class="labelel">
                                     <div>
-                                        <label for="Mobile">PAN Nuber</label>
+                                        <label for="gender">Gender : </label>
+                                        </span>
+                                        <p class="style7">
                                     </div>
                                     <div>
-                                        <input  type="digit" class="inputel" id="panNumber" placeholder="Enter your Pan number"required maxlength="10"></input>
-                                    <br>
+                                        <input type="radio" name="Gender" value="Male" required id="gender"> Male &nbsp; &nbsp; &nbsp; &nbsp;
+                                        <input type="radio" name="Gender" value="Female" required id="gender1"> Female
+                                        </p>
                                     </div>
-                                </div>
-
+                                    
+                                </div>                                
                                 
+                                
+
+                                            <div class="labelel">
+                                                <div>
+                                                    <label for="gender"> Date Of Birth: </label>
+                                                    </span>
+                                                    <p class="style7">
+                                                </div>
+                                                <div>
+                                                    <input type="date" name="date" value="date" required id="date"> 
+        
+                                                    </p>
+                                                </div>
+                                                
+                                            </div>
+
+                                            <div class="labelel">
+                                                <div>
+                                                    <label for="gender"> State : </label>
+                                                    </span>
+                                                    <p class="style7">
+                                                </div>
+                                                <div>
+                                                    <input type="text" name="state" value="" placeholder="enter your State" id="state"> 
+        
+                                                    </p>
+                                                </div>
+                                                
+                                            </div>
+                                            <div class="labelel">
+                                                <div>
+                                                    <label for="gender"> country : </label>
+                                                    </span>
+                                                    <p class="style7">
+                                                </div>
+                                                <div>
+                                                    <input type="text" name="country" value="" placeholder="enter your country" required id="country"> 
+        
+                                                    </p>
+                                                </div>
+                                                
+                                            </div>
+                                            
+                                            
+
+                                            
 
                                 <div class="labelel">
                                     <div>
@@ -262,7 +310,7 @@
                                             
                                             
                                         </select>
-                                        <br>
+                                  
                                     </div>
                                     
                                     
@@ -279,19 +327,20 @@
                                 
                                 
                             </div>
-                            
+
 
                             <div class="labelel">
                                 <div>
-                                    <label for="weightDetails">Weight</label>
+                                    <label for="height">Weight</label>
                                 </div>
                                 <div>
-                                    <input type="text" class="inputel" id="weightDetails" placeholder="Enter your Weight (in kgs)"></input>
+                                    <input type="text" class="inputel" id="Height" placeholder="Enter your Height (in cms)"></input>
                                     <br>
                                 </div>
                                 
                                 
                             </div>
+
 
                       
                             <div class="labelel">
@@ -324,8 +373,8 @@
                         </div> 
 
                         <div class="btnsel">
-                            <button type="button" onclick="window.location.href='login.html'" class="backel" style=" color: white; "> Back</button>
-                            <button type="button" onclick="saveAndNext()" class="saveel" style=" color: black; "> Save & Next</button>
+                            <button type="button" onclick="window.location.href='login.html'" class="backel" style=" color:white; "> Back</button>
+                            <button type="button" onclick="saveAndNext()" class="saveel" style=" color: green; "> Save & Next</button>
 
                             
                         </div>
@@ -340,85 +389,7 @@
 
             </div>
 
-            <div class="navbg">
-            
-                <div class="row">
-    
-    
-                    <div class="col-12 col-md-6 col-lg-3">
-                        <div class="card1">
-                            <div class="d-flex flex-row justify-content-center">
-    
-                                <img src="https://cosglobal.in/wp-content/uploads/2023/11/WhatsApp-Image-2023-11-22-at-18.18.56.jpeg" class="logo1 text-center mt-4 mb-4" />
-                            </div>
-                            <div class="d-flex flex-row justify-content-center">
-                                <div class="logocontainer">
-                                    <i class="fa-brands fa-google logo2 mr-5"></i>
-                                </div>
-                                <div class="logocontainer">
-                                    <i class="fa-brands fa-instagram logo2 mr-5"></i>
-                                </div>
-                                <div class="logocontainer">
-                                    <i class="fa-brands fa-twitter logo2 mr-5"></i>
-                                </div>
-                                <div class="logocontainer">
-                                    <i class="fa-brands fa-linkedin logo2"></i>
-                                </div>
-                            </div>
-                            <p class="para1">Madhapur, Hyderabad, India.</p>
-                        </div>
-                    </div>
-    
-                    <div class="col-6 col-md-6 col-lg-3">
-                        <div class="card2">
-                            <h1 class="head1">Get to Know Us</h1>
-                            <p>About us</p>
-                            <p>Career</p>
-                            <p>Press Release</p>
-                            <p>Gift a Smile</p>
-                        </div>
-                    </div>
-    
-                    
-                    <div class="col-6 col-md-6 col-lg-3">
-                        <div class="card2">
-                            <h1 class="head1">Contact  Us</h1>
-
-                            <form >
-                                <input class="w3-input w3-border" type="text" placeholder="Name" required name="Name">
-                                <input class="w3-input w3-section w3-border" type="text" placeholder="Email" required name="Email">
-                                <input class="w3-input w3-section w3-border" type="text" placeholder="Subject" required name="Subject">
-                                <input class="w3-input w3-section w3-border" type="text" placeholder="Comment" required name="Comment">
-                                <button class="w3-button w3-lightblue w3-section" type="submit">
-                                  <i class="fa fa-paper-plane"></i> SEND MESSAGE
-                                </button>
-                              </form>
-                       
-                              
-
-
-    
-                        </div>
-                    </div>
-    
-                    <div class="col-6 col-md-6 col-lg-3">
-                        <div class="card2">
-                            <h1 class="head1">Let Us Help You</h1>
-                            <p>Life Insurances</p>
-                            <p>Medical Insurance</p>
-                            <p>Retirement Plnas</p>
-                            <p>Child Investments</p>
-                        </div>
-                    </div>
-    
-                </div>
-            
-            <hr class="line m-5" />
-            <p class="para1">2023 by Cosglobal</p>
-    
-    
-    
-        </div>
+          
                     
 
             <script>

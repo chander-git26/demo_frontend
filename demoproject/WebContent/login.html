@@ -475,10 +475,46 @@
 </script>
 
 
-     
+<script>
+  async function fetchData() {
+    try {
+      const apiUrl = 'http://localhost:8280/user/getUserDetails/101';
+      const response = await fetch(apiUrl,{
+                method:'GET'
+               
+               
+
+               }
+      );
+ 
+      if (!response.ok) {
+        console.log('hghg');
+        throw new Error('Network response was not ok');
+      }
+      console.log('hgfgfghfhjfhfhnfnh');
+      const data = await response.json();
+      console.log(data);
+      document.getElementById('getuserid').textContent = data.data.userId; 
+  document.getElementById('getusername').textContent = data.data.firstname; 
+ 
+  
+      
+    } catch (error) {
+      console.log('Error fetching data:', error);
+    }
+  }
+ 
+  fetchData();
+</script>
+
                  
     
     <!-- End Example Code -->
+
+
+
+
+
     
   </body>
 </html>
