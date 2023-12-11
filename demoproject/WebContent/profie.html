@@ -239,7 +239,7 @@
                                                     <p class="style7">
                                                 </div>
                                                 <div>
-                                                    <input type="date" name="date" value="date" required id="date"> 
+                                                    <input type="date" name="date" id="date" value="date" required id="date"> 
         
                                                     </p>
                                                 </div>
@@ -266,7 +266,7 @@
                                                     <p class="style7">
                                                 </div>
                                                 <div>
-                                                    <input type="text" name="country" value="" placeholder="enter your country" required id="country"> 
+                                                    <input type="text" name="country" id="country" value="" placeholder="enter your country" required id="country"> 
         
                                                     </p>
                                                 </div>
@@ -284,8 +284,8 @@
                                         <p class="style7">
                                     </div>
                                     <div>
-                                        <input type="radio" name="maritalstatus" value="Single" />Single
-                                        <input type="radio" name="maritalstatus" value="Married" />Married
+                                        <input type="radio" name="maritalstatus" value="Single" id="maritalstatus" />Single
+                                        <input type="radio" name="maritalstatus" value="Married" id="maritalstatus"/>Married
                                         </p>
                                     </div>
                                     
@@ -298,7 +298,7 @@
                                         <label for="bloodgroup">Blood Group</label>
                                     </div>
                                     <div>
-                                        <select>
+                                        <select id="bloodgroup">
                                             <option>select</option>
                                             <option>A+</option>
                                             <option>B+</option>
@@ -407,9 +407,12 @@
                       
 
                        
-                        "aadharnumber": document.getElementById("aadhaarNumber").value,
-                        "pannumber": document.getElementById("panNumber").value,
-                        "bloodgroup": document.getElementById("aadhaarNumber").value,
+                        "address": document.getElementById("address").value,
+                        "gender": document.getElementById("gender").value,
+                        "dateofbirth": document.getElementById("date").value,
+                        "state": document.getElementById("state").value,
+                        "country": document.getElementById("country").value,
+                        "bloodgroup": document.getElementById("bloodgroup").value,
                         "height": document.getElementById("Height").value,
                         "weight": document.getElementById("weightDetails").value,
                         "smoking": document.getElementById("smokingyes").value,

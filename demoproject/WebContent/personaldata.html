@@ -88,14 +88,29 @@
             </thead>
             <tbody>
               <tr class="table-active">
-                <th scope="row">Adhar number</th>
-                <td ><span id="getaadhaarNumber"></span></td>
+                <th scope="row">Address</th>
+                <td ><span id="address"></span></td>
                 
               </tr>
 
-              <tr>
-                <th scope="row">Pan number</th>
-                <td><span id="getpannumber"></span></td>
+              <tr class="table-primary">
+                <th scope="row">Gender</th>
+                <td><span id="gender"></span></td>
+               
+              </tr>
+              <tr class="table-secondary">
+                <th scope="row">DOB</th>
+                <td><span id="date"></span></td>
+               
+              </tr>
+              <tr class="table-primary" >
+                <th scope="row">State</th>
+                <td><span id="state"></span></td>
+               
+              </tr>
+              <tr class="table-secondary" >
+                <th scope="row">country</th>
+                <td><span id="country"></span></td>
                
               </tr>
         
@@ -142,7 +157,7 @@
       <script>
         async function fetchData() {
           try {
-            const apiUrl = 'http://localhost:8280/user/getPersonalInfo/101';
+            const apiUrl = 'http://localhost:8280/user/getPersonalInfo/102';
             const response = await fetch(apiUrl,{
                       method:'GET'
                      
@@ -158,8 +173,11 @@
             console.log('hgfgfghfhjfhfhnfnh');
             const data = await response.json();
             console.log(data);
-            document.getElementById('getaadhaarNumber').textContent = data.data.aadhaar_number; 
-            document.getElementById('getpannumber').textContent = data.data.pan_number; 
+            document.getElementById('address').textContent = data.data.address; 
+            document.getElementById('gender').textContent = data.data.gender; 
+            document.getElementById('date').textContent = data.data.dateofbirth; 
+            document.getElementById('state').textContent = data.data.state; 
+            document.getElementById('country').textContent = data.data.country; 
             document.getElementById('getmaritalstatus').textContent = data.data.marital_status; 
             document.getElementById('getbloodgroup').textContent = data.data.blood_Group; 
             document.getElementById('getheight').textContent = data.data.height; 
