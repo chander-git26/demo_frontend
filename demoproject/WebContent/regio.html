@@ -1,289 +1,231 @@
-
-<html>
-    <head>
-        <style>
-            
+<!DOCTYPE html>
+<!-- Created By CodingLab - www.codinglabweb.com -->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <title> Responsive Registration Form | CodingLab </title>
+    <link rel="stylesheet" href="style.css">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
 *{
-    padding: 0;
-    margin: 0;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins',sans-serif;
 }
 body{
-  background: url('https://wallpapers.com/images/hd/office-decoration-1920-x-1080-wallpaper-yr937kqy6o07pvkb.jpg') no-repeat center fixed;
-  background-size: cover;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background: linear-gradient(135deg, #e7ede9, #e8e4ea);
 }
- 
 .container{
-    background: #2d3e3f;
-    width: 350px;
-    min-height: 500px;
-    padding-bottom: 20px;
-    position: absolute;
-    top:50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    margin: auto;
-  padding: 70px 50px 20px 50px;
+  max-width: 700px;
+  width: 100%;
+  background-color: #101010;
+  padding: 25px 30px;
+  border-radius: 5px;
+  box-shadow: 0 5px 10px rgba(35, 3, 151, 0.15);
 }
- 
- 
-.fl{
-    float: left;
-  width: 110px;
-  line-height: 35px;
+.container .title{
+  font-size: 25px;
+  font-weight: 500;
+  position: relative;
+  color: whitesmoke;
 }
- 
-.fontLabel{
-  color: white;
+.container .title::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 30px;
+  border-radius: 5px;
+  background: linear-gradient(135deg, #71b7e6, #9b59b6);
 }
- 
-.fr{
-    float: right;
+.content form .user-details{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 25px 0 12px 0;
 }
- 
-.clr{
-    clear: both;
+form .user-details .input-box{
+  margin-bottom: 15px;
+  width: calc(100% / 2 - 20px);
 }
- 
-.box{
-    width: 360px;
-    height: 35px;
-    margin-top: 10px;
-    font-family: verdana;
-    font-size: 12px;
+form .input-box span.details{
+  display: block;
+  font-weight: 500;
+  margin-bottom: 5px;
 }
- 
-.textBox{
-    height: 35px;
-    width: 190px;
-    border: none;
-  padding-left: 20px;
+.user-details .input-box input{
+  height: 65px;
+  width: 100%;
+  outline: 3px;
+  font-size: 16px;
+  border-radius: 45px;
+  padding-left: 35px;
+  border: 1px solid #a20f0f;
+  border-bottom-width: 4px;
+  transition: all 0.3s ease;
 }
- 
-.new{
-  float: left;
+.user-details .input-box input:focus,
+.user-details .input-box input:valid{
+  border-color: #f8f5f8;
 }
- 
-.iconBox{
-    height: 35px;
-    width: 40px;
-    line-height: 38px;
-    text-align: center;
-  background: #ff6600;
+ form .gender-details .gender-title{
+  font-size: 20px;
+  font-weight: 500;
+ }
+ form .category{
+   display: flex;
+   width: 80%;
+   margin: 14px 0 ;
+   justify-content: space-between;
+ }
+ form .category label{
+   display: flex;
+   align-items: center;
+   cursor: pointer;
+ }
+ form .category label .dot{
+  height: 18px;
+  width: 18px;
+  border-radius: 50%;
+  margin-right: 10px;
+  background: #d9d9d9;
+  border: 5px solid transparent;
+  transition: all 0.3s ease;
 }
- 
-.radio{
-    color: white;
-    background: #2d3e3f;
-    line-height: 38px;
+ #dot-1:checked ~ .category label .one,
+ #dot-2:checked ~ .category label .two,
+ #dot-3:checked ~ .category label .three{
+   background: #9b59b6;
+   border-color: #d9d9d9;
+ }
+ form input[type="radio"]{
+   display: none;
+ }
+ form .button{
+   height: 45px;
+   margin: 35px 0;
+ }
+ .btnel{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+ }
+ form .button input{
+   height: 100%;
+   width: 100%;
+   border-radius: 5px;
+   border: none;
+   color: #0b0bc8;
+   font-size: 18px;
+   font-weight: 500;
+   letter-spacing: 1px;
+   cursor: pointer;
+   transition: all 0.3s ease;
+   background: linear-gradient(135deg, #71b7e6, #9b59b6);
+ }
+ form .button input:hover{
+  /* transform: scale(0.99); */
+  background: linear-gradient(-135deg, #71b7e6, #9b59b6);
+  }
+ @media(max-width: 584px){
+ .container{
+  max-width: 100%;
 }
- 
-.terms{
-    line-height: 35px;
-    text-align: center;
-    background: #2d3e3f;
-    color: white;
-}
- 
-.submit{
-    float: right;
-    border: none;
-    color: white;
-    width: 110px;
-    height: 35px;
-    background: #ff6600;
-    text-transform: uppercase;
-  cursor: pointer;
-}
- 
-::-webkit-input-placeholder { /* Chrome/Opera/Safari */
- 
-}
- 
- 
-        </style>
-    </head>
-    <body>
-        <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Registration</title>
-    <link  type="text/css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  </head>
-  <body>
-    <!-- Body of Form starts -->
-    <div class="container">
-      <form action="signin.html">
-        <!--First name-->
-            <div class="box">
-          <label for="firstName" class="fl fontLabel"> First Name: </label>
-                <div class="new iconBox">
-            <i class="fa fa-user" aria-hidden="true"></i>
-          </div>
-                <div class="fr">
-                        <input type="text" id="fname" name="firstName" placeholder="First Name"
-              class="textBox" autofocus="on" required>
-                </div>
-                <div class="clr"></div>
-            </div>
-            <!--First name-->
- 
- 
-        <!--Second name-->
-            <div class="box">
-          <label for="secondName" class="fl fontLabel"> Seconed Name: </label>
-                <div class="fl iconBox"><i class="fa fa-user" aria-hidden="true"></i></div>
-                <div class="fr">
-                        <input type="text" id="lname" required name="secondName"
-              placeholder="Last Name" class="textBox">
-                </div>
-                <div class="clr"></div>
-            </div>
-            <!--Second name-->
- 
- 
-            <!---Phone No.------>
-            <div class="box">
-          <label for="phone" class="fl fontLabel"> Phone No:</label>
-                <div class="fl iconBox"><i class="fa fa-phone-square" aria-hidden="true"></i></div>
-                <div class="fr">
-                        <input type="text" id="mobile" required name="phoneNo" maxlength="10" placeholder="Phone No." class="textBox">
-                </div>
-                <div class="clr"></div>
-            </div>
-            <!---Phone No.---->
- 
- 
-            <!---Email ID---->
-            <div class="box">
-          <label for="email" class="fl fontLabel"> Email ID: </label>
-                <div class="fl iconBox"><i class="fa fa-envelope" aria-hidden="true"></i></div>
-                <div class="fr">
-                        <input type="email" id="email" required name="email" placeholder="Email Id" class="textBox">
-                </div>
-                <div class="clr"></div>
-            </div>
-            <!--Email ID----->
- 
- 
-            <!---Password------>
-            <div class="box">
-          <label for="password" class="fl fontLabel"> Password </label>
-                <div class="fl iconBox"><i class="fa fa-key" aria-hidden="true"></i></div>
-                <div class="fr">
-                        <input type="Password" id="password" required name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" placeholder="Password" class="textBox">
-                </div>
-                <div class="clr"></div>
-            </div>
-            <!---Password---->
- 
-            <div class="box">
-                <label for="password" class="fl fontLabel">confirm Password </label>
-                      <div class="fl iconBox"><i class="fa fa-key" aria-hidden="true"></i></div>
-                      <div class="fr">
-                              <input type="Password" id="confirm_password" required name="password" placeholder="Password" class="textBox" required>
-                      </div>
-                      <div class="clr"></div>
-                  </div>
-                  <script>
-                    var password = document.getElementById("password")
-  , confirm_password = document.getElementById("confirm_password");
-
-function validatePassword(){
-  if(password.value != confirm_password.value) {
-    confirm_password.setCustomValidity("Passwords Don't Match");
-  } else {
-    confirm_password.setCustomValidity('');
+form .user-details .input-box{
+    margin-bottom: 15px;
+    width: 100%;
+  }
+  form .category{
+    width: 100%;
+  }
+  .content form .user-details{
+    max-height: 300px;
+    overflow-y: scroll;
+  }
+  .user-details::-webkit-scrollbar{
+    width: 5px;
+  }
+  }
+  @media(max-width: 459px){
+  .container .content .category{
+    flex-direction: column;
   }
 }
-
-
+     </style>
+   </head>
+<body>
+  
+  <div class="container">
+    <div class="title">Registration</div>
+    <div class="content">
+      <form action="signin.html">
+        <div class="user-details">
+          <div class="input-box">
+           
+            <input type="text" id="fname" placeholder="Enter First name"  data-errormsg="firstNameErrorMsg" required>
+          </div>
+         
+          <div class="input-box">
+           
+            <input type="text"id="lname" placeholder="Enter Last name"  data-errormsg="lastNameErrorMsg" required>
+          </div>
+          <div class="input-box">
+           
+            <input type="email" id="email" placeholder="Enter your email"  data-errormsg="emailErrorMsg" required>
+          </div>
+          <div class="input-box">
+           
+            <input type="text" placeholder="Enter your number" id="mobile" maxlength="10"  data-errormsg="mobileErrorMsg" required>
+          </div>
+          <div class="input-box">
+           
+            <input type="password" id="password"  placeholder="Enter your password"  data-errormsg="passwordErrorMsg" required>
+          </div>
+          <div class="input-box">
+         
+            <input type="password" id="confirm_password" placeholder="Confirm your password"  data-errormsg="confirmpasswordErrorMsg" required>
+          </div>
+        </div>
+        <script>
+          var password = document.getElementById("password")
+, confirm_password = document.getElementById("confirm_password");
+ 
+function validatePassword(){
+if(password.value != confirm_password.value) {
+confirm_password.setCustomValidity("Passwords Don't Match");
+} else {
+confirm_password.setCustomValidity('');
+}
+}
+ 
+ 
 password.onchange = validatePassword;
 confirm_password.onkeyup = validatePassword;
-                  </script>
-
-            <!---Gender----->
- 
-            <div class="box">
-                <label for="secondName" class="fl fontLabel"> Address: </label>
-                      <div class="fl iconBox"><i class="fa fa-user" aria-hidden="true"></i></div>
-                      <div class="fr">
-                              <input type="text" id="address" required name="Address"
-                    placeholder="Address" class="textBox">
-                      </div>
-                      <div class="clr"></div>
-                  </div>
- 
-            <div class="box radio">
-          <label for="gender" class="fl fontLabel"> Gender: </label>
-                    <input type="radio" name="Gender" value="Male" required id="gender"> Male &nbsp; &nbsp; &nbsp; &nbsp;
-                    <input type="radio" name="Gender" value="Female" required id="gender1"> Female
-            </div>
- 
-            <div class="box">
-                <label for="password" class="fl fontLabel">Date of birth</label>
-                      <div class="fl iconBox"><i class="fa fa-calendar"></i></div>
-                      <div class="fr">
-                              <input type="date" id="dob" required name="date" placeholder="DOB" class="textBox">
-                      </div>
-                      <div class="clr"></div>
-                  </div>
- 
- 
-                  <div class="box">
-                    <label for="state" class="fl fontLabel">state</label>
-                          <div class="fl iconBox"><i class="fa fa-globe"></i></div>
-                          <div class="fr">
-                                  <input type="state" id="state" required name="state" placeholder="Enter state" class="textBox">
-                          </div>
-                          <div class="clr"></div>
-                      </div>
-                      <div class="box">
-                        <label for="country" class="fl fontLabel">country</label>
-                              <div class="fl iconBox"><i class="fa fa-globe"></i></div>
-                              <div class="fr">
-                                      <input type="country" id="country" required name="country" placeholder="Enter country" class="textBox">
-                              </div>
-                              <div class="clr"></div>
-                          </div>
-                      <div class="box">
-                        <label for="state" class="fl fontLabel">Zip code</label>
-                        <div class="fl iconBox"><i class="fa fa-globe"></i></div>
-                       
-                              <div class="fr">
-                                      <input type="Zip code" id="Zip" required name="zipcode" maxlength="6" placeholder="Enter code" class="textBox">
-                              </div>
-                              <div class="clr"></div>
-                          </div>
-   
- 
-            <!---Gender--->
- 
- 
-            <!--Terms and Conditions------>
-            <div class="box terms">
-                    <input type="checkbox" name="Terms" required> &nbsp; I accept the terms and conditions
-            </div>
-
-
-           
-
-
-            <!--Terms and Conditions------>
- 
- 
- 
-            <!---Submit Button------>
-            <div class="box" style="background: #2d3e3f">
-                    <input  type="Submit" onclick="postData()" name="Submit"  class="submit" value="SUBMIT">
-            </div>
-
-            
-            <!---Submit Button----->
-           
+        </script>
+       
+        <div class="button btnel">
+          <input type="submit" onclick="postData()"   value="SIGNUP" >
+        </div>
       </form>
+    </div>
   </div>
 
+  
+
+
+
+
+
+
+ 
   <script>
   
     async function postData() {
@@ -293,16 +235,11 @@ confirm_password.onkeyup = validatePassword;
       
       firstname: document.getElementById("fname").value,
       lastname: document.getElementById("lname").value,
-      gender: document.getElementById("gender").value,
-      dateofbirth: document.getElementById("dob").value,
+     
+     
       mobile: document.getElementById("mobile").value,
       password: document.getElementById("password").value,
       email: document.getElementById("email").value,
-      address: document.getElementById("address").value,
-      state: document.getElementById("state").value,
-      zipcode:document.getElementById("Zip").value,
-      country:document.getElementById("country").value,
-
     };
   
     try {
@@ -327,14 +264,7 @@ confirm_password.onkeyup = validatePassword;
     }
   }
   
-
-
-     
 </script>
-  <!--Body of Form ends--->
- 
-  </body>
-</html>
- 
-    </body>
+
+</body>
 </html>
