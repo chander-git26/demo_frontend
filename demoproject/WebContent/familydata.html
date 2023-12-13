@@ -1,152 +1,182 @@
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
-    <title>family</title>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <style>
-      .bg{
-        background-image: url('https://img.freepik.com/premium-photo/close-up-white-grey-color-cement-background-texture-mockup-design_42708-436.jpg');
-        background-repeat: no-repeat;
-        background-size: cover;
-        height: 100vh;
-      }
-
-      .logo {
-                height: 55px;
-                width:42px
-               
-            }
-            .bd-example{
-        width: 40%;
-        padding: 20px;
-        height: 10px;
-      }
-      .btnel{
-  
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  height: 50px;
-  border-radius: 12px;
-  }
-
-  .btntext {
-
-  color: black;
+<html>
+<head>
+   <style>
+    body {
+    background: #fafafa url(https://jackrugile.com/images/misc/noise-diagonal.png);
+    color: #444;
+    font: 100%/30px 'Helvetica Neue', helvetica, arial, sans-serif;
+    text-shadow: 0 1px 0 #fff;
+}
+ 
+strong {
+    font-weight: bold;
+}
+ 
+em {
+    font-style: italic;
+}
+ 
+table {
+    background: #f5f5f5;
+    border-collapse: separate;
+    box-shadow: inset 0 1px 0 #fff;
+    font-size: 12px;
+    line-height: 24px;
+    margin: 30px auto;
+    text-align: left;
+    width: 800px;
+}  
+ 
+th {
+    background: url(https://jackrugile.com/images/misc/noise-diagonal.png), linear-gradient(#777, #444);
+    border-left: 1px solid #555;
+    border-right: 1px solid #777;
+    border-top: 1px solid #555;
+    border-bottom: 1px solid #333;
+    box-shadow: inset 0 1px 0 #999;
+    color: #fff;
   font-weight: bold;
-  font-size:20px ;
-  }
-
-    </style>
-  </head>
-
-  <body>
-    <nav class="navbar navbar-expand-lg navbar-light">
-      <a class="navbar-brand" href=""><img src="https://cosglobal.in/wp-content/uploads/2023/11/WhatsApp-Image-2023-11-22-at-18.18.56.jpeg" class="logo "></a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse d-flex flex-row justify-content-right" id="navbarNavAltMarkup">
-        <div class="navbar-nav d-flex flex-direction:row justify-content:right">
-          
-          
-           <button type="button" onclick="window.location.href='login.html'" class="btnel btntext  w3-bar-item w3-button" ><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house" viewBox="0 0 16 16">
-              <path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5z"/>
-            </svg> Home</button><br/>
-          <!--<a class="nav-item nav-link active navbtns" href="#">Home </span></a>
-          <a class="nav-item nav-link navbtns" href="#">About us</a>
-          <a class="nav-item nav-link navbtns" href="#">Gallery</a>
-          <a class="nav-item nav-link navbtns" href="#">Contact us</a>-->
-        </div>
-      </div>
-    </nav>
-
-    <div class="bg">
-
-      <center>
-        <div class="bd-example">
-          <table class="table">
-            <thead>
-                <div class="col-2" style="border-radius: 25px;padding:35px;margin: 22px;">
-              <tr>
-                <th scope="col">Details</th>
-                <th scope="col">Name</th>
-                <th scope="col">Age</th>
-                <th scope="col">occupation</th>
-               
-
-               
-              </tr>
-                </div>
-            </thead>
-            <tbody>
-              <tr class="table-active">
-                <th scope="row">Father</th>
+    padding: 10px 15px;
+    position: relative;
+    text-shadow: 0 1px 0 #000;  
+    max-width: 75px;
+}
+ 
+th:after {
+    background: linear-gradient(rgba(255,255,255,0), rgba(255,255,255,.08));
+    content: '';
+    display: block;
+    height: 25%;
+    left: 0;
+    margin: 1px 0 0 0;
+    position: absolute;
+    top: 25%;
+    width: 50%;
+   
+}
+ 
+th:first-child {
+    border-left: 1px solid #777;    
+    box-shadow: inset 1px 1px 0 #999;
+   
+}
+ 
+th:last-child {
+    box-shadow: inset -1px 1px 0 #999;
+    width: 800px;
+   
+}
+ 
+td {
+    border-right: 1px solid #fff;
+    border-left: 1px solid #e8e8e8;
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #e8e8e8;
+    padding: 10px 15px;
+    position: relative;
+    transition: all 300ms;
+    width: 120px;
+   
+   
+}
+ 
+td:first-child {
+    box-shadow: inset 1px 0 0 #fff;
+}  
+ 
+td:last-child {
+    border-right: 1px solid #e8e8e8;
+    box-shadow: inset -1px 0 0 #fff;
+}  
+ 
+tr {
+    background: url(https://jackrugile.com/images/misc/noise-diagonal.png);
+}
+ 
+tr:nth-child(odd) td {
+    background: #f1f1f1 url(https://jackrugile.com/images/misc/noise-diagonal.png);
+}
+ 
+tr:last-of-type td {
+    box-shadow: inset 0 -1px 0 #fff;
+}
+ 
+tr:last-of-type td:first-child {
+    box-shadow: inset 1px -1px 0 #fff;
+}  
+ 
+tr:last-of-type td:last-child {
+    box-shadow: inset -1px -1px 0 #fff;
+}  
+ 
+tbody:hover td {
+    color: transparent;
+    text-shadow: 0 0 3px #aaa;
+}
+ 
+tbody:hover tr:hover td {
+    color: #444;
+    text-shadow: 0 1px 0 #fff;
+}
+   </style>
+   
+</head>
+<body>
+    <center>
+    <h1><b><span class="whitesmoke">Family Details</span></b></h1>
+</center>
+    <table>
+        <thead>
+          <tr>
+         
+          </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th><strong>Father</strong></th>
                 <td><span id="fathername"></span></td>
                 <td><span id="fatherage"></span></td>
                 <td><span id="fatheroccupation"></span></td>
-                
-                
-                
+                <td>Edit</td>
               </tr>
-              <tr>
-                <th scope="row">Mother</th>
-                <td><span id="mothername"></span></td>
-                <td><span id="motherage"></span></td>
-                <td><span id="motheroccupation"></span></td>
-                
-               
-              </tr>
-        
-        
-              <tr class="table-primary">
-                <th scope="row">Spouse</th>
-                <td><span id="spousename"></span></td>
-                <td><span id="spouseage"></span></td>
-                <td><span id="spouseoccupation"></span></td>
-               
-                
-              </tr>
-              <tr class="table-secondary">
-                <th scope="row">Nominee1</th>
-                <td><span id="nominee1name"></span></td>
-                <td><span id="nominee1age"></span></td>
-                <td><span id="nominee1occupation"></span></td>
-                
-               
-              </tr>
-              <tr class="table-success">
-                <th scope="row">Nominee2</th>
-                <td><span id="nominee2name"></span></td>
+          <tr>
+            <th><strong>Mother</strong></th>
+            <td><span id="mothername"></span></td>
+            <td><span id="motherage"></span></td>
+            <td><span id="motheroccupation"></span></td>
+            <td>Edit</td>
+          </tr>
+          <tr>
+            <th><strong>Spouce</strong></th>
+            <td><span id="spousename"></span></td>
+            <td><span id="spouseage"></span></td>
+            <td><span id="spouseoccupation"></span></td>
+            <td>Edit</td>
+          </tr>                
+          <tr>
+            <th><strong>Nominee 1</strong></th>
+            <td><span id="nominee1name"></span></td>
+            <td><span id="nominee1age"></span></td>
+            <td><span id="nominee1occupation"></span></td>
+            <td>Edit</td>
+          </tr>
+          <tr>
+            <th><strong>Nominee 2</strong></th>
+            <td><span id="nominee2name"></span></td>
                 <td><span id="nominee2age"></span></td>
                 <td><span id="nominee2ccupation"></span></td>
-               </tr>
-
-               <tr class="table-primary">
-                <th scope="row">Other nominee</th>
-                <td><span id="othernomineename"></span></td>
+            <td>Edit</td>
+          </tr>
+          <tr>
+            <th><strong>Other Nominee</strong></th>
+            <td><span id="othernomineename"></span></td>
                 <td><span id="othernomineeage"></span></td>
                 <td><span id="othernomineenamerelationship"></span></td>
-               
-                
-              </tr>
-                
-             
-            
-            </tbody>
-          </table>
-        </div>
-       
-      </center>
-    </div>
-
-        <script>
+            <td>Edit</td>
+          </tr>
+        </tbody>
+      </table>
+      <script>
 
  
  
@@ -204,9 +234,8 @@
         fetchData();
       </script>
     
-    <!-- End Example Code -->
-  </body>
+
+
+
+</body>
 </html>
-
- 
-
