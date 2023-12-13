@@ -238,6 +238,114 @@
         }
 
 
+        em {
+    font-style: italic;
+}
+ 
+table {
+    background: #f5f5f5;
+    border-collapse: separate;
+    box-shadow: inset 0 1px 0 #fff;
+    font-size: 12px;
+    line-height: 24px;
+    margin: 30px auto;
+    text-align: left;
+    width: 800px;
+}  
+ 
+th {
+    background: url(https://jackrugile.com/images/misc/noise-diagonal.png), linear-gradient(#777, #444);
+    border-left: 1px solid #555;
+    border-right: 1px solid #777;
+    border-top: 1px solid #555;
+    border-bottom: 1px solid #333;
+    box-shadow: inset 0 1px 0 #999;
+    color: #fff;
+  font-weight: bold;
+    padding: 10px 15px;
+    position: relative;
+    text-shadow: 0 1px 0 #000;  
+    max-width: 75px;
+}
+ 
+th:after {
+    background: linear-gradient(rgba(255,255,255,0), rgba(255,255,255,.08));
+    content: '';
+    display: block;
+    height: 25%;
+    left: 0;
+    margin: 1px 0 0 0;
+    position: absolute;
+    top: 25%;
+    width: 50%;
+   
+}
+ 
+th:first-child {
+    border-left: 1px solid #777;    
+    box-shadow: inset 1px 1px 0 #999;
+   
+}
+ 
+th:last-child {
+    box-shadow: inset -1px 1px 0 #999;
+    width: 800px;
+   
+}
+ 
+td {
+    border-right: 1px solid #fff;
+    border-left: 1px solid #e8e8e8;
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #e8e8e8;
+    padding: 10px 15px;
+    position: relative;
+    transition: all 300ms;
+    width: 250px;
+   
+   
+}
+ 
+td:first-child {
+    box-shadow: inset 1px 0 0 #fff;
+}  
+ 
+td:last-child {
+    border-right: 1px solid #e8e8e8;
+    box-shadow: inset -1px 0 0 #fff;
+}  
+ 
+tr {
+    background: url(https://jackrugile.com/images/misc/noise-diagonal.png);
+}
+ 
+tr:nth-child(odd) td {
+    background: #f1f1f1 url(https://jackrugile.com/images/misc/noise-diagonal.png);
+}
+ 
+tr:last-of-type td {
+    box-shadow: inset 0 -1px 0 #fff;
+}
+ 
+tr:last-of-type td:first-child {
+    box-shadow: inset 1px -1px 0 #fff;
+}  
+ 
+tr:last-of-type td:last-child {
+    box-shadow: inset -1px -1px 0 #fff;
+}  
+ 
+tbody:hover td {
+    color: transparent;
+    text-shadow: 0 0 3px #aaa;
+}
+ 
+tbody:hover tr:hover td {
+    color: #444;
+    text-shadow: 0 1px 0 #fff;
+}
+
+
 
 
   
@@ -257,202 +365,77 @@
 
             </div>
 
-            
-                <div class="bgimg  ">
-                  <div class="borderboxel d-flex flex-row justify-content-center">
-                    <div class="ex1">
-                            <h1 class="title">Personal Details</h1>
-                            <div class="d-flex flex-column flex-direction:column justify-content:center">
-        
-                                
-                                        <div class="labelel">
-                                            <div>
-                                                <label for="Mobile">Address :</label>
-                                            </div>
-                                            <div>
-                                                <input  type="digit" class="inputel" id="address" placeholder="Enter your Address"required ></input>
-                                            
-                                            </div>
-                                        </div>
-        
-                                   
-                                        <div class="labelel">
-                                            <div>
-                                                <label for="gender">Gender : </label>
-                                                </span>
-                                                <p class="style7">
-                                            </div>
-                                            <div>
-                                                <input type="radio" name="Gender" value="Male" required id="gender"> Male &nbsp; &nbsp; &nbsp; &nbsp;
-                                                <input type="radio" name="Gender" value="Female" required id="gender1"> Female
-                                                </p>
-                                            </div>
-                                            
-                                        </div>                                
-                                        
-                                        
-        
-                                        <div class="labelel">
-                                            <div>
-                                                <label for="gender"> Date Of Birth: </label>
-                                                </span>
-                                                <p class="style7">
-                                            </div>
-                                            <div>
-                                                <input type="date" name="date" id="date" value="date" required id="date"> 
-    
-                                                </p>
-                                            </div>
-                                            
-                                        </div>
+            <div>
 
-
-
-                                        <div class="labelel">
-                                            <div>
-                                                <label for="gender"> State : </label>
-                                                </span>
-                                                <p class="style7">
-                                            </div>
-                                            <div>
-                                                <input type="text" name="state" value="" placeholder="enter your State" id="state"> 
-    
-                                                </p>
-                                            </div>
-                                            
-                                        </div>
-
-
-
-                                        <div class="labelel">
-                                            <div>
-                                                <label for="gender"> country : </label>
-                                                </span>
-                                                <p class="style7">
-                                            </div>
-                                            <div>
-                                                <input type="text" name="country" id="country" value="" placeholder="enter your country" required id="country"> 
-    
-                                                </p>
-                                            </div>
-                                            
-                                        </div>
-                                                    
-                                                                        
-        
-                                        <div class="labelel">
-                                            <div>
-                                                <label for="maritalstatus"> Marital Status</label>
-                                                </span>
-                                                <p class="style7">
-                                            </div>
-                                            <div>
-                                                <input type="radio" name="maritalstatus" value="Single" id="maritalstatus" />Single
-                                                <input type="radio" name="maritalstatus" value="Married" id="maritalstatus"/>Married
-                                                </p>
-                                            </div>
-                                            
-                                        </div>
-                                        
-                                        
-        
-                                        <div class="labelel">
-                                            <div>
-                                                <label for="bloodgroup">Blood Group</label>
-                                            </div>
-                                            <div>
-                                                <select id="bloodgroup">
-                                                    <option>select</option>
-                                                    <option>A+</option>
-                                                    <option>B+</option>
-                                                    <option>AB+</option>
-                                                    <option>O+</option>
-                                                    <option>A-</option>
-                                                    <option>B-</option>
-                                                    <option>AB-</option>
-                                                    
-                                                    
-                                                </select>
-                                          
-                                            </div>
-                                            
-                                            
-                                        </div>
-
-
-                                    
-                                        <div class="labelel">
-                                            <div>
-                                                <label for="height">Height</label>
-                                            </div>
-                                            <div>
-                                                <input type="text" class="inputel" id="Height" placeholder="Enter your Height (in cms)"></input>
-                                                <br>
-                                            </div>
-                                            
-                                            
-                                        </div>
-            
-            
-                                        <div class="labelel">
-                                            <div>
-                                                <label for="height">Weight</label>
-                                            </div>
-                                            <div>
-                                                <input type="text" class="inputel" id="Height" placeholder="Enter your Height (in cms)"></input>
-                                                <br>
-                                            </div>
-                                            
-                                            
-                                        </div>
-            
-            
-                                
-                                        <div class="labelel">
-                                            <div>
-                                                <label for="smoking">Smoking</label>
-                                            </div>
-                                            <div>
-                                                <input type="radio"  id="smokingyes" name="smoking"></input>Yes
-                                                <input type="radio"  id="smokingno" name="smoking"></input>No
-                                                <br>
-                                            </div>
-                                            
-                                        </div>
-            
-                                        <div class="labelel">
-                                            <div>
-                                                <label for="alcohol">Alcohol</label>
-                                            </div>
-                                            <div>
-                                                <input type="radio" id="Alcoholyes"  name="Alchohol"></input>Yes
-                                                <input type="radio"  id="Alcoholno"  name="Alchohol" ></input>No
-                                                <br>
-                                            </div>
-                                            
-                                        </div>    
-                                        
-                                      
-                                    
-        
-                                </div> 
-        
-                                <div class="btnsel">
-                                    <button type="button" onclick="window.location.href='login.html'" class="backel" style=" color:white; "> Back</button>
-                                    <button type="button" onclick="saveAndNext()" class="saveel" style=" color: black; "> Save & Next</button>
-        
-                                    
-                                </div>
-        
-        
-        
-        
-                            </div> 
-                        </div> 
-                        
-                        
-        
-                    </div>
+                <center>
+                    <h1><b><span class="whitesmoke">Personal Details</span></b></h1>
+                </center>
+                    <table>
+                        <thead>
+                          <tr>
+                         
+                          </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th><strong>Address</strong></th>
+                                <td ><span id="address"></span></td>
+                                <td>Edit</td>
+                              </tr>
+                          <tr>
+                            <th><strong>Gender</strong></th>
+                            <td><span id="gender"></span></td>
+                            <td>Edit</td>
+                          </tr>
+                          <tr>
+                            <th><strong>D0B</strong></th>
+                            <td><span id="date"></span></td>
+                            <td>Edit</td>
+                          </tr>                
+                          <tr>
+                            <th><strong>state</strong></th>
+                            <td><span id="state"></span></td>
+                            <td>Edit</td>
+                          </tr>
+                          <tr>
+                            <th><strong>country</strong></th>
+                            <td><span id="country"></span></td>
+                            <td>Edit</td>
+                          </tr>
+                          <tr>
+                            <th><strong>Marital status</strong></th>
+                            <td><span id="getmaritalstatus"></span></td>
+                            <td>Edit</td>
+                          </tr>
+                          <tr>
+                            <th><strong>Blood Group</strong></th>
+                            <td><span id="getbloodgroup"></span></td>
+                            <td>Edit</td>
+                          </tr>
+                          <tr>
+                            <th><strong>Height</strong></th>
+                            <td><span id="getheight"></span></td>
+                            <td>Edit</td>
+                          </tr>
+                          <tr>
+                            <th><strong>Weight</strong></th>
+                            <td><span id="getweightDetails"></span></td>
+                            <td>Edit</td>
+                          </tr>
+                          <tr>
+                            <th><strong>smoking</strong></th>
+                            <td><span id="getsmoking"></span></td>
+                            <td>Edit</td>
+                          </tr>
+                          <tr>
+                            <th><strong>Alcohol</strong></th>
+                            <td><span id="getalchohol"></span></td>
+                            <td>Edit</td>
+                          </tr>
+                        </tbody>
+                      </table>
+            </div>
+                
         
 
           
@@ -464,8 +447,43 @@
         </div>
 
         <script>
-
-        </script>
+            async function fetchData() {
+              try {
+                const apiUrl = 'http://localhost:8280/user/getPersonalInfo/102';
+                const response = await fetch(apiUrl,{
+                          method:'GET'
+                         
+                         
+      
+                         }
+                );
+           
+                if (!response.ok) {
+                  console.log('hghg');
+                  throw new Error('Network response was not ok');
+                }
+                console.log('hgfgfghfhjfhfhnfnh');
+                const data = await response.json();
+                console.log(data);
+                document.getElementById('address').textContent = data.data.address; 
+                document.getElementById('gender').textContent = data.data.gender; 
+                document.getElementById('date').textContent = data.data.dateofbirth; 
+                document.getElementById('state').textContent = data.data.state; 
+                document.getElementById('country').textContent = data.data.country; 
+                document.getElementById('getmaritalstatus').textContent = data.data.marital_status; 
+                document.getElementById('getbloodgroup').textContent = data.data.blood_Group; 
+                document.getElementById('getheight').textContent = data.data.height; 
+                document.getElementById('getweightDetails').textContent = data.data.weight; 
+                document.getElementById('getsmoking').textContent = data.data.smoking; 
+                document.getElementById('getalchohol').textContent = data.data.alcohol; 
+                
+              } catch (error) {
+                console.log('Error fetching data:', error);
+              }
+            }
+           
+            fetchData();
+          </script>
 
     </body>
 </html>
