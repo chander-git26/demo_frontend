@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .bgel{
+                display: flex;
+                flex-direction: row;
+                margin: 0px;
+            }
+            .logoright{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;    
+            }
+
+            .sidebar {
+                width: 270px;
+                background-color: #002159;
+                border: 1px solid black;
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+                flex-shrink: 0;
+                margin: 0px;
+            }
+            
+
+            .btnel{
+            
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            height: 50px;
+            border-radius: 12px;
+            margin: 15px;
+            background-color: #002159;
+            font-weight: bold;
+            color: #fff;
+            border-width: 1px;
+            border-color: rgb(157, 191, 224);
+            }
+
+            .btnel:hover {
+                background-color:rgb(157, 191, 224);
+                color: black;
+            }
+
+            .btnel:active {
+            background-color: rgb(157, 191, 224);
+            transform: translateY(4px);
+            color: #fff;
+            }
+
+            
+
+            .contain1{
+                background-color: #002159;
+                color: white;
+                padding: 10px;
+                margin: 0px;
+            }
+
+            .logoel{
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .btnboxes{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                font-weight: bold;
+            }
+
+            .btnels{
+                height: 45px;
+                width: 125px;
+                background-color: white;
+                border-radius: 15px;
+                color: black;
+                font-weight: bold;
+
+            }
+
+
+            .circle{
+                border-radius: 50%;
+                width: 10px;
+                height: 18px;
+                padding: 6px;
+                background: #fff;
+                border: 2px solid green;
+                color: green;
+                text-align: center;
+                font: 10px Arial, sans-serif;
+            }
+
+    
+            .contain2{
+                display: flex;
+                flex-direction: row;
+                height: auto;
+            }
+            .contain3{
+                display: flex;
+                flex-direction: column;
+                width: 35%;
+                padding-left: 5px;
+
+            }
+
+            .bannerbg{
+                background-color: white;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                width: 75%;
+                
+            }   
+            .bannerbg2{
+                
+                max-height: 300px;
+                margin-bottom: 12px;
+            }
+            .marqueetitle{
+                font-size: 26px;
+                color: #FFA500;
+            }
+            .logo{
+                height: 30px;
+                width: 35px;
+                padding-right: 5px;
+            }
+            .card{
+                padding-bottom: 10px;
+            }
+
+            .insurancebtnel{
+                height: 40px;
+                width: 250px;
+                background-color: rgb(255, 255, 255);
+                color: black;
+                font-weight: bold;
+                margin: 10px;
+                border: none;
+                border-radius: 15px;
+                box-shadow: 0 9px #999;
+                cursor: pointer;
+                border-color: #002159;
+                border-width: 1px;
+                
+            }
+
+            .insurancebtnel:hover {
+                background-color: #002159;
+                color: #fff;
+            }
+
+            .insurancebtnel:active {
+            background-color: #002159;
+            box-shadow: 0 5px #666;
+            transform: translateY(4px);
+            color: #fff;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="bgel">
+
+            <div class="logoright sidebar">
+                    <button type="button" onclick="window.location.href=''" class="btnel btntext  " >Account Manager</button><br/>
+                    <button type="button" onclick="window.location.href=''" class="btnel btntext  " >Insurances</button><br/>
+                    <button type="button" onclick="window.location.href=''" class="btnel btntext  " >Investment</button><br/>
+                    <button type="button" onclick="window.location.href=''" class="btnel btntext  " >Contact</button><br/>
+
+
+            </div>
+
+            <div class="bg">
+
+
+                <!--dashboard code-->
+                <div class="contain1"> 
+                    
+                    <div style="text-align: center;" class="logoel">
+                        <img src="https://cosglobal.in/wp-content/uploads/2023/11/WhatsApp-Image-2023-11-22-at-18.18.56.jpeg" class="logo ">
+                        <h3>COS Insurance</h3>
+                    </div>
+                    <div class="btnboxes">
+                        <div>
+                            <button class="btnels" onclick="window.location.href='userprofile.html'">User Info</button>
+                        </div>
+                        <div>
+                            <button onclick="window.location.href='completedpersonal.html'" class="btnels">Profile   <span class="circle">100%</span></button>
+                        </div>
+                        
+                    </div><br/>
+                </div>
+    
+    
+                <!--banner code-->
+                <div class=" contain2">
+                    <div class=" bannerbg" id="banner">
+                    
+                        <button type="button" class="insurancebtnel">Health Insurance</button>
+                        <button type="button" class="insurancebtnel">Life Insurance</button>
+                        <button type="button" class="insurancebtnel">Auto Mobile Insurance</button>
+                        <button type="button" class="insurancebtnel">Retirement Insurance</button>
+                        <button type="button" class="insurancebtnel">Child Investments</button>
+                    
+    
+                    </div>
+                   
+                  
+                
+                    <div class=" contain3">
+                    
+                    <div class="card-deck" >
+                        <div class="card">
+                            <img class="bannerbg2" src="https://media.istockphoto.com/id/475702616/photo/life-insurance-paper-family.jpg?s=2048x2048&w=is&k=20&c=_qfMXgu34S-LCNEMC8Hu9nLlrRx0sU8l0vqvbJMGTAk=" alt="Card image cap">
+                            <div class="card-body">
+                                <h5 class="card-title">Life Insurance</h5>
+                                <p class="card-text">It provides contract between an individual and an insurance provider, 
+                                    where the company promises to pay a specified amount of money to the family or beneficiary of the individual, in return for regular payments over a period of time.</p>
+                                    <button type="button" class="btnels" onclick="window.location.href='Lifeinsurance1.html'" style="color: black;" >View Plans</button><br/>
+                
+                            </div>
+                                
+                        </div>
+                    </div>
+                    <iframe min-width="380" height="320"
+                        src="https://www.youtube.com/embed/ehvKU5wM0a8?autoplay=1&mute=1">
+                        </iframe>
+                </div>
+                        
+                   
+    
+                </div>
+
+            </div>
+        </div>
+    </body>
+</html>
