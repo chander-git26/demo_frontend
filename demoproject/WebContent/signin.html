@@ -15,10 +15,10 @@
         <header>
            
             <div class="wrapper">
-                <form action="userdashboard.html">
+                <form>
                     <h1>Login</h1>
                     <div class="input-box">
-                        <input type="email" placeholder="user name" required id="email">
+                        <input type="email" placeholder="Email" required id="email">
                         <box-icon name='user'></box-icon>
                     </div><br>
                     <div class="input-box">
@@ -29,7 +29,7 @@
                     <a href="forgotpswrd.html">Forgot password</a>
                <br>
                 
-                <button type="submit" class="btn">Login</a> </button>
+                <button type="submit" class="btn" onclick="postData()" >Login</a> </button>
             </div>
                 <div class="register-link">
                     <p>Don't have an account? <a href="regio.html">Register</a></p><p> <button type="button" class="btn btn-dark"><a href="inde.html">BACK</a></button></p>
@@ -54,17 +54,16 @@
                     try {
                       const apiUrl = 'http://localhost:8280/user/signin';
                       const response = await fetch(apiUrl, {
-                        method: 'GET',
+                        method: 'POST',
                         headers: {
                           'Content-Type': 'application/json'
                         },
                         body: JSON.stringify(data)
                       });
                   
-                      if (!response.ok) {
+                      if (!response.ok ) {
                         throw new Error('Network response was not ok');
                       }
-                  
                       const responseData = await response.json();
                       console.log(responseData); // You can handle the response data here
                   
@@ -74,6 +73,9 @@
                   }
                   
                 
+                function myFunction() {
+             window.location.href='userdashboard.html'
+                      }
                 
                      
                 </script>
