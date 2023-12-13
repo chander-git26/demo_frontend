@@ -129,10 +129,10 @@
           );
      
           if (!response.ok) {
-            console.log('hghg');
+            
             throw new Error('Network response was not ok');
           }
-          console.log('hgfgfghfhjfhfhnfnh');
+         
           const data = await response.json();
           console.log(data);
           document.getElementById('source_of_income').textContent = data.data.source_of_income; 
