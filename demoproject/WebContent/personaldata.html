@@ -1,159 +1,196 @@
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous"/>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
-    
-    <style>
-      
-      .bd-example{
-        width: 40%;
-        padding: 20px;
-        height: 10px;
-      }
 
-      
-      .bg{
-        background-image: url('https://img.freepik.com/premium-photo/close-up-white-grey-color-cement-background-texture-mockup-design_42708-436.jpg');
-        background-repeat: no-repeat;
-        background-size: cover;
-        height: 100vh;
-      }
-      
-      .logo {
-                height: 55px;
-                width:42px
-               
-            }
-            .btnel{
-  
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  height: 50px;
-  border-radius: 12px;
-  }
-
-  .btntext {
-
-  color: black;
+<html>
+<head>
+   <style>
+    body {
+    background: #fafafa url(https://jackrugile.com/images/misc/noise-diagonal.png);
+    color: #444;
+    font: 100%/30px 'Helvetica Neue', helvetica, arial, sans-serif;
+    text-shadow: 0 1px 0 #fff;
+}
+ 
+strong {
+    font-weight: bold;
+}
+ 
+em {
+    font-style: italic;
+}
+ 
+table {
+    background: #f5f5f5;
+    border-collapse: separate;
+    box-shadow: inset 0 1px 0 #fff;
+    font-size: 12px;
+    line-height: 24px;
+    margin: 30px auto;
+    text-align: left;
+    width: 800px;
+}  
+ 
+th {
+    background: url(https://jackrugile.com/images/misc/noise-diagonal.png), linear-gradient(#777, #444);
+    border-left: 1px solid #555;
+    border-right: 1px solid #777;
+    border-top: 1px solid #555;
+    border-bottom: 1px solid #333;
+    box-shadow: inset 0 1px 0 #999;
+    color: #fff;
   font-weight: bold;
-  font-size:20px ;
-  }
-
-    </style>
-  </head>
-  <body>
-    <nav class="navbar navbar-expand-lg navbar-light">
-      <a class="navbar-brand" href=""><img src="https://cosglobal.in/wp-content/uploads/2023/11/WhatsApp-Image-2023-11-22-at-18.18.56.jpeg" class="logo "></a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse d-flex flex-row justify-content-right" id="navbarNavAltMarkup">
-        <div class="navbar-nav d-flex flex-direction:row justify-content:right">
-          
-          
-           <button type="button" onclick="window.location.href='login.html'" class="btnel btntext  w3-bar-item w3-button" ><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house" viewBox="0 0 16 16">
-              <path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5z"/>
-            </svg> Home</button><br/>
-          <!--<a class="nav-item nav-link active navbtns" href="#">Home </span></a>
-          <a class="nav-item nav-link navbtns" href="#">About us</a>
-          <a class="nav-item nav-link navbtns" href="#">Gallery</a>
-          <a class="nav-item nav-link navbtns" href="#">Contact us</a>-->
-        </div>
-      </div>
-    </nav>
-
-      
-    <div class="bg">
-      <center>
-        <div class="bd-example">
-          <table class="table">
-            <thead>
-                <div class="col-2" style="border-radius: 25px;padding:35px;margin: 22px;">
-              <tr>
-                <th scope="col">Details</th>
-                <th scope="col">Result</th>
-               
-              </tr>
-                </div>
-            </thead>
-            <tbody>
-              <tr class="table-active">
-                <th scope="row">Address</th>
+    padding: 10px 15px;
+    position: relative;
+    text-shadow: 0 1px 0 #000;  
+    max-width: 75px;
+}
+ 
+th:after {
+    background: linear-gradient(rgba(255,255,255,0), rgba(255,255,255,.08));
+    content: '';
+    display: block;
+    height: 25%;
+    left: 0;
+    margin: 1px 0 0 0;
+    position: absolute;
+    top: 25%;
+    width: 50%;
+   
+}
+ 
+th:first-child {
+    border-left: 1px solid #777;    
+    box-shadow: inset 1px 1px 0 #999;
+   
+}
+ 
+th:last-child {
+    box-shadow: inset -1px 1px 0 #999;
+    width: 800px;
+   
+}
+ 
+td {
+    border-right: 1px solid #fff;
+    border-left: 1px solid #e8e8e8;
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #e8e8e8;
+    padding: 10px 15px;
+    position: relative;
+    transition: all 300ms;
+    width: 250px;
+   
+   
+}
+ 
+td:first-child {
+    box-shadow: inset 1px 0 0 #fff;
+}  
+ 
+td:last-child {
+    border-right: 1px solid #e8e8e8;
+    box-shadow: inset -1px 0 0 #fff;
+}  
+ 
+tr {
+    background: url(https://jackrugile.com/images/misc/noise-diagonal.png);
+}
+ 
+tr:nth-child(odd) td {
+    background: #f1f1f1 url(https://jackrugile.com/images/misc/noise-diagonal.png);
+}
+ 
+tr:last-of-type td {
+    box-shadow: inset 0 -1px 0 #fff;
+}
+ 
+tr:last-of-type td:first-child {
+    box-shadow: inset 1px -1px 0 #fff;
+}  
+ 
+tr:last-of-type td:last-child {
+    box-shadow: inset -1px -1px 0 #fff;
+}  
+ 
+tbody:hover td {
+    color: transparent;
+    text-shadow: 0 0 3px #aaa;
+}
+ 
+tbody:hover tr:hover td {
+    color: #444;
+    text-shadow: 0 1px 0 #fff;
+}
+   </style>
+   
+</head>
+<body>
+    <center>
+    <h1><b><span class="whitesmoke">Personal Details</span></b></h1>
+</center>
+    <table>
+        <thead>
+          <tr>
+         
+          </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th><strong>Address</strong></th>
                 <td ><span id="address"></span></td>
-                
+                <td>Edit</td>
               </tr>
+          <tr>
+            <th><strong>Gender</strong></th>
+            <td><span id="gender"></span></td>
+            <td>Edit</td>
+          </tr>
+          <tr>
+            <th><strong>D0B</strong></th>
+            <td><span id="date"></span></td>
+            <td>Edit</td>
+          </tr>                
+          <tr>
+            <th><strong>state</strong></th>
+            <td><span id="state"></span></td>
+            <td>Edit</td>
+          </tr>
+          <tr>
+            <th><strong>country</strong></th>
+            <td><span id="country"></span></td>
+            <td>Edit</td>
+          </tr>
+          <tr>
+            <th><strong>Marital status</strong></th>
+            <td><span id="getmaritalstatus"></span></td>
+            <td>Edit</td>
+          </tr>
+          <tr>
+            <th><strong>Blood Group</strong></th>
+            <td><span id="getbloodgroup"></span></td>
+            <td>Edit</td>
+          </tr>
+          <tr>
+            <th><strong>Height</strong></th>
+            <td><span id="getheight"></span></td>
+            <td>Edit</td>
+          </tr>
+          <tr>
+            <th><strong>Weight</strong></th>
+            <td><span id="getweightDetails"></span></td>
+            <td>Edit</td>
+          </tr>
+          <tr>
+            <th><strong>smoking</strong></th>
+            <td><span id="getsmoking"></span></td>
+            <td>Edit</td>
+          </tr>
+          <tr>
+            <th><strong>Alcohol</strong></th>
+            <td><span id="getalchohol"></span></td>
+            <td>Edit</td>
+          </tr>
+        </tbody>
+      </table>
 
-              <tr class="table-primary">
-                <th scope="row">Gender</th>
-                <td><span id="gender"></span></td>
-               
-              </tr>
-              <tr class="table-secondary">
-                <th scope="row">DOB</th>
-                <td><span id="date"></span></td>
-               
-              </tr>
-              <tr class="table-primary" >
-                <th scope="row">State</th>
-                <td><span id="state"></span></td>
-               
-              </tr>
-              <tr class="table-secondary" >
-                <th scope="row">country</th>
-                <td><span id="country"></span></td>
-               
-              </tr>
-        
-        
-              <tr class="table-primary">
-                <th scope="row">Marital status</th>
-                <td><span id="getmaritalstatus"></span></td>
-                
-              </tr>
-              <tr class="table-secondary">
-                <th scope="row">Blood group</th>
-                <td><span id="getbloodgroup"></span></td>
-               
-              </tr>
-              <tr class="table-success">
-                <th scope="row">Height</th>
-                <td><span id="getheight"></span></td>
-                
-              </tr>
-              <tr class="table-danger">
-                <th scope="row">Weight</th>
-                <td><span id="getweightDetails"></span></td>
-                
-              </tr>
-              <tr class="table-warning">
-                <th scope="row">Smoking</th>
-                <td><span id="getsmoking"></span></td>
-               
-              </tr>
-              <tr class="table-info">
-                <th scope="row">Alcohol</th>
-                <td><span id="getalchohol"></span></td>
-                
-            
-            </tbody>
-          </table>
-        </div>
-       
-      </center>
-      </div>
-
-      <!--Javascipt code-->
-      
       <script>
         async function fetchData() {
           try {
@@ -195,6 +232,5 @@
 
 
 
-     
-  </body>
+</body>
 </html>
