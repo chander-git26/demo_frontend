@@ -224,5 +224,43 @@ tbody:hover tr:hover td {
             </table>
     </div>
     </div>
+    <script>
+        
+
+        async function postData() {
+                        const apiUrl = 'http://localhost:8280/user/MedicalInformation';
+                    
+                        const data = {
+                          
+                            "past_surgeries": document.getElementById("selectIncomeOption").value,
+                            "blood_pressure": document.getElementById("businessDetails").value,
+                            "diabetes" : document.getElementById("revenuedetails").value
+                          
+                          
+                        };
+                    
+                        try {
+                        const response = await fetch(apiUrl, {
+                            method: 'POST',
+                            headers: {
+                            'Content-Type': 'application/json'
+                            },
+                            body: JSON.stringify(data)
+                        });
+                    
+                        if (!response.ok) {
+                            throw new Error('Network response was not ok');
+                        }
+                    
+                        const responseData = await response.json();
+                        console.log(responseData); // You can handle the response data here
+                    
+                        } catch (error) {
+                        console.error('Error posting data:', error);
+                        }
+                    }
+                    
+      </script>
+      
 </body>
 </html>

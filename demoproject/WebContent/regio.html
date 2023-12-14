@@ -253,15 +253,17 @@ confirm_password.onkeyup = validatePassword;
       });
   
       if (!response.ok) {
-        throw new Error('Network response was not ok');
-      }
-  
-      const responseData = await response.json();
-      console.log(responseData); // You can handle the response data here
-  
-    } catch (error) {
-      console.error('Error posting data:', error);
+      // Handle other response statuses
+      console.error('Error during request. Status:', response.status);
+      const responseBody = await response.text();
+      console.error('Response body:', responseBody);
+    } else {
+      // Redirect on success
+      window.location.href ='signin.html'; // Adjust the redirection path
     }
+  } catch (error) {
+    console.error('Error during request:', error);
+  }
   }
   
 </script>

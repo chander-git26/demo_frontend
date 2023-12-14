@@ -42,42 +42,38 @@
 
                 <script>
   
-                    async function postData() {
-                    
-                  
-                    const data = {
-                      
-                      email: document.getElementById("email").value,
-                      password: document.getElementById("password").value,
-                     
-                    };
-                  
-                    try {
-                      const apiUrl = 'http://localhost:8280/user/signin';
-                      const response = await fetch(apiUrl, {
-                        method: 'POST',
-                        headers: {
-                          'Content-Type': 'application/json'
-                        },
-                        body: JSON.stringify(data)
-                      });
-                  
-                      if (!response.ok ) {
-                        throw new Error('Network response was not ok');
-                      }
-                      myFunction();
-                      const responseData = await response.json();
-                      console.log(responseData); // You can handle the response data here
-                  
-                    } catch (error) {
-                      console.error('Error posting data:', error);
-                    }
-                  }
-                  
-                
-                function myFunction() {
-             window.location.href='userdashboard.html'
-                      }
+  async function postData() {
+  const email = document.getElementById("email").value;
+  const password = document.getElementById("password").value;
+
+  const data = {
+    email: email,
+    password: password,
+  };
+
+  try {
+    const apiUrl = 'http://localhost:8280/user/signin'; // Replace with your actual API URL
+    const response = await fetch(apiUrl, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(data),
+    });
+
+    if (!response.ok) {
+      // Handle other response statuses
+      console.error('Error during request. Status:', response.status);
+      const responseBody = await response.text();
+      console.error('Response body:', responseBody);
+    } else {
+      // Redirect on success
+      window.location.href ='userdashboard.html'; // Adjust the redirection path
+    }
+  } catch (error) {
+    console.error('Error during request:', error);
+  }
+}
                 
                      
                 </script>
