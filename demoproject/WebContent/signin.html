@@ -39,9 +39,6 @@
 
                 </form>
 
-
-                
-
                 <script>
   
   async function postData() {
@@ -63,21 +60,22 @@
       body: JSON.stringify(data),
     });
 
-    if (!response.ok) {
+    if (response.ok) {
       // Handle other response statuses
       console.error('Error during request. Status:', response.status);
       const responseBody = await response.text();
       console.error('Response body:', responseBody);
+      window.location.href ='userdashboard.html'; 
     } else {
+      window.location.href ='signin.html'; 
       // Redirect on success
-      window.location.href ='userdashboard.html'; // Adjust the redirection path
+      // Adjust the redirection path
     }
   } catch (error) {
     console.error('Error during request:', error);
-  }
+  }
 }
-                
-                     
+                  
                 </script>
 
             </div>
