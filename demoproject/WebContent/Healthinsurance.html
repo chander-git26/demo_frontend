@@ -1,155 +1,237 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous"/>
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
    
         <style>
-
             .logo {
                 height: 35px;
                 width:40px
             }
             .bgimg {
                 background-size: cover;
-                
-                min-height: 350px;
-                background-image: url("https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+                height: 200vh;
+                min-height: 250px;
+                background-image: url("istockphoto.JPG");
                 text-align: center;
                 padding:75px
                
             }
+           
             .borderboxel{
                
-                background-color: lightblue;
                 
-                width:40%;
-                border-radius: 20px;
-                padding: 20px;
-                display: flex;
-                flex-direction: column;
-                justify-content: right;
-            }
+               display: flex;
+               flex-direction: column;
+               
+           }
             .boxel{
-                width: 80vh;
-                height: 250px;
-                min-width: 100px;
+                width: 100vh;
+                height: 350px;
+                min-width: 80px;
                 border-style: solid;
-                border-width: 2px;
-                border-radius: 15px;
+                border-width: 1px;
+                border-radius: 5px;
             }
+            
             .ex1 {
                 width: 100%;
+                flex-direction: column;
             }
-            .row {
-                display: flex;
-                flex-direction: row;
-                justify-content: center;
-               
-            }
+            
+            .column {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Aligns items in the center horizontally */
+    }
+   
+    .col-6 {
+        width: 50%; /* Adjust width as needed */
+        margin: 10px;
+        padding: 10px;
+        border-style: solid;
+       border-color: black;
+       transition: background-color 0.3s ease;
+      
+    }
+    .col-6:hover {
+        background-color: lightgray; /* Change background color on hover */
+    }
+    .col-6.selected {
+        background-color: green; /* Change background color when selected */
+    }
+    .row {
+        display: flex;
+        justify-content: space-around;
+       
+        flex-wrap: nowrap; 
+        
+    }
+    .horizontal-line {
+        border-top: 1px solid black; /* Style the horizontal line */
+        margin: 5px; /* Adjust margin as needed */
+    }
+    .button-link {
+        display: inline-block;
+        padding: 8px 16px;
+        text-align: center;
+        text-decoration: none;
+        background-color: blue;
+        color: lightgreen;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    .button-link:hover {
+        background-color: blue;
+    }
             .btnel{
                 height: 40px;
-                min-width:100px ;
+                min-width:80px ;
                 background-color: aqua;
                 color: black;
  
             }
-            .homebtnel{
-  
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  height: 50px;
-  border-radius: 12px;
-  }
-
-  .btntext {
-
-  color: black;
-  font-weight: bold;
-  font-size:20px ;
-  }
-
-
  
         </style>
  
     </head>
     <body>
         <nav class="navbar navbar-expand-lg navbar-light">
-            <a class="navbar-brand" href=""><img src="https://cosglobal.in/wp-content/uploads/2023/11/WhatsApp-Image-2023-11-22-at-18.18.56.jpeg" class="logo "></a>
+            <a class="navbar-brand" href=""><img src="https://cosglobal.in/wp-content/uploads/2023/11/WhatsApp-Image-2023-11-22-at-18.18.56.jpeg" class="logo"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse d-flex flex-row justify-content-right" id="navbarNavAltMarkup">
+            <div class="collapse navbar-collapse d-flex flex-row justify-content-center" id="navbarNavAltMarkup">
               <div class="navbar-nav d-flex flex-direction:row justify-content:right">
                 
-                
-                 <button type="button" onclick="window.location.href='login.html'" class="homebtnel btntext  w3-bar-item w3-button" ><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house" viewBox="0 0 16 16">
-                    <path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5z"/>
-                  </svg> Home</button><br/>
-                <!--<a class="nav-item nav-link active navbtns" href="#">Home </span></a>
-                <a class="nav-item nav-link navbtns" href="#">About us</a>
-                <a class="nav-item nav-link navbtns" href="#">Gallery</a>
-                <a class="nav-item nav-link navbtns" href="#">Contact us</a>-->
               </div>
             </div>
           </nav>
  
-        <div class="bgimg  d-flex flex-row justify-content-center" >
+          <div class="bgimg  d-flex flex-row justify-content-center" >
+            
            
-            <div class="borderboxel  d-flex flex-row justify-content-center">
+            <div class="class="borderboxel d-flex justify-content-center ">
                 <div class="ex1 ">
-                   <marquee> <h1 class="title">Health Insurance Plans</h1></marquee>
+                    <h1 class="title">Health Insurance plans</h1>
                     <div class="container">
                         <div class="row">
-                          <div class="col-6" style="border-style: solid;padding:5px;margin:10px; border-radius: 10px; border-color: black;">
-                          <center> <b> <p>PLAN 1</p></center>
-                            <p>Years:1-5yr </p>
-                            <p>amount:10,000</p>
-                            <a href="plan1.html">Read More</a></b>
-                            <div class="pay">
-                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                                <label class="form-check-label" for="flexRadioDefault1">
-                                select
-                            </div>
-                          </div>
-                          <div class="col-6" style="border-style: solid;padding:10px;margin:10px;border-radius: 25px;border-color: black;">
-                           <b> <center> <p >PLAN 2</p></center>
-                            <p>Year:5-10 </p>
+                            <div class="col-6" onclick="toggleSelection(this)" style="border-style: solid;padding:10px;margin:10px;border-radius: 15px;border-color: whitesmoke;">
+                                <b> <center> <p >Plan A</p></b></center>
+                                    <p>Year:10-15 years </p>
+                                    <p>amount:30,000</p>
+                                    <hr class="horizontal-line">
+                                    <!-- <a href="plan1.html">view plan</a></b> -->
+                                    <a href="plan1.html" target="_blank" class="button-link">View Plan</a>
+                                   
+                                   
+                                  </div>
+                          <div class="col-6" onclick="toggleSelection(this)" style="border-style: solid;padding:10px;margin:10px;border-radius: 10px;border-color: whitesmoke">
+                           <b> <center> <p >Plan B</p></b></center>
+                            <p>Year:5-10 years </p>
                             <p>amount:20,000</p>
-                            <a href="plan1.html">Read More</a></b>
-                            <div class="pay">
-                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                <label class="form-check-label" for="flexRadioDefault1">
-                select
-                            </div>
+                            <hr class="horizontal-line">
+                            <!-- <a href="plan1.html">view plan</a></b> -->
+                            <a href="plan1.html" target="_blank" class="button-link">View Plan</a>
+                            
                           </div>
-                          <div class="col-6" style="border-style: solid;padding:10px;margin:10px;border-radius: 25px;border-color: black;">
-                        <b> <center> <p >PLAN 3</p></center>
-                            <p>Year:10-15 </p>
+                          <div class="col-6" onclick="toggleSelection(this)" style="border-style: solid;padding:10px;margin:10px;border-radius: 10px;border-color: whitesmoke">
+                        <b> <center> <p >Plan C</p></b></center>
+                            <p>Year:10-15 years </p>
                             <p>amount:30,000</p>
-                            <a href="plan1.html">Read More</a></b>
-                            <div class="pay">
-                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                                <label class="form-check-label" for="flexRadioDefault1">
-                                select
-                            </div>
+                            <hr class="horizontal-line">
+                            <!-- <a href="plan1.html">view plan</a></b> -->
+                            <a href="plan1.html" target="_blank" class="button-link">View Plan</a>
+                            
                            
                           </div>
                         </div>
-                        <button type="button" onclick="window.location.href='payment.html'" class="btnel" >continue for payment</button>
+                        <div class="row">
+                            <div class="col-6" onclick="toggleSelection(this)" style="border-style: solid;padding:10px;margin:10px;border-radius: 10px;border-color: whitesmoke">
+                                <b> <center> <p >Plan D</p></b></center>
+                                    <p>Year:10-15 years </p>
+                                    <p>amount:30,000</p>
+                                    <hr class="horizontal-line">
+                                    <!-- <a href="plan1.html">view plan</a></b> -->
+                                    <a href="plan1.html" target="_blank" class="button-link">View Plan</a>
+                                    
+                                   
+                                  </div>
+                            <div class="col-6" onclick="toggleSelection(this)" style="border-style: solid;padding:10px;margin:10px;border-radius: 10px;border-color: whitesmoke">
+                             <b> <center> <p >Plan E</p></b></center>
+                              <p>Year:5-10 years </p>
+                              <p>amount:20,000</p>
+                              <hr class="horizontal-line">
+                              <!-- <a href="plan1.html">view plan</a></b> -->
+                              <a href="plan1.html" target="_blank" class="button-link">View Plan</a>
+                             
+                            </div>
+                            <div class="col-6" onclick="toggleSelection(this)" style="border-style: solid;padding:10px;margin:10px;border-radius: 10px;border-color: whitesmoke">
+                          <b> <center> <p >Plan F</p></b></center>
+                              <p>Year:10-15 years </p>
+                              <p>amount:30,000</p>
+                              <hr class="horizontal-line">
+                              <!-- <a href="plan1.html">view plan</a></b> -->
+                              <a href="plan1.html" target="_blank"class="button-link" >View Plan</a>
+                             
+                             
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-6" onclick="toggleSelection(this)" style="border-style: solid;padding:10px;margin:10px;border-radius: 10px;border-color: whitesmoke">
+                                <b> <center> <p >Plan G</p></b></center>
+                                    <p>Year:10-15 years </p>
+                                    <p>amount:30,000</p>
+                                    <hr class="horizontal-line">
+                                    <!-- <a href="plan1.html">view plan</a></b> -->
+                                    <a href="plan1.html" target="_blank" class="button-link">View Plan</a>
+                                    
+                                   
+                                  </div>
+                            <div class="col-6" onclick="toggleSelection(this)" style="border-style: solid;padding:10px;margin:10px;border-radius: 10px;border-color: whitesmoke">
+                             <b> <center> <p >Plan H</p></b></center>
+                              <p>Year:5-10 years </p>
+                              <p>amount:20,000</p>
+                              <hr class="horizontal-line">
+                              <!-- <a href="plan1.html">view plan</a></b> -->
+                              <a href="plan1.html" target="_blank" class="button-link">View Plan</a>
+                             
+                            </div>
+                            <div class="col-6" onclick="toggleSelection(this)" style="border-style: solid;padding:10px;margin:10px;border-radius: 10px;border-color: whitesmoke">
+                          <b> <center> <p >Plan I</p></b></center>
+                              <p>Year:10-15 years </p>
+                              <p>amount:30,000</p>
+                              <hr class="horizontal-line">
+                              <!-- <a href="plan1.html">view plan</a></b> -->
+                              <a href="plan1.html" target="_blank" class="button-link">View Plan</a>
+                              
+                             
+                            </div>
+                          </div>
+                        
 
+                        
+
+                        <button class="btnel"><a href="payment1.html">continue for payment</a> </button>
+                        <button class="btnel" type = "Auto mobile inusrance.html">
+                            <a href="payment1.html">BACK</a>
+               
+                        
+                       
                 </div>
                
             </div>
+            <script>
+                function toggleSelection(element) {
+                    element.classList.toggle('selected');
+                }
+            </script>
            
-        </div>
        
     </body>
  

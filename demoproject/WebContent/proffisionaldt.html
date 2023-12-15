@@ -1,5 +1,6 @@
 <html>
 <head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
    <style>
     body {
 	background: #fafafa url(https://jackrugile.com/images/misc/noise-diagonal.png);
@@ -203,35 +204,67 @@ tbody:hover tr:hover td {
 					</tr>
 					</thead>
 					<tbody>
-						<tr>
-							<th><strong>Source of income</strong></th>
-							<td><span id="source_of_income"></span></td>
-							<td>Edit</td>
-						</tr>
-					<tr>
-						<th><strong>Company name</strong></th>
-						<td><span id="companyname"></span></td>
-						<td>Edit</td>
-					</tr>
-					<tr>
-						<th><strong>Business name</strong></th>
-						<td><span id="businessname"></span></td>
-						<td>Edit</td>
-					</tr>					
-					<tr>
-						<th><strong>Annualrevenue</strong></th>
-						<td><span id="annualrevenue"></span></td>
-						<td>Edit</td>
-					</tr>
-					<tr>
-						<th><strong>Annualincome</strong></th>
-						<td>  </td>
-						<td>Edit</td>
-					</tr>
+                        <table>
+                            <tr>
+                                <th><strong>Source of income</strong></th>
+                                <td><span id="Sourceofincome"></span></td>
+                              <td><button onclick="enableEdit('Sourceofincome')"><i class="fas fa-pencil-alt"></i></button></td>
+                            </tr>
+                            <tr>
+                                <th><strong>Company name</strong></th>
+                                <td><span id="Companyname"></span></td>
+                              <td><button onclick="enableEdit('Companyname')"><i class="fas fa-pencil-alt"></i></button></td>
+                            </tr>
+                            <tr>
+                                <th><strong>Business name</strong></th>
+                                <td><span id="Businessname"></span></td>
+                              <td><button onclick="enableEdit('Businessname')"><i class="fas fa-pencil-alt"></i></button></td>
+                            </tr>
+                            <tr>
+                                <th><strong>Annual revenue</strong></th>
+                                <td><span id="Annualrevenue"></span></td>
+                              <td><button onclick="enableEdit('Annualrevenue')"><i class="fas fa-pencil-alt"></i></button></td>
+                            </tr>
+                            <tr>
+                                <th><strong>Annual income</strong></th>
+                                <td><span id="Annualincome"></span></td>
+                              <td><button onclick="enableEdit('Annualincome')"><i class="fas fa-pencil-alt"></i></button></td>
+                            </tr>
+
+                            </table>
 					</tbody>
 			
 				</table>
 			</div>
 	</div>
+    <script>
+        function enableEdit(fieldId) {
+            var field = document.getElementById(fieldId);
+            var currentValue = field.innerText;
+            
+            // Replace the span with an input field
+            field.innerHTML = '<input type="text" id="new' + fieldId + '" value="' + currentValue + '">';
+            
+            var editButton = field.parentElement.nextElementSibling.querySelector('button');
+            editButton.innerText = 'Update'; // Change button text to 'Update'
+            editButton.onclick = function() {
+                UpdateField(fieldId);
+            }; // Change button function to UpdateField()
+        }
+        
+        function UpdateField(fieldId) {
+            var newValue = document.getElementById('new' + fieldId).value;
+            var field = document.getElementById(fieldId);
+            
+            // Update the field span with the new value
+            field.innerText = newValue;
+            
+            var editButton = field.parentElement.nextElementSibling.querySelector('button');
+            editButton.innerHTML = '<i class="fas fa-pencil-alt"></i>';// Change button text back to 'Edit'
+            editButton.onclick = function() {
+                enableEdit(fieldId);
+            }; // Change button function back to enableEdit()
+        }
+    </script>
 </body>
 </html>

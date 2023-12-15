@@ -1,5 +1,6 @@
 <html>
 <head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
    <style>
     body {
 	background: #fafafa url(https://jackrugile.com/images/misc/noise-diagonal.png);
@@ -204,52 +205,116 @@ tbody:hover tr:hover td {
                     </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <th><strong>Father</strong></th>
-                            <td><span id="fathername"></span></td>
-                            <td><span id="fatherage"></span></td>
-                            <td><span id="fatheroccupation"></span></td>
-                            <td>Edit</td>
-                        </tr>
-                    <tr>
-                        <th><strong>Mother</strong></th>
-                        <td><span id="mothername"></span></td>
-                        <td><span id="motherage"></span></td>
-                        <td><span id="motheroccupation"></span></td>
-                        <td>Edit</td>
-                    </tr>
-                    <tr>
-                        <th><strong>Spouce</strong></th>
-                        <td><span id="spousename"></span></td>
-                        <td><span id="spouseage"></span></td>
-                        <td><span id="spouseoccupation"></span></td>
-                        <td>Edit</td>
-                    </tr>					
-                    <tr>
-                        <th><strong>Nominee 1</strong></th>
-                        <td><span id="nominee1name"></span></td>
-                        <td><span id="nominee1age"></span></td>
-                        <td><span id="nominee1occupation"></span></td>
-                        <td>Edit</td>
-                    </tr>
-                    <tr>
-                        <th><strong>Nominee 2</strong></th>
-                        <td><span id="nominee2name"></span></td>
-                            <td><span id="nominee2age"></span></td>
-                            <td><span id="nominee2ccupation"></span></td>
-                        <td>Edit</td>
-                    </tr>
-                    <tr>
-                        <th><strong>Other Nominee</strong></th>
-                        <td><span id="othernomineename"></span></td>
-                            <td><span id="othernomineeage"></span></td>
-                            <td><span id="othernomineenamerelationship"></span></td>
-                        <td>Edit</td>
-                    </tr>
+                        <table>
+                            <tr>
+                                <th><strong>Father Name</strong></th>
+                                <td><span id="name"></span></td>
+                                <td><button onclick="enableEdit('name')"><i class="fas fa-pencil-alt"></i></button></td>
+                                <th><strong>Age</strong></th>
+                                <td><span id="age"></span></td>
+                                <td><button onclick="enableEdit('age')"><i class="fas fa-pencil-alt"></i></button></td>
+                                <th><strong>Occupation</strong></th>
+                                <td><span id="occupation"></span></td>
+                                <td><button onclick="enableEdit('occupation')"><i class="fas fa-pencil-alt"></i></button></td>
+                            </tr>
+                            <tr>
+                                <th><strong>Mother name</strong></th>
+                                <td><span id="MotherName"></span></td>
+                                <td><button onclick="enableEdit('MotherName')"><i class="fas fa-pencil-alt"></i></button></td>
+                                <th><strong>Age</strong></th>
+                            <td><span id="MotherAge"></span></td>
+                            <td><button onclick="enableEdit('MotherAge')"><i class="fas fa-pencil-alt"></i></button></td>
+                            <th><strong>Occupation</strong></th>
+                                <td><span id="Motheroccupation"></span></td> 
+                                <td><button onclick="enableEdit('Motheroccupation')"><i class="fas fa-pencil-alt"></i></button></td> 
+                            </tr>
+                            <tr>
+                                <th><strong>Spouse name</strong></th>
+                                <td><span id="SpouseName"></span></td>
+                                <td><button onclick="enableEdit('SpouseName')"><i class="fas fa-pencil-alt"></i></button></td>
+                                <th><strong>Age</strong></th>
+                            <td><span id="SpouseAge"></span></td>
+                            <td><button onclick="enableEdit('SpouseAge')"><i class="fas fa-pencil-alt"></i></button></td>
+                            <th><strong>Occupation</strong></th>
+                                <td><span id="Spouseoccupation"></span></td> 
+                                <td><button onclick="enableEdit('Spouseoccupation')"><i class="fas fa-pencil-alt"></i></button></td> 
+                            </tr>
+                            <tr>
+                                <th><strong>Nominee1 name</strong></th>
+                                <td><span id="Nominee1Name"></span></td>
+                                <td><button onclick="enableEdit('Nominee1Name')"><i class="fas fa-pencil-alt"></i></button></td>
+                                <th><strong>Age</strong></th>
+                            <td><span id="Nominee1Age"></span></td>
+                            <td><button onclick="enableEdit('Nominee1Age')"><i class="fas fa-pencil-alt"></i></button></td>
+                            <th><strong>Occupation</strong></th>
+                                <td><span id="Nominee1occupation"></span></td> 
+                                <td><button onclick="enableEdit('Nominee1occupation')"><i class="fas fa-pencil-alt"></i></button></td> 
+                            </tr>
+                            <tr>
+                                <th><strong>Nominee2 Name</strong></th>
+                                <td><span id="Nominee2Name"></span></td>
+                                <td><button onclick="enableEdit('Nominee2Name')"><i class="fas fa-pencil-alt"></i></button></td>
+                                <th><strong>Age</strong></th>
+                            <td><span id="Nominee2Age"></span></td>
+                            <td><button onclick="enableEdit('Nominee2Age')"><i class="fas fa-pencil-alt"></i></button></td>
+                            <th><strong>Occupation</strong></th>
+                                <td><span id="Nominee2occupation"></span></td> 
+                                <td><button onclick="enableEdit('Nominee2occupation')"><i class="fas fa-pencil-alt"></i></button></td> 
+                            </tr>
+                            <tr>
+                                <th><strong>other nominee name</strong></th>
+                                <td><span id="other nominee"></span></td>
+                                <td><button onclick="enableEdit('other nominee')"><i class="fas fa-pencil-alt"></i></button></td>
+                                <th><strong>Age</strong></th>
+                            <td><span id="othernomineeAge"></span></td>
+                            <td><button onclick="enableEdit('othernomineeAge')"><i class="fas fa-pencil-alt"></i></button></td>
+                            <th><strong>Occupation</strong></th>
+                                <td><span id="othernomineeoccupation"></span></td> 
+                                <td><button onclick="enableEdit('othernomineeoccupation')"><i class="fas fa-pencil-alt"></i></button></td> 
+                            </tr>
+                           
+
+                            </table>
+                       
+                  
                     </tbody>
                 </table>
 
             </div>
         </div>
+        <script>
+            function enableEdit(fieldId) {
+                var field = document.getElementById(fieldId);
+                var currentValue = field.innerText;
+        
+                // Replace the span with an input field
+                field.innerHTML = '<input type="text" id="new' + fieldId + '" value="' + currentValue + '">';
+        
+                var editButton = field.parentElement.nextElementSibling.querySelector('button');
+                editButton.innerText = 'Update'; // Change button text to 'Save'
+                editButton.onclick = function() {
+                    saveField(fieldId);
+                }; // Change button function to saveField()
+            }
+            enableEdit(fieldId);
+        
+            function saveField(fieldId) {
+                var newValue = document.getElementById('new' + fieldId).value;
+                var field = document.getElementById(fieldId);
+        
+                // Update the field span with the new value
+                field.innerText = newValue;
+        
+                var editButton = field.parentElement.nextElementSibling.querySelector('button');
+                editButton.innerHTML = '<i class="fas fa-pencil-alt"></i>';// Change button text back to 'Edit'
+                editButton.onclick = function() {
+                    enableEdit(fieldId);
+                }; // Change button function back to enableEdit()
+            }
+            saveField(fieldId);
+        </script>
+        
+        
+        
 </body>
 </html>
