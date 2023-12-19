@@ -53,6 +53,19 @@
                 color: black;
                 font-size: 30px;
             }
+            input[type="text"] {
+  border: 2px solid black; /* Default border color */
+  padding: 3px;
+  border-radius: 10px;
+  height: 45px;
+  width: 180px;
+
+}
+
+input[type="text"]:focus {
+  border-color: darkturquoise; /* Change border color to skyblue when focused */
+  outline: none; /* Remove the default focus outline */
+}
 
             .logo {
                 height: 55px;
@@ -227,7 +240,7 @@
                                 <label for="Mobile">Address :</label>
                             </div>
                             <div>
-                                <input  type="digit" class="inputel" id="address" placeholder="Enter your Address"required ></input>
+                                <input  type="text" class="inputel" id="address" placeholder="Enter your Address"required ></input>
                             
                             </div>
                         </div>
