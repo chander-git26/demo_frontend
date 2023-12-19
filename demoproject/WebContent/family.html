@@ -44,20 +44,7 @@
       flex-direction: row;
       justify-content: space-between;
     }
-    input[type="text"] {
-  border: 2px solid black; /* Default border color */
-  padding: 3px;
-  border-radius: 10px;
-  height: 45px;
-  width: 180px;
-
-}
-
-input[type="text"]:focus {
-  border-color: darkturquoise; /* Change border color to skyblue when focused */
-  outline: none; /* Remove the default focus outline */
-}
-
+ 
     .bgimg {
       background-size: cover;
       background-color: lightblue;
@@ -367,22 +354,6 @@ input[type="text"]:focus {
               <label for="fatherMedicalhistory">Upload medical history</label>
               <input type="file" class="inputel" id="fatherMedicalhistory" placeholder="Enter your Medical history"
                 required></input>
-=======
-              <label for="username">fatherName:</label>
-              <input type="text" id="username" name="username" required><br>
-              <br>
-              <label for="username">Age:</label>
-              <input type="text" id="username" maxlength="3" name="username" required><br>
-              <br>
-
-              <label for="username">Occupation:</label>
-              <input type="text" id="username" name="username" required><br>
-              <br>
-
-              <label for="Upload medical history">Upload medical history</label>
-              <input type="file" class="inputel" id="Medicalhistory" placeholder="Enter your Medical history"
-                required><br></input>
-
               <br>
  
  
@@ -401,7 +372,6 @@ input[type="text"]:focus {
  
             <ul class="options">
               <br>
-
               <label for="motherName">mother Name:</label>
               <input type="text" id="motherName"  required>
               <br>
@@ -415,21 +385,6 @@ input[type="text"]:focus {
               <label for="motherMedicalhistory">Upload medical history</label>
               <input type="file" class="inputel" id="motherMedicalhistory" placeholder="Enter your Medical history"
                 required></input>
-=======
-              <label for="username">mother Name:</label>
-              <input type="text" id="username" name="username" required><br>
-              <br>
-              <label for="username">Age:</label>
-              <input type="text" id="username" maxlength="3" name="username" required><br>
-              <br>
-
-              <label for="username">Occupation:</label>
-              <input type="text" id="username" name="username" required><br>
-              <br>
-              <label for="Upload medical history">Upload medical history</label>
-              <input type="file" class="inputel" id="Medicalhistory" placeholder="Enter your Medical history"
-                required><br></input>
-
               <br>
  
              
@@ -461,22 +416,6 @@ input[type="text"]:focus {
               <label for="spouseMedicalhistory">Upload medical history</label>
               <input type="file" class="inputel" id="spouseMedicalhistory" placeholder="Enter your Medical history"
                 required></input>
-
-              <label for="username">Name:</label>
-              <input type="text" id="username" maxlength="3" name="username" required><br>
-              <br>
-              <label for="username">Age:</label>
-              <input type="text" id="username" name="username" required><br>
-              <br>
-
-              <label for="username">Occupation:</label>
-              <input type="text" id="username" name="username" required><br>
-              <br>
-
-              <label for="Upload medical history">Upload medical history</label>
-              <input type="file" class="inputel" id="Medicalhistory" placeholder="Enter your Medical history"
-                required><br></input>
-
               <br>
  
              
@@ -732,7 +671,7 @@ input[type="text"]:focus {
   </script>
  
 <script>
- 
+  console.log(document.getElementById("date").value);
  async function postData() {
  
  
@@ -756,18 +695,18 @@ input[type="text"]:focus {
  
      spouseUploadMedicalHistory: document.getElementById("spouseMedicalhistory").value,
  
-    //  nominee1Name: document.getElementById("nominee1Name").value,
-    //  nominee2Name: document.getElementById("nominee2Name").value,
+     nominee1Name: document.getElementById("nominee1Name").value,
+     nominee2Name: document.getElementById("nominee2Name").value,
      otherNomineeName: document.getElementById("othersName").value,
      otherNomineeAge: document.getElementById("othersAge").value,
      otherNomineeRelation: document.getElementById("othersRelation").value,
-     //maritalStatus: document.getElementById("maritalstatus").value,
+     maritalStatus: document.getElementById("maritalstatus").value,
      selectNumberOfChildren: document.getElementById("numOfChildren").value,
      
  };
  
  try {
-   const apiUrl = 'http://localhost:8280/user/saveFamilyInformation';
+   const apiUrl = 'http://localhost:8280/user/savePersonalInformation';
    const response = await fetch(apiUrl, {
      method: 'POST',
      headers: {
@@ -781,10 +720,10 @@ input[type="text"]:focus {
    console.error('Error during request. Status:', response.status);
    const responseBody = await response.text();
    console.error('Response body:', responseBody);
-
+   window.location.href ='proffisional.html';
  } else {
    // Redirect on success
-   window.location.href ='family.html'; // Adjust the redirection path
+   window.location.href ='profie.html'; // Adjust the redirection path
  }
 } catch (error) {
  console.error('Error during request:', error);
@@ -792,7 +731,7 @@ input[type="text"]:focus {
 }
  
 </script>
-   
+ 
 </body>
  
 </html>
