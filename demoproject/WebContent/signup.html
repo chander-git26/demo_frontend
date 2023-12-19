@@ -4,7 +4,7 @@
   <head>
     <meta charset="UTF-8">
     <title> Responsive Registration Form | CodingLab </title>
-   
+    
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
@@ -16,7 +16,7 @@
         }
         body{
             background-size: cover;
-           
+            
             background-color: white;
         }
        
@@ -27,9 +27,9 @@
             flex-direction: row;
             justify-content: flex-end;
             align-items: center;
-           
+            
         }
-       
+        
         .container .title{
             font-size: 25px;
             font-weight: 500;
@@ -143,7 +143,7 @@
         }
          .user-details .input-box{
             margin-bottom: 15px;
-           
+            
         }
          .category{
             width: 100%;
@@ -161,24 +161,24 @@
             flex-direction: column;
         }
         }
- 
+
         .labelel {
-           
+            
             display: flex;
             flex-direction: row;
             justify-content: space-between;
             align-items: center;
             padding: 20px;
-           
+            
         }
- 
- 
+
+
         .newlabelel {
             display: flex;
             flex-direction: column;
-           
+            
             }
- 
+
         .row{
             display: flex;
             flex-direction: column;
@@ -214,9 +214,9 @@
      </style>
    </head>
 <body>
- 
+  
   <div class="container">
-       
+        
     <div class="row">
         <div class="title">Registration</div>
         <div class="content">
@@ -234,91 +234,91 @@
               <div class="labelel input-box">
                     <div>
                         <label for="fname">Last Name</label>
-               
+                
                     </div>
                     <div>
-                       
+                        
                         <input type="text"id="lname" placeholder=" Last Name"  data-errormsg="lastNameErrorMsg" required>
                     </div>
               </div>
- 
+
               <div class="labelel input-box">
                 <div>
                     <label for="email">Email</label>
-           
+            
                 </div>
                 <div>
-                   
+                    
                     <input type="email" id="email" placeholder="  Email"  data-errormsg="emailErrorMsg" required>
                 </div>
             </div>
- 
- 
+
+
           <div class="labelel input-box">
             <div>
                 <label for="mobile">Mobile</label>
-       
+        
             </div>
             <div>
-               
+                
                 <input type="text" placeholder="  Mobile" id="mobile" maxlength="10"  data-errormsg="mobileErrorMsg" required>
             </div>
             </div>
- 
- 
+
+
             <div class="labelel input-box">
                 <div>
                     <label for="password">Password</label>
-           
+            
                 </div>
                 <div>
-                   
+                    
                     <input type="password" id="password"  placeholder="  Password"  data-errormsg="passwordErrorMsg" required>
                 </div>
             </div>
-             
- 
+              
+
             <div class="labelel input-box">
                 <div>
                     <label for="confirm_password">Confirm Password</label>
-           
+            
                 </div>
                 <div>
-                   
+                    
                     <input type="password" id="confirm_password" placeholder=" Confirm password"  data-errormsg="confirmpasswordErrorMsg" required>
                 </div>
             </div>
              
-             
-             
+              
+              
             </div>
             <div class="btncontainer">
                 <div class="button btnel">
                     <input type="submit" onclick="postData()"   value="SIGNUP" >
                   </div>
             </div>
-           
+            
         </form>
-           
-               
+            
+                
        
     </div>
- 
- 
- 
- 
- 
- 
- 
- 
- 
+
+
+  
+
+
+
+
+
+
  
   <script>
- 
   
+    async function postData() {
         var password = document.getElementById("password");
                 var confirm_password = document.getElementById("confirm_password");
-                   
+                    
                     function validatePassword(){
                     if(password.value != confirm_password.value) {
                     confirm_password.setCustomValidity("Passwords Don't Match");
@@ -326,56 +326,45 @@
                     confirm_password.setCustomValidity('');
                     }
                     }
-                   
-                   
+                    
+                    
                     password.onchange = validatePassword;
                     confirm_password.onkeyup = validatePassword;
- 
-</script>
-
-
-<script>
   
-  async function postData() {
+    const data = {
+      
+      firstname: document.getElementById("fname").value,
+      lastname: document.getElementById("lname").value,
+     
+     
+      mobile: document.getElementById("mobile").value,
+      password: document.getElementById("password").value,
+      email: document.getElementById("email").value,
+    };
   
-
-  const data = {
-    
-    firstname: document.getElementById("fname").value,
-    lastname: document.getElementById("lname").value,
-   
-   
-    mobile: document.getElementById("mobile").value,
-    password: document.getElementById("password").value,
-    email: document.getElementById("email").value,
-  };
-
-  try {
-    const apiUrl = 'http://localhost:8280/user/createUser';
-    const response = await fetch(apiUrl, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(data)
-    });
-
-    if (!response.ok) {
-    // Handle other response statuses
-    console.error('Error during request. Status:', response.status);
-    const responseBody = await response.text();
-    console.error('Response body:', responseBody);
-  } else {
-    // Redirect on success
-    window.location.href ='signin.html'; // Adjust the redirection path
+    try {
+      const apiUrl = 'http://localhost:8280/user/createUser';
+      const response = await fetch(apiUrl, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+      });
+  
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+  
+      const responseData = await response.json();
+      console.log(responseData); // You can handle the response data here
+  
+    } catch (error) {
+      console.error('Error posting data:', error);
+    }
   }
-} catch (error) {
-  console.error('Error during request:', error);
-}
-}
-
+  
 </script>
- 
- 
+
 </body>
 </html>

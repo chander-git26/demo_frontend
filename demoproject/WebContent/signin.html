@@ -2,18 +2,155 @@
 <html lang="eng">
     <head>
         <title>Login</title>
-        <link rel="stylesheet" href="style.css">
+        
         <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    
+        <style>
+                      *{
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-family: "poppins", sans-serif;
+            }
+            body{
+                background-image: url("");
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+            body {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                min-height: 100vh;
+              
+            }
+            .wrapper{
+                width: 420px;
+                background: rgb(22, 22, 21);
+                color: aliceblue;
+                border-radius: 10px;
+                padding: 30px 40px;
+
+            }
+            .wrapper h1 {
+                font-size: 36px;
+                text-align: center;
+            }
+            .wrapper.input-box {
+                width: 100%;
+                height: 50px;
+                background: salmon;
+                margin: 30px 0;
+
+
+            }
+            .input-box input{
+                width: 100%;
+                height: 50px;
+                background: transparent;
+                border: none;
+                outline: none;
+                border: 2px solid rgba(255, 255, 255, .2);
+                border-radius: 40px;
+                font-size: 16px;
+                color: antiquewhite;
+                padding: 20px 45px 20px 20px;
+
+            }
+            .input-box input::placeholder {
+                color: wheat;
+            }
+            .input-box i {
+                position: absolute;
+                right: 20px;
+                top: 50px;
+                transform: translateY(-50%);
+                font-size: 20px;
+
+            }
+            .wrapper .remember-forgot {
+                display: flex;
+                justify-content: space-between;
+                font-size: 14.5px;
+                margin: -15px 0 15px;
+            }
+            .remember-forgot label input {
+                accent-color: white;
+                margin-right: 3px;
+
+            }
+            .remember-forgot a {
+                color: aliceblue;
+                text-decoration: none;
+            }
+            .remember-forgot a:hover {
+                text-decoration: underline;
+            }
+
+            .wrapper .btn {
+                width: 100%;
+                height: 45px;
+                background: navajowhite;
+                border: none;
+                outline: none;
+                border-radius: 40px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+                cursor: pointer;
+                font-size: 16px;
+                color: blue;
+                font-weight: 600;
+            }
+            .wrapper .registration.link{
+                font-size: 14.5px;
+                text-align: center;
+                margin: 20px 0 15px;
+
+
+            }
+
+            .register-link{
+              display: flex;
+              margin-top: 10px;
+            }
+
+            .register-link p a {
+                color: blue;
+                text-decoration: none;
+                font-weight: 600;
+                
+
+            }
+            .button
+            {
+                align-content: right;
+            }
+            .register-link p a:hover {
+                text-decoration: underline;
+
+            }
+            .fa-solid fa-user{
+                max-width: 100px;
+
+            }
+            .container{
+              display: flex;
+              flex-direction: column;
+            }
+            .backbtnel{
+              height: 35px;
+              width: 90px;
+              background-color: gray;
+              color: white;
+              margin-top: 25px;
+              border-radius: 15px;
+            }
+
+        </style>
         
     </head>
     <body>
-        <div></div>
-       <div>     </div>
-  
+      
     
-        <header>
-           
+        <div class="container">
             <div class="wrapper">
                 <form action="userdashboard.html" method="post">
                     <h1>Login</h1>
@@ -26,59 +163,66 @@
                         <box-icon name='lock-alt' type='solid' ></box-icon>
                     </div><br>
                     
-                    <a href="forgotpassword.html">Forgot password</a>
-               <br>
+                    <a style="color: white;" href="forgotpassword.html">Forgot password</a><br/><br>
              
-                <button type="submit" class="btn" onclick="postData()">Login</a> </button>
+                    <button type="submit" class="btn" style="color: black;" onclick="postData()">Login </button>
+                    <div class="register-link">
+                      <p>Don't have an account?</p> &nbsp; <button onclick="window.location.href='signup.html'">Register</button><br/>
+                        
+                  </div>
              
-            </div>
-                <div class="register-link">
-                    <p>Don't have an account? <a href="regio.html">Register</a></p><p> <button type="button" class="btn btn-dark"><a href="inde.html">BACK</a></button></p>
-                </div>
+            
+            
 
 
-                </form>
+            </form>
+            
+          </div>
+          <button type="button" onclick="window.location.href='home.html'" class="backbtnel">BACK</button>
+      </div>
 
-                <script>
+
+
+
+      <script>
   
-  async function postData() {
-  const email = document.getElementById("email").value;
-  const password = document.getElementById("password").value;
+            async function postData() {
+            const email = document.getElementById("email").value;
+            const password = document.getElementById("password").value;
 
-  const data = {
-    email: email,
-    password: password,
-  };
+            const data = {
+              email: email,
+              password: password,
+            };
 
-  try {
-    const apiUrl = 'http://localhost:8280/user/signin'; // Replace with your actual API URL
-    const response = await fetch(apiUrl, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(data),
-    });
+            try {
+              const apiUrl = 'http://localhost:8280/user/signin'; // Replace with your actual API URL
+              const response = await fetch(apiUrl, {
+                method: 'POST',
+                headers: {
+                  'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(data),
+              });
 
-    if (response.ok) {
-      // Handle other response statuses
-      console.error('Error during request. Status:', response.status);
-      const responseBody = await response.text();
-      console.error('Response body:', responseBody);
-      window.location.href ='userdashboard.html'; 
-    } else {
-      window.location.href ='signin.html'; 
-      // Redirect on success
-      // Adjust the redirection path
-    }
-  } catch (error) {
-    console.error('Error during request:', error);
-  }
-}
+              if (response.ok) {
+                // Handle other response statuses
+                console.error('Error during request. Status:', response.status);
+                const responseBody = await response.text();
+                console.error('Response body:', responseBody);
+                window.location.href ='userdashboard.html'; 
+              } else {
+                window.location.href ='signin.html'; 
+                // Redirect on success
+                // Adjust the redirection path
+              }
+            } catch (error) {
+              console.error('Error during request:', error);
+            }
+          }
                   
-                </script>
+      </script>
 
-            </div>
-        </header>
+           
     </body>
 </html>
