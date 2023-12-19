@@ -240,8 +240,9 @@
                                 <p class="style7">
                             </div>
                             <div>
-                                <input type="radio" name="Gender" value="Male" required id="gender"> Male &nbsp; &nbsp; &nbsp; &nbsp;
+                                <input type="radio" name="Gender" value="Male" required id="gender1"> Male &nbsp; &nbsp; &nbsp; &nbsp;
                                 <input type="radio" name="Gender" value="Female" required id="gender1"> Female
+                                <input type="radio" name="Gender" value="Others" required id="gender1"> Others
                                 </p>
                             </div>
                             
@@ -256,18 +257,9 @@
                                 <p class="style7">
                             </div>
                             <div>
-                                <input type="date" name="date" id="date" value="date" required id="date"> 
-
-<<<<<<< HEAD
-                        <div class="btnsel">
-                            <button type="button" onclick="window.location.href='userdashboard.html'" class="backel" style=" color:white; "> Back</button>
-                            <button type="button" onclick="postData()" class="saveel" style=" color: green; "> Save&Next</button>
-=======
-                                </p>
+                                <input type="date" name="date"  value="date"  id="date" required> 
                             </div>
-                            
                         </div>
->>>>>>> 7d3aaa954f56205ef7a59b382dc67da4144f1f78
 
                         <div class="labelel">
                             <div>
@@ -357,7 +349,7 @@
                                 <label for="height">Weight</label>
                             </div>
                             <div>
-                                <input type="text" class="inputel" id="Height" placeholder="Enter your Height (in cms)"></input>
+                                <input type="text" class="inputel" id="Weight" placeholder="Enter your Height (in cms)"></input>
                                 <br>
                             </div>
                             
@@ -373,7 +365,7 @@
                             <div>
                                 
                                 <input type="radio"  id="smokingyes" name="smoking"></input>Yes  &nbsp; &nbsp; &nbsp; &nbsp;
-                                <input type="radio"  id="smokingno" name="smoking"></input>No
+                                <input type="radio"  id="smokingyes" name="smoking"></input>No
                                 <br>
                             </div>
                             
@@ -385,7 +377,7 @@
                             </div>
                             <div>
                                 <input type="radio" id="Alcoholyes"  name="Alchohol"></input>Yes  &nbsp; &nbsp; &nbsp; &nbsp;
-                                <input type="radio"  id="Alcoholno"  name="Alchohol" ></input>No
+                                <input type="radio"  id="Alcoholyes"  name="Alchohol" ></input>No
                                 <br>
                             </div>
                             
@@ -396,7 +388,7 @@
 
                     <div class="btnsel">
                         <button type="button" onclick="window.location.href='userdashboard.html'" class="backel" style=" color:white; "> Back</button>
-                        <button type="button" onclick="saveAndNext()" class="saveel" style=" color: black; ">  Next</button>                        
+                        <button type="button" onclick="postData()" class="saveel" style="color: black;" > Next</button>                        
                     </div>
 
                 </div> 
@@ -461,58 +453,56 @@
         <p class="para1">2023 by Cosglobal</p>
 
     </div>
+
+    <script>
+         console.log(document.getElementById("date").value);
+        async function postData() {
+        
+      
+        const data = {
           
-                    
-
-        <script>
-
-                
-
-
-            async function postPersonalData() {
-                const apiUrl = 'http://localhost:8280/user/PersonalInformation';
+            address: document.getElementById("address").value,
+            gender: document.getElementById("gender1").value,
+         
+            dateOfBirth:document.getElementById("date").value,
+       
+            state: document.getElementById("state").value,
+            country: document.getElementById("country").value,
+            maritalStatus: document.getElementById("maritalstatus").value,
+            bloodGroup: document.getElementById("bloodgroup").value,
+            height: document.getElementById("Height").value,
+            weight: document.getElementById("Weight").value,
+            smoking: document.getElementById("smokingyes").value,
+            alochol: document.getElementById("Alcoholyes").value,
             
-                const data = {
-                    
-                    //getElementById doubt                    
-
-                    "address": document.getElementById("address").value,
-                    "gender": document.getElementById("gender").value,
-                    "dateOfBirth": document.getElementById("date").value,
-                    "state": document.getElementById("state").value,
-                    "country": document.getElementById("country").value,
-                    "maritalStatus": document.getElementByName("maritalStatus").value,
-                    "bloodGroup": document.getElementById("bloodgroup").value,
-                    "height": document.getElementById("Height").value,
-                    "weight": document.getElementById("weightDetails").value,
-                    "smoking": document.getElementById("smokingyes").value,
-                    "alochol": document.getElementById("Alcoholyes").value
-                    
-                };
-            
-                try {
-                const response = await fetch(apiUrl, {
-                    method: 'POST',
-                    headers: {
-                    'Content-Type': 'application/json'
-                    },
-                    body: JSON.stringify(data)
-                });
-            
-                if (!response.ok) {
-                    throw new Error('Network response was not ok');
-                }
-            
-                const responseData = await response.json();
-                console.log(responseData); // You can handle the response data here
-            
-                } catch (error) {
-                console.error('Error posting data:', error);
-
-                }
-            }
-            
-            
-        </script>
+        };
+      
+        try {
+          const apiUrl = 'http://localhost:8280/user/savePersonalInformation';
+          const response = await fetch(apiUrl, {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(data)
+          });
+      
+          if (response.ok) {
+          // Handle other response statuses
+          console.error('Error during request. Status:', response.status);
+          const responseBody = await response.text();
+          console.error('Response body:', responseBody);
+          window.location.href ='proffisional.html';
+        } else {
+          // Redirect on success
+          window.location.href ='profie.html'; // Adjust the redirection path
+        }
+      } catch (error) {
+        console.error('Error during request:', error);
+      }
+      }
+      
+    </script>
+    
     </body>
 </html>

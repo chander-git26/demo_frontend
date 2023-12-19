@@ -303,6 +303,45 @@ tbody:hover tr:hover td {
               }; // Change button function back to enableEdit()
           }
       </script>
+
+       <script>
+        async function fetchData() {
+          try {
+            const apiUrl = 'http://localhost:8280/user/getPersonalInfo/101';
+            const response = await fetch(apiUrl,{
+                      method:'GET'
+                     
+                     
+  
+                     }
+            );
+       
+            if (!response.ok) {
+              console.log('hghg');
+              throw new Error('Network response was not ok');
+            }
+            console.log('hgfgfghfhjfhfhnfnh');
+            const data = await response.json();
+            console.log(data);
+            document.getElementById('address').textContent = data.data.address; 
+            document.getElementById('gender').textContent = data.data.gender; 
+            document.getElementById('date').textContent = data.data.dateofbirth; 
+            document.getElementById('state').textContent = data.data.state; 
+            document.getElementById('country').textContent = data.data.country; 
+            document.getElementById('getmaritalstatus').textContent = data.data.marital_status; 
+            document.getElementById('getbloodgroup').textContent = data.data.blood_Group; 
+            document.getElementById('getheight').textContent = data.data.height; 
+            document.getElementById('getweightDetails').textContent = data.data.weight; 
+            document.getElementById('getsmoking').textContent = data.data.smoking; 
+            document.getElementById('getalchohol').textContent = data.data.alcohol; 
+            
+          } catch (error) {
+            console.log('Error fetching data:', error);
+          }
+        }
+       
+        fetchData();
+      </script>
       
 </body>
 </html>

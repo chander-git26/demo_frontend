@@ -4,260 +4,378 @@
   <head>
     <meta charset="UTF-8">
     <title> Responsive Registration Form | CodingLab </title>
-    <link rel="stylesheet" href="style.css">
+   
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Poppins',sans-serif;
-}
-body{
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
-  background: linear-gradient(135deg, #e7ede9, #e8e4ea);
-}
-.container{
-  max-width: 700px;
-  width: 100%;
-  background-color: #101010;
-  padding: 25px 30px;
-  border-radius: 5px;
-  box-shadow: 0 5px 10px rgba(35, 3, 151, 0.15);
-}
-.container .title{
-  font-size: 25px;
-  font-weight: 500;
-  position: relative;
-  color: whitesmoke;
-}
-.container .title::before{
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  height: 3px;
-  width: 30px;
-  border-radius: 5px;
-  background: linear-gradient(135deg, #71b7e6, #9b59b6);
-}
-.content form .user-details{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  margin: 25px 0 12px 0;
-}
-form .user-details .input-box{
-  margin-bottom: 15px;
-  width: calc(100% / 2 - 20px);
-}
-form .input-box span.details{
-  display: block;
-  font-weight: 500;
-  margin-bottom: 5px;
-}
-.user-details .input-box input{
-  height: 65px;
-  width: 100%;
-  outline: 3px;
-  font-size: 16px;
-  border-radius: 45px;
-  padding-left: 35px;
-  border: 1px solid #a20f0f;
-  border-bottom-width: 4px;
-  transition: all 0.3s ease;
-}
-.user-details .input-box input:focus,
-.user-details .input-box input:valid{
-  border-color: #f8f5f8;
-}
- form .gender-details .gender-title{
-  font-size: 20px;
-  font-weight: 500;
- }
- form .category{
-   display: flex;
-   width: 80%;
-   margin: 14px 0 ;
-   justify-content: space-between;
- }
- form .category label{
-   display: flex;
-   align-items: center;
-   cursor: pointer;
- }
- form .category label .dot{
-  height: 18px;
-  width: 18px;
-  border-radius: 50%;
-  margin-right: 10px;
-  background: #d9d9d9;
-  border: 5px solid transparent;
-  transition: all 0.3s ease;
-}
- #dot-1:checked ~ .category label .one,
- #dot-2:checked ~ .category label .two,
- #dot-3:checked ~ .category label .three{
-   background: #9b59b6;
-   border-color: #d9d9d9;
- }
- form input[type="radio"]{
-   display: none;
- }
- form .button{
-   height: 45px;
-   margin: 35px 0;
- }
- .btnel{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
- }
- form .button input{
-   height: 100%;
-   width: 100%;
-   border-radius: 5px;
-   border: none;
-   color: #0b0bc8;
-   font-size: 18px;
-   font-weight: 500;
-   letter-spacing: 1px;
-   cursor: pointer;
-   transition: all 0.3s ease;
-   background: linear-gradient(135deg, #71b7e6, #9b59b6);
- }
- form .button input:hover{
-  /* transform: scale(0.99); */
-  background: linear-gradient(-135deg, #71b7e6, #9b59b6);
-  }
- @media(max-width: 584px){
- .container{
-  max-width: 100%;
-}
-form .user-details .input-box{
-    margin-bottom: 15px;
-    width: 100%;
-  }
-  form .category{
-    width: 100%;
-  }
-  .content form .user-details{
-    max-height: 300px;
-    overflow-y: scroll;
-  }
-  .user-details::-webkit-scrollbar{
-    width: 5px;
-  }
-  }
-  @media(max-width: 459px){
-  .container .content .category{
-    flex-direction: column;
-  }
-}
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins',sans-serif;
+        }
+        body{
+            background-size: cover;
+           
+            background-color: white;
+        }
+       
+        .container{
+            height: 100vh;
+            padding: 40px;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+            align-items: center;
+           
+        }
+       
+        .container .title{
+            font-size: 25px;
+            font-weight: 500;
+            position: relative;
+            color: black;
+        }
+        .container .title::before{
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            height: 3px;
+            width: 30px;
+            border-radius: 5px;
+            background: linear-gradient(135deg, #71b7e6, #9b59b6);
+        }
+        .content  .user-details{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin: 25px 0 12px 0;
+        }
+         .user-details .input-box{
+            margin-bottom: 15px;
+            width: calc(100% / 2 - 20px);
+        }
+         .input-box span.details{
+            display: block;
+            font-weight: 500;
+            margin-bottom: 5px;
+        }
+        .user-details .input-box input{
+            height: 45px;
+            width: 100%;
+            outline: 3px;
+            font-size: 16px;
+            border-radius: 45px;
+            padding-left: 35px;
+            border: 1px solid #a20f0f;
+            border-bottom-width: 4px;
+            transition: all 0.3s ease;
+        }
+        .user-details .input-box input:focus,
+        .user-details .input-box input:valid{
+            border-color: rgb(41, 41, 100);
+        }
+         .gender-details .gender-title{
+            font-size: 20px;
+            font-weight: 500;
+        }
+         .category{
+            display: flex;
+            width: 80%;
+            margin: 14px 0 ;
+            justify-content: space-between;
+        }
+         .category label{
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+        }
+         .category label .dot{
+            height: 18px;
+            width: 18px;
+            border-radius: 50%;
+            margin-right: 10px;
+            background: #d9d9d9;
+            border: 5px solid transparent;
+            transition: all 0.3s ease;
+        }
+        #dot-1:checked ~ .category label .one,
+        #dot-2:checked ~ .category label .two,
+        #dot-3:checked ~ .category label .three{
+            background: #9b59b6;
+            border-color: #d9d9d9;
+        }
+         input[type="radio"]{
+            display: none;
+        }
+        .button{
+            height: 45px;
+            width: 120px;
+            border-radius: 10px;
+            margin: 35px 0;
+        }
+        .btnel{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+        .button input{
+            height: 100%;
+            width: 100%;
+            border-radius: 5px;
+            border: none;
+            color: #0b0bc8;
+            font-size: 18px;
+            font-weight: 500;
+            letter-spacing: 1px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            background: linear-gradient(135deg, #71b7e6, #9b59b6);
+            }
+            .button input:hover{
+            /* transform: scale(0.99); */
+            background: linear-gradient(-135deg, #71b7e6, #9b59b6);
+        }
+        @media(max-width: 584px){
+        .container{
+            max-width: 100%;
+        }
+         .user-details .input-box{
+            margin-bottom: 15px;
+           
+        }
+         .category{
+            width: 100%;
+        }
+        .content form .user-details{
+            max-height: 800px;
+            overflow-y: scroll;
+        }
+        .user-details::-webkit-scrollbar{
+            width: 5px;
+        }
+        }
+        @media(max-width: 459px){
+        .container .content .category{
+            flex-direction: column;
+        }
+        }
+ 
+        .labelel {
+           
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+           
+        }
+ 
+ 
+        .newlabelel {
+            display: flex;
+            flex-direction: column;
+           
+            }
+ 
+        .row{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            height: 75%;
+            background-color: white;
+            max-width: 60vw;
+            padding: 25px 30px;
+            border-radius: 5px;
+            box-shadow: 0 5px 10px rgba(35, 3, 151, 0.15);
+            }
+        .row .title{
+            font-size: 25px;
+            font-weight: 500;
+            position: relative;
+            color: black;
+        }
+        .row .title::before{
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            height: 3px;
+            width: 30px;
+            border-radius: 5px;
+            background: linear-gradient(135deg, #71b7e6, #9b59b6);
+            }
+            .btncontainer{
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+            }
      </style>
    </head>
 <body>
-  
+ 
   <div class="container">
-    <div class="title">Registration</div>
-    <div class="content">
-      <form action="signin.html" method="post">
-        <div class="user-details">
-          <div class="input-box">
-           
-            <input type="text" id="fname" placeholder="Enter First name"  data-errormsg="firstNameErrorMsg" required>
-          </div>
-         
-          <div class="input-box">
-           
-            <input type="text"id="lname" placeholder="Enter Last name"  data-errormsg="lastNameErrorMsg" required>
-          </div>
-          <div class="input-box">
-           
-            <input type="email" id="email" placeholder="Enter your email"  data-errormsg="emailErrorMsg" required>
-          </div>
-          <div class="input-box">
-           
-            <input type="text" placeholder="Enter your number" id="mobile" maxlength="10"  data-errormsg="mobileErrorMsg" required>
-          </div>
-          <div class="input-box">
-           
-            <input type="password" id="password"  placeholder="Enter your password"  data-errormsg="passwordErrorMsg" required>
-          </div>
-          <div class="input-box">
-         
-            <input type="password" id="confirm_password" placeholder="Confirm your password"  data-errormsg="confirmpasswordErrorMsg" required>
-          </div>
-        </div>
-        <script>
-          var password = document.getElementById("password")
-, confirm_password = document.getElementById("confirm_password");
- 
-function validatePassword(){
-if(password.value != confirm_password.value) {
-confirm_password.setCustomValidity("Passwords Don't Match");
-} else {
-confirm_password.setCustomValidity('');
-}
-}
- 
- 
-password.onchange = validatePassword;
-confirm_password.onkeyup = validatePassword;
-        </script>
        
-        <div class="button btnel">
-          <input type="submit" onclick="postData()"value="SIGNUP" >
-        </div>
-      </form>
+    <div class="row">
+        <div class="title">Registration</div>
+        <div class="content">
+          <form action="signin.html" method="post">
+            <div class="user-details">
+              <div class="labelel input-box">
+                    <div>
+                        <label for="fname">First Name</label>
+                    </div>
+                    <div>
+                        <input type="text" id="fname" placeholder=" First Name"  data-errormsg="firstNameErrorMsg" required>
+                </div>
+              </div>
+             
+              <div class="labelel input-box">
+                    <div>
+                        <label for="fname">Last Name</label>
+               
+                    </div>
+                    <div>
+                       
+                        <input type="text"id="lname" placeholder=" Last Name"  data-errormsg="lastNameErrorMsg" required>
+                    </div>
+              </div>
+ 
+              <div class="labelel input-box">
+                <div>
+                    <label for="email">Email</label>
+           
+                </div>
+                <div>
+                   
+                    <input type="email" id="email" placeholder="  Email"  data-errormsg="emailErrorMsg" required>
+                </div>
+            </div>
+ 
+ 
+          <div class="labelel input-box">
+            <div>
+                <label for="mobile">Mobile</label>
+       
+            </div>
+            <div>
+               
+                <input type="text" placeholder="  Mobile" id="mobile" maxlength="10"  data-errormsg="mobileErrorMsg" required>
+            </div>
+            </div>
+ 
+ 
+            <div class="labelel input-box">
+                <div>
+                    <label for="password">Password</label>
+           
+                </div>
+                <div>
+                   
+                    <input type="password" id="password"  placeholder="  Password"  data-errormsg="passwordErrorMsg" required>
+                </div>
+            </div>
+             
+ 
+            <div class="labelel input-box">
+                <div>
+                    <label for="confirm_password">Confirm Password</label>
+           
+                </div>
+                <div>
+                   
+                    <input type="password" id="confirm_password" placeholder=" Confirm password"  data-errormsg="confirmpasswordErrorMsg" required>
+                </div>
+            </div>
+             
+             
+             
+            </div>
+            <div class="btncontainer">
+                <div class="button btnel">
+                    <input type="submit" onclick="postData()"   value="SIGNUP" >
+                  </div>
+            </div>
+           
+        </form>
+           
+               
+       
     </div>
-  </div>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
   <script>
+ 
   
-    async function postData() {
-    
-  
-    const data = {
-      
-      firstname: document.getElementById("fname").value,
-      lastname: document.getElementById("lname").value,
-     
-     
-      mobile: document.getElementById("mobile").value,
-      password: document.getElementById("password").value,
-      email: document.getElementById("email").value,
-    };
-  
-    try {
-      const apiUrl = 'http://localhost:8280/user/createUser';
-      const response = await fetch(apiUrl, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(data)
-      });
-  
-      if (!response.ok) {
-      // Handle other response statuses
-      console.error('Error during request. Status:', response.status);
-      const responseBody = await response.text();
-      console.error('Response body:', responseBody);
-    } else {
-      // Redirect on success
-      window.location.href ='signin.html'; // Adjust the redirection path
-    }
-  } catch (error) {
-    console.error('Error during request:', error);
-  }
-  }
-  
+        var password = document.getElementById("password");
+                var confirm_password = document.getElementById("confirm_password");
+                   
+                    function validatePassword(){
+                    if(password.value != confirm_password.value) {
+                    confirm_password.setCustomValidity("Passwords Don't Match");
+                    } else {
+                    confirm_password.setCustomValidity('');
+                    }
+                    }
+                   
+                   
+                    password.onchange = validatePassword;
+                    confirm_password.onkeyup = validatePassword;
+ 
 </script>
 
+
+<script>
+  
+  async function postData() {
+  
+
+  const data = {
+    
+    firstname: document.getElementById("fname").value,
+    lastname: document.getElementById("lname").value,
+   
+   
+    mobile: document.getElementById("mobile").value,
+    password: document.getElementById("password").value,
+    email: document.getElementById("email").value,
+  };
+
+  try {
+    const apiUrl = 'http://localhost:8280/user/createUser';
+    const response = await fetch(apiUrl, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(data)
+    });
+
+    if (!response.ok) {
+    // Handle other response statuses
+    console.error('Error during request. Status:', response.status);
+    const responseBody = await response.text();
+    console.error('Response body:', responseBody);
+  } else {
+    // Redirect on success
+    window.location.href ='signin.html'; // Adjust the redirection path
+  }
+} catch (error) {
+  console.error('Error during request:', error);
+}
+}
+
+</script>
+ 
+ 
 </body>
 </html>
