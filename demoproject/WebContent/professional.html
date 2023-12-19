@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://kit.fontawesome.com/b454b53842.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous"/>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    
+        <style>
+            .navbtns {
+
+            font-weight: bold;
+            font-size: 20px;
+            }
+            
+            .inputel {
+            min-width: 50px;
+            width:200px;
+            text-align: center;
+
+            }
+            input[type="text"] {
+  border: 2px solid black; /* Default border color */
+  padding: 3px;
+  border-radius: 10px;
+  height: 45px;
+  width: 180px;
+
+}
+
+input[type="text"]:focus {
+  border-color: darkturquoise; /* Change border color to skyblue when focused */
+  outline: none; /* Remove the default focus outline */
+}
+
+
+            .labelel {
+            margin: 20px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            }
+
+            .bgimg {
+            background-size: cover;
+            height: 80vh;
+            min-height: 350px;
+            background-color: lightblue;
+            }
+            .detailsPage {
+                text-align: center;
+                padding:75px
+            }
+
+            .borderboxel {
+            
+            background-color: white;
+            max-width: 500px;
+            width:65%;
+            border-radius: 20px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: right;
+
+            }
+            .title {
+            font-family: sans-serif;
+            color: black;
+            font-size: 30px;
+            }
+
+            .submitel {
+                height: 45px;
+                width: 160px;
+                border-radius: 15px;
+                font-size: 18px;
+                font-weight: bold;
+                background-color: rgb(218, 221, 224);
+                color: white;
+                text-align: center;
+                
+            }
+
+            .backel{
+                height: 45px;
+                width: 120px;
+                border-radius: 15px;
+                font-size: 18px;
+                font-weight: bold;
+                background-color:rgb(44, 44, 42);
+                color: white;
+                text-align: center;
+
+            }
+
+
+          
+            .ex1 {
+                width: 100%;
+            }
+
+            .btnsel {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                margin-top: 30px;
+            }
+
+         
+                .btntext {
+
+                color: white;
+                font-weight: bold;
+                font-size:20px ;
+                }
+
+                .footerbg {
+            background-color: #0d2436;
+        
+        }
+        .container{
+            margin: 0px;
+            display: flex;
+            justify-content: center;
+        }
+        .row {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        
+        .card1 {
+            text-align: center;
+        }
+        
+        .logo1 {
+            height: 45px;
+            text-align: center;
+        }
+        
+        .logocontainer {
+            background-color: #152c3e;
+            color: gainsboro;
+            width: 50px;
+            height: 40px;
+            border-radius: 40px;
+            margin: 5px;
+            padding: 12px;
+            text-align: center;
+        }
+        
+        .para1 {
+            color: gainsboro;
+            text-align: center;
+            font-size: 13px;
+        }
+        
+        .card2 {
+            padding: 15px;
+            text-align: left;
+            color: gainsboro;
+        }
+        
+        .head1 {
+            font-size: 25px;
+            font-weight: bold;
+        }
+        
+        .line {
+            background-color: gainsboro;
+        }
+
+
+        .btnel{
+            
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            height: 45px;
+            border-radius: 12px;
+            margin: 15px;
+            background-color: white;
+            font-weight: bold;
+        
+            border-width: 1px;
+            border-color: rgb(157, 191, 224);
+        }
+
+        .btnel:hover {
+            
+            color: black;
+        }
+
+        .btnel:active {
+            background-color: rgb(255, 255, 255);
+            transform: translateY(4px);
+            color: #fff;
+        }
+        
+
+        .btnsel {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        
+            
+          
+         
+            .contain1{
+                background-color: white;
+                color: #002159;
+                padding: 10px;
+                margin: 0px;
+                display: flex;
+                    
+                }
+
+            .logoel{
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                align-self: center;
+                width: 100%;
+            }
+            .logo{
+                height: 30px;
+                width: 35px;
+                padding-right: 5px;
+            }
+
+            
+        </style>
+    </head>
+    <body>
+        <div class="contain1"> 
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" onclick="window.location.href='profie.html'" class="btnel bi bi-arrow-left-circle-fill" viewBox="0 0 16 16">
+                <path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0m3.5 7.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5z"/>
+              </svg> 
+            <div style="text-align: center;" class="logoel">
+                <img src="https://cosglobal.in/wp-content/uploads/2023/11/WhatsApp-Image-2023-11-22-at-18.18.56.jpeg" class="logo ">
+                <h3>COS Insurance</h3>
+            </div>
+        </div>
+
+        <div class="bgimg detailsPage d-flex flex-row justify-content-center" >
+            
+            <div class="borderboxel  d-flex flex-row justify-content-center">
+                <div class="ex1 ">
+                    <h1 class="title">Professional Details</h1>
+                    <div class="d-flex flex-column flex-direction:column justify-content:center">
+
+
+                        <!--Souce of income
+                        Company Name    Business
+
+                        Annual salary   Name
+                                        Type?
+                                        Revenue-->
+
+
+                        <div class="labelel">
+                            <div>
+                            <label for="incomesource">Source of Income</label>
+                            </div>
+                            <div>
+                                <select id="selectIncomeOption">
+                                    <option>select</option>
+                                    <option value="employee">Employement</option>
+                                    <option value="business">Business</option>
+                                    
+                                </select>
+                                
+                            </div>
+                            
+                        </div>
+
+
+
+
+                        <div id="dataDisplay">
+                            <!--javscript code-->
+                        </div>
+
+
+
+
+                    </div> 
+
+
+
+
+
+
+
+                    <div class="btnsel">
+                      
+
+                        <button type="button" onclick="window.location.href='personal.html'" class="backel" style=" color: white; "> Back</button>
+                        <button type="button" onclick="postProfessionalData()" class="submitel" style="color:black"> Next</button>
+                    </div>
+
+
+
+
+                </div> 
+            </div> 
+        </div>
+
+        <div class="footerbg">
+            
+            <div class="row">
+
+
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="card1">
+                        <div class="d-flex flex-row justify-content-center">
+
+                            <img src="https://cosglobal.in/wp-content/uploads/2023/11/WhatsApp-Image-2023-11-22-at-18.18.56.jpeg" class="logo1 text-center mt-4 mb-2" />
+                    </div>
+                    <p style="color: gainsboro; font-weight: bolder;">COS Insurance pvt ltd</p>
+                    <p class="para1"> Hyderabad, India.</p>
+                    </div>
+                    
+                        
+                </div>
+
+
+
+                <div>
+                    <h4 style="color: gainsboro; text-align: center; padding-top: 18px;">Contact Us</h4>
+                    <div class="d-flex flex-row justify-content-center">
+                        
+                        <div class="logocontainer">
+                            <i class="fa-brands fa-google logo2 mr-5"></i>
+                        </div>
+                        <div class="logocontainer">
+                            <i class="fa-brands fa-instagram logo2 mr-5"></i>
+                        </div>
+                        <div class="logocontainer">
+                            <i class="fa-brands fa-twitter logo2 mr-5"></i>
+                        </div>
+                        <div class="logocontainer">
+                            <i class="fa-brands fa-linkedin logo2"></i>
+                        </div>
+                    
+                    </div>
+                
+                </div>
+            
+
+
+
+
+
+                <div class="col-6 col-md-6 col-lg-3">
+                    <div class="card2">
+                        <h1 class="head1">Get to Know Us</h1>
+                        <p>About us</p>
+                        <p>Career</p>
+                        <p>Support</p>
+                        
+                    </div>
+                </div>
+
+                
+
+            </div>
+        
+        <hr class="line m-2" />
+        <p class="para1">2023 by Cosglobal</p>
+
+
+
+    </div>
+                
+
+
+
+        <script>
+            var selectOption = document.getElementById('selectIncomeOption');
+            var dataDisplay = document.getElementById('dataDisplay');
+
+            selectOption.addEventListener('change',function() {
+
+                var selectedValue = selectOption.value;
+                var dataDisplay = document.getElementById('dataDisplay');
+ 
+                switch (selectedValue) {
+                    case 'employee':
+                    var labelelDiv = document.createElement('div');
+                    labelelDiv.className = 'labelel';
+ 
+                    var innerDiv1 = document.createElement('div');
+ 
+                    
+
+                    
+
+                    var label = document.createElement('label');
+                        label.setAttribute('for', 'companyDetails');
+                        label.textContent = 'Company Name';
+                        innerDiv1.appendChild(label);
+ 
+                    var innerDiv2 = document.createElement('div');
+ 
+                    var inputElement = document.createElement('input');
+                    inputElement.setAttribute('type', 'text');
+                    inputElement.className = 'inputel';
+                    inputElement.id = 'companyDetails';
+                    inputElement.setAttribute('placeholder', 'Enter your Company Name');
+                    innerDiv2.appendChild(inputElement);
+ 
+                    innerDiv2.appendChild(document.createElement('br'));
+ 
+                    labelelDiv.appendChild(innerDiv1);
+                    labelelDiv.appendChild(innerDiv2);
+ 
+                    dataDisplay.innerHTML = '';
+                    dataDisplay.appendChild(labelelDiv);
+
+
+
+                    var labelelDiv1 = document.createElement('div');
+                    labelelDiv1.className = 'labelel';
+ 
+                    var innerDiv11 = document.createElement('div');
+ 
+                    var label1 = document.createElement('label');
+                    label1.setAttribute('for', 'salaryDetails');
+                    label1.textContent = 'Annual Income';
+                    innerDiv11.appendChild(label1);
+ 
+                    var innerDiv22 = document.createElement('div');
+ 
+                    /*var selectElement = document.createElement('select');
+ 
+                    var options = ['select', 250000, 290000 ,  1000000];
+ 
+                    for (var i = 0; i < options.length; i++) {
+                        var option = document.createElement('option');
+                        option.textContent = options[i];
+                        option.value=options[i];
+                        selectElement.appendChild(option);
+                    }
+*/
+                    var salaryinputElement = document.createElement('input');
+                    salaryinputElement.setAttribute('type', 'text');
+                    salaryinputElement.className = 'inputel';
+                    salaryinputElement.id = 'salaryDetails';
+                    salaryinputElement.setAttribute('placeholder', 'Enter your Salary');
+                    innerDiv2.appendChild(inputElement);
+ 
+                    innerDiv22.appendChild(salaryinputElement);
+ 
+                    innerDiv22.appendChild(document.createElement('br'));
+ 
+                    labelelDiv1.appendChild(innerDiv11);
+                    labelelDiv1.appendChild(innerDiv22);
+ 
+                    dataDisplay.appendChild(labelelDiv1);
+
+
+                    
+                    break;
+                    
+
+                    case 'business':
+                        
+                                        
+                        
+                        
+                        var labelelDiv = document.createElement('div');
+                        labelelDiv.className = 'labelel';
+
+                        var innerDiv1 = document.createElement('div');
+
+
+
+
+                        var label = document.createElement('label');
+                            label.setAttribute('for', 'businessDetails');
+                            label.textContent = 'Business Name';
+                            innerDiv1.appendChild(label);
+
+                        var innerDiv2 = document.createElement('div');
+
+                        var inputElement = document.createElement('input');
+                        inputElement.setAttribute('type', 'text');
+                        inputElement.className = 'inputel';
+                        inputElement.id = 'businessDetails';
+                        inputElement.setAttribute('placeholder', 'Enter your Business Name');
+                        innerDiv2.appendChild(inputElement);
+
+                        innerDiv2.appendChild(document.createElement('br'));
+
+                        labelelDiv.appendChild(innerDiv1);
+                        labelelDiv.appendChild(innerDiv2);
+
+                        dataDisplay.innerHTML = '';
+                        dataDisplay.appendChild(labelelDiv);
+
+
+
+
+                        var labelelDiv1 = document.createElement('div');
+                        labelelDiv1.className = 'labelel';
+
+                        var innerDiv11 = document.createElement('div');
+
+                        var label1 = document.createElement('label');
+                        label1.setAttribute('for', 'revenueDetails');
+                        label1.textContent = 'Annual Revenue';
+                        innerDiv11.appendChild(label1);
+
+                        var innerDiv22 = document.createElement('div');
+                        
+                        var revenueinputElement = document.createElement('input');
+                        revenueinputElement.setAttribute('type', 'text');
+                        revenueinputElement.className = 'inputel';
+                        revenueinputElement.id = 'revenueDetails';
+                        revenueinputElement.setAttribute('placeholder', 'Enter your revenue');
+                        innerDiv2.appendChild(revenueinputElement);
+
+                        innerDiv22.appendChild(revenueinputElement);
+
+
+
+
+                        innerDiv22.appendChild(document.createElement('br'));
+
+                        labelelDiv1.appendChild(innerDiv11);
+                        labelelDiv1.appendChild(innerDiv22);
+
+                        dataDisplay.appendChild(labelelDiv1);
+
+
+
+                        break;
+
+                   
+                    default:
+                    dataDisplay.textContent = 'Select an option to display data';
+                    break;
+                }
+
+            });
+
+        </script>
+
+
+
+<script>
+    
+    async function postProfessionalData() {
+                const apiUrl = 'http://localhost:8280/user/saveProfessionalInformation';
+                    const selectIncomeOption = document.getElementById("selectIncomeOption").value;
+               
+                    let data = { sourceOfIncome: selectIncomeOption };
+               
+                    switch (selectIncomeOption) {
+                        case 'employee':
+                            data.companyName = document.getElementById("companyDetails").value;
+                            data.annualIncome = document.getElementById("salaryDetails").value;
+                            break;
+                        case 'business':
+                            data.businessName = document.getElementById("businessDetails").value;
+                            data.businessAnnualRevenue = document.getElementById("revenueDetails").value;
+                            break;
+               
+                        default:
+                            break;
+                    }
+               
+                    try {
+                        const response = await fetch(apiUrl, {
+                            method: 'POST',
+                            headers: { 'Content-Type': 'application/json' },
+                            body: JSON.stringify(data)
+                        });
+               
+                        if (response.ok) {
+                            const responseData = await response.json();
+                            window.location.href ='family.html';
+                        }
+               
+                        throw new Error('Network response was not ok');
+                        console.log(responseData);
+                        window.location.href ='professional.html';
+                    } catch (error) {
+                        console.error('Error posting data:', error);
+               
+                    }
+                }
+</script>
+
+    </body>
+</html>

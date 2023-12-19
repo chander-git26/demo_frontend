@@ -10,9 +10,10 @@
    
         <style>
             .contain1{
-                background-color: #0d2436;
+              background-color: #002159;
                 color: white;
-                padding: 20px;
+                padding: 10px;
+                margin: 0px;
             }
  
             .btnboxes{
@@ -20,7 +21,18 @@
                 flex-direction: row;
                 justify-content: space-around;
             }
- 
+            .logoel{
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+            }
+            
+            .logo{
+                height: 30px;
+                width: 35px;
+                padding-right: 5px;
+            }
             .btnels{
                 height: 45px;
                 width: 125px;
@@ -62,21 +74,21 @@
                
             }   */
             /* Hide all slides by default */
-.mySlides {
-  display: none;
-}
+          .mySlides {
+            display: none;
+          }
 
-/* Show the active slide */
-.fade {
-  animation-name: fade;
-  animation-duration: 1.5s;
-}
+          /* Show the active slide */
+          .fade {
+            animation-name: fade;
+            animation-duration: 1.5s;
+          }
 
-/* Add animation for fading effect */
-@keyframes fade {
-  from { opacity: .4; }
-  to { opacity: 1; }
-}
+          /* Add animation for fading effect */
+          @keyframes fade {
+            from { opacity: .4; }
+            to { opacity: 1; }
+          }
 
             .bannerbg2{
                 background-image: url("https://media.istockphoto.com/id/475702616/photo/life-insurance-paper-family.jpg?s=2048x2048&w=is&k=20&c=_qfMXgu34S-LCNEMC8Hu9nLlrRx0sU8l0vqvbJMGTAk=");
@@ -93,22 +105,22 @@
     </head>
     <body>
         <div class="bg">
-            <div class="contain1">
-                <h1 style="text-align:center">Dashboard</h1>
-                
-                <div class="btnboxes">
+          <div class="contain1"> 
                     
-                 <div>
-                        <button class="btnels" onclick="window.location.href='userprofile.html'">User Info</button>
-                    </div>
-                    <div>
-                        <button class="btnels shbt" onclick="window.location.href='profie.html'" >Profile   <span class="circle">10%</span></button>
-                    </div>
-                    
-               
-                </div><br/>
-                <marquee> <h1 class="marqueetitle">Complete your profile to view plans</h1></marquee>
+            <div style="text-align: center;" class="logoel">
+                <img src="https://cosglobal.in/wp-content/uploads/2023/11/WhatsApp-Image-2023-11-22-at-18.18.56.jpeg" class="logo ">
+                <h3>COS Insurance</h3>
             </div>
+            <div class="btnboxes">
+                <div>
+                    <button class="btnels" onclick="window.location.href='userprofile.html'">User Info</button>
+                </div>
+                <div>
+                    <button onclick="window.location.href='personaldt.html'" class="btnels">Profile<span class="circle">10%</span></button>
+                </div>
+                
+            </div><br/>
+        </div>
             
             <div class="contain2">
                 <div class="col-8 ">
