@@ -44,7 +44,20 @@
       flex-direction: row;
       justify-content: space-between;
     }
- 
+    input[type="text"] {
+  border: 2px solid black; /* Default border color */
+  padding: 3px;
+  border-radius: 10px;
+  height: 45px;
+  width: 180px;
+
+}
+
+input[type="text"]:focus {
+  border-color: darkturquoise; /* Change border color to skyblue when focused */
+  outline: none; /* Remove the default focus outline */
+}
+
     .bgimg {
       background-size: cover;
       background-color: lightblue;
@@ -354,6 +367,22 @@
               <label for="fatherMedicalhistory">Upload medical history</label>
               <input type="file" class="inputel" id="fatherMedicalhistory" placeholder="Enter your Medical history"
                 required></input>
+=======
+              <label for="username">fatherName:</label>
+              <input type="text" id="username" name="username" required><br>
+              <br>
+              <label for="username">Age:</label>
+              <input type="text" id="username" maxlength="3" name="username" required><br>
+              <br>
+
+              <label for="username">Occupation:</label>
+              <input type="text" id="username" name="username" required><br>
+              <br>
+
+              <label for="Upload medical history">Upload medical history</label>
+              <input type="file" class="inputel" id="Medicalhistory" placeholder="Enter your Medical history"
+                required><br></input>
+
               <br>
  
  
@@ -372,6 +401,7 @@
  
             <ul class="options">
               <br>
+
               <label for="motherName">mother Name:</label>
               <input type="text" id="motherName"  required>
               <br>
@@ -385,6 +415,21 @@
               <label for="motherMedicalhistory">Upload medical history</label>
               <input type="file" class="inputel" id="motherMedicalhistory" placeholder="Enter your Medical history"
                 required></input>
+=======
+              <label for="username">mother Name:</label>
+              <input type="text" id="username" name="username" required><br>
+              <br>
+              <label for="username">Age:</label>
+              <input type="text" id="username" maxlength="3" name="username" required><br>
+              <br>
+
+              <label for="username">Occupation:</label>
+              <input type="text" id="username" name="username" required><br>
+              <br>
+              <label for="Upload medical history">Upload medical history</label>
+              <input type="file" class="inputel" id="Medicalhistory" placeholder="Enter your Medical history"
+                required><br></input>
+
               <br>
  
              
@@ -416,6 +461,22 @@
               <label for="spouseMedicalhistory">Upload medical history</label>
               <input type="file" class="inputel" id="spouseMedicalhistory" placeholder="Enter your Medical history"
                 required></input>
+
+              <label for="username">Name:</label>
+              <input type="text" id="username" maxlength="3" name="username" required><br>
+              <br>
+              <label for="username">Age:</label>
+              <input type="text" id="username" name="username" required><br>
+              <br>
+
+              <label for="username">Occupation:</label>
+              <input type="text" id="username" name="username" required><br>
+              <br>
+
+              <label for="Upload medical history">Upload medical history</label>
+              <input type="file" class="inputel" id="Medicalhistory" placeholder="Enter your Medical history"
+                required><br></input>
+
               <br>
  
              
