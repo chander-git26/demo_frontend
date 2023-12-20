@@ -5,7 +5,7 @@
  
   <script src="https://kit.fontawesome.com/b454b53842.js" crossorigin="anonymous"></script>
  
-        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
     integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
@@ -69,6 +69,7 @@
       font-family: sans-serif;
       color: black;
       font-size: 30px;
+      padding-bottom: 20px;
     }
  
     .submitel {
@@ -149,7 +150,8 @@
     .hidden {
       display: none;
     }
-   
+    
+    
  
     .options {
       list-style: none;
@@ -163,7 +165,7 @@
     .expand-button {
       cursor: pointer;
       color: blue;
-      text-align: left;
+      text-align: center;
     }
  
     .show {
@@ -327,6 +329,7 @@
         flex-direction: column;
         text-align: left;
       }
+   
   </style>
 </head>
  
@@ -354,158 +357,23 @@
 
           
          
-          <div class="expand-button">
-            <button for="fatherDetails" class="details-text" onclick="toggleFatherDetails()">Father details</button>
-          </div>
-         
+          
  
-          <div id="fatherDetails" class="hidden">
-       
- 
-            <ul class="options">
-              <br>
-              <label for="fatherName">fatherName:</label>
-              <input type="text" id="fatherName"required>
-              <br>
-              <label for="fatherAge">Age:</label>
-              <input type="digit" id="fatherAge" maxlength="3" required>
-              <br>
- 
-              <label for="fatherOccupation">Occupation:</label>
-              <input type="text" id="fatherOccupation"  required>
-              <br>
- 
-              <label for="fatherMedicalhistory">Upload medical history</label>
-              <input type="file" class="inputel" id="fatherMedicalhistory" placeholder="Enter your Medical history"
-                required></input>
-              <br>
- 
- 
-             
-            </ul>
-          </div><br>
+          
  
  
      
-          <div class="expand-button">
-            <button for="MotherDetails" class="details-text" onclick="toggleMotherDetails()">Mother Details</button>
-          </div>
- 
-          <div id="motherDetails" class="hidden">
-         
- 
-            <ul class="options">
-              <br>
-              <label for="motherName">mother Name:</label>
-              <input type="text" id="motherName"  required>
-              <br>
-              <label for="motherAge">Age:</label>
-              <input type="text" id="motherAge" maxlength="3"  required>
-              <br>
- 
-              <label for="motherOccupation">Occupation:</label>
-              <input type="text" id="motherOccupation"  required>
-              <br>
-              <label for="motherMedicalhistory">Upload medical history</label>
-              <input type="file" class="inputel" id="motherMedicalhistory" placeholder="Enter your Medical history"
-                required></input>
-              <br>
- 
-             
-            </ul>
-          </div><br>
+          
+          
  
 
-          <div class="labelel">
-            <div>
-              <label for="maritalstatus">Maritalstatus</label>
-             
-            </div>
-            <div>
-                <select id="maritalStatus" onchange="showHideSpouseDetails()">
-                  <option value="choose" id="choose">Choose</option>
-                    <option value="Single" >Single</option>
-                    <option value="Married" >Married</option>
-                </select>
-               
-                </div>
-              <br>
-            </div>
-            <br>
+          
  
          
           
  
-          <div id="spouseDetails"   class="hidden" style="display: none;">
-         
-            <div class="expand-button">
-              <button for="spouseDetails" class="details-text" onclick="toggleSpouseDetails()">Spouse Details</button>
-            </div>
-
-            <ul class="options">
-              <br>
-              <label for="spouseName">Name:</label>
-              <input type="text" id="spouseName"  required>
-              <br>
-              <label for="spouseAge">Age:</label>
-              <input type="text" id="spouseAge"  required>
-              <br>
- 
-              <label for="spouseOccupation">Occupation:</label>
-              <input type="text" id="spouseOccupation" name="username" required>
-              <br>
- 
-              <label for="spouseMedicalhistory">Upload medical history</label>
-              <input type="file" class="inputel" id="spouseMedicalhistory" placeholder="Enter your Medical history"
-                required></input>
-              <br>
- 
-             
-            </ul>
-          </div><br>
-          <div class="labelel" id="numOfChildren" style="display: none;">
-   
-            <script>
-              function displayChildrenInfo() {
-                var numOfChildren = document.getElementById('countOfChildren').value;
-                var childrenInfoDiv = document.getElementById('childrenInfo');
-                childrenInfoDiv.innerHTML = '';
-                for (var i = 1; i <= numOfChildren; i++) {
-                  var childDiv = document.createElement('div');
-                  childDiv.innerHTML = '<h3>Child ' + i + ' Information:</h3>' +
-                  '<label for="childName' + i + '">Name:</label>' +
-                    '<input type="text" id="childName' + i + '" name="childname' + i + '" required>' +
-                    '<label for="childAge' + i + '">Age:</label>' +
-                    '<input type="text" maxlength="3" id="childAge' + i + '" name="childAge' + i + '" required>' +
-                    '<label for="childGrade' + i + '">Grade:</label>' +
-                    '<input type="text" id="childGrade' + i + '" name="childGrade' + i + '" required>' +
-                    '<label for="childGender' + i + '">Gender:</label>' +
-                    '<input type="text" id="childGender' + i + '" name="childGender' + i + '" required><br><br>';
-                 
-                  childrenInfoDiv.appendChild(childDiv);
-                }
-              }
-          </script>
-         
-         
-          <div>
           
-            <label for="countOfChildren">Select number of children:</label>
-            <select id="countOfChildren" onchange="displayChildrenInfo()">
-              <option value="0">choose</option>
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
-            
-            </select>
-          </div>
-          <br/>
-          <div id="childrenInfo">
-           
-          </div>
-        </div>
-
+         
 
        
 
@@ -514,43 +382,144 @@
 
         <div class="labelel">
           <div>
-              <label for="diabetes">Select your nominees (max 2 people)</label>
+              <label for="diabetes">Select your nominees </label>
           </div>
           <div class="checkel">
               
-                  <label for="option1">
-                      <input type="checkbox"  name="relationship" value="father" onchange="updateCheckboxes(this)" class="option"> Father
+                  <label class="" for="option1">
+                      <input type="checkbox" id="showFatherDetails" name="relationship" onchange="updateCheckboxes(this)" value="father" onclick="showFatherDetails()" class="option"> Father
+                      
                       </label>
                 
-                  <label for="option2">
-                      <input type="checkbox" name="relationship" value="mother" onchange="updateCheckboxes(this)"class="option" > Mother
+                  <label class=""  for="option2">
+                      <input type="checkbox" id="showMotherDetails" name="relationship" onchange="updateCheckboxes(this)" value="mother"  onclick="showMotherDetails()" class="option" > Mother
+                     
                   </label>
               
-                  <label for="option3">
-                      <input type="checkbox" name="relationship" value="spouse" onchange="updateCheckboxes(this)" class="option" > Spouse
+                  <label class="" for="option3">
+                      <input type="checkbox" id="showSpouseDetails" name="relationship" onchange="updateCheckboxes(this)" value="spouse" onclick="showSpouseDetails()" class="option" > Spouse
+                      
                   </label>
               
-                  <label for="option5">
-                      <input type="checkbox" id="otherDetails" name="relationship" value="other" onclick="showDetails()" class="option" value="Other">Other
+                  <label class="" for="option5">
+                      <input type="checkbox" id="showOthersDetails" name="relationship" value="other" onclick="showOthersDetails()" class="option" value="Other">Other
+                    
                   </label>
               
           </div>
           
-      </div>  
+      </div>
+      
+      <div id="fatherDetails" class="hidden">
        
+ 
+        <ul class="options">
+          <br>
+          <label for="fatherName">Father Name:</label>
+          <input type="text" id="fatherName"required>
+          <br>
+          <label for="fatherAge">Father Age:</label>
+          <input type="digit" id="fatherAge" maxlength="3" required>
+          <br>
+
+          <label for="fatherOccupation">Father Occupation:</label>
+          <input type="text" id="fatherOccupation"  required>
+          <br>
+
+          <label for="fatherMedicalhistory">Upload medical history</label>
+          <input type="file" class="inputel" id="fatherMedicalhistory" placeholder="Enter your Medical history"
+            required></input>
+          <br>
+
+
+         
+        </ul>
+      </div><br> 
+       
+
+      <div id="motherDetails" class="hidden">
+         
+ 
+        <ul class="options">
+          <br>
+          <label for="motherName">Mother Name:</label>
+          <input type="text" id="motherName"  required>
+          <br>
+          <label for="motherAge">Mother Age:</label>
+          <input type="text" id="motherAge" maxlength="3"  required>
+          <br>
+
+          <label for="motherOccupation">Mother Occupation:</label>
+          <input type="text" id="motherOccupation"  required>
+          <br>
+          <label for="motherMedicalhistory">Upload medical history</label>
+          <input type="file" class="inputel" id="motherMedicalhistory" placeholder="Enter your Medical history"
+            required></input>
+          <br>
+
+         
+        </ul>
+      </div><br>
+
+
+      <div id="spouseDetails"   class="hidden" >
+         
+        
+
+        <ul class="options">
+          <br>
+          <label for="spouseName">Spouse Name:</label>
+          <input type="text" id="spouseName"  required>
+          <br>
+          <label for="spouseAge">Spouse Age:</label>
+          <input type="text" id="spouseAge"  required>
+          <br>
+
+          <label for="spouseOccupation">Spouse Occupation:</label>
+          <input type="text" id="spouseOccupation" name="username" required>
+          <br>
+
+          <label for="spouseMedicalhistory">Upload medical history</label>
+          <input type="file" class="inputel" id="spouseMedicalhistory" placeholder="Enter your Medical history"
+            required></input>
+          <br>
+
+         
+        </ul>
+      </div><br>
+
+
+      
+      <div id="othersDetails"   class="hidden" >
+         
+        
+
+        <ul class="options">
+          <br>
+          <label for="othersName">Others Name:</label>
+          <input type="text" id="othersName"  required>
+          <br>
+          <label for="othersAge">Others Age:</label>
+          <input type="text" id="othersAge"  required>
+          <br>
+
+          <label for="othersOccupation">Others Occupation:</label>
+          <input type="text" id="othersOccupation" name="username" required>
+          <br>
+
+          <label for="othersMedicalhistory">Upload medical history</label>
+          <input type="file" class="inputel" id="othersMedicalhistory" placeholder="Enter your Medical history"
+            required></input>
+          <br>
+
+         
+        </ul>
+      </div><br>
+
+
      
        
-          <div id="detailsDiv" style="display: none;">
-           
-            <form>
-              <label for="othersName">Name:</label>
-              <input type="text" id="othersName" name="name"><br><br>
-              <label for="othersAge">Age:</label>
-              <input type="text" id="othersAge" maxlength="3" name="username" required><br><br>
-             <label for="othersRelation">Relation to nominee:</label>
-              <input type="relation" id="othersRelation" name="relation"><br><br>              
-            </form>
-          </div>
+          
  
           <script>
             function updateCheckboxes(checkbox) {
@@ -575,45 +544,55 @@
                 }
               }
             }
+
+
+          
+
+            function showFatherDetails() {
+              var fatherDetails = document.getElementById("fatherDetails");
+              var showFatherDetails = document.getElementById("showFatherDetails");
        
-            function showDetails() {
-              var otherDetails = document.getElementById("otherDetails");
-              var detailsDiv = document.getElementById("detailsDiv");
-       
-              if (otherDetails.checked) {
-                detailsDiv.style.display = "block";
+              if (showFatherDetails.checked) {
+                fatherDetails.classList.remove("hidden");
               } else {
-                detailsDiv.style.display = "none";
+                fatherDetails.classList.add("hidden");
+              }
+            }
+
+            function showMotherDetails() {
+              var motherDetails = document.getElementById("motherDetails");
+              var showMotherDetails = document.getElementById("showMotherDetails");
+       
+              if (showMotherDetails.checked) {
+                motherDetails.classList.remove("hidden");
+              } else {
+                motherDetails.classList.add("hidden");
+              }
+            }
+
+            function showSpouseDetails() {
+              var spouseDetails = document.getElementById("spouseDetails");
+              var showSpouseDetails = document.getElementById("showSpouseDetails");
+       
+              if (showSpouseDetails.checked) {
+                spouseDetails.classList.remove("hidden");
+              } else {
+                spouseDetails.classList.add("hidden");
+              }
+            }
+       
+            function showOthersDetails() {
+              var othersDetails = document.getElementById("othersDetails");
+              var showOthersDetails = document.getElementById("showOthersDetails");
+       
+              if (showOthersDetails.checked) {
+                othersDetails.style.display = "block";
+              } else {
+                othersDetails.style.display = "none";
               }
             }
           </script>
-           <script>
-            function toggleFatherDetails() {
-              var details = document.getElementById("fatherDetails");
-              if (details.classList.contains("hidden")) {
-                details.classList.remove("hidden");
-              } else {
-                details.classList.add("hidden");
-              }
-            }
-            function toggleMotherDetails() {
-              var details = document.getElementById("motherDetails");
-              if (details.classList.contains("hidden")) {
-                details.classList.remove("hidden");
-              } else {
-                details.classList.add("hidden");
-              }
-            }
-            function toggleSpouseDetails() {
-              var details = document.getElementById("spouseDetails");
-              if (details.classList.contains("hidden")) {
-                details.classList.remove("hidden");
-              } else {
-                details.classList.add("hidden");
-              }
-            }
-            </script>
-           
+          
        
          
          
@@ -707,24 +686,7 @@
  
 </div>
          
-    <script>
-      function showHideSpouseDetails() {
-          var Maritalstatus = document.getElementById("maritalStatus");
-          var SpouseDetails = document.getElementById("spouseDetails");
-          var Noofchildren= document.getElementById("numOfChildren");
- 
-          if (Maritalstatus.value === "Married") {
-            SpouseDetails.style.display="block";
-              Noofchildren.style.display="block";
-          } else {
-            SpouseDetails.style.display = "none";
-              Noofchildren.style.display="none";
-          }
-      }
-      showHideSpouseDetails();
- 
-  </script>
- 
+    
 <script>
   console.log(document.getElementById("date").value);
  async function postData() {
