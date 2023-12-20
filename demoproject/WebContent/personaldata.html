@@ -1,197 +1,310 @@
-
 <html>
 <head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
    <style>
     body {
-    background: #fafafa url(https://jackrugile.com/images/misc/noise-diagonal.png);
-    color: #444;
-    font: 100%/30px 'Helvetica Neue', helvetica, arial, sans-serif;
-    text-shadow: 0 1px 0 #fff;
+  background: #fafafa url(https://jackrugile.com/images/misc/noise-diagonal.png);
+  color: #444;
+  font: 100%/30px 'Helvetica Neue', helvetica, arial, sans-serif;
+  text-shadow: 0 1px 0 #fff;
 }
  
 strong {
-    font-weight: bold;
+  font-weight: bold;
 }
  
 em {
-    font-style: italic;
+  font-style: italic;
+}
+.cover {
+        display: flex;
+        flex-direction: row;
+        margin: 0px;
+        height: 100vh;
+        width: 100vw;
+    }
+
+.logoright{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;    
+    }
+
+    .sidebar {
+        width: 270px;
+        background-color: #002159;
+        border: 1px solid black;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        flex-shrink: 0;
+        
+    }
+table {
+  background: #f5f5f5;
+  border-collapse: separate;
+  box-shadow: inset 0 1px 0 #fff;
+  font-size: 12px;
+  line-height: 24px;
+  margin: 30px auto;
+  text-align: left;
+  width: 800px;
 }
  
-table {
-    background: #f5f5f5;
-    border-collapse: separate;
-    box-shadow: inset 0 1px 0 #fff;
-    font-size: 12px;
-    line-height: 24px;
-    margin: 30px auto;
-    text-align: left;
-    width: 800px;
-}  
- 
 th {
-    background: url(https://jackrugile.com/images/misc/noise-diagonal.png), linear-gradient(#777, #444);
-    border-left: 1px solid #555;
-    border-right: 1px solid #777;
-    border-top: 1px solid #555;
-    border-bottom: 1px solid #333;
-    box-shadow: inset 0 1px 0 #999;
-    color: #fff;
+  background: url(https://jackrugile.com/images/misc/noise-diagonal.png), linear-gradient(#777, #444);
+  border-left: 1px solid #555;
+  border-right: 1px solid #777;
+  border-top: 1px solid #555;
+  border-bottom: 1px solid #333;
+  box-shadow: inset 0 1px 0 #999;
+  color: #fff;
   font-weight: bold;
-    padding: 10px 15px;
-    position: relative;
-    text-shadow: 0 1px 0 #000;  
+  padding: 10px 15px;
+  position: relative;
+  text-shadow: 0 1px 0 #000;  
     max-width: 75px;
 }
  
 th:after {
-    background: linear-gradient(rgba(255,255,255,0), rgba(255,255,255,.08));
-    content: '';
-    display: block;
-    height: 25%;
-    left: 0;
-    margin: 1px 0 0 0;
-    position: absolute;
-    top: 25%;
-    width: 50%;
+  background: linear-gradient(rgba(255,255,255,0), rgba(255,255,255,.08));
+  content: '';
+  display: block;
+  height: 25%;
+  left: 0;
+  margin: 1px 0 0 0;
+  position: absolute;
+  top: 25%;
+  width: 50%;
    
 }
  
 th:first-child {
-    border-left: 1px solid #777;    
-    box-shadow: inset 1px 1px 0 #999;
+  border-left: 1px solid #777;  
+  box-shadow: inset 1px 1px 0 #999;
    
 }
  
 th:last-child {
-    box-shadow: inset -1px 1px 0 #999;
+  box-shadow: inset -1px 1px 0 #999;
     width: 800px;
    
 }
  
 td {
-    border-right: 1px solid #fff;
-    border-left: 1px solid #e8e8e8;
-    border-top: 1px solid #fff;
-    border-bottom: 1px solid #e8e8e8;
-    padding: 10px 15px;
-    position: relative;
-    transition: all 300ms;
+  border-right: 1px solid #fff;
+  border-left: 1px solid #e8e8e8;
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #e8e8e8;
+  padding: 10px 15px;
+  position: relative;
+  transition: all 300ms;
     width: 250px;
    
    
 }
  
 td:first-child {
-    box-shadow: inset 1px 0 0 #fff;
-}  
+  box-shadow: inset 1px 0 0 #fff;
+}
  
 td:last-child {
-    border-right: 1px solid #e8e8e8;
-    box-shadow: inset -1px 0 0 #fff;
-}  
+  border-right: 1px solid #e8e8e8;
+  box-shadow: inset -1px 0 0 #fff;
+}
  
 tr {
-    background: url(https://jackrugile.com/images/misc/noise-diagonal.png);
+  background: url(https://jackrugile.com/images/misc/noise-diagonal.png);
 }
  
 tr:nth-child(odd) td {
-    background: #f1f1f1 url(https://jackrugile.com/images/misc/noise-diagonal.png);
+  background: #f1f1f1 url(https://jackrugile.com/images/misc/noise-diagonal.png);
 }
  
 tr:last-of-type td {
-    box-shadow: inset 0 -1px 0 #fff;
+  box-shadow: inset 0 -1px 0 #fff;
 }
  
 tr:last-of-type td:first-child {
-    box-shadow: inset 1px -1px 0 #fff;
-}  
+  box-shadow: inset 1px -1px 0 #fff;
+}
  
 tr:last-of-type td:last-child {
-    box-shadow: inset -1px -1px 0 #fff;
-}  
+  box-shadow: inset -1px -1px 0 #fff;
+}
  
 tbody:hover td {
-    color: transparent;
-    text-shadow: 0 0 3px #aaa;
+  color: transparent;
+  text-shadow: 0 0 3px #aaa;
 }
  
 tbody:hover tr:hover td {
-    color: #444;
-    text-shadow: 0 1px 0 #fff;
+  color: #444;
+  text-shadow: 0 1px 0 #fff;
 }
+.insurancebtnel{
+                height: 40px;
+                width: 250px;
+                background-color: rgb(255, 255, 255);
+                color: black;
+                font-weight: bold;
+                margin: 10px;
+                border: none;
+                border-radius: 15px;
+                box-shadow: 0 9px #999;
+                cursor: pointer;
+                border-color: #002159;
+                border-width: 1px;
+                
+            }
+
+            .insurancebtnel:hover {
+                background-color: #002159;
+                color: #fff;
+            }
+
+            .insurancebtnel:active {
+            background-color: #002159;
+            box-shadow: 0 5px #666;
+            transform: translateY(4px);
+            color: #fff;
+            }
+            .tablelcenter{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
    </style>
+ 
    
 </head>
 <body>
-    <center>
-    <h1><b><span class="whitesmoke">Personal Details</span></b></h1>
-</center>
-    <table>
-        <thead>
-          <tr>
-         
-          </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <th><strong>Address</strong></th>
-                <td ><span id="address"></span></td>
-                <td>Edit</td>
+  <div class="cover">
+    <div class="logoright sidebar">
+      <button type="button" onclick="window.location.href='personaldata.html'" class="insurancebtnel" >personal Info</button><br/>
+      <button type="button" onclick="window.location.href='Professionaldata.html'" class=" insurancebtnel  " >Professional Info</button><br/>
+      <button type="button" onclick="window.location.href='familydata.html'" class=" insurancebtnel  " >Family Info</button><br/>
+      <button type="button" onclick="window.location.href='medicaldata.html'" class="  insurancebtnel " >Medical Info</button><br/>
+    </div>
+    <div class="tablelcenter">
+            <center>
+            <h1><b><span class="whitesmoke">Personal Details</span></b></h1>
+        </center>
+            <table>
+                <thead>
+                  <tr>
+                
+                  </tr>
+                </thead>
+                <tbody>
+                    <!-- <tr> -->
+                        <!-- <th><strong>Address</strong></th> -->
+                        <!-- <td>   </td> -->
+                        <!-- <td>Edit</td> -->
+                        <!-- <td><button onclick="editAddress()">Edit</button></td> -->
+                        <!-- <td><button onclick="enableEdit()">Edit</button></td> -->
+                      <!-- </tr> -->
+                      <!-- <table>
+                        <tr>
+                            <th><strong>Address</strong></th>
+                            <td><span id="address"></span></td>
+                            <td><button onclick="enableEdit()">Edit</button></td>
+                        </tr>
+                    </table> -->
+                    <table>
+                      <tr>
+                          <th><strong>Address</strong></th>
+                          <td><span id="address"></span></td>
+                        <td><button onclick="enableEdit('address')"><i class="fas fa-pencil-alt"></i></button></td>
+                      </tr>
+                      <tr>
+                          <th><strong>Gender</strong></th>
+                          <td><span id="gender"></span></td>
+                          <td><button onclick="enableEdit('gender')"><i class="fas fa-pencil-alt"></i></button></td>
+                      </tr>
+                      <tr>
+                          <th><strong>Date of Birth</strong></th>
+                          <td><span id="dob"></span></td>
+                          <td><button onclick="enableEdit('dob')"><i class="fas fa-pencil-alt"></i></button></td>
+                      </tr>
+                      <tr>
+                          <th><strong>State</strong></th>
+                          <td><span id="state"></span></td>
+                          <td><button onclick="enableEdit('state')"><i class="fas fa-pencil-alt"></i></button></td>
+                      </tr>
+                      <tr>
+                          <th><strong>Country</strong></th>
+                          <td><span id="country"></span></td>
+                          <td><button onclick="enableEdit('country')"><i class="fas fa-pencil-alt"></i></button></td>
+                      </tr>
+                      <tr>
+                          <th><strong>Marital Status</strong></th>
+                          <td><span id="maritalStatus"></span></td>
+                          <td><button onclick="enableEdit('maritalStatus')"><i class="fas fa-pencil-alt"></i></button></td>
+                      </tr>
+                      <tr>
+                        <th><strong>Blood Group</strong></th>
+                        <td><span id="BloodGroup"></span></td>
+                        <td><button onclick="enableEdit('BloodGroup')"><i class="fas fa-pencil-alt"></i></button></td>
+                    </tr>
+                    <tr>
+                      <th><strong>Height</strong></th>
+                      <td><span id="Height"></span></td>
+                      <td><button onclick="enableEdit('Height')"><i class="fas fa-pencil-alt"></i></button></td>
+                  </tr>
+                  <tr>
+                    <th><strong>Weight</strong></th>
+                    <td><span id="Weight"></span></td>
+                    <td><button onclick="enableEdit('Weight')"><i class="fas fa-pencil-alt"></i></button></td>
+                </tr>
+                <tr>
+                  <th><strong>smoking</strong></th>
+                  <td><span id="smoking"></span></td>
+                  <td><button onclick="enableEdit('smoking')"><i class="fas fa-pencil-alt"></i></button></td>
               </tr>
-          <tr>
-            <th><strong>Gender</strong></th>
-            <td><span id="gender"></span></td>
-            <td>Edit</td>
-          </tr>
-          <tr>
-            <th><strong>D0B</strong></th>
-            <td><span id="date"></span></td>
-            <td>Edit</td>
-          </tr>                
-          <tr>
-            <th><strong>state</strong></th>
-            <td><span id="state"></span></td>
-            <td>Edit</td>
-          </tr>
-          <tr>
-            <th><strong>country</strong></th>
-            <td><span id="country"></span></td>
-            <td>Edit</td>
-          </tr>
-          <tr>
-            <th><strong>Marital status</strong></th>
-            <td><span id="getmaritalstatus"></span></td>
-            <td>Edit</td>
-          </tr>
-          <tr>
-            <th><strong>Blood Group</strong></th>
-            <td><span id="getbloodgroup"></span></td>
-            <td>Edit</td>
-          </tr>
-          <tr>
-            <th><strong>Height</strong></th>
-            <td><span id="getheight"></span></td>
-            <td>Edit</td>
-          </tr>
-          <tr>
-            <th><strong>Weight</strong></th>
-            <td><span id="getweightDetails"></span></td>
-            <td>Edit</td>
-          </tr>
-          <tr>
-            <th><strong>smoking</strong></th>
-            <td><span id="getsmoking"></span></td>
-            <td>Edit</td>
-          </tr>
-          <tr>
-            <th><strong>Alcohol</strong></th>
-            <td><span id="getalchohol"></span></td>
-            <td>Edit</td>
-          </tr>
-        </tbody>
-      </table>
+              <tr>
+                <th><strong>Alcohol</strong></th>
+                <td><span id="Alcohol"></span></td>
+                <td><button onclick="enableEdit('Alcohol')"><i class="fas fa-pencil-alt"></i></button></td>
+            </tr>
+          </table>
+        
+           </tbody>
+          </div>
+        <script>
+          function enableEdit(fieldId) {
+              var field = document.getElementById(fieldId);
+              var currentValue = field.innerText;
+              
+              // Replace the span with an input field
+              field.innerHTML = '<input type="text" id="new' + fieldId + '" value="' + currentValue + '">';
+              
+              var editButton = field.parentElement.nextElementSibling.querySelector('button');
+              editButton.innerText = 'Update'; // Change button text to 'Update'
+              editButton.onclick = function() {
+                  UpdateField(fieldId);
+              }; // Change button function to UpdateField()
+          }
+          
+          function UpdateField(fieldId) {
+              var newValue = document.getElementById('new' + fieldId).value;
+              var field = document.getElementById(fieldId);
+              
+              // Update the field span with the new value
+              field.innerText = newValue;
+              
+              var editButton = field.parentElement.nextElementSibling.querySelector('button');
+              editButton.innerHTML = '<i class="fas fa-pencil-alt"></i>';// Change button text back to 'Edit'
+              editButton.onclick = function() {
+                  enableEdit(fieldId);
+              }; // Change button function back to enableEdit()
+          }
+      </script>
 
-      <script>
+       <script>
         async function fetchData() {
           try {
             const apiUrl = 'http://localhost:8280/user/getPersonalInfo/101';
@@ -229,8 +342,6 @@ tbody:hover tr:hover td {
        
         fetchData();
       </script>
-
-
-
+      
 </body>
 </html>
