@@ -263,14 +263,14 @@ input[type="text"]:focus {
                                         Type?
                                         Revenue-->
 
-
+                        <form id="myForm" action="family.html" method="post">             
                         <div class="labelel">
                             <div>
-                            <label for="incomesource">Source of Income</label>
+                            <label for="incomesource" >Source of Income  <span class="required">*</span></label>
                             </div>
                             <div>
-                                <select id="selectIncomeOption">
-                                    <option>select</option>
+                                <select id="selectIncomeOption" name="incomesource" required>
+                                    <option value="" >Select</option>
                                     <option value="employee">Employement</option>
                                     <option value="business">Business</option>
                                     
@@ -279,7 +279,20 @@ input[type="text"]:focus {
                             </div>
                             
                         </div>
-
+                        <script>
+                            document.getElementById('myForm').addEventListener('submit', function(event) {
+                            var incomeSource = document.getElementById('selectIncomeOption').value;
+                                  if (incomeSource === '') {
+                                      alert('Please select a source of income');
+                                       event.preventDefault(); // Prevent form submission
+    }
+    else {
+            // If State field is not empty, the form will submit and redirect to professional.html
+            window.location.href = "family.html"; // Redirects to professional.html
+        }
+});
+                        </script>
+                       
 
 
 
@@ -302,7 +315,13 @@ input[type="text"]:focus {
                       
 
                         <button type="button" onclick="window.location.href='personal.html'" class="backel" style=" color: white; "> <i class="fa-solid fa-arrow-left" style="color: white;"></i></button>
-                        <button type="button" onclick="postProfessionalData()" class="submitel" style="color:black">  <i class="fa-solid fa-arrow-right"></i></button>
+                        <!-- <button type="button" onclick="  window.location.href ='family.html';"  style="color:black">  <i class="fa-solid fa-arrow-right"></i></button> -->
+
+                        <!-- <input type="submit" value="Next"> -->
+                        <input type="submit" value="Submit" style="color:black">
+                    </form>
+                     
+             
                     </div>
 
 
@@ -413,7 +432,7 @@ input[type="text"]:focus {
                     inputElement.setAttribute('type', 'text');
                     inputElement.className = 'inputel';
                     inputElement.id = 'companyDetails';
-                    inputElement.setAttribute('placeholder', 'Enter your Company Name');
+                   inputElement.setAttribute('placeholder', 'Enter your Company Name');
                     innerDiv2.appendChild(inputElement);
  
                     innerDiv2.appendChild(document.createElement('br'));
@@ -423,6 +442,8 @@ input[type="text"]:focus {
  
                     dataDisplay.innerHTML = '';
                     dataDisplay.appendChild(labelelDiv);
+
+
 
 
 
@@ -438,22 +459,13 @@ input[type="text"]:focus {
  
                     var innerDiv22 = document.createElement('div');
  
-                    /*var selectElement = document.createElement('select');
- 
-                    var options = ['select', 250000, 290000 ,  1000000];
- 
-                    for (var i = 0; i < options.length; i++) {
-                        var option = document.createElement('option');
-                        option.textContent = options[i];
-                        option.value=options[i];
-                        selectElement.appendChild(option);
-                    }
-*/
+                  
                     var salaryinputElement = document.createElement('input');
                     salaryinputElement.setAttribute('type', 'text');
                     salaryinputElement.className = 'inputel';
                     salaryinputElement.id = 'salaryDetails';
                     salaryinputElement.setAttribute('placeholder', 'Enter your Salary');
+                    salaryinputElement.setAttribute('required', '');
                     innerDiv2.appendChild(inputElement);
  
                     innerDiv22.appendChild(salaryinputElement);
@@ -464,6 +476,51 @@ input[type="text"]:focus {
                     labelelDiv1.appendChild(innerDiv22);
  
                     dataDisplay.appendChild(labelelDiv1);
+
+
+
+
+                    var labelelDiv2 = document.createElement('div');
+                      labelelDiv2.className = 'labelel';
+
+                      var innerDiv12 = document.createElement('div');
+
+                       var label2 = document.createElement('label');
+                        label2.setAttribute('for', 'spareAmountDetails');
+                         label2.textContent = 'Spare amount';
+                         innerDiv12.appendChild(label2);
+
+                      var innerDiv22 = document.createElement('div');
+
+                    var spareAmountInputElement = document.createElement('input');
+                    spareAmountInputElement.setAttribute('type', 'text');
+                    spareAmountInputElement.className = 'inputel';
+                    spareAmountInputElement.id = 'spareAmountDetails';
+                    spareAmountInputElement.setAttribute('placeholder', 'Enter your spare amount');
+                    spareAmountInputElement.setAttribute('required', ''); // Make it required if needed
+                     innerDiv22.appendChild(spareAmountInputElement);
+
+                    labelelDiv2.appendChild(innerDiv12);
+                     labelelDiv2.appendChild(innerDiv22);
+
+                         // Append labelelDiv2 to the container where you want to display it
+                         dataDisplay.appendChild(labelelDiv2);
+                          // Add event listener to validate input for only digits
+                     spareAmountInputElement.addEventListener('input', function(event) {
+                     var inputValue = event.target.value;
+                     var numericValue = inputValue.replace(/\D/g, ''); // Remove non-digit characters
+
+                      // Update the input field value with only numeric characters
+                          event.target.value = numericValue;
+                     });
+
+
+
+
+
+
+
+                    
 
 
                     
@@ -525,6 +582,7 @@ input[type="text"]:focus {
                         revenueinputElement.className = 'inputel';
                         revenueinputElement.id = 'revenueDetails';
                         revenueinputElement.setAttribute('placeholder', 'Enter your revenue');
+                        revenueinputElement.setAttribute('required', '');
                         innerDiv2.appendChild(revenueinputElement);
 
                         innerDiv22.appendChild(revenueinputElement);
@@ -540,8 +598,121 @@ input[type="text"]:focus {
                         dataDisplay.appendChild(labelelDiv1);
 
 
+                        // Create a div for GST field
+                      var labelelDiv2 = document.createElement('div');
+                      labelelDiv2.className = 'labelel';
 
-                        break;
+                      var innerDiv12 = document.createElement('div');
+
+                       var label2 = document.createElement('label');
+                        label2.setAttribute('for', 'gstDetails');
+                         label2.textContent = 'GST Number';
+                         innerDiv12.appendChild(label2);
+
+                      var innerDiv22 = document.createElement('div');
+
+                    var gstInputElement = document.createElement('input');
+                    gstInputElement.setAttribute('type', 'text');
+                    gstInputElement.className = 'inputel';
+                    gstInputElement.id = 'gstDetails';
+                    gstInputElement.setAttribute('placeholder', 'Enter your GST Number');
+                     gstInputElement.setAttribute('required', ''); // Make it required if needed
+                     innerDiv22.appendChild(gstInputElement);
+
+                    labelelDiv2.appendChild(innerDiv12);
+                     labelelDiv2.appendChild(innerDiv22);
+
+                         // Append labelelDiv2 to the container where you want to display it
+                         dataDisplay.appendChild(labelelDiv2);
+
+
+
+
+                       // Create a div for Business Type field
+                      var labelelDiv3 = document.createElement('div');
+                      labelelDiv3.className = 'labelel';
+
+                      var innerDiv13 = document.createElement('div');
+
+                      var label3 = document.createElement('label');
+                      label3.setAttribute('for', 'businessTypeDetails');
+                      label3.textContent = 'Business Type';
+                      innerDiv13.appendChild(label3);
+
+                      var innerDiv23 = document.createElement('div');
+
+                      var businessTypeSelectElement = document.createElement('select');
+                    businessTypeSelectElement.className = 'inputel';
+                    businessTypeSelectElement.id = 'businessTypeDetails';
+                    businessTypeSelectElement.setAttribute('required', ''); // Make it required if needed
+
+                    var defaultOption = document.createElement('option');
+                    defaultOption.textContent = 'Select';
+                    defaultOption.value = '';
+                     defaultOption.disabled = true;
+                   defaultOption.selected = true;
+                   businessTypeSelectElement.appendChild(defaultOption);
+
+                  var privateLimitedOption = document.createElement('option');
+                  privateLimitedOption.textContent = 'Private Limited';
+                  privateLimitedOption.value = 'privateLimited';
+                  businessTypeSelectElement.appendChild(privateLimitedOption);
+ 
+                  var partnershipOption = document.createElement('option');
+                  partnershipOption.textContent = 'Partnership';
+                  partnershipOption.value = 'partnership';
+                businessTypeSelectElement.appendChild(partnershipOption);
+
+              innerDiv23.appendChild(businessTypeSelectElement);
+
+            labelelDiv3.appendChild(innerDiv13);
+            labelelDiv3.appendChild(innerDiv23);
+
+            // Append labelelDiv3 to the container where you want to display it
+                 dataDisplay.appendChild(labelelDiv3);
+
+
+
+                        // Create a div for Spare Amount field
+                       var labelelDiv4 = document.createElement('div');
+                        labelelDiv4.className = 'labelel';
+
+                       var innerDiv14 = document.createElement('div');
+
+                         var label4 = document.createElement('label');
+                          label4.setAttribute('for', 'spareAmountDetails');
+                          label4.textContent = 'Spare Amount';
+                          innerDiv14.appendChild(label4);
+
+                         var innerDiv24 = document.createElement('div');
+
+                         var spareAmountInputElement = document.createElement('input');
+                         spareAmountInputElement.setAttribute('type', 'text');
+                         spareAmountInputElement.className = 'inputel';
+                          spareAmountInputElement.id = 'spareAmountDetails';
+                          spareAmountInputElement.setAttribute('placeholder', 'Enter Spare Amount');
+                            spareAmountInputElement.setAttribute('required', ''); // Make it required if needed
+                           innerDiv24.appendChild(spareAmountInputElement);
+
+                         labelelDiv4.appendChild(innerDiv14);
+                         labelelDiv4.appendChild(innerDiv24);
+
+                    // Append labelelDiv4 to the container where you want to display it
+                   dataDisplay.appendChild(labelelDiv4);
+
+                     // Add event listener to validate input for only digits
+                     spareAmountInputElement.addEventListener('input', function(event) {
+                     var inputValue = event.target.value;
+                     var numericValue = inputValue.replace(/\D/g, ''); // Remove non-digit characters
+
+                      // Update the input field value with only numeric characters
+                          event.target.value = numericValue;
+});
+
+
+
+
+           break;
 
                    
                     default:
@@ -591,7 +762,7 @@ input[type="text"]:focus {
                
                         throw new Error('Network response was not ok');
                         console.log(responseData);
-                        window.location.href ='professional.html';
+                     
                     } catch (error) {
                         console.error('Error posting data:', error);
                

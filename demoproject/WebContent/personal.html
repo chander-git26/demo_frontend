@@ -57,7 +57,7 @@
   border: 2px solid black; /* Default border color */
   padding: 3px;
   border-radius: 10px;
-  height: 45px;
+  height: 35px;
   width: 180px;
 
 }
@@ -185,6 +185,10 @@ input[type="text"]:focus {
             height: 75px;
             text-align: center;
         }
+        .labelel.required {
+    color: red; /* You can adjust the color as needed */
+    margin-left: 50px; /* Adjust spacing between label text and star mark */
+}
         
         .logocontainer {
             background-color: #152c3e;
@@ -233,20 +237,66 @@ input[type="text"]:focus {
                     <h1 class="title">Personal Details</h1>
                     <div class="d-flex flex-column flex-direction:column justify-content:center">
 
+                      
+
+                    
+                      
+                        <form id="myForm" action="professional.html" method="post">
+
                         <div class="labelel">
                             <div>
-                                <label for="Mobile">Address :</label>
+                                <label for="gender">State <span class="required" >:</span> *  </label>
+                               
+                                <p class="style7">
                             </div>
                             <div>
-                                <input  type="text" class="inputel" id="address" placeholder="Enter your Address"required ></input>
+                                <input type="text" name="state" value="" placeholder="enter your State" required id="state"  > 
+
+                                </p>
+                            </div>
+                            
+                        </div>
+                       
+                        <script>
+    document.getElementById("myForm").addEventListener("submit", function(event) {
+        var stateField = document.getElementById("state");
+        if (stateField.value.trim() === "") {
+            event.preventDefault(); // Prevents form submission if State field is empty
+            alert("State field cannot be empty!"); // You can replace this with your own error messaging or UI
+        } else {
+            // If State field is not empty, the form will submit and redirect to professional.html
+            window.location.href = "professional.html"; // Redirects to professional.html
+        }
+    });
+</script>
+
+                        <div class="labelel">
+                            <div>
+                                <label for="gender"> Country <span class="required">:</span> * </label>
+                                
+                                <p class="style7">
+                            </div>
+                            <div>
+                                <input type="text" name="country" id="country" value="" placeholder="enter your country" required id="country"> 
+
+                                </p>
+                            </div>
+                            
+                        </div>
+
+                        <div class="labelel">
+                            <div>
+                                <label for="Mobile">Address<span class="required">:</span> *</label>
+                            </div>
+                            <div>
+                                <input  type="text" class="inputel" required id="address" placeholder="Enter your Address" ></input>
                             
                             </div>
                         </div>
 
-                    
                         <div class="labelel">
                             <div>
-                                <label for="gender">Gender : </label>
+                                <label for="gender">Gender <span class="required">:</span> * </label>
                                 </span>
                                 <p class="style7">
                             </div>
@@ -263,65 +313,16 @@ input[type="text"]:focus {
 
                         <div class="labelel">
                             <div>
-                                <label for="gender"> Date Of Birth: </label>
+                                <label for="gender"> Date Of Birth <span class="required">:</span> * </label>
                                 </span>
                                 <p class="style7">
                             </div>
                             <div>
-                                <input type="date" name="date"  value="date"  id="date" required> 
+                                <input type="date" name="date"  value="date" required id="date" > 
                             </div>
-                        </div>
-
-
-                        <div class="labelel">
-                            <div>
-                                <label for="gender"> State : </label>
-                               
-                                <p class="style7">
-                            </div>
-                            <div>
-                                <input type="text" name="state" value="" placeholder="enter your State" id="state"> 
-
-                                </p>
-                            </div>
-                            
-                        </div>
-
-                        <div class="labelel">
-                            <div>
-                                <label for="gender"> country : </label>
-                                
-                                <p class="style7">
-                            </div>
-                            <div>
-                                <input type="text" name="country" id="country" value="" placeholder="enter your country" required id="country"> 
-
-                                </p>
-                            </div>
-                            
                         </div>
                                     
-                                    
-
-                                    
-
-                        <div class="labelel">
-                            <div>
-                                <label for="maritalstatus"> Marital Status</label>
-                                
-                                <p class="style7">
-                            </div>
-                            <div>
-                                <input type="radio" name="maritalstatus" value="Single" id="maritalstatus" />Single  &nbsp; &nbsp; &nbsp; &nbsp;
-                                <input type="radio" name="maritalstatus" value="Married" id="maritalstatus"/>Married
-                                </p>
-                            </div>
-                            
-                        </div>
-                        
-                        
-
-                        <div class="labelel">
+                                    <div class="labelel">
                             <div>
                                 <label for="bloodgroup">Blood Group</label>
                             </div>
@@ -401,7 +402,12 @@ input[type="text"]:focus {
 
                     <div class="btnsel">
                         <button type="button" onclick="window.location.href='userdashboard.html'" class="backel" style=" color:white; "> <i class="fa-solid fa-arrow-left" style="color: white;"></i></button>
-                        <button type="button" onclick="postPersonalData()" class="saveel" style="color: black;" >  <i class="fa-solid fa-arrow-right"></i></button>                        
+                         <!-- <button type="submit" value="Next" onclick="  window.location.href ='professional.html';" class="saveel" style="color: black;" >  <i class="fa-solid fa-arrow-right"></i></button>     -->
+                                         
+                         <input type="submit" value="Next">
+                     
+                        </form>               
+                                         
                     </div>
 
                 </div> 
@@ -507,7 +513,7 @@ input[type="text"]:focus {
                 console.error('Error during request. Status:', response.status);
                 const responseBody = await response.text();
                 console.error('Response body:', responseBody);
-                window.location.href ='professional.html';
+              
                 } else {
                 // Redirect on success
                 window.location.href ='personal.html'; // Adjust the redirection path
@@ -518,6 +524,7 @@ input[type="text"]:focus {
             }
       
     </script>
+   
     
     </body>
 </html>
