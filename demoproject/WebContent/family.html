@@ -39,10 +39,10 @@
     }
  
     .labelel {
-      margin: 20px;
+      padding-left: 60px;
       display: flex;
       flex-direction: row;
-      justify-content: space-between;
+      justify-content: space-around;
     }
  
     .bgimg {
@@ -54,8 +54,8 @@
     .borderboxel {
  
       background-color: white;
-      max-width: 500px;
-      width: 65%;
+      max-width: 650px;
+      width: 75%;
       border-radius: 20px;
       padding: 20px;
  
@@ -163,7 +163,7 @@
     .expand-button {
       cursor: pointer;
       color: blue;
- 
+      text-align: left;
     }
  
     .show {
@@ -182,31 +182,49 @@
       margin-right: 20px;
    
     }
-    .details-text {
-  white-space: nowrap;
-}
+    
     .saveel {
-        height: 45px;
-        width: 160px;
-        border-radius: 15px;
-        font-size: 18px;
-        font-weight: bold;
-        background-color: rgb(235, 238, 240);
-        color: rgb(243, 243, 243);
-        text-align: center;
+      border: none;
+    color: black;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    border-radius: 50%;
+    background-color: transparent;
  
                
                 }
+                .saveel:hover {
+                background-color: gray;
+                color: #fff;
+            }
+
+
+                .backel:hover {
+                background-color: gray;
+                color: #fff;
+            }
  
       .backel{
-          height: 45px;
-          width: 120px;
-          border-radius: 15px;
-          font-size: 18px;
-          font-weight: bold;
-          background-color:rgb(36, 35, 33);
-          color: white;
-          text-align: center;
+          
+
+          
+    
+    border: none;
+    color: black;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+   
+    margin: 4px 2px;
+    border-radius: 50%;
+    background-color: transparent;
+
  
       }
  
@@ -304,14 +322,18 @@
       .line {
           background-color: gainsboro;
       }
-   
+      .checkel{
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+      }
   </style>
 </head>
  
 <body>
   <div class="contain1">
     
-      <i onclick="window.location.href='userdashboard.html'"  style=" padding: 15px;" class=" fa-solid fa-house"></i>
+      <i onclick="window.location.href='userdashboard.html'"  style="font-size: 25px; padding: 15px;" class=" fa-solid fa-house" ></i>
     <div style="text-align: center;" class="logoel">
         <img src="https://cosglobal.in/wp-content/uploads/2023/11/WhatsApp-Image-2023-11-22-at-18.18.56.jpeg" class="logo ">
         <h3>COS Insurance</h3>
@@ -324,14 +346,20 @@
         <h1 class="title">FAMILY INFORMATION</h1>
         <div class="d-flex flex-column flex-direction:column justify-content:center">
  
- 
+          
+
+
+
+
+
+          
          
           <div class="expand-button">
-            <button> <label for="familyDetails" class="details-text" onclick="toggleFamilyDetails()">Father details</label></button>
+            <button for="fatherDetails" class="details-text" onclick="toggleFatherDetails()">Father details</button>
           </div>
          
  
-          <div id="familyDetails" class="hidden">
+          <div id="fatherDetails" class="hidden">
        
  
             <ul class="options">
@@ -360,7 +388,7 @@
  
      
           <div class="expand-button">
-            <button> <label for="MotherDetails" class="details-text" onclick="toggleMotherDetails()">Mother Details</label></button>
+            <button for="MotherDetails" class="details-text" onclick="toggleMotherDetails()">Mother Details</button>
           </div>
  
           <div id="motherDetails" class="hidden">
@@ -387,15 +415,33 @@
             </ul>
           </div><br>
  
+
+          <div class="labelel">
+            <div>
+              <label for="maritalstatus">Maritalstatus</label>
+             
+            </div>
+            <div>
+                <select id="maritalStatus" onchange="showHideSpouseDetails()">
+                  <option value="choose" id="choose">Choose</option>
+                    <option value="Single" >Single</option>
+                    <option value="Married" >Married</option>
+                </select>
+               
+                </div>
+              <br>
+            </div>
+            <br>
  
          
-          <div class="expand-button">
-            <button> <label for="spouseDetails" class="details-text" onclick="toggleSpouseDetails()">Spouse Details</label></button>
-          </div>
+          
  
           <div id="spouseDetails"   class="hidden" style="display: none;">
          
- 
+            <div class="expand-button">
+              <button for="spouseDetails" class="details-text" onclick="toggleSpouseDetails()">Spouse Details</button>
+            </div>
+
             <ul class="options">
               <br>
               <label for="spouseName">Name:</label>
@@ -417,15 +463,82 @@
              
             </ul>
           </div><br>
- 
+          <div class="labelel" id="numOfChildren" style="display: none;">
+   
+            <script>
+              function displayChildrenInfo() {
+                var numOfChildren = document.getElementById('countOfChildren').value;
+                var childrenInfoDiv = document.getElementById('childrenInfo');
+                childrenInfoDiv.innerHTML = '';
+                for (var i = 1; i <= numOfChildren; i++) {
+                  var childDiv = document.createElement('div');
+                  childDiv.innerHTML = '<h3>Child ' + i + ' Information:</h3>' +
+                  '<label for="childName' + i + '">Name:</label>' +
+                    '<input type="text" id="childName' + i + '" name="childname' + i + '" required>' +
+                    '<label for="childAge' + i + '">Age:</label>' +
+                    '<input type="text" maxlength="3" id="childAge' + i + '" name="childAge' + i + '" required>' +
+                    '<label for="childGrade' + i + '">Grade:</label>' +
+                    '<input type="text" id="childGrade' + i + '" name="childGrade' + i + '" required>' +
+                    '<label for="childGender' + i + '">Gender:</label>' +
+                    '<input type="text" id="childGender' + i + '" name="childGender' + i + '" required><br><br>';
+                 
+                  childrenInfoDiv.appendChild(childDiv);
+                }
+              }
+          </script>
+         
+         
+          <div>
+          
+            <label for="countOfChildren">Select number of children:</label>
+            <select id="countOfChildren" onchange="displayChildrenInfo()">
+              <option value="0">choose</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+            
+            </select>
+          </div>
+          <br/>
+          <div id="childrenInfo">
+           
+          </div>
+        </div>
+
+
        
-          <form>
-            <button> <label for="other name" class="details-text" >select your nominee</label></button><br>
-            <input type="checkbox" name="relationship" value="father" onchange="updateCheckboxes(this)"> Father<br>
-            <input type="checkbox" name="relationship" value="mother" onchange="updateCheckboxes(this)"> Mother<br>
-            <input type="checkbox" name="relationship" value="spouse" onchange="updateCheckboxes(this)"> Spouse<br>
-            <input type="checkbox" id="otherDetails" name="relationship" value="other" onclick="showDetails()"> Other Nominee Details<br>
-          </form>
+
+
+
+
+        <div class="labelel">
+          <div>
+              <label for="diabetes">Select your nominees (max 2 people)</label>
+          </div>
+          <div class="checkel">
+              
+                  <label for="option1">
+                      <input type="checkbox"  name="relationship" value="father" onchange="updateCheckboxes(this)" class="option"> Father
+                      </label>
+                
+                  <label for="option2">
+                      <input type="checkbox" name="relationship" value="mother" onchange="updateCheckboxes(this)"class="option" > Mother
+                  </label>
+              
+                  <label for="option3">
+                      <input type="checkbox" name="relationship" value="spouse" onchange="updateCheckboxes(this)" class="option" > Spouse
+                  </label>
+              
+                  <label for="option5">
+                      <input type="checkbox" id="otherDetails" name="relationship" value="other" onclick="showDetails()" class="option" value="Other">Other
+                  </label>
+              
+          </div>
+          
+      </div>  
+       
+     
        
           <div id="detailsDiv" style="display: none;">
            
@@ -475,8 +588,8 @@
             }
           </script>
            <script>
-            function toggleFamilyDetails() {
-              var details = document.getElementById("familyDetails");
+            function toggleFatherDetails() {
+              var details = document.getElementById("fatherDetails");
               if (details.classList.contains("hidden")) {
                 details.classList.remove("hidden");
               } else {
@@ -506,72 +619,18 @@
          
  
  
-  <div class="labelel">
-    <div>
-      <label for="maritalstatus">Maritalstatus</label>
-     
-    </div>
-    <div>
-        <select id="maritalStatus" onchange="showHideSpouseDetails()">
-          <option value="choose" id="choose">Choose</option>
-            <option value="Single" >Single</option>
-            <option value="Married" >Married</option>
-        </select>
-       
-        </div>
-      <br>
-    </div>
+  
  
   </div>
  
  
  
-  <div class="labelel" id="numOfChildren" style="display: none;">
-   
-    <script>
-      function displayChildrenInfo() {
-        var numOfChildren = document.getElementById('countOfChildren').value;
-        var childrenInfoDiv = document.getElementById('childrenInfo');
-        childrenInfoDiv.innerHTML = '';
-        for (var i = 1; i <= numOfChildren; i++) {
-          var childDiv = document.createElement('div');
-          childDiv.innerHTML = '<h3>Child ' + i + ' Information:</h3>' +
-          '<label for="childName' + i + '">Name:</label>' +
-            '<input type="text" id="childName' + i + '" name="childname' + i + '" required>' +
-            '<label for="childAge' + i + '">Age:</label>' +
-            '<input type="text" maxlength="3" id="childAge' + i + '" name="childAge' + i + '" required>' +
-            '<label for="childGrade' + i + '">Grade:</label>' +
-            '<input type="text" id="childGrade' + i + '" name="childGrade' + i + '" required>' +
-            '<label for="childGender' + i + '">Gender:</label>' +
-            '<input type="text" id="childGender' + i + '" name="childGender' + i + '" required><br><br>';
-         
-          childrenInfoDiv.appendChild(childDiv);
-        }
-      }
-  </script>
- 
- 
-<div>
- 
-  <label for="countOfChildren">Select number of children:</label>
-  <select id="countOfChildren" onchange="displayChildrenInfo()">
-    <option value="0">choose</option>
-    <option value="1">1</option>
-    <option value="2">2</option>
-    <option value="3">3</option>
-    <option value="4">4</option>
-   
-  </select>
-</div>
-  <div id="childrenInfo">
-   
-  </div>
-</div>
+  
  
           <div class="btnsel">
            
-            <button type="button" onclick="window.location.href='professional.html'" class="backel" style=" color: white; "> <i class="fa-solid fa-arrow-left" style="color: white;"></i></button>
-            <button type="button" onclick="window.location.href='medical.html'" class="saveel" style=" color: black; ">  <i class="fa-solid fa-arrow-right"></i></button>
+            <button type="button" onclick="window.location.href='professional.html'" class="backel"  > <i class="fa-solid  fa-arrow-left fa-lg" ></i></button>
+            <button type="button" onclick="window.location.href='medical.html'" class="saveel"  >  <i class="fa-solid fa-arrow-right fa-lg"></i></button>
         </div>
  
  </div>

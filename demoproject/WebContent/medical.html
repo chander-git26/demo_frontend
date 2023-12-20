@@ -21,22 +21,58 @@
             padding:75px
             }
             .inputel {
-            min-width: 50px;
-            width:200px;
+            
+            width:450px;
             text-align: center;
+            height: 300px;
 
             }
             .saveel {
-                height: 45px;
-                width: 160px;
-                border-radius: 15px;
-                font-size: 18px;
-                font-weight: bold;
-                background-color: rgb(230, 235, 230);
-                color: white;
-                text-align: center;
-                
+      border: none;
+    color: black;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    border-radius: 50%;
+    background-color: transparent;
+ 
+               
+                }
+                .saveel:hover {
+                background-color: gray;
+                color: #fff;
             }
+
+
+                .backel:hover {
+                background-color: gray;
+                color: #fff;
+            }
+ 
+      .backel{
+          
+
+          
+  
+    border: none;
+    color: black;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    border-radius: 50%;
+    background-color: transparent;
+
+ 
+      }
+
+
+
             input[type="text"] {
   border: 2px solid black; /* Default border color */
   padding: 3px;
@@ -51,18 +87,7 @@ input[type="text"]:focus {
   outline: none; /* Remove the default focus outline */
 }
  
-            .backel{
-                height: 45px;
-                width: 120px;
-                border-radius: 15px;
-                font-size: 18px;
-                font-weight: bold;
-                background-color:rgb(43, 42, 41);
-                color: white;
-                text-align: center;
- 
-            }
- 
+            
            
  
             .btnsel {
@@ -82,17 +107,17 @@ input[type="text"]:focus {
             .bgimg {
             background-size: cover;
             background-color: lightblue;
-            height: 80vh;
+            
             }
 
             .borderboxel {
 
             background-color: white;
-            max-width: 500px;
-            width:65%;
+            max-width: 700px;
+            width:75%;
             border-radius: 20px;
             padding: 20px;
-            height: 500px;
+            min-height: 500px;
             display: flex;
             flex-direction: column;
             justify-content: right;
@@ -229,11 +254,46 @@ input[type="text"]:focus {
       .line {
           background-color: gainsboro;
       }
+
+      #options option:checked {
+      background-color: #b3d9ff; 
+      color: aquamarine;
+    }
+
+    #selected-options {
+
+    margin-top: 10px;
+  }
+ 
+  #selected-list {
+    list-style-type: none;
+    padding: 0; 
+  }
+  .checkel{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+  }
+
+  li {
+      display: flex;
+      flex-direction: row;
+      align-items: center; /* Align items vertically in the center */
+    }
+ 
+    /* Additional styling for label and file input */
+    label {
+      margin-right: 10px; /* Adjust as needed for spacing */
+    }
+ 
+    .file-input {
+      margin-left: 10px; /* Adjust as needed for spacing */
+    }
         </style>
     </head>
     <body>
         <div class="contain1"> 
-            <i onclick="window.location.href='userdashboard.html'"  style=" padding: 15px;" class=" fa-solid fa-house"></i>
+            <i onclick="window.location.href='userdashboard.html'"  style="font-size: 25px; padding: 15px;" class=" fa-solid fa-house"></i>
             <div style="text-align: center;" class="logoel">
                 <img src="https://cosglobal.in/wp-content/uploads/2023/11/WhatsApp-Image-2023-11-22-at-18.18.56.jpeg" class="logo ">
                 <h3>COS Insurance</h3>
@@ -248,67 +308,127 @@ input[type="text"]:focus {
 
 
 
-                            <div class="labelel">
-                                <div>
-                                <label for="pastSurgeries">Past surgeries</label>
-                                </div>
-                                <div>
-                                    <input type="text" class="inputel" id="pastSurgeries"placeholder="Enter Past surgeries" required ></input>
-                                
+                           
+
+                           
 
 
 
-                                </select>
-                                
-                                <br>
-                                </div>
-                            </div>
-                                    
-                            
-                    
-                        <div class="labelel">
-                            <div>
-                                <label for="bloodPressure">Blood pressure</label>
-                            </div>
-                            <div>
-                                <input type="text" class="inputel" id="bloodPressure"placeholder="Enter Blood pressure"  maxlength="3" required ></input>
-                                
-                                <br>
-                            </div>
-                            
-                        </div>
+
 
                         <div class="labelel">
                             <div>
-                                <label for="diabetes">Diabetes</label>
+                                <label for="diabetes">Select any pre-existing conditions</label>
                             </div>
-                            <div>
-                                <input type="text" class="inputel" id="diabetes"placeholder="Enter diabetes percentage"  maxlength="3" required></input>
-                                <br>
+                            <div class="checkel">
+                                <div>
+                                    <label for="option1">
+                                        <input type="checkbox" id="option1" class="option" value="Asthma"> Asthma
+                                        </label>
+                                </div>
+                                <div>    
+                                    <label for="option2">
+                                        <input type="checkbox" id="option2" class="option" value="BP"> BP
+                                    </label>
+                                </div>
+                                <div>
+                                    <label for="option3">
+                                        <input type="checkbox" id="option3" class="option" value="Diabetes"> Diabetes
+                                    </label>
+                                </div>
+
+                                <div>
+                                    <label for="option4">
+                                        <input type="checkbox" id="option4" class="option" value="Heart Stroke"> Heart Stroke
+                                    </label>
+                                </div>
+
+                                <div>
+                                    <label for="option5">
+                                        <input type="checkbox" id="option5" class="option" value="Other">Other
+                                    </label>
+                                </div>
                             </div>
                             
                         </div>   
 
 
-                        <div class="labelel">
-                            <div>
-                            <label for="Medicalhistory">Upload medical history</label>
-                            </div>
-                            <div>
-                            <input type="file" class="inputel" id="Medicalhistory"placeholder="Enter your Medical history"required></input>
+
+
+                        <div>
+
+
                             
-                            
-                            <br>
+                        
+                         
+                          
+
+                            <div id="selected-options labelel">
+                                <div>
+                                    <label for="selected-list"></label>
+                                </div>
+                                <div>
+                                    <ul id="selected-list"></ul>
+                                    <br>
+                                </div>
+                               
                             </div>
                         </div>
 
-                    </div> 
-                <div class="btnsel">
-                    
-                    <button type="button" onclick="window.location.href='family.html'" class="backel" style=" color: white; "> <i class="fa-solid fa-arrow-left" style="color: white;"></i></button>
-                    <button type="button" onclick="window.location.href='completeduserdashboard.html'" class="submitel" style=" color: black; ">  <i class="fa-solid fa-arrow-right"></i></button>
-            
+
+                        
+                                
+                        
+                
+                    <div class="labelel">
+                        <div>
+                            <label for="currentTreatment">Current Treatments</label>
+                        </div>
+                        <div>
+                            <textarea type="text"   class="inputel" style="height: 70px; width: 200px;"  id="currentTreatment" placeholder="If yes, provide brief details"></textarea>
+                            
+                            <br>
+                        </div>
+                        
                     </div>
+
+                    <div class="labelel">
+                        <div>
+                        <label for="pastSurgeries">Past Surgeries </label>
+                        </div>
+                        <div>
+                            <textarea type="text" class="inputel" style="height: 70px; width: 200px;" id="pastSurgeries" placeholder="If yes, provide brief details about type of surgery "  ></textarea>
+                        
+
+
+
+                        </select>
+                        
+                        <br>
+                        </div>
+                    </div>
+
+                    <div class="labelel">
+                        <div>
+                            <label for="currentTreatment">COVID status in last 3 months?</label>
+                        </div>
+                        <div>
+                            <textarea type="text"   class="inputel" style="height: 70px; width: 200px;"  id="currentTreatment" placeholder="If yes, provide brief details"></textarea>
+                            
+                            <br>
+                        </div>
+                        
+                    </div>
+
+                        <div class="btnsel">
+                    
+                        <button type="button" onclick="window.location.href='family.html'" class="backel"  >  <i class="fa-solid  fa-arrow-left fa-lg" ></i></button>
+                        <button type="button" onclick="window.location.href='completeduserdashboard.html'" class="saveel"  >  <i class="fa-solid fa-arrow-right fa-lg"></i></button>
+                
+                        </div>
+                    
+                    </div> 
+                
 
                 </div> 
                         
@@ -384,6 +504,52 @@ input[type="text"]:focus {
       
       
       </div>
+
+      <script>
+        // Function to update the selected options display
+        function updateSelectedOptions() {
+          var checkboxes = document.querySelectorAll('.option');
+          var selectedList = document.getElementById('selected-list');
+          selectedList.innerHTML = ''; // Clear previous selection
+     
+          // Iterate through the checkboxes and add selected ones to the list
+          checkboxes.forEach(function (checkbox) {
+            if (checkbox.checked) {
+              var listItem = document.createElement('li');
+              
+                listItem.className = 'labelel';
+              selectedList.appendChild(listItem);
+     
+              // Create label for the file input
+              var label = document.createElement('label');
+              label.textContent = 'Upload Recent Report for ' + checkbox.value;
+              listItem.appendChild(label);
+     
+              // Create file input for the selected option
+              var fileInput = document.createElement('input');
+              fileInput.type = 'file';
+              fileInput.className = 'file-input';
+    fileInput.id = 'Medicalhistory_' + checkbox.value; // Use a unique ID for each file input
+              fileInput.required = true;
+              listItem.appendChild(fileInput); // Append file input to the list item
+              
+              // Append <br> elements after the file input in each loop
+              
+            }
+          });
+        }
+     
+        // Attach event listener to checkboxes to trigger update on checkbox state change
+        document.querySelectorAll('.option').forEach(function (checkbox) {
+          checkbox.addEventListener('change', updateSelectedOptions);
+        });
+      </script>
+
+
+
+
+
+
                        
     <script>
         
