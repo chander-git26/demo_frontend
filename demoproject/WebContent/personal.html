@@ -283,34 +283,38 @@ input[type="text"]:focus {
 
                         <div class="labelel">
                             <div>
-                                <label for="gender"> Country <span  style="color: red;" >*</span>  </label>
+                                <label for="gender"> pincode </label>
                                 
                                 <p class="style7">
                             </div>
                             <div>
-                                <input type="text" name="country" id="country" value="" placeholder="enter your country" required id="country" pattern="[A-Za-z]+" > 
-                                <script>
-                                    document.getElementById('country').addEventListener('input', function(event) {
-                                        let inputValue = event.target.value;
-                                        let regex = /^[A-Za-z]+$/;
-                                
-                                        if (!regex.test(inputValue)) {
-                                            event.target.value = inputValue.replace(/[^A-Za-z]/g, '');
-                                        }
-                                    });
-                                </script>
+                                <input type="text" name="pincode" id="pincode" value="" placeholder="enter your pincode"  pattern="[A-Za-z]+" > 
+                               
 
                                 </p>
                             </div>
                             
                         </div>
+                        <script>
+                            // Get the input element by its ID
+                             const pincodeInput = document.getElementById('pincode');
+
+                              // Add an event listener for input events
+                              pincodeInput.addEventListener('input', function(event) {
+                                  let inputValue = event.target.value;
+    
+                                    // Replace non-digit characters with an empty string
+                                     event.target.value = inputValue.replace(/\D/g, '');
+});
+
+                        </script>
 
                         <div class="labelel">
                             <div>
-                                <label for="Mobile">Address<span  style="color: red;" >*</span> </label>
+                                <label for="Mobile">Address </label>
                             </div>
                             <div>
-                                <input  type="text" class="inputel" required id="address" placeholder="Enter your Address" ></input>
+                                <input  type="text" class="inputel" id="address" placeholder="Enter your Address" ></input>
                             
                             </div>
                         </div>
@@ -329,6 +333,23 @@ input[type="text"]:focus {
                             </div>
                             
                         </div>                                
+
+
+                        <div class="labelel">
+                            <div>
+                                <label for="marital status">Marital status <span  style="color: red;" >*</span>  </label>
+                                </span>
+                                <p class="style7">
+                            </div>
+                            <div>
+                                <input type="radio" name="marital" value="married" required id="married"> Married &nbsp; &nbsp; &nbsp; &nbsp;
+                                <input type="radio" name="marital" value="single" required id="single"> Single
+                               
+                                </p>
+                            </div>
+                            
+                        </div>                                
+                                
                                 
                                 
 
@@ -343,40 +364,32 @@ input[type="text"]:focus {
                             </div>
                         </div>
                                     
-                                    <div class="labelel">
-                            <div>
-                                <label for="bloodgroup">Blood Group</label>
-                            </div>
-                            <div>
-                                <select id="bloodgroup">
-                                    <option>select</option>
-                                    <option>A+</option>
-                                    <option>B+</option>
-                                    <option>AB+</option>
-                                    <option>O+</option>
-                                    <option>A-</option>
-                                    <option>B-</option>
-                                    <option>AB-</option>
-                                    
-                                    
-                                </select>
-                            
-                            </div>
-                                    
-                                    
-                        </div>
+                                   
                             
                         <div class="labelel">
                             <div>
                                 <label for="height">Height</label>
                             </div>
                             <div>
-                                <input type="text" class="inputel" id="Height" placeholder="Enter your Height (in cms)"></input>
+                                <input type="text" class="inputel" id="Height" placeholder="Enter your Height (in cms)" maxlength="3"></input>
                                 <br>
                             </div>
                             
                             
                         </div>
+                        <script>
+                            // Get the input element by its ID
+                             const heightInput = document.getElementById('Height');
+
+                              // Add an event listener for input events
+                                 heightInput.addEventListener('input', function(event) {
+                                  let inputValue = event.target.value;
+    
+                                    // Replace non-digit characters with an empty string
+                                     event.target.value = inputValue.replace(/\D/g, '');
+});
+
+                        </script>
 
 
                         <div class="labelel">
@@ -384,12 +397,25 @@ input[type="text"]:focus {
                                 <label for="height">Weight</label>
                             </div>
                             <div>
-                                <input type="text" class="inputel" id="Weight" placeholder="Enter your Height (in cms)"></input>
+                                <input type="text" class="inputel" id="Weight" placeholder="Enter your weight" maxlength="3"></input>
                                 <br>
                             </div>
                             
                             
                         </div>
+                        <script>
+                            // Get the input element by its ID
+                             const weightInput = document.getElementById('Weight');
+
+                              // Add an event listener for input events
+                                 weightInput.addEventListener('input', function(event) {
+                                  let inputValue = event.target.value;
+    
+                                    // Replace non-digit characters with an empty string
+                                     event.target.value = inputValue.replace(/\D/g, '');
+});
+
+                        </script>
 
 
                       
@@ -400,7 +426,7 @@ input[type="text"]:focus {
                             <div>
                                 
                                 <input type="radio"  id="smokingyes" name="smoking"></input>Yes  &nbsp; &nbsp; &nbsp; &nbsp;
-                                <input type="radio"  id="smokingyes" name="smoking"></input>No
+                                <input type="radio"  id="smokingno" name="smoking"></input>No
                                 <br>
                             </div>
                             
@@ -412,7 +438,7 @@ input[type="text"]:focus {
                             </div>
                             <div>
                                 <input type="radio" id="Alcoholyes"  name="Alchohol"></input>Yes  &nbsp; &nbsp; &nbsp; &nbsp;
-                                <input type="radio"  id="Alcoholyes"  name="Alchohol" ></input>No
+                                <input type="radio"  id="Alcoholno"  name="Alchohol" ></input>No
                                 <br>
                             </div>
                             
@@ -515,7 +541,9 @@ input[type="text"]:focus {
                     height: document.getElementById("Height").value,
                     weight: document.getElementById("Weight").value,
                     smoking: document.getElementById("smokingyes").value,
+                    smoking: document.getElementById("smokingno").value,
                     alochol: document.getElementById("Alcoholyes").value,
+                    alochol: document.getElementById("Alcoholno").value,
                     
                 };
             

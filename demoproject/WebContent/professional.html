@@ -266,7 +266,7 @@ input[type="text"]:focus {
                         <form id="myForm" action="family.html" method="post">             
                         <div class="labelel">
                             <div>
-                            <label for="incomesource" >Source of Income  <span class="required">*</span></label>
+                            <label for="incomesource" >Source of Income  <span  style="color: red;" class="required">*</span></label>
                             </div>
                             <div>
                                 <select id="selectIncomeOption" name="incomesource" required>
@@ -455,6 +455,14 @@ input[type="text"]:focus {
                      var label1 = document.createElement('label');
                       label1.setAttribute('for', 'salaryDetails');
                       label1.textContent = 'Annual Income';
+
+                      // Adding a span element for the star
+                     var starSpan = document.createElement('span');
+                     starSpan.style.color = 'red'; // Style the star color as red or adjust as needed
+                       starSpan.textContent = ' *'; // Star symbol
+
+                       // Append the label text and the star to the label element
+                         label1.appendChild(starSpan);
                         innerDiv11.appendChild(label1);
 
                         var innerDiv22 = document.createElement('div');
@@ -480,6 +488,8 @@ input[type="text"]:focus {
                                labelelDiv1.appendChild(innerDiv22);
 
                                     dataDisplay.appendChild(labelelDiv1);
+
+
 
 
 
@@ -577,6 +587,13 @@ input[type="text"]:focus {
                         var label1 = document.createElement('label');
                         label1.setAttribute('for', 'revenueDetails');
                         label1.textContent = 'Annual Revenue';
+                        // Adding a span element for the star
+                         var starSpan = document.createElement('span');
+                         starSpan.style.color = 'red'; // Style the star color as red or adjust as needed
+                           starSpan.textContent = ' *'; // Star symbol
+
+                        // Append the label text and the star to the label element
+                            label1.appendChild(starSpan);
                         innerDiv11.appendChild(label1);
 
                         var innerDiv22 = document.createElement('div');
@@ -617,6 +634,13 @@ input[type="text"]:focus {
                        var label2 = document.createElement('label');
                         label2.setAttribute('for', 'gstDetails');
                          label2.textContent = 'GST Number';
+                            // Adding a span element for the star
+                             var starSpan1 = document.createElement('span1');
+                             starSpan1.style.color = 'red'; // Style the star color as red or adjust as needed
+                                   starSpan1.textContent = ' *'; // Star symbol
+
+                                     // Append the label text and the star to the label element
+                                      label2.appendChild(starSpan1);
                          innerDiv12.appendChild(label2);
 
                       var innerDiv22 = document.createElement('div');
@@ -647,6 +671,13 @@ input[type="text"]:focus {
                       var label3 = document.createElement('label');
                       label3.setAttribute('for', 'businessTypeDetails');
                       label3.textContent = 'Business Type';
+                      // Adding a span element for the star
+                     var starSpan2 = document.createElement('span2');
+                    starSpan2.style.color = 'red'; // Style the star color as red or adjust as needed
+                       starSpan2.textContent = ' *'; // Star symbol
+
+                       // Append the label text and the star to the label element
+                          label3.appendChild(starSpan2);
                       innerDiv13.appendChild(label3);
 
                       var innerDiv23 = document.createElement('div');
@@ -672,6 +703,16 @@ input[type="text"]:focus {
                   partnershipOption.textContent = 'Partnership';
                   partnershipOption.value = 'partnership';
                 businessTypeSelectElement.appendChild(partnershipOption);
+
+                var proprietorship = document.createElement('option');
+                proprietorship.textContent = 'proprietorship';
+                proprietorship.value = 'proprietorship';
+                businessTypeSelectElement.appendChild(proprietorship);
+
+                var corporation = document.createElement('option');
+                corporation.textContent = 'corporation';
+                corporation.value = 'corporation';
+                businessTypeSelectElement.appendChild(corporation);
 
               innerDiv23.appendChild(businessTypeSelectElement);
 
@@ -701,7 +742,7 @@ input[type="text"]:focus {
                          spareAmountInputElement.className = 'inputel';
                           spareAmountInputElement.id = 'spareAmountDetails';
                           spareAmountInputElement.setAttribute('placeholder', 'Enter Spare Amount');
-                            spareAmountInputElement.setAttribute('required', ''); // Make it required if needed
+                            //spareAmountInputElement.setAttribute('required', ''); // Make it required if needed
                            innerDiv24.appendChild(spareAmountInputElement);
 
                          labelelDiv4.appendChild(innerDiv14);

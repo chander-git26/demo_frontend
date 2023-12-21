@@ -318,7 +318,7 @@ input[type="text"]:focus {
 
                         <div class="labelel">
                             <div>
-                                <label for="diabetes"> pre-existing conditions</label>
+                                <label for="diabetes"> Pre-Existing Conditions</label>
                             </div>
                             <div class="checkel">
                                 
@@ -338,15 +338,24 @@ input[type="text"]:focus {
                                         <input type="checkbox" id="option4" class="option" value="Heart Stroke"> Heart Stroke
                                     </label>
                                 </div>
-
                                 <div>
                                     <label for="option5">
-                                        <input type="checkbox" id="option5" class="option" value="Other">Other
+                                        <input type="checkbox" id="option5" class="option" value="Astama"> Asthma
+                                    </label>
+                                </div>
+
+                                <div>
+                                    <label for="option6">
+                                        <input type="checkbox" id="option6" class="option" value="Other">Other
                                     </label>
                                 </div>
                             </div>
                             
-                        </div>   
+                        </div>  
+                        
+                        
+                       
+
 
 
 
@@ -369,6 +378,29 @@ input[type="text"]:focus {
                                 </div>
                                
                             </div>
+                        </div>
+
+                        <div class="labelel">
+                            <div>
+                                <label for="bloodgroup">Blood Group</label>
+                            </div>
+                            <div>
+                                <select id="bloodgroup">
+                                    <option>select</option>
+                                    <option>A+</option>
+                                    <option>B+</option>
+                                    <option>AB+</option>
+                                    <option>O+</option>
+                                    <option>A-</option>
+                                    <option>B-</option>
+                                    <option>AB-</option>
+                                    
+                                    
+                                </select>
+                            
+                            </div>
+                                    
+                                    
                         </div>
 
 
@@ -406,10 +438,10 @@ input[type="text"]:focus {
 
                     <div class="labelel">
                         <div>
-                            <label for="currentTreatment">COVID status in last 3 months</label>
+                            <label for="Covid status">Covid Status</label>
                         </div>
                         <div>
-                            <textarea type="text"   class="inputel" style="height: 70px; width: 200px;"  id="currentTreatment" placeholder="If yes, provide brief details"></textarea>
+                            <textarea type="text"   class="inputel" style="height: 70px; width: 200px;"  id="covidStatus" placeholder="If yes, provide brief details"></textarea>
                             
                             <br>
                         </div>
@@ -500,45 +532,46 @@ input[type="text"]:focus {
       
       
       </div>
+    
 
       <script>
         // Function to update the selected options display
-        function updateSelectedOptions() {
-          var checkboxes = document.querySelectorAll('.option');
-          var selectedList = document.getElementById('selected-list');
-          selectedList.innerHTML = ''; // Clear previous selection
-     
-          // Iterate through the checkboxes and add selected ones to the list
-          checkboxes.forEach(function (checkbox) {
-            if (checkbox.checked) {
-              var listItem = document.createElement('li');
-              
-                listItem.className = 'labelel';
-              selectedList.appendChild(listItem);
-     
-              // Create label for the file input
-              var label = document.createElement('label');
-              label.textContent = 'Upload Recent Report for ' + checkbox.value;
-              listItem.appendChild(label);
-     
-              // Create file input for the selected option
-              var fileInput = document.createElement('input');
-              fileInput.type = 'file';
-              fileInput.className = 'file-input';
-    fileInput.id = 'Medicalhistory_' + checkbox.value; // Use a unique ID for each file input
-              fileInput.required = true;
-              listItem.appendChild(fileInput); // Append file input to the list item
-              
-              // Append <br> elements after the file input in each loop
-              
-            }
-          });
-        }
-     
-        // Attach event listener to checkboxes to trigger update on checkbox state change
-        document.querySelectorAll('.option').forEach(function (checkbox) {
-          checkbox.addEventListener('change', updateSelectedOptions);
-        });
+function updateSelectedOptions() {
+  var checkboxes = document.querySelectorAll('.option');
+  var selectedList = document.getElementById('selected-list');
+  selectedList.innerHTML = ''; // Clear previous selection
+
+  // Iterate through the checkboxes and add selected ones to the list
+  checkboxes.forEach(function (checkbox) {
+    if (checkbox.checked) {
+      var listItem = document.createElement('li');
+      listItem.className = 'labelel';
+      selectedList.appendChild(listItem);
+
+      // Create label for the file input
+      var label = document.createElement('label');
+      label.textContent = 'Upload Recent Report for ' + checkbox.value;
+      listItem.appendChild(label);
+
+      // Create file input for the selected option
+      var fileInput = document.createElement('input');
+      fileInput.type = 'file';
+      fileInput.className = 'file-input';
+      fileInput.id = 'Medicalhistory_' + checkbox.value; // Use a unique ID for each file input
+      fileInput.setAttribute('required', ''); // Make the file input mandatory
+      listItem.appendChild(fileInput); // Append file input to the list item
+
+      // Append <br> elements after the file input in each loop
+    }
+  });
+}
+
+// Attach event listener to checkboxes to trigger update on checkbox state change
+document.querySelectorAll('.option').forEach(function (checkbox) {
+  checkbox.addEventListener('change', updateSelectedOptions);
+});
+
+
       </script>
 
 

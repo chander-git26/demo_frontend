@@ -349,37 +349,6 @@
         <h1 class="title">FAMILY INFORMATION</h1>
         <div class="d-flex flex-column flex-direction:column justify-content:center">
  
-          
-
-
-
-
-
-          
-         
-          
- 
-          
- 
- 
-     
-          
-          
- 
-
-          
- 
-         
-          
- 
-          
-         
-
-       
-
-
-
-
         <div class="labelel">
           <div>
               <label for="diabetes">Select your nominees </label>
@@ -409,15 +378,31 @@
           </div>
           
       </div>
+     
       
       <div id="fatherDetails" class="hidden">
-       
+      
+        <form id="myForm" action="medical.html" method="post">
  
         <ul class="options">
           <br>
-          <label for="fatherName">Father Name:</label>
+          <label for="fatherName">Father Name: <span  style="color: red;" >*</span>  </label>
           <input type="text" id="fatherName"required>
           <br>
+          <script>
+            document.getElementById("myForm").addEventListener("submit", function(event) {
+                  var fathernameField = document.getElementById("fatherName");
+                       if (fathernameField.value.trim() === "") {
+                            event.preventDefault(); // Prevents form submission if State field is empty
+                     alert("State field cannot be empty!"); // You can replace this with your own error messaging or UI
+                      } else {
+                       // If State field is not empty, the form will submit and redirect to professional.html
+                         window.location.href ="medical.html"; // Redirects to professional.html
+                              }
+                                 });
+                     </script>
+                   
+        
           <label for="fatherAge">Father Age:</label>
           <input type="digit" id="fatherAge" maxlength="3" required>
           <br>
@@ -435,6 +420,7 @@
          
         </ul>
       </div><br> 
+      
        
 
       <div id="motherDetails" class="hidden">
@@ -515,6 +501,7 @@
          
         </ul>
       </div><br>
+ 
 
 
      
@@ -609,7 +596,12 @@
           <div class="btnsel">
            
             <button type="button" onclick="window.location.href='professional.html'" class="backel"  > <i class="fa-solid  fa-arrow-left fa-lg" ></i></button>
-            <button type="button" onclick="window.location.href='medical.html'" class="saveel"  >  <i class="fa-solid fa-arrow-right fa-lg"></i></button>
+            <!-- <button type="button" onclick="window.location.href='medical.html'" class="saveel"  >  <i class="fa-solid fa-arrow-right fa-lg"></i></button> -->
+            <input type="submit" value="Next">
+                     
+          </form>               
+                 
+         
         </div>
  
  </div>
@@ -660,12 +652,7 @@
          
           </div>
      
- 
- 
- 
- 
- 
-          <div class="col-6 col-md-6 col-lg-3">
+            <div class="col-6 col-md-6 col-lg-3">
               <div class="card2">
                   <h1 class="head1">Get to Know Us</h1>
                   <p>About us</p>
@@ -702,7 +689,7 @@
      fatherUploadMedicalHistory: document.getElementById("fatherMedicalhistory").value,
      motherName: document.getElementById("motherName").value,
      motherAge: document.getElementById("motherAge").value,
-     motherOccupation: document.getElementById("motherAge").value,
+     motherOccupation: document.getElementById("motherOccupation").value,
      motherUploadMedicalHistory: document.getElementById("motherMedicalhistory").value,
      
      spouseName: document.getElementById("spouseName").value,
@@ -712,13 +699,11 @@
  
      spouseUploadMedicalHistory: document.getElementById("spouseMedicalhistory").value,
  
-     nominee1Name: document.getElementById("nominee1Name").value,
-     nominee2Name: document.getElementById("nominee2Name").value,
      otherNomineeName: document.getElementById("othersName").value,
      otherNomineeAge: document.getElementById("othersAge").value,
-     otherNomineeRelation: document.getElementById("othersRelation").value,
-     maritalStatus: document.getElementById("maritalstatus").value,
-     selectNumberOfChildren: document.getElementById("numOfChildren").value,
+     otherNomineeoccupation: document.getElementById("othersOccupation").value,
+     othermedicalhistory: document.getElementById("othersMedicalhistory").value,
+    
      
  };
  
@@ -737,7 +722,7 @@
    console.error('Error during request. Status:', response.status);
    const responseBody = await response.text();
    console.error('Response body:', responseBody);
-   window.location.href ='proffisional.html';
+   window.location.href ='medical.html';
  } else {
    // Redirect on success
    window.location.href ='profie.html'; // Adjust the redirection path
