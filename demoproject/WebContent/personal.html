@@ -268,17 +268,17 @@ input[type="text"]:focus {
                         </div>
                        
                         <script>
-                         document.getElementById("myForm").addEventListener("submit", function(event) {
-                               var stateField = document.getElementById("state");
-                                    if (stateField.value.trim() === "") {
-                                         event.preventDefault(); // Prevents form submission if State field is empty
-                                  alert("State field cannot be empty!"); // You can replace this with your own error messaging or UI
-                                   } else {
-                                    // If State field is not empty, the form will submit and redirect to professional.html
-                                      window.location.href = "professional.html"; // Redirects to professional.html
-                                           }
-                                              });
-                                  </script>
+                            document.getElementById("myForm").addEventListener("submit", function(event) {
+                                  var stateField = document.getElementById("state");
+                                       if (stateField.value.trim() === "") {
+                                            event.preventDefault(); // Prevents form submission if State field is empty
+                                     alert("State field cannot be empty!"); // You can replace this with your own error messaging or UI
+                                      } else {
+                                       // If State field is not empty, the form will submit and redirect to professional.html
+                                         window.location.href = "professional.html"; // Redirects to professional.html
+                                              }
+                                                 });
+                                     </script>
                                 
 
                         <div class="labelel">
@@ -449,9 +449,9 @@ input[type="text"]:focus {
 
                     <div class="btnsel">
                         <button type="button" onclick="window.location.href='userdashboard.html'" class="backel" style=" color:white; "> <i class="fa-solid fa-arrow-left" style="color: white;"></i></button>
-                         <!-- <button type="submit" value="Next" onclick="  window.location.href ='professional.html';" class="saveel" style="color: black;" >  <i class="fa-solid fa-arrow-right"></i></button>     -->
+                         <button type="submit" value="Next"  class="saveel" style="color: black;" >  <i class="fa-solid fa-arrow-right"></i></button>    
                                          
-                         <input type="submit" value="Next">
+                         <!-- <input type="submit"  <i class="fa-solid fa-arrow-right"></i> -->
                      
                         </form>               
                                          
