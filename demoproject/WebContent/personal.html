@@ -250,25 +250,36 @@ input[type="text"]:focus {
                                 <p class="style7">
                             </div>
                             <div>
-                                <input type="text" name="state" value="" placeholder="enter your State" required id="state"  > 
-
-                                </p>
+                                <input type="text" name="state" value="" placeholder="enter your State" required id="state" pattern="[A-Za-z]+"  > 
+                                <script>
+                                    document.getElementById('state').addEventListener('input', function(event) {
+                                        let inputValue = event.target.value;
+                                        let regex = /^[A-Za-z]+$/;
+                                
+                                        if (!regex.test(inputValue)) {
+                                            event.target.value = inputValue.replace(/[^A-Za-z]/g, '');
+                                        }
+                                    });
+                                </script>
+                                
+                               </p>
                             </div>
                             
                         </div>
                        
                         <script>
-    document.getElementById("myForm").addEventListener("submit", function(event) {
-        var stateField = document.getElementById("state");
-        if (stateField.value.trim() === "") {
-            event.preventDefault(); // Prevents form submission if State field is empty
-            alert("State field cannot be empty!"); // You can replace this with your own error messaging or UI
-        } else {
-            // If State field is not empty, the form will submit and redirect to professional.html
-            window.location.href = "professional.html"; // Redirects to professional.html
-        }
-    });
-</script>
+                         document.getElementById("myForm").addEventListener("submit", function(event) {
+                               var stateField = document.getElementById("state");
+                                    if (stateField.value.trim() === "") {
+                                         event.preventDefault(); // Prevents form submission if State field is empty
+                                  alert("State field cannot be empty!"); // You can replace this with your own error messaging or UI
+                                   } else {
+                                    // If State field is not empty, the form will submit and redirect to professional.html
+                                      window.location.href = "professional.html"; // Redirects to professional.html
+                                           }
+                                              });
+                                  </script>
+                                
 
                         <div class="labelel">
                             <div>
@@ -277,7 +288,17 @@ input[type="text"]:focus {
                                 <p class="style7">
                             </div>
                             <div>
-                                <input type="text" name="country" id="country" value="" placeholder="enter your country" required id="country"> 
+                                <input type="text" name="country" id="country" value="" placeholder="enter your country" required id="country" pattern="[A-Za-z]+" > 
+                                <script>
+                                    document.getElementById('country').addEventListener('input', function(event) {
+                                        let inputValue = event.target.value;
+                                        let regex = /^[A-Za-z]+$/;
+                                
+                                        if (!regex.test(inputValue)) {
+                                            event.target.value = inputValue.replace(/[^A-Za-z]/g, '');
+                                        }
+                                    });
+                                </script>
 
                                 </p>
                             </div>
@@ -527,4 +548,5 @@ input[type="text"]:focus {
    
     
     </body>
+   
 </html>

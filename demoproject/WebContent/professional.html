@@ -448,34 +448,38 @@ input[type="text"]:focus {
 
 
                     var labelelDiv1 = document.createElement('div');
-                    labelelDiv1.className = 'labelel';
- 
-                    var innerDiv11 = document.createElement('div');
- 
-                    var label1 = document.createElement('label');
-                    label1.setAttribute('for', 'salaryDetails');
-                    label1.textContent = 'Annual Income';
-                    innerDiv11.appendChild(label1);
- 
-                    var innerDiv22 = document.createElement('div');
- 
-                  
-                    var salaryinputElement = document.createElement('input');
-                    salaryinputElement.setAttribute('type', 'text');
-                    salaryinputElement.className = 'inputel';
-                    salaryinputElement.id = 'salaryDetails';
-                    salaryinputElement.setAttribute('placeholder', 'Enter your Salary');
-                    salaryinputElement.setAttribute('required', '');
-                    innerDiv2.appendChild(inputElement);
- 
-                    innerDiv22.appendChild(salaryinputElement);
- 
-                    innerDiv22.appendChild(document.createElement('br'));
- 
-                    labelelDiv1.appendChild(innerDiv11);
-                    labelelDiv1.appendChild(innerDiv22);
- 
-                    dataDisplay.appendChild(labelelDiv1);
+                     labelelDiv1.className = 'labelel';
+
+                     var innerDiv11 = document.createElement('div');
+
+                     var label1 = document.createElement('label');
+                      label1.setAttribute('for', 'salaryDetails');
+                      label1.textContent = 'Annual Income';
+                        innerDiv11.appendChild(label1);
+
+                        var innerDiv22 = document.createElement('div');
+
+                           var salaryinputElement = document.createElement('input');
+                           salaryinputElement.setAttribute('type', 'text');
+                            salaryinputElement.className = 'inputel';
+                             salaryinputElement.id = 'salaryDetails';
+                             salaryinputElement.setAttribute('placeholder', 'Enter your Salary');
+                             salaryinputElement.setAttribute('required', '');
+
+                               // Add an event listener for input that allows only numeric input
+                                         salaryinputElement.addEventListener('input', function(event) {
+                                 let inputValue = event.target.value;
+                                    // Replace non-numeric characters with an empty string
+                                      event.target.value = inputValue.replace(/\D/g, '');
+                                       });
+
+                                       innerDiv22.appendChild(salaryinputElement);
+                        innerDiv22.appendChild(document.createElement('br'));
+
+                            labelelDiv1.appendChild(innerDiv11);
+                               labelelDiv1.appendChild(innerDiv22);
+
+                                    dataDisplay.appendChild(labelelDiv1);
 
 
 
@@ -583,6 +587,12 @@ input[type="text"]:focus {
                         revenueinputElement.id = 'revenueDetails';
                         revenueinputElement.setAttribute('placeholder', 'Enter your revenue');
                         revenueinputElement.setAttribute('required', '');
+                         // Add an event listener for input that allows only numeric input
+                         revenueinputElement.addEventListener('input', function(event) {
+                                 let inputValue = event.target.value;
+                                    // Replace non-numeric characters with an empty string
+                                      event.target.value = inputValue.replace(/\D/g, '');
+                                       });
                         innerDiv2.appendChild(revenueinputElement);
 
                         innerDiv22.appendChild(revenueinputElement);
