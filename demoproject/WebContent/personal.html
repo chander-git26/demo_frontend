@@ -78,30 +78,48 @@ input[type="text"]:focus {
             }
 
             .saveel {
-                height: 45px;
-                width: 120px;
-                border-radius: 15px;
-                font-size: 18px;
-                font-weight: bold;
-                background-color: rgb(235, 238, 240);
-                color: rgb(243, 243, 243);
-                text-align: center;
-
-             
-
+      border: none;
+    color: black;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    border-radius: 50%;
+    background-color: transparent;
+ 
+               
+                }
+                .saveel:hover {
+                background-color: gray;
+                color: #fff;
             }
 
-            .backel{
-                height: 45px;
-                width: 120px;
-                border-radius: 15px;
-                font-size: 18px;
-                font-weight: bold;
-                background-color:black;
-                color: white;
-                text-align: center;
 
+                .backel:hover {
+                background-color: gray;
+                color: #fff;
             }
+ 
+      .backel{
+          
+
+          
+  
+    border: none;
+    color: black;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    border-radius: 50%;
+    background-color: transparent;
+
+ 
+      }
             
            .btnel{
             
@@ -241,83 +259,9 @@ input[type="text"]:focus {
 
                     
                       
-                        <form id="myForm" action="professional.html" method="post">
+                        
 
-                        <div class="labelel">
-                            <div>
-                                <label for="gender">State <span  style="color: red;" >*</span>  </label>
-                               
-                                <p class="style7">
-                            </div>
-                            <div>
-                                <input type="text" name="state" value="" placeholder="enter your State" required id="state" pattern="[A-Za-z]+"  > 
-                                <script>
-                                    document.getElementById('state').addEventListener('input', function(event) {
-                                        let inputValue = event.target.value;
-                                        let regex = /^[A-Za-z]+$/;
-                                
-                                        if (!regex.test(inputValue)) {
-                                            event.target.value = inputValue.replace(/[^A-Za-z]/g, '');
-                                        }
-                                    });
-                                </script>
-                                
-                               </p>
-                            </div>
-                            
-                        </div>
-                       
-                        <script>
-                            document.getElementById("myForm").addEventListener("submit", function(event) {
-                                  var stateField = document.getElementById("state");
-                                       if (stateField.value.trim() === "") {
-                                            event.preventDefault(); // Prevents form submission if State field is empty
-                                     alert("State field cannot be empty!"); // You can replace this with your own error messaging or UI
-                                      } else {
-                                       // If State field is not empty, the form will submit and redirect to professional.html
-                                         window.location.href = "professional.html"; // Redirects to professional.html
-                                              }
-                                                 });
-                                     </script>
-                                
-
-                        <div class="labelel">
-                            <div>
-                                <label for="gender"> pincode </label>
-                                
-                                <p class="style7">
-                            </div>
-                            <div>
-                                <input type="text" name="pincode" id="pincode" value="" placeholder="enter your pincode"  pattern="[A-Za-z]+" > 
-                               
-
-                                </p>
-                            </div>
-                            
-                        </div>
-                        <script>
-                            // Get the input element by its ID
-                             const pincodeInput = document.getElementById('pincode');
-
-                              // Add an event listener for input events
-                              pincodeInput.addEventListener('input', function(event) {
-                                  let inputValue = event.target.value;
-    
-                                    // Replace non-digit characters with an empty string
-                                     event.target.value = inputValue.replace(/\D/g, '');
-});
-
-                        </script>
-
-                        <div class="labelel">
-                            <div>
-                                <label for="Mobile">Address </label>
-                            </div>
-                            <div>
-                                <input  type="text" class="inputel" id="address" placeholder="Enter your Address" ></input>
-                            
-                            </div>
-                        </div>
+                        
 
                         <div class="labelel">
                             <div>
@@ -364,14 +308,76 @@ input[type="text"]:focus {
                             </div>
                         </div>
                                     
-                                   
+                        <div class="labelel">
+                            <div>
+                                <label for="gender">State <span  style="color: red;" >*</span>  </label>
+                               
+                                <p class="style7">
+                            </div>
+                            <div>
+                                <input type="text" class="inputel personal-input" name="state" value="" placeholder="State" required id="state" pattern="[A-Za-z]+"  > 
+                                <script>
+                                    document.getElementById('state').addEventListener('input', function(event) {
+                                        let inputValue = event.target.value;
+                                        let regex = /^[A-Za-z]+$/;
+                                
+                                        if (!regex.test(inputValue)) {
+                                            event.target.value = inputValue.replace(/[^A-Za-z]/g, '');
+                                        }
+                                    });
+                                </script>
+                                
+                               </p>
+                            </div>
+                            
+                        </div>
+                       
+                     
+
+                        <div class="labelel">
+                            <div>
+                                <label for="gender"> pincode </label>
+                                
+                                <p class="style7">
+                            </div>
+                            <div>
+                                <input type="text" class="inputel" name="pincode" id="pincode" value="" placeholder="pincode"  pattern="[A-Za-z]+" > 
+                               
+
+                                </p>
+                            </div>
+                            
+                        </div>
+                        <script>
+                            // Get the input element by its ID
+                             const pincodeInput = document.getElementById('pincode');
+
+                              // Add an event listener for input events
+                              pincodeInput.addEventListener('input', function(event) {
+                                  let inputValue = event.target.value;
+    
+                                    // Replace non-digit characters with an empty string
+                                     event.target.value = inputValue.replace(/\D/g, '');
+});
+
+                        </script>
+
+                        <div class="labelel">
+                            <div>
+                                <label for="Mobile">Address </label>
+                            </div>
+                            <div>
+                                <input  type="text" class="inputel" id="address" placeholder="Address" ></input>
+                            
+                            </div>
+                        </div>          
                             
                         <div class="labelel">
                             <div>
                                 <label for="height">Height</label>
                             </div>
                             <div>
-                                <input type="text" class="inputel" id="Height" placeholder="Enter your Height (in cms)" maxlength="3"></input>
+                                <input type="text" class="inputel" id="Height" placeholder="(in cms)" maxlength="3"></input>
                                 <br>
                             </div>
                             
@@ -397,7 +403,7 @@ input[type="text"]:focus {
                                 <label for="height">Weight</label>
                             </div>
                             <div>
-                                <input type="text" class="inputel" id="Weight" placeholder="Enter your weight" maxlength="3"></input>
+                                <input type="text" class="inputel" id="Weight" placeholder="(in kgs)" maxlength="3"></input>
                                 <br>
                             </div>
                             
@@ -413,7 +419,7 @@ input[type="text"]:focus {
     
                                     // Replace non-digit characters with an empty string
                                      event.target.value = inputValue.replace(/\D/g, '');
-});
+                        });
 
                         </script>
 
@@ -448,13 +454,13 @@ input[type="text"]:focus {
                     </div> 
 
                     <div class="btnsel">
-                        <button type="button" onclick="window.location.href='userdashboard.html'" class="backel" style=" color:white; "> <i class="fa-solid fa-arrow-left" style="color: white;"></i></button>
-                         <button type="submit" value="Next"  class="saveel" style="color: black;" >  <i class="fa-solid fa-arrow-right"></i></button>    
+                          
                                          
                          <!-- <input type="submit"  <i class="fa-solid fa-arrow-right"></i> -->
+                         <button type="button" onclick="window.location.href='userdashboard.html'"  class="backel"  >  <i class="fa-solid  fa-arrow-left fa-lg" ></i></button>
+                        <button type="button"  onclick="submitForm()" class="saveel"  >  <i class="fa-solid fa-arrow-right fa-lg"></i></button>
                      
-                        </form>               
-                                         
+
                     </div>
 
                 </div> 
@@ -519,6 +525,22 @@ input[type="text"]:focus {
         <p class="para1">2023 by Cosglobal</p>
 
     </div>
+    <script>
+         function submitForm() {
+                var textInputs = document.querySelectorAll('.personal-input');
+                
+                for (var i = 0; i < textInputs.length; i++) {
+                    if (textInputs[i].value.trim() === '') {
+                    alert("Please fill in all required fields.");
+                
+                    return;
+                    }
+                }
+                
+                // If all text inputs have non-empty values, navigate to "medical.html"
+                window.location.href = "professional.html";
+            }
+    </script>
 
     <script>
          console.log(document.getElementById("date").value);

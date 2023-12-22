@@ -381,7 +381,7 @@
           </div>
           
       </div>
-      <form id="myForm" action="medical.html" method="post" >
+      
       
       <div id="fatherDetails" class="hidden">
        
@@ -396,11 +396,11 @@
           
           
         
-          <label for="fatherAge">Father Age:</label>
+          <label for="fatherAge">Father Age:  <span  style="color: red;" >*</span> </label>
           <input type="digit" id="fatherAge" maxlength="3" required>
           <br>
 
-          <label for="fatherOccupation">Father Occupation:</label>
+          <label for="fatherOccupation">Father Occupation:  <span  style="color: red;" >*</span> </label>
           <input type="text" id="fatherOccupation"  required>
           <br>
 
@@ -415,20 +415,7 @@
        
                  
       </div><br> 
-      <script>
-        document.getElementById("myForm").addEventListener("submit", function(event) {
-          var fathernameField = document.getElementById("fatherName");
       
-          if (fathernameField.value.trim() === "") {
-            event.preventDefault(); // Prevents form submission if Father Name field is empty
-            alert("Father Name field cannot be empty!");
-            return false; // Halt the form submission
-          } else {
-            // If Father Name field is not empty, the form will submit and redirect to medical.html
-            window.location.href = "medical.html";
-          }
-        });
-      </script>
       
        
 
@@ -437,14 +424,14 @@
  
         <ul class="options">
           <br>
-          <label for="motherName">Mother Name:</label>
+          <label for="motherName">Mother Name:  <span  style="color: red;" >*</span> </label>
           <input type="text" id="motherName"  required>
           <br>
-          <label for="motherAge">Mother Age:</label>
+          <label for="motherAge">Mother Age:  <span  style="color: red;" >*</span> </label>
           <input type="text" id="motherAge" maxlength="3"  required>
           <br>
 
-          <label for="motherOccupation">Mother Occupation:</label>
+          <label for="motherOccupation">Mother Occupation:  <span  style="color: red;" >*</span> </label>
           <input type="text" id="motherOccupation"  required>
           <br>
           <label for="motherMedicalhistory">Upload medical history</label>
@@ -463,14 +450,14 @@
 
         <ul class="options">
           <br>
-          <label for="spouseName">Spouse Name:</label>
+          <label for="spouseName">Spouse Name:  <span  style="color: red;" >*</span> </label>
           <input type="text" id="spouseName"  required>
           <br>
-          <label for="spouseAge">Spouse Age:</label>
+          <label for="spouseAge">Spouse Age:  <span  style="color: red;" >*</span> </label>
           <input type="text" id="spouseAge"  required>
           <br>
 
-          <label for="spouseOccupation">Spouse Occupation:</label>
+          <label for="spouseOccupation">Spouse Occupation: <span  style="color: red;" >*</span> </label>
           <input type="text" id="spouseOccupation" name="username" required>
           <br>
 
@@ -491,14 +478,14 @@
 
         <ul class="options">
           <br>
-          <label for="othersName">Others Name:</label>
+          <label for="othersName">Others Name: <span  style="color: red;" >*</span> </label>
           <input type="text" id="othersName"  required>
           <br>
-          <label for="othersAge">Others Age:</label>
+          <label for="othersAge">Others Age: <span  style="color: red;" >*</span> </label>
           <input type="text" id="othersAge"  required>
           <br>
 
-          <label for="othersOccupation">Others Occupation:</label>
+          <label for="othersOccupation">Others Occupation: <span  style="color: red;" >*</span> </label>
           <input type="text" id="othersOccupation" name="username" required>
           <br>
 
@@ -547,44 +534,85 @@
             function showFatherDetails() {
               var fatherDetails = document.getElementById("fatherDetails");
               var showFatherDetails = document.getElementById("showFatherDetails");
-       
+              var fatherName = document.getElementById("fatherName");
+              var fatherAge = document.getElementById("fatherAge");
+              var fatherOccupation = document.getElementById("fatherOccupation");
+
               if (showFatherDetails.checked) {
                 fatherDetails.classList.remove("hidden");
+                fatherName.classList.add("family-input");
+                fatherAge.classList.add("family-input");
+                fatherOccupation.classList.add("family-input");
+                
               } else {
                 fatherDetails.classList.add("hidden");
+                fatherName.classList.remove("family-input");
+                fatherAge.classList.remove("family-input");
+
+                fatherOccupation.classList.remove("family-input");
               }
             }
 
             function showMotherDetails() {
               var motherDetails = document.getElementById("motherDetails");
               var showMotherDetails = document.getElementById("showMotherDetails");
+              var motherName = document.getElementById("motherName");
+              var motherAge = document.getElementById("motherAge");
+              var motherOccupation = document.getElementById("motherOccupation");
        
               if (showMotherDetails.checked) {
                 motherDetails.classList.remove("hidden");
+                motherName.classList.add("family-input");
+                motherAge.classList.add("family-input");
+                motherOccupation.classList.add("family-input");
               } else {
                 motherDetails.classList.add("hidden");
+                motherName.classList.remove("family-input");
+                motherAge.classList.remove("family-input");
+
+                motherOccupation.classList.remove("family-input");
               }
             }
 
             function showSpouseDetails() {
               var spouseDetails = document.getElementById("spouseDetails");
               var showSpouseDetails = document.getElementById("showSpouseDetails");
+              var spouseName = document.getElementById("spouseName");
+              var spouseAge = document.getElementById("spouseAge");
+              var spouseOccupation = document.getElementById("spouseOccupation");
        
               if (showSpouseDetails.checked) {
                 spouseDetails.classList.remove("hidden");
+                spouseName.classList.add("family-input");
+                spouseAge.classList.add("family-input");
+                spouseOccupation.classList.add("family-input");
               } else {
                 spouseDetails.classList.add("hidden");
+                spouseName.classList.remove("family-input");
+                spouseAge.classList.remove("family-input");
+
+                spouseOccupation.classList.remove("family-input");
               }
             }
        
             function showOthersDetails() {
               var othersDetails = document.getElementById("othersDetails");
               var showOthersDetails = document.getElementById("showOthersDetails");
-       
+              var othersName = document.getElementById("othersName");
+              var othersAge = document.getElementById("othersAge");
+              var othersOccupation = document.getElementById("othersOccupation");
+
               if (showOthersDetails.checked) {
                 othersDetails.style.display = "block";
+                othersName.classList.add("family-input");
+                othersAge.classList.add("family-input");
+                othersOccupation.classList.add("family-input");
               } else {
                 othersDetails.style.display = "none";
+                othersName.classList.remove("family-input");
+                othersAge.classList.remove("family-input");
+
+                othersOccupation.classList.remove("family-input");
               }
             }
           </script>
@@ -606,9 +634,10 @@
            
             <button type="button" onclick="window.location.href='professional.html'" class="backel"  > <i class="fa-solid  fa-arrow-left fa-lg" ></i></button>
             <!-- <button type="submit" onclick="window.location.href='medical.html' "  class="saveel" >  <i class="fa-solid fa-arrow-right fa-lg"></i></button> -->
-            <input type="submit"  value="Next">
+           
+            <button type="button" onclick="submitForm()" class="saveel"  > <i class="fa-solid  fa-arrow-right fa-lg" ></i></button>
                      
-          </form>               
+                     
         
                  
          
@@ -682,10 +711,30 @@
  
  
 </div>
+
+<script>
+  function submitForm() {
+  var textInputs = document.querySelectorAll('.family-input');
+ 
+  for (var i = 0; i < textInputs.length; i++) {
+    if (textInputs[i].value.trim() === '') {
+      alert("Please fill in all required fields.");
+ 
+      return;
+    }
+  }
+ 
+  // If all text inputs have non-empty values, navigate to "medical.html"
+  window.location.href = "medical.html";
+}
+ 
+ 
+</script>
          
     
+
+
 <script>
-  console.log(document.getElementById("date").value);
  async function postData() {
  
  

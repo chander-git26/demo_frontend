@@ -312,7 +312,7 @@ input[type="text"]:focus {
 
                            
 
-
+                        <form id="myForm" action="completeduserdashboard.html" method="post">   
 
 
 
@@ -447,11 +447,12 @@ input[type="text"]:focus {
                         </div>
                         
                     </div>
+                    </form>
 
                         <div class="btnsel">
                     
                         <button type="button" onclick="window.location.href='family.html'" class="backel"  >  <i class="fa-solid  fa-arrow-left fa-lg" ></i></button>
-                        <button type="button" onclick="window.location.href='completeduserdashboard.html'" class="saveel"  >  <i class="fa-solid fa-arrow-right fa-lg"></i></button>
+                        <button type="button" onclick="submitForm()" class="saveel"  >  <i class="fa-solid fa-arrow-right fa-lg"></i></button>
                 
                         </div>
                     
@@ -550,15 +551,17 @@ function updateSelectedOptions() {
 
       // Create label for the file input
       var label = document.createElement('label');
-      label.textContent = 'Upload Recent Report for ' + checkbox.value;
+      label.textContent = 'Upload Recent Report for ' + checkbox.value + ' *' ;
+     
       listItem.appendChild(label);
 
       // Create file input for the selected option
       var fileInput = document.createElement('input');
       fileInput.type = 'file';
       fileInput.className = 'file-input';
+      fileInput.setAttribute('required', '');
       fileInput.id = 'Medicalhistory_' + checkbox.value; // Use a unique ID for each file input
-      fileInput.setAttribute('required', ''); // Make the file input mandatory
+       // Make the file input mandatory
       listItem.appendChild(fileInput); // Append file input to the list item
 
       // Append <br> elements after the file input in each loop
@@ -574,7 +577,20 @@ document.querySelectorAll('.option').forEach(function (checkbox) {
 
       </script>
 
-
+<script>
+    function submitForm() {
+      var fileInputs = document.querySelectorAll('.file-input');
+      for (var i = 0; i < fileInputs.length; i++) {
+        if (!fileInputs[i].files.length) {
+          alert("Please upload medical history for all selected conditions.");
+          return; // Stop form submission
+        }
+      }
+      window.location.href = "completeduserdashboard.html";
+    }
+   
+   
+  </script>
 
 
 
