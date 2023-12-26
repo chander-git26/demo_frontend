@@ -289,6 +289,10 @@ input[type="text"]:focus {
     .file-input {
       margin-left: 10px; /* Adjust as needed for spacing */
     }
+    .starel{
+        color: red;
+        
+    }
         </style>
     </head>
     <body>
@@ -551,7 +555,9 @@ function updateSelectedOptions() {
 
       // Create label for the file input
       var label = document.createElement('label');
-      label.textContent = 'Upload Recent Report for ' + checkbox.value + ' *' ;
+      var star = ' *';
+      star.className = 'starel';
+      label.textContent = 'Upload Recent Report for ' + checkbox.value + star ;
      
       listItem.appendChild(label);
 
