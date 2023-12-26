@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="eng">
     <head>
+        <script src="https://kit.fontawesome.com/b454b53842.js" crossorigin="anonymous"></script>
         <title>Login</title>
         
         <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
@@ -16,13 +17,7 @@
                 background-repeat: no-repeat;
                 background-size: cover;
             }
-            body {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                min-height: 100vh;
-              
-            }
+            
             .wrapper{
                 width: 420px;
                 background: rgb(22, 22, 21);
@@ -132,24 +127,54 @@
 
             }
             .container{
+              
               display: flex;
-              flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                min-height: 100vh;
             }
             .backbtnel{
               height: 35px;
               width: 90px;
               background-color: gray;
               color: white;
-              margin-top: 25px;
               border-radius: 15px;
             }
+            .contain1{
+                    background-color: white;
+                    color: #002159;
+                    padding: 10px;
+                    margin: 0px;
+                    display: flex;
+                        
+                    }
+
+                .logoel{
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    align-items: center;
+                    align-self: center;
+                    width: 100%;
+                }
+                .logo{
+                    height: 30px;
+                    width: 35px;
+                    padding-right: 5px;
+                }
 
         </style>
         
     </head>
     <body>
       
-    
+        <div class="contain1"> 
+            <i onclick="window.location.href='home.html'" style="font-size: 25px; padding: 15px;" class=" fa-solid fa-house"></i>
+            <div style="text-align: center;" class="logoel">
+                <img src="https://cosglobal.in/wp-content/uploads/2023/11/WhatsApp-Image-2023-11-22-at-18.18.56.jpeg" class="logo ">
+                <h3>COS Insurance</h3>
+            </div>
+        </div>
         <div class="container">
             <div class="wrapper">
                 <form action="userdashboard.html" method="post">
@@ -167,7 +192,7 @@
              
                     <button type="submit" class="btn" style="color: black;" onclick="postData()">Login </button>
                     <div class="register-link">
-                      <p>Don't have an account?</p> &nbsp; <button onclick="window.location.href='signup.html'">Register</button><br/>
+                      <p style="margin-top: 8px;">Don't have an account?</p> &nbsp; <button onclick="window.location.href='signup.html'" class="backbtnel">Register</button><br/>
                         
                   </div>
              
@@ -178,7 +203,6 @@
             </form>
             
           </div>
-          <button type="button" onclick="window.location.href='home.html'" class="backbtnel">BACK</button>
       </div>
 
 

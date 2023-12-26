@@ -5,173 +5,181 @@
    <style>
     body {
     background-color: #f9f9fa
+    }
+
+    .padding {
+        padding: 5rem !important;
+        max-width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .user-card-full {
+        overflow: hidden;
+    }
+
+    .card {
+        border-radius: 5px;
+        -webkit-box-shadow: 0 1px 20px 0 rgba(69,90,100,0.08);
+        box-shadow: 0 1px 20px 0 rgba(69,90,100,0.08);
+        border: none;
+        margin-bottom: 30px;
+    }
+
+    .m-r-0 {
+        margin-right: 0px;
+    }
+
+    .m-l-0 {
+        margin-left: 0px;
+    }
+
+    .user-card-full .user-profile {
+        border-radius: 5px 0 0 5px;
+    }
+
+    .bg-c-lite-green {
+            background: -webkit-gradient(linear, left top, right top, from(#002159 ), to(#5267e4));
+        background: linear-gradient(to right,  #002159, #3380e6,);
+    }
+
+    .user-profile {
+        padding: 20px 0;
+    }
+
+    .card-block {
+        padding: 1.25rem;
+    }
+
+    .m-b-25 {
+        margin-bottom: 25px;
+    }
+
+    .img-radius {
+        border-radius: 5px;
+    }
+
+
+    
+    h6 {
+        font-size: 14px;
+    }
+
+    .card .card-block p {
+        line-height: 25px;
+    }
+
+    @media only screen and (min-width: 1400px){
+    p {
+        font-size: 14px;
+    }
+    }
+
+    .card-block {
+        padding: 1.25rem;
+    }
+
+    .b-b-default {
+        border-bottom: 1px solid #e0e0e0;
+    }
+
+    .m-b-20 {
+        margin-bottom: 20px;
+    }
+
+    .p-b-5 {
+        padding-bottom: 5px !important;
+    }
+
+    .card .card-block p {
+        line-height: 25px;
+    }
+
+    .m-b-10 {
+        margin-bottom: 10px;
+    }
+
+    .text-muted {
+        color: #919aa3 !important;
+    }
+
+    .b-b-default {
+        border-bottom: 1px solid #e0e0e0;
+    }
+
+    .f-w-600 {
+        font-weight: 600;
+    }
+
+    .m-b-20 {
+        margin-bottom: 20px;
+    }
+
+    .m-t-40 {
+        margin-top: 20px;
+    }
+
+    .p-b-5 {
+        padding-bottom: 5px !important;
+    }
+
+    .m-b-10 {
+        margin-bottom: 10px;
+    }
+
+    .m-t-40 {
+        margin-top: 20px;
+    }
+
+    .user-card-full .social-link li {
+        display: inline-block;
+    }
+
+    .user-card-full .social-link li a {
+        font-size: 20px;
+        margin: 0 10px 0 0;
+        -webkit-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+    }
+    .container{
+        width: 50%;
+    }
+    .contain1{
+        background-color: white;
+        color: #002159;
+        padding: 10px;
+        margin: 0px;
+        display: flex;
+            
+        }
+
+    .logoel{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        align-self: center;
+        width: 100%;
+    }
+    .logo{
+        height: 30px;
+        width: 35px;
+        padding-right: 5px;
+    }
+    .logoutbtnel{
+        height: 30px;
+        width: 90px;
+        border-radius: 12px;
+        background-color: #002159;
+        color: white;
+        font-weight: bold;
 }
 
-.padding {
-    padding: 5rem !important;
-    max-width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.user-card-full {
-    overflow: hidden;
-}
-
-.card {
-    border-radius: 5px;
-    -webkit-box-shadow: 0 1px 20px 0 rgba(69,90,100,0.08);
-    box-shadow: 0 1px 20px 0 rgba(69,90,100,0.08);
-    border: none;
-    margin-bottom: 30px;
-}
-
-.m-r-0 {
-    margin-right: 0px;
-}
-
-.m-l-0 {
-    margin-left: 0px;
-}
-
-.user-card-full .user-profile {
-    border-radius: 5px 0 0 5px;
-}
-
-.bg-c-lite-green {
-        background: -webkit-gradient(linear, left top, right top, from(#002159 ), to(#5267e4));
-    background: linear-gradient(to right,  #002159, #3380e6,);
-}
-
-.user-profile {
-    padding: 20px 0;
-}
-
-.card-block {
-    padding: 1.25rem;
-}
-
-.m-b-25 {
-    margin-bottom: 25px;
-}
-
-.img-radius {
-    border-radius: 5px;
-}
 
 
- 
-h6 {
-    font-size: 14px;
-}
-
-.card .card-block p {
-    line-height: 25px;
-}
-
-@media only screen and (min-width: 1400px){
-p {
-    font-size: 14px;
-}
-}
-
-.card-block {
-    padding: 1.25rem;
-}
-
-.b-b-default {
-    border-bottom: 1px solid #e0e0e0;
-}
-
-.m-b-20 {
-    margin-bottom: 20px;
-}
-
-.p-b-5 {
-    padding-bottom: 5px !important;
-}
-
-.card .card-block p {
-    line-height: 25px;
-}
-
-.m-b-10 {
-    margin-bottom: 10px;
-}
-
-.text-muted {
-    color: #919aa3 !important;
-}
-
-.b-b-default {
-    border-bottom: 1px solid #e0e0e0;
-}
-
-.f-w-600 {
-    font-weight: 600;
-}
-
-.m-b-20 {
-    margin-bottom: 20px;
-}
-
-.m-t-40 {
-    margin-top: 20px;
-}
-
-.p-b-5 {
-    padding-bottom: 5px !important;
-}
-
-.m-b-10 {
-    margin-bottom: 10px;
-}
-
-.m-t-40 {
-    margin-top: 20px;
-}
-
-.user-card-full .social-link li {
-    display: inline-block;
-}
-
-.user-card-full .social-link li a {
-    font-size: 20px;
-    margin: 0 10px 0 0;
-    -webkit-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out;
-}
-.container{
-    width: 50%;
-}
-.contain1{
-                    background-color: white;
-                    color: #002159;
-                    padding: 10px;
-                    margin: 0px;
-                    display: flex;
-                        
-                    }
-
-                .logoel{
-                    display: flex;
-                    flex-direction: row;
-                    justify-content: center;
-                    align-items: center;
-                    align-self: center;
-                    width: 100%;
-                }
-                .logo{
-                    height: 30px;
-                    width: 35px;
-                    padding-right: 5px;
-                }
-
-
-
-   </style>
+</style>
     
 </head>
 <body>
@@ -186,28 +194,28 @@ p {
     <div  id="page-content">
         <div class="padding">
             <div class="container d-flex justify-content-center">
-    <div class="col-xl-6 col-md-12">
-                <div class="card user-card-full">
-                    <div class="row m-l-0 m-r-0">
-                        <div class="col-sm-4 bg-c-lite-green user-profile">
-                            <div class="card-block text-center text-white">
-                                <div class="m-b-25">
-                                    <img src="https://static.vecteezy.com/system/resources/previews/002/318/271/original/user-profile-icon-free-vector.jpg" class="img-radius" alt="User-Profile-Image" width="100" height="100">
-                                    <i class="fas fa-edit" style="color: white;"></i>
+                <div class="col-xl-6 col-md-12">
+                    <div class="card user-card-full">
+                        <div class="row m-l-0 m-r-0">
+                            <div class="col-sm-4 bg-c-lite-green user-profile">
+                                <div class="card-block text-center text-white">
+                                    <div class="m-b-25">
+                                        <img src="https://static.vecteezy.com/system/resources/previews/002/318/271/original/user-profile-icon-free-vector.jpg" class="img-radius" alt="User-Profile-Image" width="100" height="100">
+                                        <i class="fas fa-edit" style="color: white;"></i>
+                                    </div>
+                                    
+                                    <h2 class="f-w-600" style="color: white;" id="name">YOUR NAME</h2>
+                                    
+                                    
                                 </div>
-                                
-                                <h2 class="f-w-600" style="color: white;" id="name"></h2>
-                                
-                                
-                            </div>
                         </div>
                         <div class="col-sm-8">
                             <div class="card-block">
-                                <h6 class="m-b-20 p-b-5 b-b-default f-w-600" >Information</h6>
+                                <h6 class="m-b-20 p-b-5 b-b-default f-w-600" >User Information</h6>
                                 <div class="row">
                                     <div class="col-sm-6">
                                         <p class="m-b-10 f-w-600">Userid</p>
-                                        <h6 class="text-muted f-w-400" id="userid">Your Name</h6>
+                                        <h6 class="text-muted f-w-400" id="userid">Your Id</h6>
                                     </div>
                                     <div class="col-sm-6">
                                         <p class="m-b-10 f-w-600" >Email</p>
@@ -227,6 +235,9 @@ p {
                         </div>
                     </div>
                 </div>
+            </div>
+            <div style="text-align: right;">
+                <button class="logoutbtnel" onclick="window.location.href='home.html'" >Log Out</button>
             </div>
                 </div>
                 </div>
