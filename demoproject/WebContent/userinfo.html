@@ -176,7 +176,21 @@ p {
                     width: 35px;
                     padding-right: 5px;
                 }
-
+                .inputimgel{
+                    position: relative;
+                    width: 100px;
+                    height: 100px;
+                }
+                .inputimgel::before {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    background-size: cover;
+                    background-position: center;
+                }
 
 
    </style>
@@ -199,10 +213,13 @@ p {
                         <div class="row m-l-0 m-r-0">
                             <div class="col-sm-4 bg-c-lite-green user-profile">
                                 <div class="card-block text-center text-white">
-                                    <div class="m-b-25">
+                                    <div class="m-b-25 ">
                                         <img src="https://static.vecteezy.com/system/resources/previews/002/318/271/original/user-profile-icon-free-vector.jpg" class="img-radius" alt="User-Profile-Image" width="100" height="100">
+                                        <input type="file" id="uploadInput" style="display: none" accept="image/*" onchange="handleImageUpload(this)">
+                                        <label for="uploadInput" style="background-color: transparent; border-style: none; cursor: pointer">
                                         <i class="fas fa-edit" style="color: white;"></i>
-                                    </div>
+                                        </label>
+                                      </div>
                                 
                                 <h2 class="f-w-600" style="color: white;" id="name">YOUR NAME</h2>
                                 
@@ -243,6 +260,26 @@ p {
                
                 </div>
             </div>
+
+
+
+            <script>
+                function handleImageUpload(input) {
+                  var container = document.querySelector('.m-b-25');
+             
+                  if (input.files && input.files[0]) {
+                    var reader = new FileReader();
+             
+                    reader.onload = function (e) {
+            container.style.backgroundImage = 'url(' + e.target.result + ')';
+                    };
+             
+                    reader.readAsDataURL(input.files[0]);
+                  }
+                }
+              </script>
+
+
             <script>
                 async function fetchData() {
                     try {
