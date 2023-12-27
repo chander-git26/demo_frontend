@@ -285,7 +285,7 @@
                            
                         <div class="labelel">
                             <div>
-                            <label for="incomesource" >Source of Income  <span  style="color: red;" >*</span></label>
+                            <label for="selectIncomeOption" >Source of Income  <span  style="color: red;" >*</span></label>
                             </div>
                             <div>
                                 <select id="selectIncomeOption" class="professional-input" name="incomesource" required>
@@ -314,7 +314,7 @@
                       
 
                         <button type="button" onclick="window.location.href='personal.html'" class="backel" > <i class="fa-solid fa-arrow-left fa-lg" ></i></button>
-                        <button type="submit" onclick="submitForm()" class="saveel"  >  <i class="fa-solid fa-arrow-right fa-lg"></i></button>
+                        <button type="submit" onclick="postProfessionalData()" class="saveel"  >  <i class="fa-solid fa-arrow-right fa-lg"></i></button>
           
                     </div>
 
@@ -735,20 +735,20 @@
 
 
 <script>
-    function submitForm() {
-           var textInputs = document.querySelectorAll('.professional-input');
+    // function submitForm() {
+    //        var textInputs = document.querySelectorAll('.professional-input');
            
-           for (var i = 0; i < textInputs.length; i++) {
-               if (textInputs[i].value.trim() === '') {
-               alert("Please fill in all required fields.");
+    //        for (var i = 0; i < textInputs.length; i++) {
+    //            if (textInputs[i].value.trim() === '') {
+    //            alert("Please fill in all required fields.");
            
-               return;
-               }
-           }
+    //            return;
+    //            }
+    //        }
            
-           // If all text inputs have non-empty values, navigate to "medical.html"
-           window.location.href = "family.html";
-       }
+    //        // If all text inputs have non-empty values, navigate to "medical.html"
+    //        window.location.href = "family.html";
+    //    }
 </script>
 
 <script>
@@ -762,11 +762,16 @@
                     switch (selectIncomeOption) {
                         case 'employee':
                             data.companyName = document.getElementById("companyDetails").value;
-                            data.annualIncome = document.getElementById("salaryDetails").value;
+                            data.annualIncome = +document.getElementById("salaryDetails").value;
+                            data.investAmount = document.getElementById("spareAmountDetails").value;
+
                             break;
                         case 'business':
                             data.businessName = document.getElementById("businessDetails").value;
                             data.businessAnnualRevenue = document.getElementById("revenueDetails").value;
+                            data.gstNumber = document.getElementById("gstDetails").value;
+                            data.businessType = document.getElementById("businessTypeDetails").value;
+                            data.investAmount = document.getElementById("spareAmountDetails").value;
                             break;
                
                         default:
@@ -782,6 +787,7 @@
                
                         if (response.ok) {
                             const responseData = await response.json();
+                          // window.location.href="family.html";
                             
                         }
                

@@ -266,9 +266,9 @@
                                 <p class="style7">
                             </div>
                             <div>
-                                <input type="radio" name="Gender" value="Male" required id="gender1"> Male &nbsp; &nbsp; 
-                                <input type="radio" name="Gender" value="Female" required id="gender1"> Female &nbsp; &nbsp;
-                                <input type="radio" name="Gender" value="Others" required id="gender1"> Others
+                                <input type="radio" name="gender" value="Male" required id="gender1"> Male &nbsp; &nbsp; 
+                                <input type="radio" name="gender" value="Female" required id="gender1"> Female &nbsp; &nbsp;
+                                <input type="radio" name="gender" value="Others" required id="gender1"> Others
                                 </p>
                             </div>
                             
@@ -427,8 +427,8 @@
                             </div>
                             <div>
                                 
-                                <input type="radio"  id="smokingyes" name="smoking"></input>Yes  &nbsp; &nbsp; &nbsp; &nbsp;
-                                <input type="radio"  id="smokingno" name="smoking"></input>No
+                                <input type="radio"  id="smoking" value="yes" name="smoking"></input>Yes  &nbsp; &nbsp; &nbsp; &nbsp;
+                                <input type="radio"  id="smoking" value="no" name="smoking"></input>No
                                 <br>
                             </div>
                             
@@ -439,8 +439,8 @@
                                 <label for="alcohol">Alcohol <span  style="color: red;" >*</span> </label>
                             </div>
                             <div>
-                                <input type="radio" id="Alcoholyes"  name="Alchohol"></input>Yes  &nbsp; &nbsp; &nbsp; &nbsp;
-                                <input type="radio"  id="Alcoholno"  name="Alchohol" ></input>No
+                                <input type="radio" id="Alcohol1" value="yes"  name="Alchohol"></input>Yes  &nbsp; &nbsp; &nbsp; &nbsp;
+                                <input type="radio"  id="Alcohol2" value="no" name="Alchohol" ></input>No
                                 <br>
                             </div>
                             
@@ -454,7 +454,7 @@
                                          
                          <!-- <input type="submit"  <i class="fa-solid fa-arrow-right"></i> -->
                          <button type="button" onclick="window.location.href='userdashboard.html'"  class="backel"  >  <i class="fa-solid  fa-arrow-left fa-lg" ></i></button>
-                        <button type="button"  onclick="submitForm()" class="saveel"  >  <i class="fa-solid fa-arrow-right fa-lg"></i></button>
+                        <button type="button"  onclick=" postPersonalData()" class="saveel"  >  <i class="fa-solid fa-arrow-right fa-lg"></i></button>
                      
 
                     </div>
@@ -522,46 +522,61 @@
 
     </div>
     <script>
-         function submitForm() {
-                var textInputs = document.querySelectorAll('.personal-input');
+        //  function submitForm() {
+        //         var textInputs = document.querySelectorAll('.personal-input');
                 
-                for (var i = 0; i < textInputs.length; i++) {
-                    if (textInputs[i].value.trim() === '') {
-                    alert("Please fill in all required fields.");
+        //         for (var i = 0; i < textInputs.length; i++) {
+        //             if (textInputs[i].value.trim() === '') {
+        //             alert("Please fill in all required fields.");
                 
-                    return;
-                    }
-                }
+        //             return;
+        //             }
+        //         }
                 
-                // If all text inputs have non-empty values, navigate to "medical.html"
-                window.location.href = "professional.html";
-            }
+        //         // If all text inputs have non-empty values, navigate to "medical.html"
+        //         window.location.href = "professional.html";
+        //     }
     </script>
 
     <script>
-         console.log(document.getElementById("date").value);
-
+      
 
         async function postPersonalData() {
+
+                var genderRadios = document.getElementsByName('gender');
+                var selectedGender = Array.from(genderRadios).find(radio => radio.checked);
         
-      
+                var alchoholRadios = document.getElementsByName('Alchohol');
+                var selectedAlchohol = Array.from(alchoholRadios).find(radio => radio.checked);
+
+                var smokingRadios = document.getElementsByName('smoking');
+                var selectedSmoking = Array.from(smokingRadios).find(radio => radio.checked);
+
+                
+                var maritalRadios = document.getElementsByName('marital');
+                var selectedMarital = Array.from(maritalRadios).find(radio => radio.checked);
+
+
                 const data = {
                 
                     address: document.getElementById("address").value,
-                    gender: document.getElementById("gender1").value,
+                    gender: selectedGender.value,
                 
                     dateOfBirth:document.getElementById("date").value,
             
                     state: document.getElementById("state").value,
-                    country: document.getElementById("country").value,
-                    maritalStatus: document.getElementById("maritalstatus").value,
-                    bloodGroup: document.getElementById("bloodgroup").value,
+                    pincode: document.getElementById("pincode").value,
+                    maritalStatus: selectedMarital.value,
+                   
+                   
                     height: document.getElementById("Height").value,
                     weight: document.getElementById("Weight").value,
-                    smoking: document.getElementById("smokingyes").value,
-                    smoking: document.getElementById("smokingno").value,
-                    alochol: document.getElementById("Alcoholyes").value,
-                    alochol: document.getElementById("Alcoholno").value,
+                    smoking: selectedSmoking.value,
+                   // smoking: document.getElementById("smokingno").value,
+                   // alochol: document.getElementById("Alcoholyes").value,
+                    alochol:selectedAlchohol.value,
+                    
+                    
                     
                 };
             
@@ -580,7 +595,8 @@
                 console.error('Error during request. Status:', response.status);
                 const responseBody = await response.text();
                 console.error('Response body:', responseBody);
-              
+
+                // window.location.href ='professional.html';
                 } else {
                 // Redirect on success
                 window.location.href ='personal.html'; // Adjust the redirection path
